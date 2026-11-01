@@ -1,1 +1,418 @@
-{"schemaVersion":1,"ruleVersion":"1","exportedAt":"2026-11-01T22:50:05.096Z","records":[{"id":"0882baf7-7fa6-497d-b32c-72c850c90e5f","kind":"formula","name":"After tax value (post-leave cash-out)","revision":1,"updatedAt":"2026-11-01T22:49:05.750Z","archived":false,"fields":{"expression":"[formula:a25677db-75d6-45ad-96d6-3e44df270414] + [leave_cash_out_net_total]","format":"money","direction":"higher"},"items":{}},{"id":"1ae5bb4f-bc0d-4041-a649-f505817e3959","kind":"comparison","name":"ekg vs saw (2 remote)","revision":1,"updatedAt":"2026-11-01T22:49:05.750Z","archived":false,"fields":{"year":"2026-27","timeValue":"yes","baseline":"ca16da71-d7f6-4214-9b05-bdc3850d3979"},"items":{"offers":[{"id":"fb016827-b583-40da-bee0-dd395d5bdfee","fields":{"offerId":"ca16da71-d7f6-4214-9b05-bdc3850d3979"}},{"id":"bb7d6330-19ac-4df8-a866-766dfa89bb9f","fields":{"offerId":"3b34b3a9-4998-41e4-a362-772a874fffe1"}}]}},{"id":"1cfe88d4-48ea-4f08-a7b9-1d77b0f9a63a","kind":"offer","name":"saw (3 remote)","revision":1,"updatedAt":"2026-11-01T22:49:05.750Z","archived":false,"fields":{"amount":"150000","inclusion":"includes","weeklyHours":"37.5","distance":"75","minutes":"90","leaveOrdinaryHours":"37.5","leaveLoadingBasis":"none"},"items":{"roster":[{"id":"weekday-4","fields":{"day":"4","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}},{"id":"weekday-5","fields":{"day":"5","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}},{"id":"weekday-1","fields":{"day":"1","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"onsite","journeys":"1"}},{"id":"weekday-2","fields":{"day":"2","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"onsite","journeys":"1"}},{"id":"weekday-3","fields":{"day":"3","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}}]}},{"id":"3b34b3a9-4998-41e4-a362-772a874fffe1","kind":"offer","name":"saw (2 remote)","revision":1,"updatedAt":"2026-11-01T22:49:05.750Z","archived":false,"fields":{"amount":"150000","inclusion":"includes","weeklyHours":"37.5","distance":"75","minutes":"90","leaveOrdinaryHours":"37.5","leaveLoadingBasis":"none"},"items":{"roster":[{"id":"weekday-4","fields":{"day":"4","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}},{"id":"weekday-5","fields":{"day":"5","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}},{"id":"weekday-1","fields":{"day":"1","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"onsite","journeys":"1"}},{"id":"weekday-2","fields":{"day":"2","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"onsite","journeys":"1"}},{"id":"weekday-3","fields":{"day":"3","start":"09:00","hours":"7.5","breakStart":"12:30","breakMinutes":"30","place":"onsite","journeys":"1"}}]}},{"id":"a25677db-75d6-45ad-96d6-3e44df270414","kind":"formula","name":"After tax value (pre-leave cash-out)","revision":1,"updatedAt":"2026-11-01T22:49:05.750Z","archived":false,"fields":{"expression":"[annual_cash_after_tax] + [annual_net_super_contributions] + [annual_personal_perk_value] - [annual_commuting_cost]","format":"money","direction":"higher"},"items":{}},{"id":"a27f4f28-feb3-4ba7-8c35-7b2a8aa2f7ed","kind":"comparison","name":"ekg vs saw","revision":1,"updatedAt":"2026-11-01T22:49:05.750Z","archived":false,"fields":{"year":"2026-27","timeValue":"yes","baseline":"ca16da71-d7f6-4214-9b05-bdc3850d3979"},"items":{"offers":[{"id":"c0f4d466-81f0-4460-9e7b-b68cc8219459","fields":{"offerId":"ca16da71-d7f6-4214-9b05-bdc3850d3979"}},{"id":"47cc9da4-d820-445a-bb3d-ad51e915e901","fields":{"offerId":"3b34b3a9-4998-41e4-a362-772a874fffe1"}},{"id":"1e3f24be-98df-4fd0-ab36-0600c74b250b","fields":{"offerId":"1cfe88d4-48ea-4f08-a7b9-1d77b0f9a63a"}}],"formulas":[{"id":"8cd88b26-6267-4db0-8831-9fcef4e48521","fields":{"formulaId":"a25677db-75d6-45ad-96d6-3e44df270414"}},{"id":"ac8ca4f3-2495-4829-9e18-3178da682972","fields":{"formulaId":"0882baf7-7fa6-497d-b32c-72c850c90e5f"}}]}},{"id":"ca16da71-d7f6-4214-9b05-bdc3850d3979","kind":"offer","name":"ekg","revision":1,"updatedAt":"2026-11-01T22:49:05.750Z","archived":false,"fields":{"amount":"105000","inclusion":"includes","weeklyHours":"40","tripBasis":"","energyPrice":"2.40","consumption":"9.5","evenSuper":"yes","leaveOrdinaryHours":"40","leaveRateBasis":"salary","leaveLoadingBasis":"none"},"items":{"earnings":[{"id":"bb8d2ba5-a083-4ea2-a65c-beca5d939ffa","fields":{"included":"no","taxClass":"ordinary","eligible":"yes","label":"$10,000 annual salary","amount":"10000","inclusion":"includes","certainty":"guaranteed","recurrence":"recurring"}}],"roster":[{"id":"weekday-2","fields":{"day":"2","start":"09:00","hours":"8","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}},{"id":"weekday-3","fields":{"day":"3","start":"09:00","hours":"8","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}},{"id":"weekday-4","fields":{"day":"4","start":"09:00","hours":"8","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}},{"id":"weekday-5","fields":{"day":"5","start":"09:00","hours":"8","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}},{"id":"weekday-1","fields":{"day":"1","start":"09:00","hours":"8","breakStart":"12:30","breakMinutes":"30","place":"remote","journeys":"0"}}]}},{"id":"preferences","kind":"preferences","name":"","revision":6,"updatedAt":"2026-11-01T22:49:39.989Z","archived":false,"fields":{"leaveRateBasis":"salary","estimateMode":"standard","sacrifice":"0","personalSuper":"0","periodPersonalSuper":"0","periodOtherDeductions":"0","reportableBenefitsOffer":"0","businessCosts":"0","businessDeductions":"0","contractorSuper":"0","contractorPersonalSuper":"0","unit":"annual","employment":"full-time","weeklyHours":"38","weeks":"52","payFrequency":"fortnightly","threshold":"yes","annualLeave":"4","superRate":"12","superLimit":"statutory","ordinaryFund":"yes","holidaysWorked":"no","tripBasis":"return","costMethod":"entered","maintenance":"0","tripCharges":"0","start":"09:00","breakStart":"12:30","breakMinutes":"30","place":"onsite","journeys":"1","appearance":"dark","year":"2026-27","inspectorPinned":"yes","pageWidth":"100","shortcutUndo":"Delete","fontSize":"14"},"items":{}},{"id":"vehicle","kind":"vehicle","name":"","revision":1,"updatedAt":"2026-11-01T22:49:05.750Z","archived":false,"fields":{"energy":"fuel","energyPrice":"2.40","consumption":"9.5"},"items":{}}]}
+{
+  "schemaVersion": 1,
+  "ruleVersion": "1",
+  "exportedAt": "2026-11-01T22:50:05.096Z",
+  "records": [
+    {
+      "id": "0882baf7-7fa6-497d-b32c-72c850c90e5f",
+      "kind": "formula",
+      "name": "After tax value (post-leave cash-out)",
+      "revision": 1,
+      "updatedAt": "2026-11-01T22:49:05.750Z",
+      "archived": false,
+      "fields": {
+        "expression": "[formula:a25677db-75d6-45ad-96d6-3e44df270414] + [leave_cash_out_net_total]",
+        "format": "money",
+        "direction": "higher"
+      },
+      "items": {}
+    },
+    {
+      "id": "1ae5bb4f-bc0d-4041-a649-f505817e3959",
+      "kind": "comparison",
+      "name": "ekg vs saw (2 remote)",
+      "revision": 1,
+      "updatedAt": "2026-11-01T22:49:05.750Z",
+      "archived": false,
+      "fields": {
+        "year": "2026-27",
+        "timeValue": "yes",
+        "baseline": "ca16da71-d7f6-4214-9b05-bdc3850d3979"
+      },
+      "items": {
+        "offers": [
+          {
+            "id": "fb016827-b583-40da-bee0-dd395d5bdfee",
+            "fields": { "offerId": "ca16da71-d7f6-4214-9b05-bdc3850d3979" }
+          },
+          {
+            "id": "bb7d6330-19ac-4df8-a866-766dfa89bb9f",
+            "fields": { "offerId": "3b34b3a9-4998-41e4-a362-772a874fffe1" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "1cfe88d4-48ea-4f08-a7b9-1d77b0f9a63a",
+      "kind": "offer",
+      "name": "saw (3 remote)",
+      "revision": 1,
+      "updatedAt": "2026-11-01T22:49:05.750Z",
+      "archived": false,
+      "fields": {
+        "amount": "150000",
+        "inclusion": "includes",
+        "weeklyHours": "37.5",
+        "distance": "75",
+        "minutes": "90",
+        "leaveOrdinaryHours": "37.5",
+        "leaveLoadingBasis": "none"
+      },
+      "items": {
+        "roster": [
+          {
+            "id": "weekday-4",
+            "fields": {
+              "day": "4",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          },
+          {
+            "id": "weekday-5",
+            "fields": {
+              "day": "5",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          },
+          {
+            "id": "weekday-1",
+            "fields": {
+              "day": "1",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "onsite",
+              "journeys": "1"
+            }
+          },
+          {
+            "id": "weekday-2",
+            "fields": {
+              "day": "2",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "onsite",
+              "journeys": "1"
+            }
+          },
+          {
+            "id": "weekday-3",
+            "fields": {
+              "day": "3",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "3b34b3a9-4998-41e4-a362-772a874fffe1",
+      "kind": "offer",
+      "name": "saw (2 remote)",
+      "revision": 1,
+      "updatedAt": "2026-11-01T22:49:05.750Z",
+      "archived": false,
+      "fields": {
+        "amount": "150000",
+        "inclusion": "includes",
+        "weeklyHours": "37.5",
+        "distance": "75",
+        "minutes": "90",
+        "leaveOrdinaryHours": "37.5",
+        "leaveLoadingBasis": "none"
+      },
+      "items": {
+        "roster": [
+          {
+            "id": "weekday-4",
+            "fields": {
+              "day": "4",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          },
+          {
+            "id": "weekday-5",
+            "fields": {
+              "day": "5",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          },
+          {
+            "id": "weekday-1",
+            "fields": {
+              "day": "1",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "onsite",
+              "journeys": "1"
+            }
+          },
+          {
+            "id": "weekday-2",
+            "fields": {
+              "day": "2",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "onsite",
+              "journeys": "1"
+            }
+          },
+          {
+            "id": "weekday-3",
+            "fields": {
+              "day": "3",
+              "start": "09:00",
+              "hours": "7.5",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "onsite",
+              "journeys": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "a25677db-75d6-45ad-96d6-3e44df270414",
+      "kind": "formula",
+      "name": "After tax value (pre-leave cash-out)",
+      "revision": 1,
+      "updatedAt": "2026-11-01T22:49:05.750Z",
+      "archived": false,
+      "fields": {
+        "expression": "[annual_cash_after_tax] + [annual_net_super_contributions] + [annual_personal_perk_value] - [annual_commuting_cost]",
+        "format": "money",
+        "direction": "higher"
+      },
+      "items": {}
+    },
+    {
+      "id": "a27f4f28-feb3-4ba7-8c35-7b2a8aa2f7ed",
+      "kind": "comparison",
+      "name": "ekg vs saw",
+      "revision": 1,
+      "updatedAt": "2026-11-01T22:49:05.750Z",
+      "archived": false,
+      "fields": {
+        "year": "2026-27",
+        "timeValue": "yes",
+        "baseline": "ca16da71-d7f6-4214-9b05-bdc3850d3979"
+      },
+      "items": {
+        "offers": [
+          {
+            "id": "c0f4d466-81f0-4460-9e7b-b68cc8219459",
+            "fields": { "offerId": "ca16da71-d7f6-4214-9b05-bdc3850d3979" }
+          },
+          {
+            "id": "47cc9da4-d820-445a-bb3d-ad51e915e901",
+            "fields": { "offerId": "3b34b3a9-4998-41e4-a362-772a874fffe1" }
+          },
+          {
+            "id": "1e3f24be-98df-4fd0-ab36-0600c74b250b",
+            "fields": { "offerId": "1cfe88d4-48ea-4f08-a7b9-1d77b0f9a63a" }
+          }
+        ],
+        "formulas": [
+          {
+            "id": "8cd88b26-6267-4db0-8831-9fcef4e48521",
+            "fields": { "formulaId": "a25677db-75d6-45ad-96d6-3e44df270414" }
+          },
+          {
+            "id": "ac8ca4f3-2495-4829-9e18-3178da682972",
+            "fields": { "formulaId": "0882baf7-7fa6-497d-b32c-72c850c90e5f" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca16da71-d7f6-4214-9b05-bdc3850d3979",
+      "kind": "offer",
+      "name": "ekg",
+      "revision": 1,
+      "updatedAt": "2026-11-01T22:49:05.750Z",
+      "archived": false,
+      "fields": {
+        "amount": "105000",
+        "inclusion": "includes",
+        "weeklyHours": "40",
+        "tripBasis": "",
+        "energyPrice": "2.40",
+        "consumption": "9.5",
+        "evenSuper": "yes",
+        "leaveOrdinaryHours": "40",
+        "leaveRateBasis": "salary",
+        "leaveLoadingBasis": "none"
+      },
+      "items": {
+        "earnings": [
+          {
+            "id": "bb8d2ba5-a083-4ea2-a65c-beca5d939ffa",
+            "fields": {
+              "included": "no",
+              "taxClass": "ordinary",
+              "eligible": "yes",
+              "label": "$10,000 annual salary",
+              "amount": "10000",
+              "inclusion": "includes",
+              "certainty": "guaranteed",
+              "recurrence": "recurring"
+            }
+          }
+        ],
+        "roster": [
+          {
+            "id": "weekday-2",
+            "fields": {
+              "day": "2",
+              "start": "09:00",
+              "hours": "8",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          },
+          {
+            "id": "weekday-3",
+            "fields": {
+              "day": "3",
+              "start": "09:00",
+              "hours": "8",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          },
+          {
+            "id": "weekday-4",
+            "fields": {
+              "day": "4",
+              "start": "09:00",
+              "hours": "8",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          },
+          {
+            "id": "weekday-5",
+            "fields": {
+              "day": "5",
+              "start": "09:00",
+              "hours": "8",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          },
+          {
+            "id": "weekday-1",
+            "fields": {
+              "day": "1",
+              "start": "09:00",
+              "hours": "8",
+              "breakStart": "12:30",
+              "breakMinutes": "30",
+              "place": "remote",
+              "journeys": "0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "preferences",
+      "kind": "preferences",
+      "name": "",
+      "revision": 6,
+      "updatedAt": "2026-11-01T22:49:39.989Z",
+      "archived": false,
+      "fields": {
+        "leaveRateBasis": "salary",
+        "estimateMode": "standard",
+        "sacrifice": "0",
+        "personalSuper": "0",
+        "periodPersonalSuper": "0",
+        "periodOtherDeductions": "0",
+        "reportableBenefitsOffer": "0",
+        "businessCosts": "0",
+        "businessDeductions": "0",
+        "contractorSuper": "0",
+        "contractorPersonalSuper": "0",
+        "unit": "annual",
+        "employment": "full-time",
+        "weeklyHours": "38",
+        "weeks": "52",
+        "payFrequency": "fortnightly",
+        "threshold": "yes",
+        "annualLeave": "4",
+        "superRate": "12",
+        "superLimit": "statutory",
+        "ordinaryFund": "yes",
+        "holidaysWorked": "no",
+        "tripBasis": "return",
+        "costMethod": "entered",
+        "maintenance": "0",
+        "tripCharges": "0",
+        "start": "09:00",
+        "breakStart": "12:30",
+        "breakMinutes": "30",
+        "place": "onsite",
+        "journeys": "1",
+        "appearance": "dark",
+        "year": "2026-27",
+        "inspectorPinned": "yes",
+        "pageWidth": "100",
+        "shortcutUndo": "Delete",
+        "fontSize": "14"
+      },
+      "items": {}
+    },
+    {
+      "id": "vehicle",
+      "kind": "vehicle",
+      "name": "",
+      "revision": 1,
+      "updatedAt": "2026-11-01T22:49:05.750Z",
+      "archived": false,
+      "fields": { "energy": "fuel", "energyPrice": "2.40", "consumption": "9.5" },
+      "items": {}
+    }
+  ]
+}
