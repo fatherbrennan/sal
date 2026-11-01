@@ -1,0 +1,27 @@
+[
+  {
+    "path": "tailwind",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "tailwind.attributes",
+    "state": "explicit",
+    "value": ["class", "className"]
+  },
+  {
+    "path": "tailwind.mergeFunctions",
+    "state": "explicit",
+    "value": ["clsx", "tw", "twMerge", "twJoin", "cn", "cc", "cnb", "ctl"]
+  },
+  {
+    "path": "tailwind.stylesheet",
+    "state": "excluded",
+    "reason": "Tailwind is not part of the approved styling stack; there is no Tailwind stylesheet."
+  },
+  {
+    "path": "tailwind.variantFunctions",
+    "state": "explicit",
+    "value": ["cva", "tv"]
+  }
+]

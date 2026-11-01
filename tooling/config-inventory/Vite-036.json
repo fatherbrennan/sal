@@ -1,0 +1,228 @@
+[
+  {
+    "path": "Vite.build.rolldownOptions.checks.shimmedExport",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1800,
+    "documentation": "Whether to emit warnings when a missing export is replaced with an undefined binding.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "config/bundler.ts:72"
+  },
+  {
+    "path": "Vite.build.rolldownOptions.devtools.sessionId",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4085,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Developer tools are explicitly disabled at the Vite level; no session is selected."
+  },
+  {
+    "path": "Vite.build.rolldownOptions.optimization.inlineConst",
+    "type": "boolean | { mode?: \"all\" | \"smart\" | undefined; pass?: number | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3577,
+    "documentation": "Inline imported constant values during bundling instead of preserving variable references.\n\nWhen enabled, constant values from imported modules will be inlined at their usage sites,\npotentially reducing bundle size and improving runtime performance by eliminating variable lookups.\n\n**Options:**\n- `true`: equivalent to `{ mode: 'all', pass: 1 }`, enabling constant inlining for all eligible constants with a single pass.\n- `false`: Disable constant inlining\n- `{ mode: 'smart' | 'all', pass?: number }`:\n  - `mode: 'smart'`: Only inline constants in specific scenarios where it is likely to reduce bundle size and improve performance.\n    Smart mode inlines constants in these specific scenarios:\n    1. `if (test) {} else {}` - condition expressions in if statements\n    2. `test ? a : b` - condition expressions in ternary operators\n    3. `test1 || test2` - logical OR expressions\n    4. `test1 && test2` - logical AND expressions\n    5. `test1 ?? test2` - nullish coalescing expressions\n - `mode: 'all'`: Inline all imported constants wherever they are used.\n - `pass`: Number of passes to perform for inlining constants.",
+    "tags": {
+      "example": "```js\n// Input files:\n// constants.js\nexport const API_URL = 'https://api.example.com';\n\n// main.js\nimport { API_URL } from './constants.js';\nconsole.log(API_URL);\n\n// With inlineConst: true, the bundled output becomes:\nconsole.log('https://api.example.com');\n\n// Instead of:\nconst API_URL = 'https://api.example.com';\nconsole.log(API_URL);\n```",
+      "default": "{ mode: 'smart', pass: 1 }"
+    },
+    "state": "explicit",
+    "value": "{ mode: \"smart\", pass: 1 }",
+    "location": "config/bundler.ts:43"
+  },
+  {
+    "path": "Vite.build.rolldownOptions.optimization.inlineConst.mode",
+    "type": "\"all\" | \"smart\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3578,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"smart\"",
+    "location": "config/bundler.ts:43"
+  },
+  {
+    "path": "Vite.build.rolldownOptions.optimization.inlineConst.pass",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3579,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "1",
+    "location": "config/bundler.ts:43"
+  },
+  {
+    "path": "Vite.build.rolldownOptions.optimization.pifeForModuleWrappers",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3590,
+    "documentation": "Use PIFE pattern for module wrappers.\n\nEnabling this option improves the start up performance of the generated bundle with the cost of a slight increase in bundle size.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "config/bundler.ts:44"
+  },
+  {
+    "path": "Vite.build.watch.skipWrite",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3439,
+    "documentation": "Whether to skip the {@linkcode RolldownBuild.writebundle.write()} step when a rebuild is triggered.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.buildDelay",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3457,
+    "documentation": "Configures how long Rolldown will wait for further changes until it triggers\na rebuild in milliseconds.\n\nEven if this value is set to 0, there's a small debounce timeout configured\nin the file system watcher. Setting this to a value greater than 0 will mean\nthat Rolldown will only trigger a rebuild if there was no change for the\nconfigured number of milliseconds. If several configurations are watched,\nRolldown will use the largest configured build delay.\n\nThis option is useful if you use a tool that regenerates multiple source files\nvery slowly. Rebuilding immediately after the first change could cause Rolldown\nto generate a broken intermediate build before generating a successful final\nbuild, which can be confusing and distracting.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.watcher",
+    "type": "WatcherFileWatcherOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3461,
+    "documentation": "File watcher options for configuring how file changes are detected.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.watcher.usePolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3397,
+    "documentation": "Whether to use polling-based file watching instead of native OS events.\n\nPolling is useful for environments where native FS events are unreliable,\nsuch as network mounts, Docker volumes, or WSL2.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.watcher.pollInterval",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3405,
+    "documentation": "Interval between each poll in milliseconds.\n\nThis option is only used when {@linkcode usePolling} is `true`.",
+    "tags": {
+      "default": "100"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.watcher.compareContentsForPolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3414,
+    "documentation": "Whether to compare file contents for poll-based watchers.\nWhen enabled, poll watchers will check file contents to determine if they actually changed.\n\nThis option is only used when {@linkcode usePolling} is `true`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.watcher.useDebounce",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3420,
+    "documentation": "Whether to use debounced event delivery at the filesystem level.\nThis coalesces rapid filesystem events before they reach the build coordinator.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.watcher.debounceDelay",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3426,
+    "documentation": "Debounce delay in milliseconds for fs-level debounced watchers.\nOnly used when {@linkcode useDebounce} is `true`.",
+    "tags": {
+      "default": "10"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.watcher.debounceTickRate",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3432,
+    "documentation": "Tick rate in milliseconds for the debouncer's internal polling.\nOnly used when {@linkcode useDebounce} is `true`.\nWhen undefined, auto-selects 1/4 of debounceDelay.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.include",
+    "type": "StringOrRegExp | StringOrRegExp[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3479,
+    "documentation": "Filter to limit the file-watching to certain files.\n\nStrings are treated as glob patterns.\nNote that this only filters the module graph but does not allow adding\nadditional watch files.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  watch: {\n    include: 'src/**',\n  },\n})\n```",
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.exclude",
+    "type": "StringOrRegExp | StringOrRegExp[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3495,
+    "documentation": "Filter to prevent files from being watched.\n\nStrings are treated as glob patterns.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  watch: {\n    exclude: 'node_modules/**',\n  },\n})\n```",
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.onInvalidate",
+    "type": "((id: string) => void) | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3509,
+    "documentation": "An optional function that will be called immediately every time\na module changes that is part of the build.\n\nThis is different from the {@linkcode Plugin.watchChangewatchChange} plugin hook, which is\nonly called once the running build has finished. This may for\ninstance be used to prevent additional steps from being performed\nif we know another build will be started anyway once the current\nbuild finished. This callback may be called multiple times per\nbuild as it tracks every change.",
+    "tags": {
+      "param": "id The id of the changed module."
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  },
+  {
+    "path": "Vite.build.watch.clearScreen",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3514,
+    "documentation": "Whether to clear the screen when a rebuild is triggered.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object options do not apply."
+  }
+]

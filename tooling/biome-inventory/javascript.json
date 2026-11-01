@@ -1,0 +1,162 @@
+[
+  {
+    "path": "javascript",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "javascript.assist",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "javascript.assist.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "javascript.experimentalEmbeddedSnippetsEnabled",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "javascript.formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "javascript.formatter.arrowParentheses",
+    "state": "explicit",
+    "value": "always"
+  },
+  {
+    "path": "javascript.formatter.attributePosition",
+    "state": "explicit",
+    "value": "auto"
+  },
+  {
+    "path": "javascript.formatter.bracketSameLine",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "javascript.formatter.bracketSpacing",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "javascript.formatter.delimiterSpacing",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "javascript.formatter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "javascript.formatter.expand",
+    "state": "explicit",
+    "value": "auto"
+  },
+  {
+    "path": "javascript.formatter.indentStyle",
+    "state": "explicit",
+    "value": "space"
+  },
+  {
+    "path": "javascript.formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "javascript.formatter.jsxQuoteStyle",
+    "state": "explicit",
+    "value": "double"
+  },
+  {
+    "path": "javascript.formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "javascript.formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "javascript.formatter.operatorLinebreak",
+    "state": "explicit",
+    "value": "after"
+  },
+  {
+    "path": "javascript.formatter.quoteProperties",
+    "state": "explicit",
+    "value": "asNeeded"
+  },
+  {
+    "path": "javascript.formatter.quoteStyle",
+    "state": "explicit",
+    "value": "double"
+  },
+  {
+    "path": "javascript.formatter.semicolons",
+    "state": "explicit",
+    "value": "always"
+  },
+  {
+    "path": "javascript.formatter.trailingCommas",
+    "state": "explicit",
+    "value": "all"
+  },
+  {
+    "path": "javascript.formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "javascript.globals",
+    "state": "explicit",
+    "value": []
+  },
+  {
+    "path": "javascript.jsxRuntime",
+    "state": "explicit",
+    "value": "transparent"
+  },
+  {
+    "path": "javascript.linter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "javascript.linter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "javascript.parser",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "javascript.parser.jsxEverywhere",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "javascript.parser.unsafeParameterDecoratorsEnabled",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "javascript.resolver",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "javascript.resolver.experimentalPnpmCatalogs",
+    "state": "explicit",
+    "value": false
+  }
+]

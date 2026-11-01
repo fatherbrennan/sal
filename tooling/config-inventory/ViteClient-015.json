@@ -1,0 +1,361 @@
+[
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1174,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is smaller than or equal to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1180,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is larger than or equal to this value.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].entriesAware",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1200,
+    "documentation": "When `false` (default), all matching modules are merged into a single chunk.\nEvery entry that uses any of these modules must load the entire chunk — even\nmodules it doesn't need.\n\nWhen `true`, matching modules are grouped by which entries actually import them.\nModules shared by the same set of entries go into the same chunk, while modules\nshared by a different set go into a separate chunk. This way, each entry only\nloads the code it actually uses.\n\nExample: entries A, B, C all match a `\"vendor\"` group.\n- `moduleX` is used by A, B, C\n- `moduleY` is used by A, B only\n\nWith `entriesAware: false` → one `vendor.js` chunk with both modules; C loads `moduleY` unnecessarily.\nWith `entriesAware: true`  → `vendor.js` (moduleX, loaded by all) + `vendor2.js` (moduleY, loaded by A and B only).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].entriesAwareMergeThreshold",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1210,
+    "documentation": "Size threshold in bytes for merging small `entriesAware` subgroups into the\nclosest neighboring subgroup.\n\nThis option only works when {@linkcode CodeSplittingGroup.entriesAwareentriesAware}\nis `true`. Set to `0` to disable subgroup merging.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1224,
+    "documentation": "Whether to include captured modules' dependencies.\n\nEnabling this option reduces the chance of generating circular chunks.\n\nIf you want to disable this behavior, it's recommended to both set\n- {@linkcode InputOptions.preserveEntrySignaturespreserveEntrySignatures}: `false | 'allow-extension'`\n- {@linkcode OutputOptions.strictExecutionOrderstrictExecutionOrder}: `true`\n\nto avoid generating invalid chunks.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].tags",
+    "type": "\"$initial\"[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1239,
+    "documentation": "Filter modules by tags. Only modules that have **all** specified tags\nare captured by this group. Combines with `test` and other filters —\na module must match all criteria.\n\nBuilt-in tags: `'$initial'` (module is statically imported by a user-defined entry or part of its dependency chain).",
+    "tags": {
+      "see": "{@link https://rolldown.rs/in-depth/manual-code-splitting Manual Code Splitting}",
+      "example": "```js\n{ name: 'initial-deps', tags: ['$initial'], maxSize: 1048576 }\n```"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.experimentalInlineCommonChunks",
+    "type": "ExperimentalInlineCommonChunksOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1353,
+    "documentation": "Replace small automatic common chunks with factory copies in their consumers.",
+    "tags": {
+      "experimental": "This feature is experimental. Its behavior and option shape may change in any release."
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.experimentalInlineCommonChunks.maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1306,
+    "documentation": "Common chunks whose pre-render size (the sum of the transformed source sizes of their modules,\nin bytes) is strictly smaller than this value are candidates for inlining.\nUse `Infinity` to remove the size limit.\n\nA value greater than `0` requires `output.format: 'es'`, an explicit\n`preserveEntrySignatures: false` and code splitting, and it turns on\n{@linkcode OutputOptions.strictExecutionOrderstrictExecutionOrder} when that option is\nomitted. `output.strictExecutionOrder: false` is an error, `output.preserveModules`,\n`experimental.devMode` and `experimental.onDemandWrapping` must be off.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.codeSplitting.experimentalInlineCommonChunks.exclude",
+    "type": "StringOrRegExp | CodeSplittingTestFunction | (StringOrRegExp | CodeSplittingTestFunction)[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1312,
+    "documentation": "A matcher for module ids, or an array of them: a string (matched as a regular expression), a\nRegExp, or a function, each applied like {@linkcode CodeSplittingGroup.testtest}. A common\nchunk is kept as a file when any of its modules matches any matcher.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 879,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 880,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 881,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 882,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 883,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 884,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups",
+    "type": "CodeSplittingGroup[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 885,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].debugName",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1040,
+    "documentation": "`debugName` gives this group a label in the bundler timing report.\n\nSet this option when `name` is a function. This option does not change the chunk name.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].name",
+    "type": "string | CodeSplittingNameFunction",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1099,
+    "documentation": "Name of the group. It will be also used as the name of the chunk and replace the `[name]` placeholder in the {@linkcode OutputOptions.chunkFileNamesoutput.chunkFileNames} option.\n\nFor example,\n\n```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: 'libs',\n          test: /node_modules/,\n        },\n      ],\n    },\n  },\n});\n```\nwill create a chunk named `libs-[hash].js` in the end.\n\nIt's ok to have the same name for different groups. Rolldown will deduplicate the chunk names if necessary.\n\n#### Dynamic `name()`\n\nIf `name` is a function, it will be called with the module id as the argument. The function should return a string or `null`. If it returns `null`, the module will be ignored by this group.\n\nNotice, each returned new name will be treated as a separate group.\n\nFor example,\n\n```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: (moduleId) => moduleId.includes('node_modules') ? 'libs' : 'app',\n          minSize: 100 * 1024,\n        },\n      ],\n    },\n  },\n});\n```\n\n:::warning\nConstraints like `minSize`, `maxSize`, etc. are applied separately for different names returned by the function.\n:::\n\n:::warning\nRolldown calls a function `name` once for each captured module, in a deterministic order. It calls `test` for every candidate module of the group first. Do not read a \"current module\" variable that `test` wrote, because that variable holds the last module `test` saw. Store such state under the module id instead.\n:::",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].test",
+    "type": "StringOrRegExp | CodeSplittingTestFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1118,
+    "documentation": "Controls which modules are captured in this group.\n\n- If `test` is a string, the module whose id contains the string will be captured.\n- If `test` is a regular expression, the module whose id matches the regular expression will be captured.\n- If `test` is a function, modules for which `test(id)` returns `true` will be captured.\n- If `test` is empty, any module will be considered as matched.\n\n:::warning\nWhen using regular expression, it's recommended to use `[\\\\/]` to match the path separator instead of `/` to avoid potential issues on Windows.\n- ✅ Recommended: `/node_modules[\\\\/]react/`\n- ❌ Not recommended: `/node_modules/react/`\n:::\n\n:::warning\nRolldown calls a function `test` once for each candidate module, in a deterministic order. It makes every `test` call of a group before it makes the first `name` call of that group. Rolldown processes the groups in the order that you declare them.\n:::",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].priority",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1150,
+    "documentation": "Priority of the group. Group with higher priority will be chosen first to match modules and create chunks. When converting the group to a chunk, modules of that group will be removed from other groups.\n\nIf two groups have the same priority, the group whose index is smaller will be chosen.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: 'react',\n          test: /node_modules[\\\\/]react/,\n          priority: 2,\n        },\n        {\n          name: 'other-libs',\n          test: /node_modules/,\n          priority: 1,\n        },\n      ],\n    },\n  },\n});\n```",
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1156,
+    "documentation": "Minimum size in bytes of the desired chunk. If the accumulated size of the captured modules by this group is smaller than this value, it will be ignored. Modules in this group will fall back to the `automatic chunking` if they are not captured by any other group.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1162,
+    "documentation": "Controls if a module should be captured based on how many entry chunks reference it.",
+    "tags": {
+      "default": "1"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1168,
+    "documentation": "If the accumulated size in bytes of the captured modules by this group is larger than this value, this group will be split into multiple groups that each has size close to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1174,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is smaller than or equal to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1180,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is larger than or equal to this value.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].entriesAware",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1200,
+    "documentation": "When `false` (default), all matching modules are merged into a single chunk.\nEvery entry that uses any of these modules must load the entire chunk — even\nmodules it doesn't need.\n\nWhen `true`, matching modules are grouped by which entries actually import them.\nModules shared by the same set of entries go into the same chunk, while modules\nshared by a different set go into a separate chunk. This way, each entry only\nloads the code it actually uses.\n\nExample: entries A, B, C all match a `\"vendor\"` group.\n- `moduleX` is used by A, B, C\n- `moduleY` is used by A, B only\n\nWith `entriesAware: false` → one `vendor.js` chunk with both modules; C loads `moduleY` unnecessarily.\nWith `entriesAware: true`  → `vendor.js` (moduleX, loaded by all) + `vendor2.js` (moduleY, loaded by A and B only).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].entriesAwareMergeThreshold",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1210,
+    "documentation": "Size threshold in bytes for merging small `entriesAware` subgroups into the\nclosest neighboring subgroup.\n\nThis option only works when {@linkcode CodeSplittingGroup.entriesAwareentriesAware}\nis `true`. Set to `0` to disable subgroup merging.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1224,
+    "documentation": "Whether to include captured modules' dependencies.\n\nEnabling this option reduces the chance of generating circular chunks.\n\nIf you want to disable this behavior, it's recommended to both set\n- {@linkcode InputOptions.preserveEntrySignaturespreserveEntrySignatures}: `false | 'allow-extension'`\n- {@linkcode OutputOptions.strictExecutionOrderstrictExecutionOrder}: `true`\n\nto avoid generating invalid chunks.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.advancedChunks.groups[].tags",
+    "type": "\"$initial\"[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1239,
+    "documentation": "Filter modules by tags. Only modules that have **all** specified tags\nare captured by this group. Combines with `test` and other filters —\na module must match all criteria.\n\nBuilt-in tags: `'$initial'` (module is statically imported by a user-defined entry or part of its dependency chain).",
+    "tags": {
+      "see": "{@link https://rolldown.rs/in-depth/manual-code-splitting Manual Code Splitting}",
+      "example": "```js\n{ name: 'initial-deps', tags: ['$initial'], maxSize: 1048576 }\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.comments.legal",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 356,
+    "documentation": "Comments that contain `@license`, `@preserve` or start with `//!` or `/*!`",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite derives annotation/legal/JSDoc retention from the selected minification and output mode."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.comments.annotation",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 360,
+    "documentation": "Comments that contain `@__PURE__`, `@__NO_SIDE_EFFECTS__` or `@vite-ignore`",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite derives annotation/legal/JSDoc retention from the selected minification and output mode."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output.comments.jsdoc",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 364,
+    "documentation": "JSDoc comments",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite derives annotation/legal/JSDoc retention from the selected minification and output mode."
+  }
+]

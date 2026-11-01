@@ -1,0 +1,66 @@
+const TAX_RULE_VERSION = "1";
+const TAX_SOURCES: ReadonlyMap<string, string> = new Map([
+  [
+    "T01",
+    "https://www.legislation.gov.au/C2004A03348/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T02",
+    "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T03",
+    "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_2/document_2.html",
+  ],
+  [
+    "T07",
+    "https://www.legislation.gov.au/C2026A00049/asmade/2026-06-26/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T08",
+    "https://www.legislation.gov.au/C2004A03351/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T09",
+    "https://www.legislation.gov.au/C2026A00058/asmade/2026-06-30/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  ["T10", "https://privatehealth.gov.au/health_insurance/surcharges_incentives/medicare_levy.htm"],
+  [
+    "T11",
+    "https://www.legislation.gov.au/C2004A00412/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T12",
+    "https://www.legislation.gov.au/C2004A01234/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T13",
+    "https://www.legislation.gov.au/C2026G00249/asmade/2026-04-20/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T22",
+    "https://www.legislation.gov.au/F2026L00716/asmade/2026-06-12/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T31",
+    "https://www.legislation.gov.au/F2026L00785/asmade/2026-06-23/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T33",
+    "https://www.legislation.gov.au/F2025L00647/asmade/2025-06-04/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T34",
+    "https://www.legislation.gov.au/F2025L01016/asmade/2025-09-01/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T36",
+    "https://www.legislation.gov.au/F2024L00697/asmade/2024-06-17/text/original/epub/OEBPS/document_1/document_1.html",
+  ],
+  [
+    "T53",
+    "https://caat-p-001.sitecorecontenthub.cloud/api/public/content/0-7350b1a9-c870-4d9b-b4dc-1506974b918e",
+  ],
+]);
+
+export { TAX_RULE_VERSION, TAX_SOURCES };

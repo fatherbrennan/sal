@@ -1,0 +1,101 @@
+[
+  {
+    "path": "TypeScript.useUnknownInCatchVariables",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7126,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.useUnknownInCatchVariables"
+  },
+  {
+    "path": "TypeScript.noUncheckedSideEffectImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7127,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noUncheckedSideEffectImports"
+  },
+  {
+    "path": "TypeScript.resolveJsonModule",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7128,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.resolveJsonModule"
+  },
+  {
+    "path": "TypeScript.types",
+    "type": "string[] | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7129,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "[\"$app/types\",\"svelte\"]",
+    "location": "tsconfig.json#compilerOptions.types"
+  },
+  {
+    "path": "TypeScript.typeRoots",
+    "type": "string[] | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7131,
+    "documentation": "Paths used to compute primary types search locations",
+    "tags": {},
+    "state": "explicit",
+    "value": "[\"./node_modules/@types\",\"./node_modules\"]",
+    "location": "tsconfig.json#compilerOptions.typeRoots"
+  },
+  {
+    "path": "TypeScript.verbatimModuleSyntax",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7132,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.verbatimModuleSyntax"
+  },
+  {
+    "path": "TypeScript.erasableSyntaxOnly",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7133,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.erasableSyntaxOnly"
+  },
+  {
+    "path": "TypeScript.esModuleInterop",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7134,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.esModuleInterop"
+  },
+  {
+    "path": "TypeScript.useDefineForClassFields",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7135,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.useDefineForClassFields"
+  }
+]

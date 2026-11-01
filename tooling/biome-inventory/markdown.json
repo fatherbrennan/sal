@@ -1,0 +1,87 @@
+[
+  {
+    "path": "markdown",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "markdown.analyzeEmbeds",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "markdown.formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "markdown.formatter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "markdown.formatter.formatEmbeds",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "markdown.formatter.indentStyle",
+    "state": "explicit",
+    "value": "space"
+  },
+  {
+    "path": "markdown.formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "markdown.formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "markdown.formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "markdown.formatter.proseWrap",
+    "state": "explicit",
+    "value": "preserve"
+  },
+  {
+    "path": "markdown.formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "markdown.linter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "markdown.linter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "markdown.parser",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "markdown.parser.cjkFriendlyEmphasis",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "markdown.parser.frontmatter",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "markdown.parser.gfm",
+    "state": "explicit",
+    "value": true
+  }
+]

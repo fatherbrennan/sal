@@ -1,0 +1,39 @@
+[
+  {
+    "path": "files",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "files.experimentalScannerIgnores",
+    "state": "excluded",
+    "reason": "Deprecated scanner ignore mechanism; force-ignore entries are explicit in files.includes."
+  },
+  {
+    "path": "files.ignoreUnknown",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "files.includes",
+    "state": "explicit",
+    "value": [
+      "**",
+      "!!**/.git",
+      "!!**/node_modules",
+      "!!**/.cache",
+      "!!**/.svelte-kit",
+      "!!**/build",
+      "!!**/coverage",
+      "!!**/test-results",
+      "!!**/playwright-report",
+      "!!**/backups",
+      "!!**/local-data"
+    ]
+  },
+  {
+    "path": "files.maxSize",
+    "state": "explicit",
+    "value": 1048576
+  }
+]

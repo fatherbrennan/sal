@@ -1,0 +1,62 @@
+[
+  {
+    "path": "TypeScriptWatch.watchFile",
+    "type": "WatchFileKind | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7139,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No TypeScript watch task is selected."
+  },
+  {
+    "path": "TypeScriptWatch.watchDirectory",
+    "type": "WatchDirectoryKind | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7140,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No TypeScript watch task is selected."
+  },
+  {
+    "path": "TypeScriptWatch.fallbackPolling",
+    "type": "PollingWatchKind | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7141,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No TypeScript watch task is selected."
+  },
+  {
+    "path": "TypeScriptWatch.synchronousWatchDirectory",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7142,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No TypeScript watch task is selected."
+  },
+  {
+    "path": "TypeScriptWatch.excludeDirectories",
+    "type": "string[] | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7143,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No TypeScript watch task is selected."
+  },
+  {
+    "path": "TypeScriptWatch.excludeFiles",
+    "type": "string[] | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7144,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No TypeScript watch task is selected."
+  }
+]

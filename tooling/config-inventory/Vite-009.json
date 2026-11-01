@@ -1,0 +1,1150 @@
+[
+  {
+    "path": "Vite.build.commonjsOptions.ignoreGlobal",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 125,
+    "documentation": "If true then uses of `global` won't be dealt with by this plugin",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.sourceMap",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 131,
+    "documentation": "If false, skips source map generation for CommonJS modules. This will\nimprove performance.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.ignoreDynamicRequires",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 143,
+    "documentation": "Some `require` calls cannot be resolved statically to be translated to\nimports.\nWhen this option is set to `false`, the generated code will either\ndirectly throw an error when such a call is encountered or, when\n`dynamicRequireTargets` is used, when such a call cannot be resolved with a\nconfigured dynamic require target.\nSetting this option to `true` will instead leave the `require` call in the\ncode or use it as a fallback for `dynamicRequireTargets`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.transformMixedEsModules",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 155,
+    "documentation": "Instructs the plugin whether to enable mixed module transformations. This\nis useful in scenarios with modules that contain a mix of ES `import`\nstatements and CommonJS `require` expressions. Set to `true` if `require`\ncalls should be transformed to imports in mixed modules, or `false` if the\n`require` expressions should survive the transformation. The latter can be\nimportant if the code contains environment detection, or you are coding\nfor an environment with special treatment for `require` calls such as\nElectronJS. See also the `ignore` option.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.strictRequires",
+    "type": "string | boolean | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 188,
+    "documentation": "By default, this plugin will try to hoist `require` statements as imports\nto the top of each file. While this works well for many code bases and\nallows for very efficient ESM output, it does not perfectly capture\nCommonJS semantics as the order of side effects like log statements may\nchange. But it is especially problematic when there are circular `require`\ncalls between CommonJS modules as those often rely on the lazy execution of\nnested `require` calls.\n\nSetting this option to `true` will wrap all CommonJS files in functions\nwhich are executed when they are required for the first time, preserving\nNodeJS semantics. Note that this can have an impact on the size and\nperformance of the generated code.\n\nThe default value of `\"auto\"` will only wrap CommonJS files when they are\npart of a CommonJS dependency cycle, e.g. an index file that is required by\nmany of its dependencies. All other CommonJS files are hoisted. This is the\nrecommended setting for most code bases.\n\n`false` will entirely prevent wrapping and hoist all files. This may still\nwork depending on the nature of cyclic dependencies but will often cause\nproblems.\n\nYou can also provide a minimatch pattern, or array of patterns, to only\nspecify a subset of files which should be wrapped in functions for proper\n`require` semantics.\n\n`\"debug\"` works like `\"auto\"` but after bundling, it will display a warning\ncontaining a list of ids that have been wrapped which can be used as\nminimatch pattern for fine-tuning.",
+    "tags": {
+      "default": "\"auto\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.ignore",
+    "type": "readonly string[] | ((id: string) => boolean) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 194,
+    "documentation": "Sometimes you have to leave require statements unconverted. Pass an array\ncontaining the IDs or a `id => boolean` function.",
+    "tags": {
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.ignoreTryCatch",
+    "type": "boolean | \"remove\" | readonly string[] | ((id: string) => boolean | \"remove\") | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 212,
+    "documentation": "In most cases, where `require` calls are inside a `try-catch` clause,\nthey should be left unconverted as it requires an optional dependency\nthat may or may not be installed beside the rolled up package.\nDue to the conversion of `require` to a static `import` - the call is\nhoisted to the top of the file, outside the `try-catch` clause.\n\n- `true`: Default. All `require` calls inside a `try` will be left unconverted.\n- `false`: All `require` calls inside a `try` will be converted as if the\n  `try-catch` clause is not there.\n- `remove`: Remove all `require` calls from inside any `try` block.\n- `string[]`: Pass an array containing the IDs to left unconverted.\n- `((id: string) => boolean|'remove')`: Pass a function that controls\n  individual IDs.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.esmExternals",
+    "type": "boolean | readonly string[] | ((id: string) => boolean) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 230,
+    "documentation": "Controls how to render imports from external dependencies. By default,\nthis plugin assumes that all external dependencies are CommonJS. This\nmeans they are rendered as default imports to be compatible with e.g.\nNodeJS where ES modules can only import a default export from a CommonJS\ndependency.\n\nIf you set `esmExternals` to `true`, this plugin assumes that all\nexternal dependencies are ES modules and respect the\n`requireReturnsDefault` option. If that option is not set, they will be\nrendered as namespace imports.\n\nYou can also supply an array of ids to be treated as ES modules, or a\nfunction that will be passed each external id to determine whether it is\nan ES module.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.requireReturnsDefault",
+    "type": "boolean | \"auto\" | \"namespace\" | \"preferred\" | ((id: string) => boolean | \"auto\" | \"namespace\" | \"preferred\") | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 281,
+    "documentation": "Controls what is returned when requiring an ES module from a CommonJS file.\nWhen using the `esmExternals` option, this will also apply to external\nmodules. By default, this plugin will render those imports as namespace\nimports i.e.\n\n```js\n// input\nconst foo = require('foo');\n\n// output\nimport * as foo from 'foo';\n```\n\nHowever, there are some situations where this may not be desired.\nFor these situations, you can change Rollup's behaviour either globally or\nper module. To change it globally, set the `requireReturnsDefault` option\nto one of the following values:\n\n- `false`: This is the default, requiring an ES module returns its\n  namespace. This is the only option that will also add a marker\n  `__esModule: true` to the namespace to support interop patterns in\n  CommonJS modules that are transpiled ES modules.\n- `\"namespace\"`: Like `false`, requiring an ES module returns its\n  namespace, but the plugin does not add the `__esModule` marker and thus\n  creates more efficient code. For external dependencies when using\n  `esmExternals: true`, no additional interop code is generated.\n- `\"auto\"`: This is complementary to how `output.exports: \"auto\"` works in\n  Rollup: If a module has a default export and no named exports, requiring\n  that module returns the default export. In all other cases, the namespace\n  is returned. For external dependencies when using `esmExternals: true`, a\n  corresponding interop helper is added.\n- `\"preferred\"`: If a module has a default export, requiring that module\n  always returns the default export, no matter whether additional named\n  exports exist. This is similar to how previous versions of this plugin\n  worked. Again for external dependencies when using `esmExternals: true`,\n  an interop helper is added.\n- `true`: This will always try to return the default export on require\n  without checking if it actually exists. This can throw at build time if\n  there is no default export. This is how external dependencies are handled\n  when `esmExternals` is not used. The advantage over the other options is\n  that, like `false`, this does not add an interop helper for external\n  dependencies, keeping the code lean.\n\nTo change this for individual modules, you can supply a function for\n`requireReturnsDefault` instead. This function will then be called once for\neach required ES module or external dependency with the corresponding id\nand allows you to return different values for different modules.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.defaultIsModuleExports",
+    "type": "boolean | \"auto\" | ((id: string) => boolean | \"auto\") | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 285,
+    "documentation": "",
+    "tags": {
+      "default": "\"auto\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.dynamicRequireTargets",
+    "type": "string | readonly string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 299,
+    "documentation": "Some modules contain dynamic `require` calls, or require modules that\ncontain circular dependencies, which are not handled well by static\nimports. Including those modules as `dynamicRequireTargets` will simulate a\nCommonJS (NodeJS-like) environment for them with support for dynamic\ndependencies. It also enables `strictRequires` for those modules.\n\nNote: In extreme cases, this feature may result in some paths being\nrendered as absolute in the final bundle. The plugin tries to avoid\nexposing paths from the local machine, but if you are `dynamicRequirePaths`\nwith paths that are far away from your project's folder, that may require\nreplacing strings like `\"/Users/John/Desktop/foo-project/\"` -\\> `\"/\"`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.dynamicRequireRoot",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 306,
+    "documentation": "To avoid long paths when using the `dynamicRequireTargets` option, you can use this option to specify a directory\nthat is a common parent for all files that use dynamic require statements. Using a directory higher up such as `/`\nmay lead to unnecessarily long paths in the generated code and may expose directory names on your machine like your\nhome directory name. By default, it uses the current working directory.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.dynamicImportVarsOptions",
+    "type": "RollupDynamicImportVarsOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2921,
+    "documentation": "Options to pass on to `@rollup/plugin-dynamic-import-vars`",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ include: [], exclude: [nodeModules] }",
+    "location": "vite.config.ts:129"
+  },
+  {
+    "path": "Vite.build.dynamicImportVarsOptions.include",
+    "type": "string | RegExp | (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 315,
+    "documentation": "Files to include in this plugin (default all).",
+    "tags": {
+      "default": "[]"
+    },
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:129"
+  },
+  {
+    "path": "Vite.build.dynamicImportVarsOptions.exclude",
+    "type": "string | RegExp | (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 320,
+    "documentation": "Files to exclude in this plugin (default none).",
+    "tags": {
+      "default": "[]"
+    },
+    "state": "explicit",
+    "value": "[nodeModules]",
+    "location": "vite.config.ts:129"
+  },
+  {
+    "path": "Vite.build.dynamicImportVarsOptions.warnOnError",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 324,
+    "documentation": "",
+    "tags": {
+      "deprecated": "This option is no-op and will be removed in future versions."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.write",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2926,
+    "documentation": "Whether to write bundle to disk",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:138"
+  },
+  {
+    "path": "Vite.build.emptyOutDir",
+    "type": "boolean | null | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2931,
+    "documentation": "Empty outDir on write.",
+    "tags": {
+      "default": "true when outDir is a sub directory of project root"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit enforced_config owns clearing its generated output."
+  },
+  {
+    "path": "Vite.build.copyPublicDir",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2936,
+    "documentation": "Copy the public directory to outDir on write.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:139"
+  },
+  {
+    "path": "Vite.build.license",
+    "type": "boolean | LicenseOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2942,
+    "documentation": "Whether to emit a `.vite/license.md` file that includes all bundled dependencies'\nlicenses. Pass an object to customize the output file name.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:140"
+  },
+  {
+    "path": "Vite.build.license.fileName",
+    "type": "string",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2782,
+    "documentation": "The output file name of the license file relative to the output directory.\nSpecify a path that ends with `.json` to output the raw JSON metadata.",
+    "tags": {
+      "default": "'.vite/license.md'"
+    },
+    "state": "excluded",
+    "reason": "License report generation is explicitly disabled; report-output object options do not apply."
+  },
+  {
+    "path": "Vite.build.manifest",
+    "type": "string | boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2962,
+    "documentation": "Whether to emit a .vite/manifest.json in the output dir to map hash-less filenames\nto their hashed versions. Useful when you want to generate your own HTML\ninstead of using the one generated by Vite.\n\nExample:\n\n```json\n{\n  \"main.js\": {\n    \"file\": \"main.68fe3fad.js\",\n    \"css\": \"main.e6b63442.css\",\n    \"imports\": [...],\n    \"dynamicImports\": [...]\n  }\n}\n```",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit enforced_config owns the build manifest."
+  },
+  {
+    "path": "Vite.build.lib",
+    "type": "false | LibraryOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2969,
+    "documentation": "Build in library mode. The value should be the global name of the lib in\nUMD mode. This will produce esm + cjs + umd bundle formats with default\nconfigurations that are suitable for distributing libraries.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit uses this internal build shape and enforces entries/formats; sal is not a published library."
+  },
+  {
+    "path": "Vite.build.lib.entry",
+    "type": "InputOption | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3020,
+    "documentation": "Path of library entry.\nDefaults to the top-level `input` option when omitted.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit uses this internal build shape and enforces entries/formats; sal is not a published library."
+  },
+  {
+    "path": "Vite.build.lib.name",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3025,
+    "documentation": "The name of the exposed global variable. Required when the `formats` option includes\n`umd` or `iife`",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit uses this internal build shape and enforces entries/formats; sal is not a published library."
+  },
+  {
+    "path": "Vite.build.lib.formats",
+    "type": "LibraryFormats[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3032,
+    "documentation": "Output bundle formats. Defaults to `['es', 'umd']` for a single entry, or\n`['es', 'cjs']` for multiple entries (`umd` and `iife` do not support\nmultiple entries).",
+    "tags": {
+      "default": "['es', 'umd']"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit uses this internal build shape and enforces entries/formats; sal is not a published library."
+  },
+  {
+    "path": "Vite.build.lib.fileName",
+    "type": "string | ((format: ModuleFormat, entryName: string) => string) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3038,
+    "documentation": "The name of the package file output. The default file name is the name option\nof the project package.json. It can also be defined as a function taking the\nformat as an argument.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit uses this internal build shape and enforces entries/formats; sal is not a published library."
+  },
+  {
+    "path": "Vite.build.lib.cssFileName",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3044,
+    "documentation": "The name of the CSS file output if the library imports CSS. Defaults to the\nsame value as `build.lib.fileName` if it's set a string, otherwise it falls\nback to the name option of the project package.json.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit uses this internal build shape and enforces entries/formats; sal is not a published library."
+  },
+  {
+    "path": "Vite.build.ssr",
+    "type": "string | boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2975,
+    "documentation": "Produce SSR oriented build. Note this requires specifying SSR entry via\n`rolldownOptions.input`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit requires its build-time SSR phase even when route SSR is disabled; the framework selects the environment."
+  },
+  {
+    "path": "Vite.build.ssrManifest",
+    "type": "string | boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2981,
+    "documentation": "Generate SSR manifest for determining style links and asset preload\ndirectives in production.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:130"
+  },
+  {
+    "path": "Vite.build.ssrEmitAssets",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2986,
+    "documentation": "Emit assets during SSR.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:131"
+  },
+  {
+    "path": "Vite.build.emitAssets",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2991,
+    "documentation": "Emit assets during build. Frameworks can set environments.ssr.build.emitAssets\nBy default, it is true for the client and false for other environments.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server defaults differ."
+  },
+  {
+    "path": "Vite.build.reportCompressedSize",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2997,
+    "documentation": "Set to false to disable reporting compressed chunk sizes.\nCan slightly improve build speed.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:141"
+  },
+  {
+    "path": "Vite.build.chunkSizeWarningLimit",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3002,
+    "documentation": "Adjust chunk size warning limit (in kB).",
+    "tags": {
+      "default": "500"
+    },
+    "state": "explicit",
+    "value": "500",
+    "location": "vite.config.ts:142"
+  },
+  {
+    "path": "Vite.build.watch",
+    "type": "WatcherOptions | null | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3008,
+    "documentation": "Rollup watch options\nhttps://rollupjs.org/configuration-options/#watch",
+    "tags": {
+      "default": "null"
+    },
+    "state": "explicit",
+    "value": "null",
+    "location": "vite.config.ts:143"
+  },
+  {
+    "path": "Vite.build.createEnvironment",
+    "type": "((name: string, config: ResolvedConfig) => BuildEnvironment | Promise<BuildEnvironment>) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3012,
+    "documentation": "create the Build Environment instance",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit/Vite own their build environment factories; no custom implementation selected."
+  },
+  {
+    "path": "Vite.input",
+    "type": "InputOption | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3419,
+    "documentation": "Entry points of the application.\n\nPaths are resolved relative to the project root.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit owns the environment entry points."
+  },
+  {
+    "path": "Vite.define",
+    "type": "Record<string, any> | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3424,
+    "documentation": "Define global variable replacements.\nEntries will be defined on `window` during dev and replaced during build.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{}",
+    "location": "vite.config.ts:87"
+  },
+  {
+    "path": "Vite.isBundled",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3453,
+    "documentation": "Whether this environment produces a bundled output.\n\nDuring `build`, this defaults to `true` for every environment.\nDuring `serve`, this defaults to `true` only for the client environment\nwhen `experimental.bundledDev` is enabled, and `false` otherwise.\nSetting this explicitly on an environment always overrides the default.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Explicitly configured per environment and command; bundledDev remains disabled."
+  },
+  {
+    "path": "Vite.resolve",
+    "type": "AllResolveOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3479,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    externalConditions: [\"node\", \"module-sync\"],\n    extensions: [\".mjs\", \".js\", \".mts\", \".ts\", \".jsx\", \".tsx\", \".json\"],\n    dedupe: [],\n    noExternal: [],\n    external: [],\n    preserveSymlinks: false,\n    tsconfigPaths: false,\n  }",
+    "location": "vite.config.ts:99"
+  },
+  {
+    "path": "Vite.resolve.preserveSymlinks",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2721,
+    "documentation": "",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:105"
+  },
+  {
+    "path": "Vite.resolve.tsconfigPaths",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2727,
+    "documentation": "Enable tsconfig paths resolution",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:106"
+  },
+  {
+    "path": "Vite.resolve.mainFields",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2692,
+    "documentation": "",
+    "tags": {
+      "default": "['browser', 'module', 'jsnext:main', 'jsnext']"
+    },
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server resolution priorities differ."
+  },
+  {
+    "path": "Vite.resolve.conditions",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2693,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server conditions differ."
+  },
+  {
+    "path": "Vite.resolve.externalConditions",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2694,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "[\"node\", \"module-sync\"]",
+    "location": "vite.config.ts:100"
+  },
+  {
+    "path": "Vite.resolve.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2698,
+    "documentation": "",
+    "tags": {
+      "default": "['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']"
+    },
+    "state": "explicit",
+    "value": "[\".mjs\", \".js\", \".mts\", \".ts\", \".jsx\", \".tsx\", \".json\"]",
+    "location": "vite.config.ts:101"
+  },
+  {
+    "path": "Vite.resolve.dedupe",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2699,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:102"
+  },
+  {
+    "path": "Vite.resolve.noExternal",
+    "type": "string | true | RegExp | (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2705,
+    "documentation": "Prevent listed dependencies from being externalized and will get bundled in build.\nOnly works in server environments for now. Previously this was `ssr.noExternal`.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:103"
+  },
+  {
+    "path": "Vite.resolve.external",
+    "type": "true | string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2711,
+    "documentation": "Externalize the given dependencies and their transitive dependencies.\nOnly works in server environments for now. Previously this was `ssr.external`.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:104"
+  },
+  {
+    "path": "Vite.resolve.builtins",
+    "type": "(string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2715,
+    "documentation": "Array of strings or regular expressions that indicate what modules are builtin for the environment.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly configured per environment; browser builtins are empty and server builtins derive from the Bun runtime."
+  },
+  {
+    "path": "Vite.resolve.alias",
+    "type": "AliasOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3411,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Framework aliases are injected by SvelteKit; no custom application aliases selected."
+  },
+  {
+    "path": "Vite.resolve.alias[].find",
+    "type": "string | RegExp",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 37,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Framework aliases are injected by SvelteKit; no custom application aliases selected."
+  },
+  {
+    "path": "Vite.resolve.alias[].replacement",
+    "type": "string",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 38,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Framework aliases are injected by SvelteKit; no custom application aliases selected."
+  },
+  {
+    "path": "Vite.resolve.alias[].customResolver",
+    "type": "((this: PluginContext, source: string, importer: string | undefined, extraOptions: ResolveIdExtraOptions) => ResolveIdResult) | ResolverObject | null | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 45,
+    "documentation": "Instructs the plugin to use an alternative resolving algorithm,\nrather than the Rollup's resolver.",
+    "tags": {
+      "default": "null",
+      "deprecated": "Use a custom plugin with resolveId hook and `enforce: 'pre'` instead"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use a custom plugin with resolveId hook and `enforce: 'pre'` instead"
+  },
+  {
+    "path": "Vite.resolve.alias[].customResolver.buildStart",
+    "type": "((this: PluginContext, options: NormalizedInputOptions) => void) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 50,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use a custom plugin with resolveId hook and `enforce: 'pre'` instead"
+  },
+  {
+    "path": "Vite.resolve.alias[].customResolver.resolveId",
+    "type": "(this: PluginContext, source: string, importer: string | undefined, extraOptions: ResolveIdExtraOptions) => ResolveIdResult",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 51,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use a custom plugin with resolveId hook and `enforce: 'pre'` instead"
+  },
+  {
+    "path": "Vite.css.preprocessorOptions.sass.additionalData",
+    "type": "PreprocessorAdditionalData | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3229,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No Sass, Less, Stylus or other CSS preprocessors are installed or approved."
+  },
+  {
+    "path": "Vite.css.preprocessorOptions.stylus.additionalData",
+    "type": "PreprocessorAdditionalData | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3235,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No Sass, Less, Stylus or other CSS preprocessors are installed or approved."
+  },
+  {
+    "path": "Vite.css.preprocessorOptions.stylus.define",
+    "type": "Record<string, any> | undefined",
+    "source": "node_modules/vite/types/internal/cssPreprocessorOptions.d.ts",
+    "line": 37,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No Sass, Less, Stylus or other CSS preprocessors are installed or approved."
+  },
+  {
+    "path": "Vite.css.postcss.stringifier.parse",
+    "type": "Parser<Document_ | Root_> | undefined",
+    "source": "node_modules/postcss/lib/postcss.d.ts",
+    "line": 253,
+    "documentation": "Function to generate AST by string.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom PostCSS stringifier is selected."
+  },
+  {
+    "path": "Vite.css.postcss.stringifier.stringify",
+    "type": "Stringifier | undefined",
+    "source": "node_modules/postcss/lib/postcss.d.ts",
+    "line": 258,
+    "documentation": "Class to generate string by AST.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom PostCSS stringifier is selected."
+  },
+  {
+    "path": "Vite.css.postcss.syntax.parse",
+    "type": "Parser<Document_ | Root_> | undefined",
+    "source": "node_modules/postcss/lib/postcss.d.ts",
+    "line": 253,
+    "documentation": "Function to generate AST by string.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom PostCSS syntax is selected."
+  },
+  {
+    "path": "Vite.css.postcss.syntax.stringify",
+    "type": "Stringifier | undefined",
+    "source": "node_modules/postcss/lib/postcss.d.ts",
+    "line": 258,
+    "documentation": "Class to generate string by AST.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom PostCSS syntax is selected."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.RuleExit.unknown",
+    "type": "UnknownVisitors<UnknownAtRule> | Omit<RuleVisitor<UnknownAtRule>, keyof CallableFunction> | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 115,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.RuleExit.custom",
+    "type": "CustomVisitors<CustomAtRules> | Omit<RuleVisitor<CustomAtRule<string, CustomAtRuleDefinition>>, keyof CallableFunction> | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 116,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.DeclarationExit.custom",
+    "type": "CustomPropertyVisitors | DeclarationVisitor<CustomProperty> | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 163,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.preview.https.IncomingMessage",
+    "type": "typeof IncomingMessage | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 206,
+    "documentation": "Specifies the `IncomingMessage` class to be used. Useful for extending the original `IncomingMessage`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.ServerResponse",
+    "type": "typeof ServerResponse | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 210,
+    "documentation": "Specifies the `ServerResponse` class to be used. Useful for extending the original `ServerResponse`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.requestTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 217,
+    "documentation": "Sets the timeout value in milliseconds for receiving the entire request from the client.",
+    "tags": {
+      "see": "Server.requestTimeout for more information.",
+      "default": "300000",
+      "since": "v18.0.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.joinDuplicateHeaders",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 223,
+    "documentation": "It joins the field line values of multiple headers in a request with `, ` instead of discarding the duplicates.",
+    "tags": {
+      "default": "false",
+      "since": "v18.14.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.keepAliveTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 231,
+    "documentation": "The number of milliseconds of inactivity a server needs to wait for additional incoming data,\nafter it has finished writing the last response, before a socket will be destroyed.",
+    "tags": {
+      "see": "Server.keepAliveTimeout for more information.",
+      "default": "65000",
+      "since": "v18.0.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.keepAliveTimeoutBuffer",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 238,
+    "documentation": "An additional buffer time added to the\n`server.keepAliveTimeout` to extend the internal socket timeout.",
+    "tags": {
+      "since": "24.6.0",
+      "default": "1000"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.connectionsCheckingInterval",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 243,
+    "documentation": "Sets the interval value in milliseconds to check for request and headers timeout in incomplete requests.",
+    "tags": {
+      "default": "30000"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.headersTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 250,
+    "documentation": "Sets the timeout value in milliseconds for receiving the complete HTTP headers from the client.\nSee {@link Server.headersTimeout} for more information.",
+    "tags": {
+      "default": "60000",
+      "since": "18.0.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.highWaterMark",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 257,
+    "documentation": "Optionally overrides all `socket`s' `readableHighWaterMark` and `writableHighWaterMark`.\nThis affects `highWaterMark` property of both `IncomingMessage` and `ServerResponse`.\nDefault:",
+    "tags": {
+      "see": "stream.getDefaultHighWaterMark ().",
+      "since": "v20.1.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.httpValidation",
+    "type": "\"strict\" | \"relaxed\" | \"insecure\" | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 272,
+    "documentation": "Controls HTTP header value validation strictness\nfor incoming requests. Accepted values are:\n* `'strict'`: Strictest validation; rejects any non-ASCII or control\n  characters in header values.\n* `'relaxed'`: Allows a limited set of non-ASCII characters in header\n  values, aligning with the\n  [Fetch specification](https://fetch.spec.whatwg.org/).\n* `'insecure'`: Disables all header value validation (equivalent to\n  `insecureHTTPParser: true`).\n\nCannot be used together with `insecureHTTPParser`. **Default:** `'strict'`.",
+    "tags": {
+      "since": "v26.3.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.insecureHTTPParser",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 279,
+    "documentation": "Use an insecure HTTP parser that accepts invalid HTTP headers when `true`.\nUsing the insecure parser should be avoided.\nSee --insecure-http-parser for more information.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.maxHeaderSize",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 286,
+    "documentation": "Optionally overrides the value of `--max-http-header-size` for requests received by\nthis server, i.e. the maximum length of request headers in bytes.",
+    "tags": {
+      "default": "16384",
+      "since": "v13.3.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.noDelay",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 292,
+    "documentation": "If set to `true`, it disables the use of Nagle's algorithm immediately after a new incoming connection is received.",
+    "tags": {
+      "default": "true",
+      "since": "v16.5.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.requireHostHeader",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 299,
+    "documentation": "If set to `true`, it forces the server to respond with a 400 (Bad Request) status code\nto any HTTP/1.1 request message that lacks a Host header (as mandated by the specification).",
+    "tags": {
+      "default": "true",
+      "since": "20.0.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.keepAlive",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 306,
+    "documentation": "If set to `true`, it enables keep-alive functionality on the socket immediately after a new incoming connection is received,\nsimilarly on what is done in `socket.setKeepAlive()`.",
+    "tags": {
+      "default": "false",
+      "since": "v16.5.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.keepAliveInitialDelay",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 312,
+    "documentation": "If set to a positive number, it sets the initial delay before the first keepalive probe is sent on an idle socket.",
+    "tags": {
+      "default": "0",
+      "since": "v16.5.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.uniqueHeaders",
+    "type": "(string | string[])[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 317,
+    "documentation": "A list of response headers that should be sent only once.\nIf the header's value is an array, the items will be joined using `; `.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.shouldUpgradeCallback",
+    "type": "((request: IncomingMessage) => boolean) | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 328,
+    "documentation": "A callback which receives an\nincoming request and returns a boolean, to control which upgrade attempts\nshould be accepted. Accepted upgrades will fire an `'upgrade'` event (or\ntheir sockets will be destroyed, if no listener is registered) while\nrejected upgrades will fire a `'request'` event like any non-upgrade\nrequest.",
+    "tags": {
+      "since": "v24.9.0",
+      "default": "() => server.listenerCount('upgrade') > 0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.rejectNonStandardBodyWrites",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 334,
+    "documentation": "If set to `true`, an error is thrown when writing to an HTTP response which does not have a body.",
+    "tags": {
+      "default": "false",
+      "since": "v18.17.0, v20.2.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.optimizeEmptyRequests",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 343,
+    "documentation": "If set to `true`, requests without `Content-Length`\nor `Transfer-Encoding` headers (indicating no body) will be initialized with an\nalready-ended body stream, so they will never emit any stream events\n(like `'data'` or `'end'`). You can use `req.readableEnded` to detect this case.",
+    "tags": {
+      "since": "v25.1.0",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.handshakeTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 590,
+    "documentation": "Abort the connection if the SSL/TLS handshake does not finish in the\nspecified number of milliseconds. A 'tlsClientError' is emitted on\nthe tls.Server object whenever a handshake times out. Default:\n120000 (120 seconds).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.sessionTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 596,
+    "documentation": "The number of seconds after which a TLS session created by the\nserver will no longer be resumable. See Session Resumption for more\ninformation. Default: 300.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.ticketKeys",
+    "type": "Buffer<ArrayBufferLike> | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 600,
+    "documentation": "48-bytes of cryptographically strong pseudo-random data.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.pskCallback",
+    "type": "((socket: TLSSocket, identity: string) => ArrayBufferView<ArrayBufferLike> | null) | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 619,
+    "documentation": "",
+    "tags": {
+      "param": "identity identity parameter sent from the client.",
+      "return": "pre-shared key that must either be\na buffer or `null` to stop the negotiation process. Returned PSK must be\ncompatible with the selected cipher's digest.\n\nWhen negotiating TLS-PSK (pre-shared keys), this function is called\nwith the identity provided by the client.\nIf the return value is `null` the negotiation process will stop and an\n\"unknown_psk_identity\" alert message will be sent to the other party.\nIf the server wishes to hide the fact that the PSK identity was not known,\nthe callback must provide some random data as `psk` to make the connection\nfail with \"decrypt_error\" before negotiation is finished.\nPSK ciphers are disabled by default, and using TLS-PSK thus\nrequires explicitly specifying a cipher suite with the `ciphers` option.\nMore information can be found in the RFC 4279."
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.pskIdentityHint",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 626,
+    "documentation": "hint to send to a client to help\nwith selecting the identity during TLS-PSK negotiation. Will be ignored\nin TLS 1.3. Upon failing to set pskIdentityHint `tlsClientError` will be\nemitted with `ERR_TLS_PSK_SET_IDENTIY_HINT_FAILED` code.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.ALPNCallback",
+    "type": "((arg: { servername: string; protocols: string[]; }) => string | undefined) | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 773,
+    "documentation": "If set, this will be called when a client opens a connection using the ALPN extension.\nOne argument will be passed to the callback: an object containing `servername` and `protocols` fields,\nrespectively containing the server name from the SNI extension (if any) and an array of\nALPN protocol name strings. The callback must return either one of the strings listed in `protocols`,\nwhich will be returned to the client as the selected ALPN protocol, or `undefined`,\nto reject the connection with a fatal alert. If a string is returned that does not match one of\nthe client's ALPN protocols, an error will be thrown.\nThis option cannot be used with the `ALPNProtocols` option, and setting both options will throw an error.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.allowPartialTrustChain",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 779,
+    "documentation": "Treat intermediate (non-self-signed)\ncertificates in the trust CA certificate list as trusted.",
+    "tags": {
+      "since": "v22.9.0, v20.18.0"
+    },
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.ca",
+    "type": "string | Buffer<ArrayBufferLike> | (string | Buffer<ArrayBufferLike>)[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 785,
+    "documentation": "Optionally override the trusted CA certificates. Default is to trust\nthe well-known CAs curated by Mozilla. Mozilla's CAs are completely\nreplaced when CAs are explicitly specified using this option.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.cert",
+    "type": "string | Buffer<ArrayBufferLike> | (string | Buffer<ArrayBufferLike>)[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 797,
+    "documentation": "Cert chains in PEM format. One cert chain should be provided per\nprivate key. Each cert chain should consist of the PEM formatted\ncertificate for a provided private key, followed by the PEM\nformatted intermediate certificates (if any), in order, and not\nincluding the root CA (the root CA must be pre-known to the peer,\nsee ca). When providing multiple cert chains, they do not have to\nbe in the same order as their private keys in key. If the\nintermediate certificates are not provided, the peer will not be\nable to validate the certificate, and the handshake will fail.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.certificateCompression",
+    "type": "readonly CertificateCompressionAlgorithm[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 806,
+    "documentation": "An array of supported certificate\ncompression algorithm names, in preference order. Supported values are\n`'zlib'`, `'brotli'`, and `'zstd'`. When set, enables TLS certificate\ncompression ([RFC 8879](https://tools.ietf.org/html/rfc8879)) which compresses certificates during the TLS\nhandshake, reducing handshake size. Only effective with TLSv1.3.\n**Default:** `[]` (disabled).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.sigalgs",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 813,
+    "documentation": "Colon-separated list of supported signature algorithms. The list\ncan contain digest algorithms (SHA256, MD5 etc.), public key\nalgorithms (RSA-PSS, ECDSA etc.), combination of both (e.g\n'RSA+SHA384') or TLS v1.3 scheme names (e.g. rsa_pss_pss_sha512).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.ciphers",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 820,
+    "documentation": "Cipher suite specification, replacing the default. For more\ninformation, see modifying the default cipher suite. Permitted\nciphers can be obtained via tls.getCiphers(). Cipher names must be\nuppercased in order for OpenSSL to accept them.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.preview.https.clientCertEngine",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 825,
+    "documentation": "Name of an OpenSSL engine which can provide the client certificate.",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "Vite.preview.https.crl",
+    "type": "string | Buffer<ArrayBufferLike> | (string | Buffer<ArrayBufferLike>)[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 829,
+    "documentation": "PEM formatted CRLs (Certificate Revocation Lists).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected."
+  }
+]

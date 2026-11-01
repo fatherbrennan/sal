@@ -1,0 +1,1120 @@
+[
+  {
+    "path": "Vite.css.lightningcss.visitor.Ratio",
+    "type": "((ratio: Ratio) => void | Ratio) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 197,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.Resolution",
+    "type": "((resolution: Resolution) => void | Resolution) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 198,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.Time",
+    "type": "((time: Time) => void | Time) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 199,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.CustomIdent",
+    "type": "((ident: string) => string | void) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 200,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.DashedIdent",
+    "type": "((ident: string) => string | void) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 201,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.MediaQuery",
+    "type": "((query: MediaQuery) => void | ReturnedMediaQuery | ReturnedMediaQuery[]) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 202,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.MediaQueryExit",
+    "type": "((query: MediaQuery) => void | ReturnedMediaQuery | ReturnedMediaQuery[]) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 203,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.SupportsCondition",
+    "type": "((condition: SupportsCondition) => SupportsCondition) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 204,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.SupportsConditionExit",
+    "type": "((condition: SupportsCondition) => SupportsCondition) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 205,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.Selector",
+    "type": "((selector: Selector) => void | Selector | Selector[]) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 206,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.Token",
+    "type": "TokenVisitor | TokenVisitors | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 207,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.Function",
+    "type": "FunctionVisitor | { [name: string]: FunctionVisitor; } | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 208,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.FunctionExit",
+    "type": "FunctionVisitor | { [name: string]: FunctionVisitor; } | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 209,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.Variable",
+    "type": "((variable: Variable) => TokenReturnValue) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 210,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.VariableExit",
+    "type": "((variable: Variable) => TokenReturnValue) | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 211,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.EnvironmentVariable",
+    "type": "EnvironmentVariableVisitor | EnvironmentVariableVisitors | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 212,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.visitor.EnvironmentVariableExit",
+    "type": "EnvironmentVariableVisitor | EnvironmentVariableVisitors | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 213,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.css.lightningcss.customAtRules",
+    "type": "CustomAtRules | undefined",
+    "source": "node_modules/lightningcss/node/index.d.ts",
+    "line": 73,
+    "documentation": "Defines how to parse custom CSS at-rules. Each at-rule can have a prelude, defined using a CSS\n[syntax string](https://drafts.css-houdini.org/css-properties-values-api/#syntax-strings), and\na block body. The body can be a declaration list, rule list, or style block as defined in the\n[css spec](https://drafts.csswg.org/css-syntax/#declaration-rule-list).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply."
+  },
+  {
+    "path": "Vite.json",
+    "type": "JsonOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3537,
+    "documentation": "JSON loading options",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ namedExports: true, stringify: \"auto\" }",
+    "location": "vite.config.ts:98"
+  },
+  {
+    "path": "Vite.json.namedExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3259,
+    "documentation": "Generate a named export for every property of the JSON object",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:98"
+  },
+  {
+    "path": "Vite.json.stringify",
+    "type": "boolean | \"auto\" | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3266,
+    "documentation": "Generate performant output as JSON.parse(\"stringified\").\n\nWhen set to 'auto', the data will be stringified only if the data is bigger than 10kB.",
+    "tags": {
+      "default": "'auto'"
+    },
+    "state": "explicit",
+    "value": "\"auto\"",
+    "location": "vite.config.ts:98"
+  },
+  {
+    "path": "Vite.esbuild",
+    "type": "false | ESBuildOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3544,
+    "documentation": "Transform options to pass to esbuild.\nOr set to `false` to disable esbuild.",
+    "tags": {
+      "deprecated": "Use `oxc` option instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `oxc` option instead."
+  },
+  {
+    "path": "Vite.esbuild.include",
+    "type": "string | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3240,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `oxc` option instead."
+  },
+  {
+    "path": "Vite.esbuild.exclude",
+    "type": "string | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3241,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `oxc` option instead."
+  },
+  {
+    "path": "Vite.esbuild.jsxInject",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3242,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `oxc` option instead."
+  },
+  {
+    "path": "Vite.esbuild.minify",
+    "type": "undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3246,
+    "documentation": "This option is not respected. Use `build.minify` instead.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `oxc` option instead."
+  },
+  {
+    "path": "Vite.oxc",
+    "type": "false | OxcOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3549,
+    "documentation": "Transform options to pass to Oxc.\nOr set to `false` to disable Oxc.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    define: {},\n    assumptions: {\n      ignoreFunctionLength: false,\n      noDocumentAll: false,\n      objectRestNoSymbols: false,\n      pureGetters: false,\n      setPublicClassFields: false,\n    },\n    typescript: {\n      onlyRemoveTypeImports: true,\n      allowNamespaces: true,\n      removeClassFieldsWithoutInitializer: false,\n      optimizeConstEnums: false,\n      optimizeEnums: false,\n      rewriteImportExtensions: false,\n    },\n    decorator: { legacy: false, emitDecoratorMetadata: false, strictNullChecks: true },\n  }",
+    "location": "vite.config.ts:216"
+  },
+  {
+    "path": "Vite.oxc.include",
+    "type": "string | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3271,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom transform inclusion filter; Vite selects the supported source extensions."
+  },
+  {
+    "path": "Vite.oxc.exclude",
+    "type": "string | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3272,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom transform exclusion filter; Vite selects its dependency handling."
+  },
+  {
+    "path": "Vite.oxc.jsxInject",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3273,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX source or injected JSX factory is selected."
+  },
+  {
+    "path": "Vite.oxc.jsxRefreshInclude",
+    "type": "string | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3274,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX source or React refresh plugin is selected."
+  },
+  {
+    "path": "Vite.oxc.jsxRefreshExclude",
+    "type": "string | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3275,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX source or React refresh plugin is selected."
+  },
+  {
+    "path": "Vite.oxc.typescript",
+    "type": "TypeScriptOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1591,
+    "documentation": "Configure how TypeScript is transformed.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/typescript}"
+    },
+    "state": "explicit",
+    "value": "{\n      onlyRemoveTypeImports: true,\n      allowNamespaces: true,\n      removeClassFieldsWithoutInitializer: false,\n      optimizeConstEnums: false,\n      optimizeEnums: false,\n      rewriteImportExtensions: false,\n    }",
+    "location": "vite.config.ts:225"
+  },
+  {
+    "path": "Vite.oxc.typescript.jsxPragma",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1214,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX source or JSX factory is selected."
+  },
+  {
+    "path": "Vite.oxc.typescript.jsxPragmaFrag",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1215,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX source or JSX fragment factory is selected."
+  },
+  {
+    "path": "Vite.oxc.typescript.onlyRemoveTypeImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1216,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:226"
+  },
+  {
+    "path": "Vite.oxc.typescript.allowNamespaces",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1217,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:227"
+  },
+  {
+    "path": "Vite.oxc.typescript.allowDeclareFields",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1226,
+    "documentation": "When enabled, type-only class fields are only removed if they are prefixed with the declare modifier:",
+    "tags": {
+      "deprecated": "Allowing `declare` fields is built-in support in Oxc without any option. If you want to remove class fields\nwithout initializer, you can use `remove_class_fields_without_initializer: true` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Allowing `declare` fields is built-in support in Oxc without any option. If you want to remove class fields\nwithout initializer, you can use `remove_class_fields_without_initializer: true` instead."
+  },
+  {
+    "path": "Vite.oxc.typescript.removeClassFieldsWithoutInitializer",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1261,
+    "documentation": "When enabled, class fields without initializers are removed.\n\nFor example:\n```ts\nclass Foo {\n   x: number;\n   y: number = 0;\n}\n```\n// transform into\n```js\nclass Foo {\n   x: number;\n}\n```\n\nThe option is used to align with the behavior of TypeScript's `useDefineForClassFields: false` option.\nWhen you want to enable this, you also need to set [`crate::CompilerAssumptions::set_public_class_fields`]\nto `true`. The `set_public_class_fields: true` + `remove_class_fields_without_initializer: true` is\nequivalent to `useDefineForClassFields: false` in TypeScript.\n\nWhen `set_public_class_fields` is true and class-properties plugin is enabled, the above example transforms into:\n\n```js\nclass Foo {\n  constructor() {\n    this.y = 0;\n  }\n}\n```\n\nDefaults to `false`.",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:228"
+  },
+  {
+    "path": "Vite.oxc.typescript.optimizeConstEnums",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1268,
+    "documentation": "When true, optimize const enums by inlining their values at usage sites\nand removing the enum declaration.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:229"
+  },
+  {
+    "path": "Vite.oxc.typescript.optimizeEnums",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1279,
+    "documentation": "When true, optimize regular (non-const) enums by inlining their member\naccesses at usage sites when the member value is statically known.\n\nNon-exported enum declarations are also removed when all members are\nevaluable and no references to the enum as a runtime value exist\n(e.g., `console.log(Foo)`, `typeof Foo`, or passing the enum as an argument).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:230"
+  },
+  {
+    "path": "Vite.oxc.typescript.declaration",
+    "type": "IsolatedDeclarationsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1289,
+    "documentation": "Also generate a `.d.ts` declaration file for TypeScript files.\n\nThe source file must be compliant with all\n[`isolatedDeclarations`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html#isolated-declarations)\nrequirements.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The app is not a declaration-generating library. TypeScript is configured noEmit."
+  },
+  {
+    "path": "Vite.oxc.typescript.declaration.stripInternal",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 892,
+    "documentation": "Do not emit declarations for code that has an",
+    "tags": {
+      "internal": "annotation in its JSDoc comment.\nThis is an internal compiler option; use at your own risk, because the compiler does not check that the result is valid.\n\nDefault: `false`\n\nSee <https://www.typescriptlang.org/tsconfig/#stripInternal>"
+    },
+    "state": "excluded",
+    "reason": "The app is not a declaration-generating library. TypeScript is configured noEmit."
+  },
+  {
+    "path": "Vite.oxc.typescript.declaration.sourcemap",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 893,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The app is not a declaration-generating library. TypeScript is configured noEmit."
+  },
+  {
+    "path": "Vite.oxc.typescript.rewriteImportExtensions",
+    "type": "boolean | \"rewrite\" | \"remove\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1300,
+    "documentation": "Rewrite or remove TypeScript import/export declaration extensions.\n\n- When set to `rewrite`, it will change `.ts`, `.mts`, `.cts` extensions to `.js`, `.mjs`, `.cjs` respectively.\n- When set to `remove`, it will remove `.ts`/`.mts`/`.cts`/`.tsx` extension entirely.\n- When set to `true`, it's equivalent to `rewrite`.\n- When set to `false` or omitted, no changes will be made to the extensions.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:231"
+  },
+  {
+    "path": "Vite.oxc.define",
+    "type": "Record<string, string> | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1618,
+    "documentation": "Define Plugin",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement#define}"
+    },
+    "state": "explicit",
+    "value": "{}",
+    "location": "vite.config.ts:217"
+  },
+  {
+    "path": "Vite.oxc.assumptions",
+    "type": "CompilerAssumptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1586,
+    "documentation": "Set assumptions in order to produce smaller output.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n      ignoreFunctionLength: false,\n      noDocumentAll: false,\n      objectRestNoSymbols: false,\n      pureGetters: false,\n      setPublicClassFields: false,\n    }",
+    "location": "vite.config.ts:218"
+  },
+  {
+    "path": "Vite.oxc.assumptions.ignoreFunctionLength",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 792,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:219"
+  },
+  {
+    "path": "Vite.oxc.assumptions.noDocumentAll",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 793,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:220"
+  },
+  {
+    "path": "Vite.oxc.assumptions.objectRestNoSymbols",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 794,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:221"
+  },
+  {
+    "path": "Vite.oxc.assumptions.pureGetters",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 795,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:222"
+  },
+  {
+    "path": "Vite.oxc.assumptions.setPublicClassFields",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 837,
+    "documentation": "When using public class fields, assume that they don't shadow any getter in the current class,\nin its subclasses or in its superclass. Thus, it's safe to assign them rather than using\n`Object.defineProperty`.\n\nFor example:\n\nInput:\n```js\nclass Test {\n field = 2;\n\n static staticField = 3;\n}\n```\n\nWhen `set_public_class_fields` is `true`, the output will be:\n```js\nclass Test {\n constructor() {\n   this.field = 2;\n }\n}\nTest.staticField = 3;\n```\n\nOtherwise, the output will be:\n```js\nimport _defineProperty from \"@oxc-project/runtime/helpers/defineProperty\";\nclass Test {\n  constructor() {\n    _defineProperty(this, \"field\", 2);\n  }\n}\n_defineProperty(Test, \"staticField\", 3);\n```\n\nNOTE: For TypeScript, if you wanted behavior is equivalent to `useDefineForClassFields: false`, you should\nset both `set_public_class_fields` and [`crate::TypeScriptOptions::remove_class_fields_without_initializer`]\nto `true`.",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:223"
+  },
+  {
+    "path": "Vite.oxc.jsx",
+    "type": "\"preserve\" | JsxOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1596,
+    "documentation": "Configure how TSX and JSX are transformed.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/jsx}"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.runtime",
+    "type": "\"classic\" | \"automatic\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 916,
+    "documentation": "Decides which runtime to use.\n\n- 'automatic' - auto-import the correct JSX factories\n- 'classic' - no auto-import",
+    "tags": {
+      "default": "'automatic'"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.development",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 922,
+    "documentation": "Emit development-specific information, such as `__source` and `__self`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.throwIfNamespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 932,
+    "documentation": "Toggles whether or not to throw an error if an XML namespaced tag name\nis used.\n\nThough the JSX spec allows this, it is disabled by default since React's\nJSX does not currently have support for it.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.pure",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 938,
+    "documentation": "Mark JSX elements and top-level React method calls as pure for tree shaking.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.importSource",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 944,
+    "documentation": "Replaces the import source when importing functions.",
+    "tags": {
+      "default": "'react'"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.pragma",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 954,
+    "documentation": "Replace the function used when compiling JSX expressions. It should be a\nqualified name (e.g. `React.createElement`) or an identifier (e.g.\n`createElement`).\n\nOnly used for `classic` {@link runtime}.",
+    "tags": {
+      "default": "'React.createElement'"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.pragmaFrag",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 963,
+    "documentation": "Replace the component used when compiling JSX fragments. It should be a\nvalid JSX tag name.\n\nOnly used for `classic` {@link runtime}.",
+    "tags": {
+      "default": "'React.Fragment'"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.refresh",
+    "type": "boolean | ReactRefreshOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 971,
+    "documentation": "Enable React Fast Refresh .\n\nConforms to the implementation in {@link https://github.com/facebook/react/tree/v18.3.1/packages/react-refresh}",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.refresh.refreshReg",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1035,
+    "documentation": "Specify the identifier of the refresh registration variable.",
+    "tags": {
+      "default": "`$RefreshReg$`."
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.refresh.refreshSig",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1041,
+    "documentation": "Specify the identifier of the refresh signature variable.",
+    "tags": {
+      "default": "`$RefreshSig$`."
+    },
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.jsx.refresh.emitFullSignatures",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1042,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX source is authored; Svelte templates are handled by the Svelte compiler."
+  },
+  {
+    "path": "Vite.oxc.target",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1611,
+    "documentation": "Sets the target environment for the generated JavaScript.\n\nThe lowest target is `es2015`.\n\nExample:\n\n* `'es2015'`\n* `['es2020', 'chrome58', 'edge16', 'firefox57', 'node12', 'safari11']`",
+    "tags": {
+      "default": "`esnext` (No transformation)",
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/lowering#target}"
+    },
+    "state": "excluded",
+    "reason": "Vite derives transform targets per environment from build.target; a single global target would override development/build behavior."
+  },
+  {
+    "path": "Vite.oxc.decorator",
+    "type": "DecoratorOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1625,
+    "documentation": "Decorator plugin",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ legacy: false, emitDecoratorMetadata: false, strictNullChecks: true }",
+    "location": "vite.config.ts:233"
+  },
+  {
+    "path": "Vite.oxc.decorator.legacy",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 849,
+    "documentation": "Enables experimental support for decorators, which is a version of decorators that predates the TC39 standardization process.\n\nDecorators are a language feature which hasn’t yet been fully ratified into the JavaScript specification.\nThis means that the implementation version in TypeScript may differ from the implementation in JavaScript when it it decided by TC39.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#experimentalDecorators",
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:233"
+  },
+  {
+    "path": "Vite.oxc.decorator.emitDecoratorMetadata",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 859,
+    "documentation": "Enables emitting decorator metadata.\n\nThis option the same as [emitDecoratorMetadata](https://www.typescriptlang.org/tsconfig/#emitDecoratorMetadata)\nin TypeScript, and it only works when `legacy` is true.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#emitDecoratorMetadata",
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:233"
+  },
+  {
+    "path": "Vite.oxc.decorator.strictNullChecks",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 871,
+    "documentation": "Aligns nullable-union `design:type` emission with `--strictNullChecks`.\n\nWhen `true` (default), `T | null` and `T | undefined` emit `Object`, matching tsc strict.\nWhen `false`, `null` and `undefined` are elided from the union so the underlying\nprimitive constructor is emitted, matching tsc with `--strictNullChecks=false`\nand `babel-plugin-transform-typescript-metadata`.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#strictNullChecks",
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:233"
+  },
+  {
+    "path": "Vite.oxc.plugins",
+    "type": "PluginsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1630,
+    "documentation": "Third-party plugins to use.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/plugins}"
+    },
+    "state": "excluded",
+    "reason": "No transformer plugin modules are selected."
+  },
+  {
+    "path": "Vite.assetsInclude",
+    "type": "string | RegExp | (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3553,
+    "documentation": "Specify additional picomatch patterns to be treated as static assets.",
+    "tags": {},
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:88"
+  },
+  {
+    "path": "Vite.builder",
+    "type": "BuilderOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3558,
+    "documentation": "Builder specific options",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "{ sharedConfigBuild: false, sharedPlugins: false }",
+    "location": "vite.config.ts:209"
+  },
+  {
+    "path": "Vite.builder.sharedConfigBuild",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3110,
+    "documentation": "Whether to share the config instance among environments to align with the behavior of dev server.",
+    "tags": {
+      "default": "false",
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:209"
+  },
+  {
+    "path": "Vite.builder.sharedPlugins",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3117,
+    "documentation": "Whether to share the plugin instances among environments to align with the behavior of dev server.",
+    "tags": {
+      "default": "false",
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:209"
+  },
+  {
+    "path": "Vite.builder.buildApp",
+    "type": "((builder: ViteBuilder) => Promise<void>) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3118,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit supplies the application build orchestrator."
+  },
+  {
+    "path": "Vite.server",
+    "type": "ServerOptions$1 | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3562,
+    "documentation": "Server specific options, e.g. host, port, https...",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    port: applicationPort,\n    strictPort: true,\n    host: \"localhost\",\n    allowedHosts: [],\n    open: false,\n    proxy: {},\n    headers: {},\n    warmup: { clientFiles: [], ssrFiles: [] },\n    middlewareMode: false,\n    preTransformRequests: true,\n    perEnvironmentStartEndDuringDev: false,\n    perEnvironmentWatchChangeDuringDev: false,\n    forwardConsole: { unhandledErrors: true, logLevels: [\"error\", \"warn\"] },\n    fs: {\n      strict: true,\n      deny: [\n        \".env\",\n        \".env.*\",\n        \"*.{crt,pem,key,p12,pfx,cer,der}\",\n        \".npmrc\",\n        \".yarnrc.yml\",\n        \"**/.git/**\",\n      ],\n    },\n    hmr: { overlay: true },\n    ws: { timeout: 30_000 },\n    watch: {\n      ignored: [\"**/.cache/**\", \"**/coverage/**\", \"**/tooling/evidence/**\"],\n      persistent: true,\n      ignoreInitial: true,\n      followSymlinks: true,\n      disableGlobbing: false,\n      alwaysStat: false,\n      interval: 100,\n      binaryInterval: 300,\n      ignorePermissionErrors: true,\n      awaitWriteFinish: false,\n    },\n  }",
+    "location": "vite.config.ts:152"
+  },
+  {
+    "path": "Vite.server.hmr",
+    "type": "boolean | HmrOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2363,
+    "documentation": "Configure HMR-specific options (port, host, path & protocol)",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ overlay: true }",
+    "location": "vite.config.ts:177"
+  },
+  {
+    "path": "Vite.server.hmr.protocol",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1319,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use `server.ws.protocol` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `server.ws.protocol` instead."
+  },
+  {
+    "path": "Vite.server.hmr.host",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1323,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use `server.ws.host` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `server.ws.host` instead."
+  },
+  {
+    "path": "Vite.server.hmr.port",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1327,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use `server.ws.port` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `server.ws.port` instead."
+  },
+  {
+    "path": "Vite.server.hmr.clientPort",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1331,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use `server.ws.clientPort` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `server.ws.clientPort` instead."
+  },
+  {
+    "path": "Vite.server.hmr.path",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1335,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use `server.ws.path` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `server.ws.path` instead."
+  },
+  {
+    "path": "Vite.server.hmr.timeout",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1339,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use `server.ws.timeout` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `server.ws.timeout` instead."
+  },
+  {
+    "path": "Vite.server.hmr.overlay",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1340,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:177"
+  },
+  {
+    "path": "Vite.server.hmr.server",
+    "type": "HttpServer | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1344,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use `server.ws.server` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `server.ws.server` instead."
+  },
+  {
+    "path": "Vite.server.ws",
+    "type": "false | WsOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2368,
+    "documentation": "Configure WebSocket connection options.\nSet to `false` to disable the WebSocket server and connection.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ timeout: 30_000 }",
+    "location": "vite.config.ts:178"
+  },
+  {
+    "path": "Vite.server.ws.protocol",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1307,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Derived from the selected HTTP/HTTPS listener; no separate WebSocket endpoint selected."
+  },
+  {
+    "path": "Vite.server.ws.host",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1308,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Derived from the bound listener; no separate WebSocket endpoint selected."
+  },
+  {
+    "path": "Vite.server.ws.port",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1309,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Derived from the actual bound listener port; no separate WebSocket endpoint selected."
+  },
+  {
+    "path": "Vite.server.ws.clientPort",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1310,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No reverse proxy or alternate public WebSocket port selected."
+  },
+  {
+    "path": "Vite.server.ws.path",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1311,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite derives the WebSocket path from the application base; no additional path selected."
+  },
+  {
+    "path": "Vite.server.ws.timeout",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1312,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "30_000",
+    "location": "vite.config.ts:178"
+  },
+  {
+    "path": "Vite.server.ws.server",
+    "type": "HttpServer | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1313,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No external WebSocket HTTP server is supplied."
+  },
+  {
+    "path": "Vite.server.warmup",
+    "type": "{ clientFiles?: string[] | undefined; ssrFiles?: string[] | undefined; } | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2373,
+    "documentation": "Warm-up files to transform and cache the results in advance. This improves the\ninitial page load during server starts and prevents transform waterfalls.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ clientFiles: [], ssrFiles: [] }",
+    "location": "vite.config.ts:160"
+  },
+  {
+    "path": "Vite.server.warmup.clientFiles",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2377,
+    "documentation": "The files to be transformed and used on the client-side. Supports glob patterns.",
+    "tags": {},
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:160"
+  },
+  {
+    "path": "Vite.server.warmup.ssrFiles",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2381,
+    "documentation": "The files to be transformed and used in SSR. Supports glob patterns.",
+    "tags": {},
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:160"
+  },
+  {
+    "path": "Vite.server.watch",
+    "type": "ServerWatchOptions | null | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2391,
+    "documentation": "File system watcher options, or null to disable FS watching.\n\nAccepts chokidar options\n(https://github.com/paulmillr/chokidar/tree/3.6.0#api), which are used by\nthe chokidar watcher, and Rolldown watch options, which are used by the\nRolldown file watcher when bundled dev mode is enabled.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n      ignored: [\"**/.cache/**\", \"**/coverage/**\", \"**/tooling/evidence/**\"],\n      persistent: true,\n      ignoreInitial: true,\n      followSymlinks: true,\n      disableGlobbing: false,\n      alwaysStat: false,\n      interval: 100,\n      binaryInterval: 300,\n      ignorePermissionErrors: true,\n      awaitWriteFinish: false,\n    }",
+    "location": "vite.config.ts:179"
+  },
+  {
+    "path": "Vite.server.watch.persistent",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 396,
+    "documentation": "Indicates whether the process should continue to run as long as files are being watched. If\nset to `false` when using `fsevents` to watch, no more events will be emitted after `ready`,\neven if the process continues to run.",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:181"
+  },
+  {
+    "path": "Vite.server.watch.ignored",
+    "type": "AnymatchMatcher | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 404,
+    "documentation": "([anymatch](https://github.com/micromatch/anymatch)-compatible definition) Defines files/paths to\nbe ignored. The whole relative or absolute path is tested, not just filename. If a function\nwith two arguments is provided, it gets called twice per path - once with a single argument\n(the path), second time with two arguments (the path and the\n[`fs.Stats`](https://nodejs.org/api/fs.html#fs_class_fs_stats) object of that path).",
+    "tags": {},
+    "state": "explicit",
+    "value": "[\"**/.cache/**\", \"**/coverage/**\", \"**/tooling/evidence/**\"]",
+    "location": "vite.config.ts:180"
+  },
+  {
+    "path": "Vite.server.watch.ignoreInitial",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 409,
+    "documentation": "If set to `false` then `add`/`addDir` events are also emitted for matching paths while\ninstantiating the watching as chokidar discovers these file paths (before the `ready` event).",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:182"
+  }
+]

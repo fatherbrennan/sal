@@ -1,0 +1,1160 @@
+[
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.resolve.tsconfigFilename",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3731,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use the top-level {@linkcode tsconfig} option instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use the top-level {@linkcode tsconfig} option instead."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.define",
+    "type": "Record<string, string> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1847,
+    "documentation": "Replace global variables or [property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) with the provided values.\n\nSee Oxc's [`define` option](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement.html#define) for more details.",
+    "tags": {
+      "example": "**Replace the global variable `IS_PROD` with `true`**\n```js [rolldown.config.js]\nexport default defineConfig({\n  transform: { define: { IS_PROD: 'true' } }\n})\n```\nResult:\n```js\n// Input\nif (IS_PROD) {\n  console.log('Production mode')\n}\n\n// After bundling\nif (true) {\n  console.log('Production mode')\n}\n```\n\n**Replace the property accessor `process.env.NODE_ENV` with `'production'`**\n```js [rolldown.config.js]\nexport default defineConfig({\n  transform: { define: { 'process.env.NODE_ENV': \"'production'\" } }\n})\n```\nResult:\n```js\n// Input\nif (process.env.NODE_ENV === 'production') {\n  console.log('Production mode')\n}\n\n// After bundling\nif ('production' === 'production') {\n  console.log('Production mode')\n}\n```"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.inject",
+    "type": "Record<string, string | [string, string]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1875,
+    "documentation": "Inject import statements on demand.\n\nThe API is aligned with `@rollup/plugin-inject`.\n\nSee Oxc's [`inject` option](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement.html#inject) for more details.\n\n#### Supported patterns\n```js\n{\n  // import { Promise } from 'es6-promise'\n  Promise: ['es6-promise', 'Promise'],\n\n  // import { Promise as P } from 'es6-promise'\n  P: ['es6-promise', 'Promise'],\n\n  // import $ from 'jquery'\n  $: 'jquery',\n\n  // import * as fs from 'node:fs'\n  fs: ['node:fs', '*'],\n\n  // Inject shims for property access pattern\n  'Object.assign': path.resolve( 'src/helpers/object-assign.js' ),\n}\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.dropLabels",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1902,
+    "documentation": "Remove labeled statements with these label names.\n\nLabeled statements are JavaScript statements prefixed with a label identifier.\nThis option allows you to strip specific labeled statements from the output,\nwhich is useful for removing debug-only code in production builds.",
+    "tags": {
+      "example": "```js rolldown.config.js\nexport default defineConfig({\n  transform: { dropLabels: ['DEBUG', 'DEV'] }\n})\n```\nResult:\n```js\n// Input\nDEBUG: console.log('Debug info');\nDEV: {\n  console.log('Development mode');\n}\nconsole.log('Production code');\n\n// After bundling\nconsole.log('Production code');\n```"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx",
+    "type": "false | \"preserve\" | JsxOptions | \"react\" | \"react-jsx\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1911,
+    "documentation": "Controls how JSX syntax is transformed.\n\n- If set to `false`, an error will be thrown if JSX syntax is encountered.\n- If set to `'react'`, JSX syntax will be transformed to classic runtime React code.\n- If set to `'react-jsx'`, JSX syntax will be transformed to automatic runtime React code.\n- If set to `'preserve'`, JSX syntax will be preserved as-is.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript",
+    "type": "TypeScriptOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1156,
+    "documentation": "Configure how TypeScript is transformed.\n\n`typescript.declaration` is evaluated before all transforms.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/typescript}"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.helpers",
+    "type": "Helpers | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1185,
+    "documentation": "Behaviour for runtime helpers.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.helpers.mode",
+    "type": "HelperMode | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 875,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.assumptions",
+    "type": "CompilerAssumptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1148,
+    "documentation": "Set assumptions in order to produce smaller output.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.target",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1183,
+    "documentation": "Sets the target environment for the generated JavaScript.\n\nThe lowest target is `es2015`.\n\nExample:\n\n* `'es2015'`\n* `['es2020', 'chrome58', 'edge16', 'firefox57', 'node12', 'safari11']`",
+    "tags": {
+      "default": "`esnext` (No transformation)",
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/lowering#target}"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.decorator",
+    "type": "DecoratorOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1158,
+    "documentation": "Decorator plugin",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.plugins",
+    "type": "PluginsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1163,
+    "documentation": "Third-party plugins to use.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/plugins}"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.runtime",
+    "type": "\"classic\" | \"automatic\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 916,
+    "documentation": "Decides which runtime to use.\n\n- 'automatic' - auto-import the correct JSX factories\n- 'classic' - no auto-import",
+    "tags": {
+      "default": "'automatic'"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.development",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 922,
+    "documentation": "Emit development-specific information, such as `__source` and `__self`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.throwIfNamespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 932,
+    "documentation": "Toggles whether or not to throw an error if an XML namespaced tag name\nis used.\n\nThough the JSX spec allows this, it is disabled by default since React's\nJSX does not currently have support for it.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.pure",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 938,
+    "documentation": "Mark JSX elements and top-level React method calls as pure for tree shaking.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.importSource",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 944,
+    "documentation": "Replaces the import source when importing functions.",
+    "tags": {
+      "default": "'react'"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.pragma",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 954,
+    "documentation": "Replace the function used when compiling JSX expressions. It should be a\nqualified name (e.g. `React.createElement`) or an identifier (e.g.\n`createElement`).\n\nOnly used for `classic` {@link runtime}.",
+    "tags": {
+      "default": "'React.createElement'"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.pragmaFrag",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 963,
+    "documentation": "Replace the component used when compiling JSX fragments. It should be a\nvalid JSX tag name.\n\nOnly used for `classic` {@link runtime}.",
+    "tags": {
+      "default": "'React.Fragment'"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.refresh",
+    "type": "boolean | ReactRefreshOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 971,
+    "documentation": "Enable React Fast Refresh .\n\nConforms to the implementation in {@link https://github.com/facebook/react/tree/v18.3.1/packages/react-refresh}",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.refresh.refreshReg",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1035,
+    "documentation": "Specify the identifier of the refresh registration variable.",
+    "tags": {
+      "default": "`$RefreshReg$`."
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.refresh.refreshSig",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1041,
+    "documentation": "Specify the identifier of the refresh signature variable.",
+    "tags": {
+      "default": "`$RefreshSig$`."
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.jsx.refresh.emitFullSignatures",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1042,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.jsxPragma",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1214,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.jsxPragmaFrag",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1215,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.onlyRemoveTypeImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1216,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.allowNamespaces",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1217,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.allowDeclareFields",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1226,
+    "documentation": "When enabled, type-only class fields are only removed if they are prefixed with the declare modifier:",
+    "tags": {
+      "deprecated": "Allowing `declare` fields is built-in support in Oxc without any option. If you want to remove class fields\nwithout initializer, you can use `remove_class_fields_without_initializer: true` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Allowing `declare` fields is built-in support in Oxc without any option. If you want to remove class fields\nwithout initializer, you can use `remove_class_fields_without_initializer: true` instead."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.removeClassFieldsWithoutInitializer",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1261,
+    "documentation": "When enabled, class fields without initializers are removed.\n\nFor example:\n```ts\nclass Foo {\n   x: number;\n   y: number = 0;\n}\n```\n// transform into\n```js\nclass Foo {\n   x: number;\n}\n```\n\nThe option is used to align with the behavior of TypeScript's `useDefineForClassFields: false` option.\nWhen you want to enable this, you also need to set [`crate::CompilerAssumptions::set_public_class_fields`]\nto `true`. The `set_public_class_fields: true` + `remove_class_fields_without_initializer: true` is\nequivalent to `useDefineForClassFields: false` in TypeScript.\n\nWhen `set_public_class_fields` is true and class-properties plugin is enabled, the above example transforms into:\n\n```js\nclass Foo {\n  constructor() {\n    this.y = 0;\n  }\n}\n```\n\nDefaults to `false`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.optimizeConstEnums",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1268,
+    "documentation": "When true, optimize const enums by inlining their values at usage sites\nand removing the enum declaration.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.optimizeEnums",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1279,
+    "documentation": "When true, optimize regular (non-const) enums by inlining their member\naccesses at usage sites when the member value is statically known.\n\nNon-exported enum declarations are also removed when all members are\nevaluable and no references to the enum as a runtime value exist\n(e.g., `console.log(Foo)`, `typeof Foo`, or passing the enum as an argument).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.declaration",
+    "type": "IsolatedDeclarationsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1289,
+    "documentation": "Also generate a `.d.ts` declaration file for TypeScript files.\n\nThe source file must be compliant with all\n[`isolatedDeclarations`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html#isolated-declarations)\nrequirements.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.declaration.stripInternal",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 892,
+    "documentation": "Do not emit declarations for code that has an",
+    "tags": {
+      "internal": "annotation in its JSDoc comment.\nThis is an internal compiler option; use at your own risk, because the compiler does not check that the result is valid.\n\nDefault: `false`\n\nSee <https://www.typescriptlang.org/tsconfig/#stripInternal>"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.declaration.sourcemap",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 893,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.typescript.rewriteImportExtensions",
+    "type": "boolean | \"rewrite\" | \"remove\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1300,
+    "documentation": "Rewrite or remove TypeScript import/export declaration extensions.\n\n- When set to `rewrite`, it will change `.ts`, `.mts`, `.cts` extensions to `.js`, `.mjs`, `.cjs` respectively.\n- When set to `remove`, it will remove `.ts`/`.mts`/`.cts`/`.tsx` extension entirely.\n- When set to `true`, it's equivalent to `rewrite`.\n- When set to `false` or omitted, no changes will be made to the extensions.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.assumptions.ignoreFunctionLength",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 792,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.assumptions.noDocumentAll",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 793,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.assumptions.objectRestNoSymbols",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 794,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.assumptions.pureGetters",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 795,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.assumptions.setPublicClassFields",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 837,
+    "documentation": "When using public class fields, assume that they don't shadow any getter in the current class,\nin its subclasses or in its superclass. Thus, it's safe to assign them rather than using\n`Object.defineProperty`.\n\nFor example:\n\nInput:\n```js\nclass Test {\n field = 2;\n\n static staticField = 3;\n}\n```\n\nWhen `set_public_class_fields` is `true`, the output will be:\n```js\nclass Test {\n constructor() {\n   this.field = 2;\n }\n}\nTest.staticField = 3;\n```\n\nOtherwise, the output will be:\n```js\nimport _defineProperty from \"@oxc-project/runtime/helpers/defineProperty\";\nclass Test {\n  constructor() {\n    _defineProperty(this, \"field\", 2);\n  }\n}\n_defineProperty(Test, \"staticField\", 3);\n```\n\nNOTE: For TypeScript, if you wanted behavior is equivalent to `useDefineForClassFields: false`, you should\nset both `set_public_class_fields` and [`crate::TypeScriptOptions::remove_class_fields_without_initializer`]\nto `true`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.decorator.legacy",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 849,
+    "documentation": "Enables experimental support for decorators, which is a version of decorators that predates the TC39 standardization process.\n\nDecorators are a language feature which hasn’t yet been fully ratified into the JavaScript specification.\nThis means that the implementation version in TypeScript may differ from the implementation in JavaScript when it it decided by TC39.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#experimentalDecorators",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.decorator.emitDecoratorMetadata",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 859,
+    "documentation": "Enables emitting decorator metadata.\n\nThis option the same as [emitDecoratorMetadata](https://www.typescriptlang.org/tsconfig/#emitDecoratorMetadata)\nin TypeScript, and it only works when `legacy` is true.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#emitDecoratorMetadata",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.transform.decorator.strictNullChecks",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 871,
+    "documentation": "Aligns nullable-union `design:type` emission with `--strictNullChecks`.\n\nWhen `true` (default), `T | null` and `T | undefined` emit `Object`, matching tsc strict.\nWhen `false`, `null` and `undefined` are elided from the union so the underlying\nprimitive constructor is emitted, matching tsc with `--strictNullChecks=false`\nand `babel-plugin-transform-typescript-metadata`.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#strictNullChecks",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.moduleSideEffects",
+    "type": "ModuleSideEffectsOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2583,
+    "documentation": "**Values:**\n\n- **`true`**: All modules are assumed to have side effects and will be included in the bundle even if none of their exports are used.\n- **`false`**: No modules have side effects. This enables aggressive tree-shaking, removing any modules whose exports are not used.\n- **`string[]`**: Array of module IDs that have side effects. Only modules in this list will be preserved if unused; all others can be tree-shaken when their exports are unused.\n- **`'no-external'`**: Assumes no external modules have side effects while preserving the default behavior for local modules.\n- **`ModuleSideEffectsRule[]`**: Array of rules with `test`, `external`, and `sideEffects` properties for fine-grained control.\n- **`function`**: Function that receives `(id, external)` and returns whether the module has side effects.\n\n**Important:** Setting this to `false` or using an array/string assumes that your modules and their dependencies have no side effects other than their exports. Only use this if you're certain that removing unused modules won't break your application.\n\n> [!NOTE]\n> **Performance: Prefer `ModuleSideEffectsRule[]` over functions**\n>\n> When possible, use rule-based configuration instead of functions. Rules are processed entirely in Rust, while JavaScript functions require runtime calls between Rust and JavaScript, which can hurt CPU utilization during builds.\n>\n> **Functions should be a last resort**: Only use the function signature when your logic cannot be expressed with patterns or simple string matching.\n>\n> **Rule advantages**: `ModuleSideEffectsRule[]` provides better performance by avoiding Rust-JavaScript runtime calls, clearer intent, and easier maintenance.",
+    "tags": {
+      "example": "```js\n// Assume no modules have side effects (aggressive tree-shaking)\ntreeshake: {\n  moduleSideEffects: false\n}\n\n// Only specific modules have side effects (string array)\ntreeshake: {\n  moduleSideEffects: [\n    'lodash',\n    'react-dom',\n  ]\n}\n\n// Use rules for pattern matching and granular control\ntreeshake: {\n  moduleSideEffects: [\n    { test: /^node:/, sideEffects: true },\n    { test: /\\.css$/, sideEffects: true },\n    { test: /some-package/, sideEffects: false, external: false },\n  ]\n}\n\n// Custom function to determine side effects\ntreeshake: {\n  moduleSideEffects: (id, external) => {\n    if (external) return false; // external modules have no side effects\n    return id.includes('/side-effects/') || id.endsWith('.css');\n  }\n}\n\n// Assume no external modules have side effects\ntreeshake: {\n  moduleSideEffects: 'no-external',\n}\n```\n\n**Common Use Cases:**\n- **CSS files**: `{ test: /\\.css$/, sideEffects: true }` - preserve CSS imports\n- **Polyfills**: Add specific polyfill modules to the array\n- **Plugins**: Modules that register themselves globally on import\n- **Library development**: Set to `false` for libraries where unused exports should be removed",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The boolean variant explicitly preserves side-effect metadata; no custom per-module rule array is selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.moduleSideEffects[].test",
+    "type": "RegExp | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2507,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The boolean variant explicitly preserves side-effect metadata; no custom per-module rule array is selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.moduleSideEffects[].external",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2508,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The boolean variant explicitly preserves side-effect metadata; no custom per-module rule array is selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.moduleSideEffects[].sideEffects",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2509,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The boolean variant explicitly preserves side-effect metadata; no custom per-module rule array is selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.annotations",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2591,
+    "documentation": "Whether to respect `/*@__PURE__*\\/` annotations and other tree-shaking hints in the code.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#pure-annotations) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.manualPureFunctions",
+    "type": "readonly string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2605,
+    "documentation": "Array of function names that should be considered pure (no side effects) even if they can't be automatically detected as pure.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#define-pure-functions) for more details.",
+    "tags": {
+      "example": "```js\ntreeshake: {\n  manualPureFunctions: ['console.log', 'debug.trace']\n}\n```",
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.unknownGlobalSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2613,
+    "documentation": "Whether to assume that accessing unknown global properties might have side effects.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-global-variable-access-side-effects) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.invalidImportSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2621,
+    "documentation": "Whether to assume that invalid import statements might have side effects.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-invalid-import-statement-side-effects) for more details.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.commonjs",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2640,
+    "documentation": "Whether to enable tree-shaking for CommonJS modules. When `true`, unused exports from CommonJS modules can be eliminated from the bundle, similar to ES modules. When disabled, CommonJS modules will always be included in their entirety.\n\nThis option allows rolldown to analyze `exports.property` assignments in CommonJS modules and remove unused exports while preserving the module's side effects.",
+    "tags": {
+      "example": "```js\n// source.js (CommonJS)\nexports.used = 'This will be kept';\nexports.unused = 'This will be tree-shaken away';\n\n// main.js\nimport { used } from './source.js';\n// With commonjs: true, only the 'used' export is included in the bundle\n// With commonjs: false, both exports are included\n```",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.propertyReadSideEffects",
+    "type": "false | \"always\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2650,
+    "documentation": "Controls whether reading properties from objects is considered to have side effects.\n\nSet to `false` for more aggressive tree-shaking behavior.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-property-read-side-effects) for more details.",
+    "tags": {
+      "default": "'always'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.treeshake.propertyWriteSideEffects",
+    "type": "false | \"always\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2658,
+    "documentation": "Controls whether writing properties to objects is considered to have side effects.\n\nSet to `false` for more aggressive behavior.",
+    "tags": {
+      "default": "'always'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.skipWrite",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3439,
+    "documentation": "Whether to skip the {@linkcode RolldownBuild.writebundle.write()} step when a rebuild is triggered.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.buildDelay",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3457,
+    "documentation": "Configures how long Rolldown will wait for further changes until it triggers\na rebuild in milliseconds.\n\nEven if this value is set to 0, there's a small debounce timeout configured\nin the file system watcher. Setting this to a value greater than 0 will mean\nthat Rolldown will only trigger a rebuild if there was no change for the\nconfigured number of milliseconds. If several configurations are watched,\nRolldown will use the largest configured build delay.\n\nThis option is useful if you use a tool that regenerates multiple source files\nvery slowly. Rebuilding immediately after the first change could cause Rolldown\nto generate a broken intermediate build before generating a successful final\nbuild, which can be confusing and distracting.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.watcher",
+    "type": "WatcherFileWatcherOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3461,
+    "documentation": "File watcher options for configuring how file changes are detected.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.watcher.usePolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3397,
+    "documentation": "Whether to use polling-based file watching instead of native OS events.\n\nPolling is useful for environments where native FS events are unreliable,\nsuch as network mounts, Docker volumes, or WSL2.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.watcher.pollInterval",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3405,
+    "documentation": "Interval between each poll in milliseconds.\n\nThis option is only used when {@linkcode usePolling} is `true`.",
+    "tags": {
+      "default": "100"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.watcher.compareContentsForPolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3414,
+    "documentation": "Whether to compare file contents for poll-based watchers.\nWhen enabled, poll watchers will check file contents to determine if they actually changed.\n\nThis option is only used when {@linkcode usePolling} is `true`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.watcher.useDebounce",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3420,
+    "documentation": "Whether to use debounced event delivery at the filesystem level.\nThis coalesces rapid filesystem events before they reach the build coordinator.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.watcher.debounceDelay",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3426,
+    "documentation": "Debounce delay in milliseconds for fs-level debounced watchers.\nOnly used when {@linkcode useDebounce} is `true`.",
+    "tags": {
+      "default": "10"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.watcher.debounceTickRate",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3432,
+    "documentation": "Tick rate in milliseconds for the debouncer's internal polling.\nOnly used when {@linkcode useDebounce} is `true`.\nWhen undefined, auto-selects 1/4 of debounceDelay.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.include",
+    "type": "StringOrRegExp | StringOrRegExp[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3479,
+    "documentation": "Filter to limit the file-watching to certain files.\n\nStrings are treated as glob patterns.\nNote that this only filters the module graph but does not allow adding\nadditional watch files.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  watch: {\n    include: 'src/**',\n  },\n})\n```",
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.exclude",
+    "type": "StringOrRegExp | StringOrRegExp[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3495,
+    "documentation": "Filter to prevent files from being watched.\n\nStrings are treated as glob patterns.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  watch: {\n    exclude: 'node_modules/**',\n  },\n})\n```",
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.onInvalidate",
+    "type": "((id: string) => void) | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3509,
+    "documentation": "An optional function that will be called immediately every time\na module changes that is part of the build.\n\nThis is different from the {@linkcode Plugin.watchChangewatchChange} plugin hook, which is\nonly called once the running build has finished. This may for\ninstance be used to prevent additional steps from being performed\nif we know another build will be started anyway once the current\nbuild finished. This callback may be called multiple times per\nbuild as it tracks every change.",
+    "tags": {
+      "param": "id The id of the changed module."
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.watch.clearScreen",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3514,
+    "documentation": "Whether to clear the screen when a rebuild is triggered.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.circularDependency",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1624,
+    "documentation": "Whether to emit warnings when detecting circular dependency.\n\nCircular dependencies lead to a bigger bundle size and sometimes cause execution order issues and are better to avoid.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.eval",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1631,
+    "documentation": "Whether to emit warnings when detecting uses of direct `eval`s.\n\nSee [Avoiding Direct `eval` in Troubleshooting page](https://rolldown.rs/guide/troubleshooting#avoiding-direct-eval) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.missingGlobalName",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1638,
+    "documentation": "Whether to emit warnings when the `output.globals` option is missing when needed.\n\nSee [`output.globals`](https://rolldown.rs/reference/OutputOptions.globals).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.missingNameOptionForIifeExport",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1645,
+    "documentation": "Whether to emit warnings when the `output.name` option is missing when needed.\n\nSee [`output.name`](https://rolldown.rs/reference/OutputOptions.name).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.invalidAnnotation",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1657,
+    "documentation": "Whether to emit warnings when a `#__PURE__` / `@__PURE__` annotation has no effect due to its position.\n\nAnnotations placed where they cannot annotate a call expression (e.g. before a non-call expression,\nbefore a statement declaration, or between an identifier and `=` in a variable declarator) are\nignored by the parser. Matches Rollup's `INVALID_ANNOTATION` log code.\n\nBy default, warnings are emitted only for local project files inside `cwd` and outside\n`node_modules`. Set this option to `false` to disable the warning entirely.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.mixedExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1664,
+    "documentation": "Whether to emit warnings when the way to export values is ambiguous.\n\nSee [`output.exports`](https://rolldown.rs/reference/OutputOptions.exports).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.unresolvedEntry",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1669,
+    "documentation": "Whether to emit warnings when an entrypoint cannot be resolved.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.unresolvedImport",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1674,
+    "documentation": "Whether to emit warnings when an import cannot be resolved.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.filenameConflict",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1681,
+    "documentation": "Whether to emit warnings when files generated have the same name with different contents.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.moduleLevelDirective",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1686,
+    "documentation": "Whether to emit warnings for module-level directives other than `use strict`.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.commonJsVariableInEsm",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1695,
+    "documentation": "Whether to emit warnings when a CommonJS variable is used in an ES module.\n\nCommonJS variables like `module` and `exports` are treated as global variables in ES modules and may not work as expected.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.importIsUndefined",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1704,
+    "documentation": "Whether to emit warnings when an imported variable is not exported.\n\nIf the code is importing a variable that is not exported by the imported module, the value will always be `undefined`. This might be a mistake in the code.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.emptyImportMeta",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1711,
+    "documentation": "Whether to emit warnings when `import.meta` is not supported with the output format and is replaced with an empty object (`{}`).\n\nSee [`import.meta` in Non-ESM Output Formats page](https://rolldown.rs/in-depth/non-esm-output-formats#import-meta) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.toleratedTransform",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1716,
+    "documentation": "Whether to emit warnings when detecting tolerated transform.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.cannotCallNamespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1725,
+    "documentation": "Whether to emit warnings when a namespace is called as a function.\n\nA module namespace object is an object and not a function. Calling it as a function will cause a runtime error.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.configurationFieldConflict",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1732,
+    "documentation": "Whether to emit warnings when a config value is overridden by another config value with a higher priority.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.preferBuiltinFeature",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1739,
+    "documentation": "Whether to emit warnings when a plugin that is covered by a built-in feature is used.\n\nUsing built-in features is generally more performant than using plugins.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.couldNotCleanDirectory",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1746,
+    "documentation": "Whether to emit warnings when Rolldown could not clean the output directory.\n\nSee [`output.cleanDir`](https://rolldown.rs/reference/OutputOptions.cleanDir).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.bundlerTimings",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1753,
+    "documentation": "Whether to emit warnings when plugins and option callbacks take significant time during the build process.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.pluginTimings",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1757,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use {@linkcode bundlerTimings}. If `bundlerTimings` and `pluginTimings` have values, Rolldown uses `bundlerTimings`."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use {@linkcode bundlerTimings}. If `bundlerTimings` and `pluginTimings` have values, Rolldown uses `bundlerTimings`."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.duplicateShebang",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1764,
+    "documentation": "Whether to emit warnings when both the code and postBanner contain shebang\n\nHaving multiple shebangs in a file is a syntax error.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.unsupportedTsconfigOption",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1769,
+    "documentation": "Whether to emit warnings when a tsconfig option or combination of options is not supported.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.ineffectiveDynamicImport",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1774,
+    "documentation": "Whether to emit warnings when a module is dynamically imported but also statically imported, making the dynamic import ineffective for code splitting.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.largeBarrelModules",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1785,
+    "documentation": "Whether to emit info logs when a barrel module has a very large number of re-exports (more than 5000).\n\nSuch modules can significantly slow down module resolution. Consider using\n[`@rolldown/plugin-transform-imports`](https://github.com/rolldown/plugins/tree/main/packages/transform-imports)\nto rewrite barrel imports at the source level so the barrel file is never loaded.\n\nSee [Large barrel modules](https://rolldown.rs/in-depth/lazy-barrel-optimization#large-barrel-modules) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.sourcemapBroken",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1790,
+    "documentation": "Whether to emit warnings when a plugin transforms code without generating a sourcemap.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.namespaceConflict",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1795,
+    "documentation": "Whether to emit warnings when multiple star re-exports provide the same name from different modules.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.checks.shimmedExport",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1800,
+    "documentation": "Whether to emit warnings when a missing export is replaced with an undefined binding.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.devtools.sessionId",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4085,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Developer tools are explicitly disabled at the Vite level; no session is selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.optimization.inlineConst",
+    "type": "boolean | { mode?: \"all\" | \"smart\" | undefined; pass?: number | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3577,
+    "documentation": "Inline imported constant values during bundling instead of preserving variable references.\n\nWhen enabled, constant values from imported modules will be inlined at their usage sites,\npotentially reducing bundle size and improving runtime performance by eliminating variable lookups.\n\n**Options:**\n- `true`: equivalent to `{ mode: 'all', pass: 1 }`, enabling constant inlining for all eligible constants with a single pass.\n- `false`: Disable constant inlining\n- `{ mode: 'smart' | 'all', pass?: number }`:\n  - `mode: 'smart'`: Only inline constants in specific scenarios where it is likely to reduce bundle size and improve performance.\n    Smart mode inlines constants in these specific scenarios:\n    1. `if (test) {} else {}` - condition expressions in if statements\n    2. `test ? a : b` - condition expressions in ternary operators\n    3. `test1 || test2` - logical OR expressions\n    4. `test1 && test2` - logical AND expressions\n    5. `test1 ?? test2` - nullish coalescing expressions\n - `mode: 'all'`: Inline all imported constants wherever they are used.\n - `pass`: Number of passes to perform for inlining constants.",
+    "tags": {
+      "example": "```js\n// Input files:\n// constants.js\nexport const API_URL = 'https://api.example.com';\n\n// main.js\nimport { API_URL } from './constants.js';\nconsole.log(API_URL);\n\n// With inlineConst: true, the bundled output becomes:\nconsole.log('https://api.example.com');\n\n// Instead of:\nconst API_URL = 'https://api.example.com';\nconsole.log(API_URL);\n```",
+      "default": "{ mode: 'smart', pass: 1 }"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.optimization.inlineConst.mode",
+    "type": "\"all\" | \"smart\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3578,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.optimization.inlineConst.pass",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3579,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.optimization.pifeForModuleWrappers",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3590,
+    "documentation": "Use PIFE pattern for module wrappers.\n\nEnabling this option improves the start up performance of the generated bundle with the cost of a slight increase in bundle size.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.paths",
+    "type": "Record<string, string> | PathsFunction$1 | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 752,
+    "documentation": "Maps {@link InputOptions.externalexternal} module IDs to paths.\n\nAllows customizing the path used when importing external dependencies.\nThis is particularly useful for loading dependencies from CDNs or custom locations.\n\n- Object form: Maps module IDs to their replacement paths\n- Function form: Takes a module ID and returns its replacement path",
+    "tags": {
+      "example": "```js\n{\n  paths: (id) => {\n    if (id.startsWith('lodash')) {\n      return `https://cdn.jsdelivr.net/npm/${id}`\n    }\n    return id\n  }\n}\n```"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  }
+]

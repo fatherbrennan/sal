@@ -1,0 +1,295 @@
+import assert from "node:assert/strict";
+import process from "node:process";
+import * as ts from "typescript";
+
+interface Entry { path: string; source: string; line: number; tags: Record<string,string>; type: string; documentation: string; }
+const catalog: Entry[] = await Bun.file(".cache/config-type-catalog.json").json();
+const refs: Record<string,string> = await Bun.file(".cache/config-type-references.json").json();
+const entries = new Map(catalog.map((entry) => [entry.path, entry]));
+for (let pass = 0; pass < 6; pass += 1) {
+  let added = 0;
+  for (const [alias, original] of Object.entries(refs)) {
+    for (const entry of [...entries.values()].filter((item) => item.path.startsWith(original + "."))) {
+      const path = alias + entry.path.slice(original.length);
+      if (!entries.has(path)) { entries.set(path, {...entry, path}); added += 1; }
+    }
+  }
+  if (added === 0) break;
+}
+const explicit = new Map<string, {value: string; location: string}>();
+const configText = await Bun.file("vite.config.ts").text();
+const source = ts.createSourceFile("vite.config.ts", configText, ts.ScriptTarget.Latest, true);
+const bundlerSource = ts.createSourceFile("config/bundler.ts", await Bun.file("config/bundler.ts").text(), ts.ScriptTarget.Latest, true);
+const environmentSource = ts.createSourceFile("config/environments.ts", await Bun.file("config/environments.ts").text(), ts.ScriptTarget.Latest, true);
+const bindings = new Map<string, ts.Expression>();
+function collectBindings(node: ts.Node): void {
+  if (ts.isVariableDeclaration(node) && ts.isIdentifier(node.name) && node.initializer) bindings.set(node.name.text, node.initializer);
+  ts.forEachChild(node, collectBindings);
+}
+collectBindings(source);
+collectBindings(bundlerSource);
+collectBindings(environmentSource);
+function collectObject(node: ts.Node, prefix: string): void {
+  if (ts.isPropertyAccessExpression(node) && ts.isIdentifier(node.expression)) {
+    let object = bindings.get(node.expression.text);
+    if (object && ts.isSatisfiesExpression(object)) object = object.expression;
+    if (object && ts.isObjectLiteralExpression(object)) {
+      const property = object.properties.find((field) => ts.isPropertyAssignment(field) && field.name.getText() === node.name.text);
+      if (property && ts.isPropertyAssignment(property)) collectObject(property.initializer, prefix);
+    }
+    return;
+  }
+  if (ts.isIdentifier(node)) {
+    const binding = bindings.get(node.text);
+    if (binding) collectObject(binding, prefix);
+    return;
+  }
+  if (ts.isSatisfiesExpression(node) || ts.isParenthesizedExpression(node)) return collectObject(node.expression, prefix);
+  if (!ts.isObjectLiteralExpression(node)) return;
+  for (const property of node.properties) {
+    if (ts.isSpreadAssignment(property)) collectObject(property.expression, prefix);
+    if (ts.isPropertyAssignment(property)) {
+      const key = property.name.getText().replace(/^["']|["']$/g, "");
+      const path = prefix + "." + key;
+      const owner = property.getSourceFile();
+      explicit.set(path, {value: property.initializer.getText(), location: `${owner.fileName}:${owner.getLineAndCharacterOfPosition(property.getStart()).line + 1}`});
+      collectObject(property.initializer, path);
+    } else if (ts.isMethodDeclaration(property)) {
+      const owner = property.getSourceFile();
+      explicit.set(prefix + "." + property.name.getText(), {value: property.getText(), location: `${owner.fileName}:${owner.getLineAndCharacterOfPosition(property.getStart()).line + 1}`});
+    }
+  }
+}
+function scan(node: ts.Node): void {
+  if (ts.isVariableDeclaration(node) && node.name.getText(source) === "kitOptions" && node.initializer) collectObject(node.initializer, "SvelteKit");
+  if (ts.isCallExpression(node) && node.expression.getText(source) === "adapter" && node.arguments[0]) collectObject(node.arguments[0], "StaticAdapter");
+  if (ts.isCallExpression(node) && node.expression.getText(source) === "defineConfig") {
+    const fn = node.arguments[0];
+    if (fn && ts.isArrowFunction(fn)) collectObject(fn.body, "Vite");
+  }
+  if (ts.isCallExpression(node) && node.expression.getText(source) === "sveltekit" && node.arguments[0]) collectObject(node.arguments[0], "SvelteKit");
+  ts.forEachChild(node, scan);
+}
+scan(source);
+for (const [path, value] of [...explicit]) {
+  if (path.startsWith("Vite.environments.client.")) explicit.set(path.replace("Vite.environments.client.", "ViteClient."), value);
+  if (path.startsWith("Vite.environments.ssr.")) explicit.set(path.replace("Vite.environments.ssr.", "ViteServer."), value);
+}
+const typescript = await Bun.file("tsconfig.json").json();
+for (const [name,value] of Object.entries(typescript.compilerOptions)) explicit.set("TypeScript." + name, {value:JSON.stringify(value),location:"tsconfig.json#compilerOptions." + name});
+
+const exclusions: Record<string,string> = {
+  "Vite.optimizeDeps.rolldownOptions.output.entryFileNames": "Vite's dependency optimizer explicitly sets [name].js when writing its cache.",
+  "ViteServer.optimizeDeps.rolldownOptions": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive.",
+  "ViteServer.optimizeDeps.entries": "Server dependency discovery is explicitly disabled and include is empty.",
+  "Vite.ssr.noExternal": "Server externalization is configured through Vite.resolve.noExternal and inherited by the server environment; no duplicate legacy SSR alias selected.",
+  "Vite.ssr.external": "Server externalization is configured through Vite.resolve.external and inherited by the server environment; no duplicate legacy SSR alias selected.",
+  "Vite.ssr.optimizeDeps": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected.",
+  "Vite.ssr.resolve": "Server resolution is explicitly configured under environments.ssr.resolve; no duplicate legacy SSR alias selected.",
+  "Vite.dev.preTransformRequests": "Explicitly configured per environment because browser/server defaults differ.",
+  "Vite.dev.recoverable": "Explicitly configured per environment because browser/server defaults differ.",
+  "Vite.dev.moduleRunnerTransform": "Explicitly configured per environment because browser/server defaults differ.",
+  "Vite.build.cssMinify": "Explicitly configured per environment because browser/server defaults differ.",
+  "Vite.build.minify": "Explicitly configured per environment because browser/server defaults differ.",
+  "Vite.build.sourcemap": "Explicitly configured per environment because browser/server defaults differ.",
+  "Vite.build.emitAssets": "Explicitly configured per environment because browser/server defaults differ.",
+  "Vite.isBundled": "Explicitly configured per environment and command; bundledDev remains disabled.",
+  "Vite.resolve.mainFields": "Explicitly configured per environment because browser/server resolution priorities differ.",
+  "Vite.resolve.conditions": "Explicitly configured per environment because browser/server conditions differ.",
+  "Vite.resolve.builtins": "Explicitly configured per environment; browser builtins are empty and server builtins derive from the Bun runtime.",
+  "Vite.oxc.include": "No custom transform inclusion filter; Vite selects the supported source extensions.",
+  "Vite.oxc.exclude": "No custom transform exclusion filter; Vite selects its dependency handling.",
+  "Vite.oxc.jsxInject": "No JSX source or injected JSX factory is selected.",
+  "Vite.oxc.jsxRefreshInclude": "No JSX source or React refresh plugin is selected.",
+  "Vite.oxc.jsxRefreshExclude": "No JSX source or React refresh plugin is selected.",
+  "Vite.oxc.jsx": "No JSX source is authored; Svelte templates are handled by the Svelte compiler.",
+  "Vite.oxc.typescript.jsxPragma": "No JSX source or JSX factory is selected.",
+  "Vite.oxc.typescript.jsxPragmaFrag": "No JSX source or JSX fragment factory is selected.",
+  "Vite.oxc.typescript.declaration": "The app is not a declaration-generating library. TypeScript is configured noEmit.",
+  "Vite.oxc.target": "Vite derives transform targets per environment from build.target; a single global target would override development/build behavior.",
+  "Vite.oxc.plugins": "No transformer plugin modules are selected.",
+  "Vite.builder.buildApp": "SvelteKit supplies the application build orchestrator.",
+  "Vite.customLogger": "The logger instance is returned by Vite's logger factory; warning methods explicitly throw to enforce zero warnings. Its operational methods are not additional configuration.",
+  "Vite.css.postcss.document": "Per-input document metadata is supplied by Vite, not a fixed global source.",
+  "Vite.css.postcss.from": "Vite selects each source stylesheet path.",
+  "Vite.css.postcss.to": "Vite selects each destination stylesheet path.",
+  "Vite.css.postcss.map": "Vite derives PostCSS maps from css.devSourcemap and build.sourcemap; a global map override would conflict with per-environment behavior.",
+  "Vite.css.postcss.unsafeMap": "No unsafe externally generated input map is supplied.",
+  "Vite.css.postcss.parser": "No custom PostCSS parser is selected; ordinary CSS uses the built-in parser.",
+  "Vite.css.postcss.stringifier": "No custom PostCSS stringifier is selected.",
+  "Vite.css.postcss.syntax": "No custom PostCSS syntax is selected.",
+  "Vite.server.watch.cwd": "The watcher receives resolved framework/project paths; no alternate relative watcher root is selected.",
+  "Vite.server.watch.usePolling": "Chokidar derives the backend from platform capabilities and CHOKIDAR_USEPOLLING. A single fixed value is not its cross-platform default.",
+  "Vite.server.watch.useFsEvents": "Chokidar derives native FSEvents availability on macOS; it is unavailable on Windows/Linux.",
+  "Vite.server.watch.atomic": "Chokidar derives atomic handling from the actual polling/FSEvents backend.",
+  "Vite.server.watch.depth": "The default is unlimited traversal; no finite invented depth is equivalent.",
+  "Vite.server.watch.awaitWriteFinish": "Explicitly disabled; delayed-write object settings do not apply.",
+  "Vite.server.watch.include": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false.",
+  "Vite.server.watch.exclude": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false.",
+  "Vite.server.watch.pollInterval": "Only used by the experimental native bundled-dev watcher; the selected Chokidar interval is explicit.",
+  "Vite.server.watch.useDebounce": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false.",
+  "Vite.server.watch.debounceDuration": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false.",
+  "Vite.server.watch.compareContentsForPolling": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false.",
+  "Vite.server.watch.debounceTickRate": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false.",
+  "Vite.preview.cors.allowedHeaders": "Default reflects each Access-Control-Request-Headers request header; a fixed invented list is not equivalent.",
+  "Vite.preview.cors.exposedHeaders": "No additional exposed response headers selected.",
+  "Vite.preview.cors.maxAge": "No preflight cache lifetime is selected; the default omits this header.",
+  "Vite.optimizeDeps.entries": "SvelteKit supplies dependency scan entries from route/generated modules.",
+  "Vite.build.modulePreload.resolveDependencies": "No custom module preload rewrite hook selected.",
+  "Vite.build.createEnvironment": "SvelteKit/Vite own their build environment factories; no custom implementation selected.",
+  "Vite.dev.createEnvironment": "SvelteKit/Vite own their development environment factories; no custom implementation selected.",
+  "Vite.server.ws.protocol": "Derived from the selected HTTP/HTTPS listener; no separate WebSocket endpoint selected.",
+  "Vite.server.ws.host": "Derived from the bound listener; no separate WebSocket endpoint selected.",
+  "Vite.server.ws.port": "Derived from the actual bound listener port; no separate WebSocket endpoint selected.",
+  "Vite.server.ws.clientPort": "No reverse proxy or alternate public WebSocket port selected.",
+  "Vite.server.ws.path": "Vite derives the WebSocket path from the application base; no additional path selected.",
+  "Vite.server.headers": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server.",
+  "Vite.preview.headers": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server.",
+  "Vite.server.middlewareMode": "Middleware mode is explicitly false; supplying an external server instance is not applicable.",
+  "Vite.server.cors": "SvelteKit derives the development CORS origins from the actual listener and framework configuration.",
+  "StaticAdapter.fallback": "All current routes are prerendered. A route fallback and static host remain a product/deployment decision; do not invent a fallback filename.",
+  "SvelteKit.adapter": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter.",
+  "SvelteKit.csp.directives": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit.",
+  "SvelteKit.csp.reportOnly": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use.",
+  "SvelteKit.csrf.checkOrigin": "Removed option in the pinned SvelteKit native validator; trustedOrigins replaces it.",
+  "SvelteKit.files": "Deprecated custom filesystem layout; the pinned framework's conventional layout is used.",
+  "SvelteKit.alias": "Deprecated alias surface; TypeScript/framework generated module paths apply.",
+  "SvelteKit.output.preloadStrategy": "Removed by the pinned native validator; framework module preload is automatic.",
+  "SvelteKit.paths.origin": "A deployed origin has not been selected; optional unset origin must not invent a host.",
+  "SvelteKit.prerender.origin": "Removed by the pinned native validator.",
+  "SvelteKit.typescript": "Deprecated hook; TypeScript configuration is authored directly.",
+  "SvelteKit.version.name": "Framework-generated build timestamp; a fixed invented value would prevent version-change detection.",
+  "SvelteKit.serviceWorker.options": "No service-worker implementation is present during the tooling milestone. Registration details require the offline implementation.",
+  "SvelteKit.preprocess": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor.",
+  "SvelteKit.inspector": "Inspector is explicitly disabled; its object-variant options do not apply.",
+  "SvelteKit.dynamicCompileOptions": "No per-component compiler override hook is selected.",
+  "SvelteKit.experimental.compileModule.include": "No custom compile-module inclusion filter; explicit infixes/extensions determine discovery.",
+  "SvelteKit.experimental.compileModule.exclude": "No additional compile-module exclusions selected.",
+  "SvelteKit.compilerOptions.name": "Component names are generated from each filename; no fixed shared name is valid.",
+  "SvelteKit.compilerOptions.cssHash": "The Svelte Vite plugin owns development/production CSS hashing.",
+  "SvelteKit.compilerOptions.sourcemap": "Input sourcemaps belong to the framework transform pipeline; no external preprocessing map is selected.",
+  "SvelteKit.compilerOptions.outputFilename": "Framework output paths vary by module and build environment.",
+  "SvelteKit.compilerOptions.cssOutputFilename": "Framework output paths vary by module and build environment.",
+  "SvelteKit.compilerOptions.hmr": "Svelte Vite plugin selects HMR for development and disables it for builds.",
+  "SvelteKit.compilerOptions.dev": "Svelte Vite plugin selects development checks per command/mode.",
+  "SvelteKit.compilerOptions.rootDir": "Svelte Vite plugin derives the compiler root from the resolved project root.",
+  "Vite.base": "SvelteKit enforced_config owns this value from SvelteKit.paths.",
+  "Vite.publicDir": "SvelteKit enforced_config owns the static asset directory.",
+  "Vite.appType": "SvelteKit enforced_config owns application middleware behavior.",
+  "Vite.mode": "The Vite CLI selects development/production or the explicitly requested mode; a global override would change command behavior.",
+  "Vite.plugins": "The single selected plugin is SvelteKit. Plugin implementation methods are not user settings; SvelteKit settings are inventoried separately.",
+  "Vite.html.cspNonce": "No fixed nonce is valid for static responses; CSP is configured through SvelteKit when a deployment policy is selected.",
+  "Vite.css.modules": "CSS Modules are explicitly disabled; Svelte component CSS is required.",
+  "Vite.css.preprocessorOptions": "No Sass, Less, Stylus or other CSS preprocessors are installed or approved.",
+  "Vite.css.lightningcss": "PostCSS is the selected CSS transformer; Lightning CSS transformer-only options do not apply.",
+  "Vite.server.https": "Local development uses HTTP on loopback. No TLS listener or certificate is selected.",
+  "Vite.preview.https": "Local preview uses HTTP on loopback. No TLS listener or certificate is selected.",
+  "Vite.server.proxy": "No backend or proxy targets are selected; the app is client-only.",
+  "Vite.preview.proxy": "No backend or proxy targets are selected; the app is client-only.",
+  "Vite.server.fs.allow": "SvelteKit assembles the allow-list from project, generated and framework paths; overriding it can block required development files.",
+  "Vite.server.watch.ignored": "SvelteKit and Vite assemble project/output/cache ignores from resolved paths.",
+  "Vite.server.sourcemapIgnoreList": "SvelteKit supplies its source-map exclusion function.",
+  "Vite.server.origin": "No separate asset origin is selected; derive URLs from the actual listener.",
+  "Vite.server.hmr.server": "No external HMR HTTP server is supplied.",
+  "Vite.server.ws.server": "No external WebSocket HTTP server is supplied.",
+  "Vite.server.hotUpdateEnvironments": "No custom hot-update orchestration hook is selected.",
+  "Vite.experimental.hmrPartialAccept": "The Svelte Vite plugin explicitly enables partial HMR acceptance; a global conflicting default is invalid.",
+  "Vite.experimental.renderBuiltUrl": "No custom asset URL hook is selected; SvelteKit controls asset paths.",
+  "Vite.future": "Opt-in migration warning switches have no false enum variant. They remain unset while the pinned framework owns these APIs.",
+  "Vite.worker": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration.",
+  "Vite.build.terserOptions": "Terser is not the selected minifier.",
+  "Vite.build.outDir": "SvelteKit enforced_config selects output directories for each build environment.",
+  "Vite.build.cssCodeSplit": "SvelteKit enforced_config owns CSS splitting.",
+  "Vite.build.emptyOutDir": "SvelteKit enforced_config owns clearing its generated output.",
+  "Vite.build.lib": "SvelteKit uses this internal build shape and enforces entries/formats; sal is not a published library.",
+  "Vite.build.manifest": "SvelteKit enforced_config owns the build manifest.",
+  "Vite.build.ssr": "SvelteKit requires its build-time SSR phase even when route SSR is disabled; the framework selects the environment.",
+  "Vite.build.watch": "Watch builds are explicitly disabled; watcher object options do not apply.",
+  "Vite.build.license": "License report generation is explicitly disabled; report-output object options do not apply.",
+  "Vite.build.rolldownOptions.input": "SvelteKit enforced_config owns the build entry points.",
+  "Vite.build.rolldownOptions.preserveEntrySignatures": "SvelteKit enforced_config owns entry signatures.",
+  "Vite.build.rolldownOptions.output.format": "SvelteKit enforced_config owns generated module formats.",
+  "Vite.build.rolldownOptions.output.entryFileNames": "SvelteKit enforced_config owns hashed entry paths.",
+  "Vite.build.rolldownOptions.output.chunkFileNames": "SvelteKit enforced_config owns hashed chunk paths.",
+  "Vite.build.rolldownOptions.output.assetFileNames": "SvelteKit enforced_config owns hashed asset paths.",
+  "Vite.resolve.alias": "Framework aliases are injected by SvelteKit; no custom application aliases selected.",
+  "Vite.input": "SvelteKit owns the environment entry points.",
+  "TypeScript.paths": "Inherited from the explicitly generated $app/tsconfig; required framework route/virtual-module paths are environment-specific.",
+  "TypeScript.rootDirs": "Inherited from $app/tsconfig to join authored and generated route types. Tooling explicitly overrides its own rootDirs.",
+  "TypeScript.ignoreDeprecations": "Deprecation suppression is prohibited.",
+  "TypeScript.locale": "CLI-only display locale, not a valid compilerOptions property.",
+  "TypeScript.project": "CLI-only project selector; named tasks explicitly select each configuration.",
+  "TypeScript.assumeChangesOnlyAffectDirectDependencies": "Incremental/watch builds are disabled; full type checks run.",
+  "TypeScript.tsBuildInfoFile": "Incremental/composite builds are disabled.",
+  "TypeScriptWatch": "No TypeScript watch task is selected.",
+};
+for (const prefix of ["Vite.build.rolldownOptions", "Vite.optimizeDeps.rolldownOptions"]) {
+  const commonExclusions = {
+    context: "Default is undefined. exactOptionalPropertyTypes rejects explicitly assigning undefined to this optional string; no replacement top-level this context is selected.",
+    platform: "The framework selects browser/server environments and output format; no fixed cross-environment native platform override is selected.",
+    plugins: "Vite builds this native plugin list from its environment-specific plugin pipeline.",
+    onLog: "Vite routes native diagnostics through its logger; the configured logger throws on warnings.",
+    tsconfig: "Vite explicitly supplies the top-level tsconfig path to its native bundler.",
+    devtools: "Developer tools are explicitly disabled at the Vite level; no session is selected.",
+    transform: "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected.",
+    watch: "Watch builds are explicitly disabled; watcher object fields do not apply.",
+    "resolve.aliasFields": "Native platform-dependent alias fields are automatic; no cross-environment fixed platform override is selected.",
+    "resolve.conditionNames": "Native conditions vary by platform and import/require kind. Vite resolves dependencies with its environment conditions.",
+    "resolve.extensions": "Vite's build resolver and dependency optimizer select different extension lists; the application resolver extensions are explicit.",
+    "resolve.mainFields": "Native main-field priority varies by platform. Vite supplies environment-specific resolution.",
+    "experimental.viteMode": "Vite explicitly enables its internal native-bundler integration mode.",
+    "experimental.devMode": "Bundled dev is explicitly disabled; no low-level dev server is selected.",
+    "experimental.chunkImportMap": "Explicitly disabled; its URL/name object variant does not apply.",
+    "output[]": "The selected native output configuration is one object, not an array of separately configured outputs.",
+    "output.dir": "Vite sets each environment output/cache directory.",
+    "output.file": "Vite rejects output.file; directory-based output is required.",
+    "output.sourcemap": "Vite requires the build.sourcemap surface and sets dependency optimizer maps itself.",
+    "output.sourcemapBaseUrl": "No separate sourcemap hosting URL is selected.",
+    "output.sourcemapFileNames": "The default derives each map name from its output chunk. No fixed shared map filename is valid.",
+    "output.sourcemapPathTransform": "No source-map path rewrite hook is selected.",
+    "output.extend": "Only applies to IIFE/UMD exports; SvelteKit emits ES modules.",
+    "output.esModule": "Only applies to non-ES output interop metadata; SvelteKit emits ES modules.",
+    "output.minify": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected.",
+    "output.name": "No IIFE/UMD global export name is applicable to the ES-module app.",
+    "output.globals": "No IIFE/UMD external global mapping is applicable.",
+    "output.dynamicImportInCjs": "No CommonJS output is selected.",
+    "output.codeSplitting": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected.",
+    "output.comments": "Vite derives annotation/legal/JSDoc retention from the selected minification and output mode.",
+    "output.virtualDirname": "preserveModules is explicitly false; virtual preserved-module paths are inapplicable.",
+    "output.preserveModulesRoot": "preserveModules is explicitly false; there is no preserved-module root.",
+    "treeshake.moduleSideEffects": "The boolean variant explicitly preserves side-effect metadata; no custom per-module rule array is selected.",
+  };
+  for (const [key, reason] of Object.entries(commonExclusions)) exclusions[prefix + "." + key] = reason;
+}
+for (const name of ["declaration","declarationMap","emitDeclarationOnly","declarationDir","emitBOM","importHelpers","inlineSourceMap","inlineSources","mapRoot","newLine","noEmitHelpers","noEmitOnError","outDir","outFile","preserveConstEnums","removeComments","rewriteRelativeImportExtensions","sourceMap","sourceRoot","stripInternal"]) exclusions["TypeScript." + name] = "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline.";
+for (const name of ["jsx","reactNamespace","jsxFactory","jsxFragmentFactory","jsxImportSource"]) exclusions["TypeScript." + name] = "No JSX/React source is authored; sal uses Svelte templates.";
+for (const entry of entries.values()) {
+  if (Object.hasOwn(entry.tags, "deprecated")) exclusions[entry.path] =
+    "Deprecated in the pinned tool type definitions. " + entry.tags.deprecated;
+}
+const inheritedExclusions = Object.entries(exclusions).sort(([a],[b]) => b.length - a.length);
+const rows = [...entries.values()].map((entry) => {
+  const configured = explicit.get(entry.path);
+  if (configured) return { ...entry, state:"explicit", ...configured };
+  const canonical = entry.path.replace(/^Vite(?:Client|Server)\./, "Vite.");
+  const inheritedValue = explicit.get(canonical);
+  const inheritable = /^(ViteClient|ViteServer)\.(dev|build|resolve|define)(\.|$)/.test(entry.path)
+    || /^ViteClient\.optimizeDeps(\.|$)/.test(entry.path);
+  if (inheritable && inheritedValue) return { ...entry, state:"inherited", ...inheritedValue, reason:"Vite merges the explicitly configured root settings into this environment." };
+  const deprecated = Object.hasOwn(entry.tags, "deprecated");
+  const inherited = inheritedExclusions.find(([prefix]) => [entry.path,canonical].some((path) => path === prefix || path.startsWith(prefix + ".") || path.startsWith(prefix + "[]")));
+  if (deprecated || inherited) return { ...entry, state:"excluded", reason:deprecated ? "Deprecated in the pinned tool type definitions. " + entry.tags.deprecated : inherited?.[1] };
+  return { ...entry, state:"pending" };
+});
+for (const prefix of ["StaticAdapter","SvelteKit","Vite","TypeScript","TypeScriptWatch","ViteClient","ViteServer"]) {
+  const selected = rows.filter((row) => row.path === prefix || row.path.startsWith(prefix + "."));
+  for (let index = 0; index < selected.length; index += 100) {
+    await Bun.write(`tooling/config-inventory/${prefix}-${String(index / 100).padStart(3, "0")}.json`, JSON.stringify(selected.slice(index,index+100),null,2) + "\n");
+  }
+}
+const pending = rows.filter((row) => row.state === "pending");
+await Bun.write(".cache/config-pending.json", JSON.stringify(pending, null, 2) + "\n");
+const requested = process.argv[2];
+for (const row of pending.filter((entry) => requested ? entry.path.startsWith(requested) : entry.path.split(".").length <= 4)) console.log(JSON.stringify({path:row.path,default:row.tags.default,type:row.type}));
+console.log(`${rows.length} properties enumerated; ${pending.length} unresolved.`);
+assert(pending.length === 0, "Configuration audit is incomplete; do not mark tooling accepted.");

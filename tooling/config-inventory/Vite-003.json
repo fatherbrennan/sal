@@ -1,0 +1,1048 @@
+[
+  {
+    "path": "Vite.server.https.ticketKeys",
+    "type": "Buffer<ArrayBufferLike> | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 600,
+    "documentation": "48-bytes of cryptographically strong pseudo-random data.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.pskCallback",
+    "type": "((socket: TLSSocket, identity: string) => ArrayBufferView<ArrayBufferLike> | null) | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 619,
+    "documentation": "",
+    "tags": {
+      "param": "identity identity parameter sent from the client.",
+      "return": "pre-shared key that must either be\na buffer or `null` to stop the negotiation process. Returned PSK must be\ncompatible with the selected cipher's digest.\n\nWhen negotiating TLS-PSK (pre-shared keys), this function is called\nwith the identity provided by the client.\nIf the return value is `null` the negotiation process will stop and an\n\"unknown_psk_identity\" alert message will be sent to the other party.\nIf the server wishes to hide the fact that the PSK identity was not known,\nthe callback must provide some random data as `psk` to make the connection\nfail with \"decrypt_error\" before negotiation is finished.\nPSK ciphers are disabled by default, and using TLS-PSK thus\nrequires explicitly specifying a cipher suite with the `ciphers` option.\nMore information can be found in the RFC 4279."
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.pskIdentityHint",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 626,
+    "documentation": "hint to send to a client to help\nwith selecting the identity during TLS-PSK negotiation. Will be ignored\nin TLS 1.3. Upon failing to set pskIdentityHint `tlsClientError` will be\nemitted with `ERR_TLS_PSK_SET_IDENTIY_HINT_FAILED` code.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.ALPNCallback",
+    "type": "((arg: { servername: string; protocols: string[]; }) => string | undefined) | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 773,
+    "documentation": "If set, this will be called when a client opens a connection using the ALPN extension.\nOne argument will be passed to the callback: an object containing `servername` and `protocols` fields,\nrespectively containing the server name from the SNI extension (if any) and an array of\nALPN protocol name strings. The callback must return either one of the strings listed in `protocols`,\nwhich will be returned to the client as the selected ALPN protocol, or `undefined`,\nto reject the connection with a fatal alert. If a string is returned that does not match one of\nthe client's ALPN protocols, an error will be thrown.\nThis option cannot be used with the `ALPNProtocols` option, and setting both options will throw an error.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.allowPartialTrustChain",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 779,
+    "documentation": "Treat intermediate (non-self-signed)\ncertificates in the trust CA certificate list as trusted.",
+    "tags": {
+      "since": "v22.9.0, v20.18.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.ca",
+    "type": "string | Buffer<ArrayBufferLike> | (string | Buffer<ArrayBufferLike>)[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 785,
+    "documentation": "Optionally override the trusted CA certificates. Default is to trust\nthe well-known CAs curated by Mozilla. Mozilla's CAs are completely\nreplaced when CAs are explicitly specified using this option.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.cert",
+    "type": "string | Buffer<ArrayBufferLike> | (string | Buffer<ArrayBufferLike>)[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 797,
+    "documentation": "Cert chains in PEM format. One cert chain should be provided per\nprivate key. Each cert chain should consist of the PEM formatted\ncertificate for a provided private key, followed by the PEM\nformatted intermediate certificates (if any), in order, and not\nincluding the root CA (the root CA must be pre-known to the peer,\nsee ca). When providing multiple cert chains, they do not have to\nbe in the same order as their private keys in key. If the\nintermediate certificates are not provided, the peer will not be\nable to validate the certificate, and the handshake will fail.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.certificateCompression",
+    "type": "readonly CertificateCompressionAlgorithm[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 806,
+    "documentation": "An array of supported certificate\ncompression algorithm names, in preference order. Supported values are\n`'zlib'`, `'brotli'`, and `'zstd'`. When set, enables TLS certificate\ncompression ([RFC 8879](https://tools.ietf.org/html/rfc8879)) which compresses certificates during the TLS\nhandshake, reducing handshake size. Only effective with TLSv1.3.\n**Default:** `[]` (disabled).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.sigalgs",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 813,
+    "documentation": "Colon-separated list of supported signature algorithms. The list\ncan contain digest algorithms (SHA256, MD5 etc.), public key\nalgorithms (RSA-PSS, ECDSA etc.), combination of both (e.g\n'RSA+SHA384') or TLS v1.3 scheme names (e.g. rsa_pss_pss_sha512).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.ciphers",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 820,
+    "documentation": "Cipher suite specification, replacing the default. For more\ninformation, see modifying the default cipher suite. Permitted\nciphers can be obtained via tls.getCiphers(). Cipher names must be\nuppercased in order for OpenSSL to accept them.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.clientCertEngine",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 825,
+    "documentation": "Name of an OpenSSL engine which can provide the client certificate.",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "Vite.server.https.crl",
+    "type": "string | Buffer<ArrayBufferLike> | (string | Buffer<ArrayBufferLike>)[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 829,
+    "documentation": "PEM formatted CRLs (Certificate Revocation Lists).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.dhparam",
+    "type": "string | Buffer<ArrayBufferLike> | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 835,
+    "documentation": "`'auto'` or custom Diffie-Hellman parameters, required for non-ECDHE perfect forward secrecy.\nIf omitted or invalid, the parameters are silently discarded and DHE ciphers will not be available.\nECDHE-based perfect forward secrecy will still be available.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.ecdhCurve",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 848,
+    "documentation": "A string describing a named curve, TLS group, or\ncolon-separated list of named curves or TLS groups to use for key agreement,\nfor example `P-521:P-384:P-256`, `X25519`, or `X25519MLKEM768`. The\nhistorical name of this option refers to ECDH key agreement in TLSv1.2 and\nbelow. In TLSv1.3, this option configures the TLS Supported Groups and\nkey share groups offered or accepted by the TLS stack. Set to `auto` to\nselect the group automatically. Use `crypto.getCurves()` to obtain a\nlist of available elliptic curve names. For TLS group names, use\n`openssl list -tls-groups` or consult the [IANA TLS Supported Groups\nregistry](https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-8).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.honorCipherOrder",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 854,
+    "documentation": "Attempt to use the server's cipher suite preferences instead of the\nclient's. When true, causes SSL_OP_CIPHER_SERVER_PREFERENCE to be\nset in secureOptions",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.key",
+    "type": "string | Buffer<ArrayBufferLike> | (string | Buffer<ArrayBufferLike> | KeyObject)[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 865,
+    "documentation": "Private keys in PEM format. PEM allows the option of private keys\nbeing encrypted. Encrypted keys will be decrypted with\noptions.passphrase. Multiple keys using different algorithms can be\nprovided either as an array of unencrypted key strings or buffers,\nor an array of objects in the form {pem: <string|buffer>[,\npassphrase: <string>]}. The object form can only occur in an array.\nobject.passphrase is optional. Encrypted keys will be decrypted with\nobject.passphrase if provided, or options.passphrase if it is not.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.key[].pem",
+    "type": "string | Buffer<ArrayBufferLike>",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 163,
+    "documentation": "Private keys in PEM format.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.key[].passphrase",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 167,
+    "documentation": "Optional passphrase.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.privateKeyEngine",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 871,
+    "documentation": "Name of an OpenSSL engine to get private key from. Should be used\ntogether with privateKeyIdentifier.",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "Vite.server.https.privateKeyIdentifier",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 878,
+    "documentation": "Identifier of a private key managed by an OpenSSL engine. Should be\nused together with privateKeyEngine. Should not be set together with\nkey, because both options define a private key in different ways.",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "Vite.server.https.maxVersion",
+    "type": "SecureVersion | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 887,
+    "documentation": "Optionally set the maximum TLS version to allow. One\nof `'TLSv1.3'`, `'TLSv1.2'`, `'TLSv1.1'`, or `'TLSv1'`. Cannot be specified along with the\n`secureProtocol` option, use one or the other.\n**Default:** `'TLSv1.3'`, unless changed using CLI options. Using\n`--tls-max-v1.2` sets the default to `'TLSv1.2'`. Using `--tls-max-v1.3` sets the default to\n`'TLSv1.3'`. If multiple of the options are provided, the highest maximum is used.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.minVersion",
+    "type": "SecureVersion | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 898,
+    "documentation": "Optionally set the minimum TLS version to allow. One\nof `'TLSv1.3'`, `'TLSv1.2'`, `'TLSv1.1'`, or `'TLSv1'`. Cannot be specified along with the\n`secureProtocol` option, use one or the other.  It is not recommended to use\nless than TLSv1.2, but it may be required for interoperability.\n**Default:** `'TLSv1.2'`, unless changed using CLI options. Using\n`--tls-v1.0` sets the default to `'TLSv1'`. Using `--tls-v1.1` sets the default to\n`'TLSv1.1'`. Using `--tls-min-v1.3` sets the default to\n'TLSv1.3'. If multiple of the options are provided, the lowest minimum is used.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.passphrase",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 902,
+    "documentation": "Shared passphrase used for a single private key and/or a PFX.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.pfx",
+    "type": "string | Buffer<ArrayBufferLike> | (string | Buffer<ArrayBufferLike> | PxfObject)[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 913,
+    "documentation": "PFX or PKCS12 encoded private key and certificate chain. pfx is an\nalternative to providing key and cert individually. PFX is usually\nencrypted, if it is, passphrase will be used to decrypt it. Multiple\nPFX can be provided either as an array of unencrypted PFX buffers,\nor an array of objects in the form {buf: <string|buffer>[,\npassphrase: <string>]}. The object form can only occur in an array.\nobject.passphrase is optional. Encrypted PFX will be decrypted with\nobject.passphrase if provided, or options.passphrase if it is not.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.pfx[].buf",
+    "type": "string | Buffer<ArrayBufferLike>",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 173,
+    "documentation": "PFX or PKCS12 encoded private key and certificate chain.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.pfx[].passphrase",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 177,
+    "documentation": "Optional passphrase.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.secureOptions",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 919,
+    "documentation": "Optionally affect the OpenSSL protocol behavior, which is not\nusually necessary. This should be used carefully if at all! Value is\na numeric bitmask of the SSL_OP_* options from OpenSSL Options",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.secureProtocol",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 931,
+    "documentation": "Legacy mechanism to select the TLS protocol version to use, it does\nnot support independent control of the minimum and maximum version,\nand does not support limiting the protocol to TLSv1.3. Use\nminVersion and maxVersion instead. The possible values are listed as\nSSL_METHODS, use the function names as strings. For example, use\n'TLSv1_1_method' to force TLS version 1.1, or 'TLS_method' to allow\nany TLS protocol version up to TLSv1.3. It is not recommended to use\nTLS versions less than 1.2, but it may be required for\ninteroperability. Default: none, see minVersion.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.sessionIdContext",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 936,
+    "documentation": "Opaque identifier used by servers to ensure session state is not\nshared between applications. Unused by clients.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.secureContext",
+    "type": "SecureContext | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 537,
+    "documentation": "An optional TLS context object from tls.createSecureContext()",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.secureContext.context",
+    "type": "any",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 950,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.enableTrace",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 543,
+    "documentation": "When enabled, TLS packet trace information is written to `stderr`. This can be\nused to debug TLS connection problems.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.requestCert",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 549,
+    "documentation": "If true the server will request a certificate from clients that\nconnect and attempt to verify that certificate. Defaults to\nfalse.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.ALPNProtocols",
+    "type": "ArrayBufferView<ArrayBufferLike> | readonly string[] | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 558,
+    "documentation": "An array of strings, or a single `Buffer`, `TypedArray`, or `DataView` containing the supported\nALPN protocols. Buffers should have the format `[len][name][len][name]...`\ne.g. `'\\x08http/1.1\\x08http/1.0'`, where the `len` byte is the length of the\nnext protocol name. Passing an array is usually much simpler, e.g.\n`['http/1.1', 'http/1.0']`. Protocols earlier in the list have higher\npreference than those later.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.SNICallback",
+    "type": "((servername: string, cb: (err: Error | null, ctx?: SecureContext | undefined) => void) => void) | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 568,
+    "documentation": "SNICallback(servername, cb) <Function> A function that will be\ncalled if the client supports SNI TLS extension. Two arguments\nwill be passed when called: servername and cb. SNICallback should\ninvoke cb(null, ctx), where ctx is a SecureContext instance.\n(tls.createSecureContext(...) can be used to get a proper\nSecureContext.) If SNICallback wasn't provided the default callback\nwith high-level API will be used (see below).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.rejectUnauthorized",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 575,
+    "documentation": "If true the server will reject any connection which is not\nauthorized with the list of supplied CAs. This option only has an\neffect if requestCert is true.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.requestOCSP",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 581,
+    "documentation": "If true, specifies that the OCSP status request extension will be\nadded to the client hello and an 'OCSPResponse' event will be\nemitted on the socket before establishing a secure communication.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.allowHalfOpen",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 568,
+    "documentation": "Indicates whether half-opened TCP connections are allowed.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.pauseOnConnect",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 573,
+    "documentation": "Indicates whether the socket should be paused on incoming connections.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.blockList",
+    "type": "BlockList | undefined",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 607,
+    "documentation": "`blockList` can be used for disabling inbound\naccess to specific IP addresses, IP ranges, or IP subnets. This does not\nwork if the server is behind a reverse proxy, NAT, etc. because the address\nchecked against the block list is the address of the proxy, or the one\nspecified by the NAT.",
+    "tags": {
+      "since": "v22.13.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.blockList.addAddress",
+    "type": "{ (address: string, type?: IPVersion | undefined): void; (address: SocketAddress): void; }",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 775,
+    "documentation": "Adds a rule to block the given IP address.",
+    "tags": {
+      "since": "v15.0.0, v14.18.0",
+      "param": "type Either `'ipv4'` or `'ipv6'`."
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.blockList.addRange",
+    "type": "{ (start: string, end: string, type?: IPVersion | undefined): void; (start: SocketAddress, end: SocketAddress): void; }",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 784,
+    "documentation": "Adds a rule to block a range of IP addresses from `start` (inclusive) to`end` (inclusive).",
+    "tags": {
+      "since": "v15.0.0, v14.18.0",
+      "param": "type Either `'ipv4'` or `'ipv6'`."
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.blockList.addSubnet",
+    "type": "{ (net: SocketAddress, prefix: number): void; (net: string, prefix: number, type?: IPVersion | undefined): void; }",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 793,
+    "documentation": "Adds a rule to block a range of IP addresses specified as a subnet mask.",
+    "tags": {
+      "since": "v15.0.0, v14.18.0",
+      "param": "type Either `'ipv4'` or `'ipv6'`."
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.blockList.check",
+    "type": "{ (address: SocketAddress): boolean; (address: string, type?: IPVersion | undefined): boolean; }",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 816,
+    "documentation": "Returns `true` if the given IP address matches any of the rules added to the`BlockList`.\n\n```js\nconst blockList = new net.BlockList();\nblockList.addAddress('123.123.123.123');\nblockList.addRange('10.0.0.1', '10.0.0.10');\nblockList.addSubnet('8592:757c:efae:4e45::', 64, 'ipv6');\n\nconsole.log(blockList.check('123.123.123.123'));  // Prints: true\nconsole.log(blockList.check('10.0.0.3'));  // Prints: true\nconsole.log(blockList.check('222.111.111.222'));  // Prints: false\n\n// IPv6 notation for IPv4 addresses works:\nconsole.log(blockList.check('::ffff:7b7b:7b7b', 'ipv6')); // Prints: true\nconsole.log(blockList.check('::ffff:123.123.123.123', 'ipv6')); // Prints: true\n```",
+    "tags": {
+      "since": "v15.0.0, v14.18.0",
+      "param": "type Either `'ipv4'` or `'ipv6'`."
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.blockList.rules",
+    "type": "readonly string[]",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 822,
+    "documentation": "The list of rules added to the blocklist.",
+    "tags": {
+      "since": "v15.0.0, v14.18.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.blockList.fromJSON",
+    "type": "(data: string | readonly string[]) => void",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 844,
+    "documentation": "```js\nconst blockList = new net.BlockList();\nconst data = [\n  'Subnet: IPv4 192.168.1.0/24',\n  'Address: IPv4 10.0.0.5',\n  'Range: IPv4 192.168.2.1-192.168.2.10',\n  'Range: IPv4 10.0.0.1-10.0.0.10',\n];\nblockList.fromJSON(data);\nblockList.fromJSON(JSON.stringify(data));\n```",
+    "tags": {
+      "since": "v24.5.0",
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.blockList.toJSON",
+    "type": "() => readonly string[]",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 849,
+    "documentation": "",
+    "tags": {
+      "since": "v24.5.0",
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.open",
+    "type": "string | boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 838,
+    "documentation": "Open browser window on startup",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:157"
+  },
+  {
+    "path": "Vite.server.proxy",
+    "type": "Record<string, string | ProxyOptions> | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 861,
+    "documentation": "Configure custom proxy rules for the dev server. Expects an object\nof `{ key: options }` pairs.\nUses [`http-proxy-3`](https://github.com/sagemathinc/http-proxy-3).\nFull options [here](https://github.com/sagemathinc/http-proxy-3#options).\n\nExample `vite.config.js`:\n``` js\nmodule.exports = {\n  proxy: {\n    // string shorthand: /foo -> http://localhost:4567/foo\n    '/foo': 'http://localhost:4567',\n    // with options\n    '/api': {\n      target: 'http://jsonplaceholder.typicode.com',\n      changeOrigin: true,\n      rewrite: path => path.replace(/^\\/api/, '')\n    }\n  }\n}\n```",
+    "tags": {},
+    "state": "explicit",
+    "value": "{}",
+    "location": "vite.config.ts:158"
+  },
+  {
+    "path": "Vite.server.cors",
+    "type": "boolean | CorsOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 874,
+    "documentation": "Configure CORS for the dev server.\nUses https://github.com/expressjs/cors.\n\nWhen enabling this option, **we recommend setting a specific value\nrather than `true`** to avoid exposing the source code to untrusted origins.\n\nSet to `true` to allow all methods from any origin, or configure separately\nusing an object.",
+    "tags": {
+      "default": "{ origin: /^https?:\\/\\/(?:(?:[^:]+\\.)?localhost|127\\.0\\.0\\.1|\\[::1\\])(?::\\d+)?$/ }"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.cors.origin",
+    "type": "CorsOrigin | ((origin: string | undefined, cb: (err: Error, origins: CorsOrigin) => void) => void) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 890,
+    "documentation": "Configures the Access-Control-Allow-Origin CORS header.\n\n**We recommend setting a specific value rather than\n`true`** to avoid exposing the source code to untrusted origins.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.cors.methods",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 891,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.cors.allowedHeaders",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 892,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.cors.exposedHeaders",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 893,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.cors.credentials",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 894,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.cors.maxAge",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 895,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.cors.preflightContinue",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 896,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.cors.optionsSuccessStatus",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 897,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit derives the development CORS origins from the actual listener and framework configuration."
+  },
+  {
+    "path": "Vite.server.headers",
+    "type": "OutgoingHttpHeaders | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 878,
+    "documentation": "Specify server response headers.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{}",
+    "location": "vite.config.ts:159"
+  },
+  {
+    "path": "Vite.server.headers.accept",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 82,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.accept-charset",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 83,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.accept-encoding",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 84,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.accept-language",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 85,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.accept-ranges",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 86,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.access-control-allow-credentials",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 87,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.access-control-allow-headers",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 88,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.access-control-allow-methods",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 89,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.access-control-allow-origin",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 90,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.access-control-expose-headers",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 91,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.access-control-max-age",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 92,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.access-control-request-headers",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 93,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.access-control-request-method",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 94,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.age",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 95,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.allow",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 96,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.authorization",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 97,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.cache-control",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 98,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.cdn-cache-control",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 99,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.connection",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 100,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-disposition",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 101,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-encoding",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 102,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-language",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 103,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-length",
+    "type": "string | number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 104,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-location",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 105,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-range",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 106,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-security-policy",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 107,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-security-policy-report-only",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 108,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.content-type",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 109,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.cookie",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 110,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.dav",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 111,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.dnt",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 112,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.date",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 113,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.etag",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 114,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.expect",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 115,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.expires",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 116,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.forwarded",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 117,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.from",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 118,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.host",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 119,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.if-match",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 120,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.if-modified-since",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 121,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  },
+  {
+    "path": "Vite.server.headers.if-none-match",
+    "type": "string | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 122,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom response headers selected; the empty map is explicit and protocol-required response headers are generated by the server."
+  }
+]

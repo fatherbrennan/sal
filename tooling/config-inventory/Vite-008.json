@@ -1,0 +1,1185 @@
+[
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.plugins",
+    "type": "RolldownPluginOption<any>",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3628,
+    "documentation": "The list of plugins to use.\n\nFalsy plugins will be ignored, which can be used to easily activate or deactivate plugins. Nested plugins will be flattened. Async plugins will be awaited and resolved.\n\nSee [Plugin API document](https://rolldown.rs/apis/plugin-api) for more details about creating plugins.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown'\n\nexport default defineConfig({\n  plugins: [\n    examplePlugin1(),\n    // Conditional plugins\n    process.env.ENV1 && examplePlugin2(),\n    // Nested plugins arrays are flattened\n    [examplePlugin3(), examplePlugin4()],\n  ]\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Vite builds this native plugin list from its environment-specific plugin pipeline."
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.preserveEntrySignatures",
+    "type": "false | \"strict\" | \"allow-extension\" | \"exports-only\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4095,
+    "documentation": "Controls how entry chunk exports are preserved.\n\nThis determines whether Rolldown needs to create facade chunks (additional wrapper chunks) to maintain the exact export signatures of entry modules, or whether it can combine entry modules with other chunks for optimization.",
+    "tags": {
+      "default": "`'exports-only'`"
+    },
+    "state": "explicit",
+    "value": "\"exports-only\"",
+    "location": "vite.config.ts:111"
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.platform",
+    "type": "\"node\" | \"browser\" | \"neutral\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3751,
+    "documentation": "Expected platform where the code run.\n\n When the platform is set to neutral:\n   - When bundling is enabled the default output format is set to esm, which uses the export syntax introduced with ECMAScript 2015 (i.e. ES6). You can change the output format if this default is not appropriate.\n   - The main fields setting is empty by default. If you want to use npm-style packages, you will likely have to configure this to be something else such as main for the standard main field used by node.\n   - The conditions setting does not automatically include any platform-specific values.",
+    "tags": {
+      "default": "- `'node'` if the format is `'cjs'`\n- `'browser'` for other formats"
+    },
+    "state": "excluded",
+    "reason": "The framework selects browser/server environments and output format; no fixed cross-environment native platform override is selected."
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.shimMissingExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3757,
+    "documentation": "When `true`, creates shim variables for missing exports instead of throwing an error.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "config/bundler.ts:8"
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.treeshake",
+    "type": "boolean | TreeshakingOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3768,
+    "documentation": "Controls tree-shaking (dead code elimination).\n\nSee the [In-depth Dead Code Elimination Guide](https://rolldown.rs/in-depth/dead-code-elimination) for more details.\n\nWhen `false`, tree-shaking will be disabled.\nWhen `true`, it is equivalent to setting each options to the default value.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "{\n    moduleSideEffects: true,\n    annotations: true,\n    manualPureFunctions: [],\n    unknownGlobalSideEffects: true,\n    invalidImportSideEffects: false,\n    commonjs: true,\n    propertyReadSideEffects: \"always\",\n    propertyWriteSideEffects: \"always\",\n  }",
+    "location": "config/bundler.ts:13"
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.onLog",
+    "type": "OnLogFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3798,
+    "documentation": "A function that intercepts log messages. If not supplied, logs are printed to the console.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  onLog(level, log, defaultHandler) {\n    if (log.code === 'CIRCULAR_DEPENDENCY') {\n      return; // Ignore circular dependency warnings\n    }\n    if (level === 'warn') {\n      defaultHandler('error', log); // turn other warnings into errors\n    } else {\n      defaultHandler(level, log); // otherwise, just print the log\n    }\n  }\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Vite routes native diagnostics through its logger; the configured logger throws on warnings."
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.moduleTypes",
+    "type": "ModuleTypes | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3828,
+    "documentation": "Maps file patterns to module types, controlling how files are processed.\n\nThis is conceptually similar to [esbuild's `loader`](https://esbuild.github.io/api/#loader) option, allowing you to specify how each file extensions should be handled.\n\nSee [the In-Depth Guide](https://rolldown.rs/in-depth/module-types) for more details.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown'\n\nexport default defineConfig({\n  moduleTypes: {\n    '.frag': 'text',\n  }\n})\n```"
+    },
+    "state": "explicit",
+    "value": "{}",
+    "location": "config/bundler.ts:11"
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.watch",
+    "type": "false | WatcherOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4056,
+    "documentation": "Watch mode related options.\n\nThese options only take effect when running with the [`--watch`](/apis/cli#w-watch) flag, or using {@linkcode watchwatch()} API.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "config/bundler.ts:12"
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.checks",
+    "type": "ChecksOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4060,
+    "documentation": "Controls which warnings are emitted during the build process. Each option can be set to `true` (emit warning) or `false` (suppress warning).",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    circularDependency: false,\n    eval: true,\n    missingGlobalName: true,\n    missingNameOptionForIifeExport: true,\n    invalidAnnotation: true,\n    mixedExports: true,\n    unresolvedEntry: true,\n    unresolvedImport: true,\n    filenameConflict: true,\n    moduleLevelDirective: true,\n    commonJsVariableInEsm: true,\n    importIsUndefined: true,\n    emptyImportMeta: true,\n    toleratedTransform: true,\n    cannotCallNamespace: true,\n    configurationFieldConflict: true,\n    preferBuiltinFeature: true,\n    couldNotCleanDirectory: true,\n    bundlerTimings: true,\n    duplicateShebang: true,\n    unsupportedTsconfigOption: true,\n    ineffectiveDynamicImport: true,\n    largeBarrelModules: true,\n    sourcemapBroken: true,\n    namespaceConflict: true,\n    shimmedExport: true,\n  }",
+    "location": "config/bundler.ts:46"
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.makeAbsoluteExternalsRelative",
+    "type": "MakeAbsoluteExternalsRelative | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4068,
+    "documentation": "Determines if absolute external paths should be converted to relative paths in the output.\n\nThis does not only apply to paths that are absolute in the source but also to paths that are resolved to an absolute path by either a plugin or Rolldown core.",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"ifRelativeSource\"",
+    "location": "config/bundler.ts:10"
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.devtools",
+    "type": "{ sessionId?: string | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4084,
+    "documentation": "Devtools integration options.\n\nWhen enabled, Rolldown writes JSON-lines devtools output under\n`node_modules/.rolldown/{session_id}/`, resolved against {@linkcode cwd}.\nConsumers can parse the output with `@rolldown/debug` after\n`await bundle.close()` resolves.\n\n`sessionId` replaces the generated session id. It must be one path segment: not empty, not\n`.` or `..`, and without `/`, `\\` or NUL. Rolldown does not check that it is unique: give each\nbundler that runs at the same time its own `sessionId`, or their devtools output mixes.\nThe name `unknown-session` is reserved regardless of case.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Developer tools are explicitly disabled at the Vite level; no session is selected."
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.optimization",
+    "type": "OptimizationOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4099,
+    "documentation": "Configure optimization features for the bundler.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    inlineConst: { mode: \"smart\", pass: 1 },\n    pifeForModuleWrappers: true,\n  }",
+    "location": "config/bundler.ts:42"
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.context",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4115,
+    "documentation": "The value of `this` at the top level of each module. **Normally, you don't need to set this option.**",
+    "tags": {
+      "default": "undefined",
+      "example": "**Set custom context**\n```js\nexport default {\n  context: 'globalThis',\n  output: {\n    format: 'iife',\n  },\n};\n```"
+    },
+    "state": "excluded",
+    "reason": "Default is undefined. exactOptionalPropertyTypes rejects explicitly assigning undefined to this optional string; no replacement top-level this context is selected."
+  },
+  {
+    "path": "Vite.optimizeDeps.rolldownOptions.output",
+    "type": "Omit<OutputOptions, \"format\" | \"sourcemap\" | \"banner\" | \"dir\"> | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 966,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n        ...bundlerOptions.output,\n        assetFileNames: \"assets/[name]-[hash][extname]\",\n        chunkFileNames: \"[name]-[hash].js\",\n      }",
+    "location": "vite.config.ts:112"
+  },
+  {
+    "path": "Vite.optimizeDeps.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 977,
+    "documentation": "List of file extensions that can be optimized. A corresponding esbuild\nplugin must exist to handle the specific extension.\n\nBy default, Vite can optimize `.mjs`, `.js`, `.ts`, and `.mts` files. This option\nallows specifying additional extensions.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:121"
+  },
+  {
+    "path": "Vite.optimizeDeps.disabled",
+    "type": "boolean | \"dev\" | \"build\" | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 987,
+    "documentation": "Deps optimization during build was removed in Vite 5.1. This option is\nnow redundant and will be removed in a future version. Switch to using\n`optimizeDeps.noDiscovery` and an empty or undefined `optimizeDeps.include`.\ntrue or 'dev' disables the optimizer, false or 'build' leaves it enabled.",
+    "tags": {
+      "default": "'build'",
+      "deprecated": "",
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "Vite.optimizeDeps.noDiscovery",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 994,
+    "documentation": "Automatic dependency discovery. When `noDiscovery` is true, only dependencies\nlisted in `include` will be optimized. The scanner isn't run for cold start\nin this case. CJS-only dependencies must be present in `include` during dev.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:125"
+  },
+  {
+    "path": "Vite.optimizeDeps.holdUntilCrawlEnd",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1005,
+    "documentation": "When enabled, it will hold the first optimized deps results until all static\nimports are crawled on cold start. This avoids the need for full-page reloads\nwhen new dependencies are discovered and they trigger the generation of new\ncommon chunks. If all dependencies are found by the scanner plus the explicitly\ndefined ones in `include`, it is better to disable this option to let the\nbrowser process more requests in parallel.",
+    "tags": {
+      "default": "true",
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:122"
+  },
+  {
+    "path": "Vite.optimizeDeps.ignoreOutdatedRequests",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1013,
+    "documentation": "When enabled, Vite will not throw an error when an outdated optimized\ndependency is requested. Enabling this option may cause a single module\nto have a multiple reference.",
+    "tags": {
+      "default": "false",
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:124"
+  },
+  {
+    "path": "Vite.optimizeDeps.entries",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1026,
+    "documentation": "By default, Vite will crawl your `index.html` to detect dependencies that\nneed to be pre-bundled. If `build.rolldownOptions.input` is specified, Vite\nwill crawl those entry points instead.\n\nIf neither of these fit your needs, you can specify custom entries using\nthis option - the value should be a tinyglobby pattern or array of patterns\n(https://github.com/SuperchupuDev/tinyglobby) that are relative from\nvite project root. This will overwrite default entries inference.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit supplies dependency scan entries from route/generated modules."
+  },
+  {
+    "path": "Vite.optimizeDeps.force",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1031,
+    "documentation": "Force dep pre-optimization regardless of whether deps have changed.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:123"
+  },
+  {
+    "path": "Vite.ssr",
+    "type": "SSROptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3644,
+    "documentation": "SSR specific options\nWe could make SSROptions be a EnvironmentOptions if we can abstract\nexternal/noExternal for environments in general.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ target: \"node\" }",
+    "location": "vite.config.ts:210"
+  },
+  {
+    "path": "Vite.ssr.noExternal",
+    "type": "string | true | RegExp | (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3283,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server externalization is configured through Vite.resolve.noExternal and inherited by the server environment; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.external",
+    "type": "true | string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3284,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server externalization is configured through Vite.resolve.external and inherited by the server environment; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.target",
+    "type": "SSRTarget | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3291,
+    "documentation": "Define the target for the ssr build. The browser field in package.json\nis ignored for node but used if webworker is the target\nThis option will be removed in a future major version",
+    "tags": {
+      "default": "'node'"
+    },
+    "state": "explicit",
+    "value": "\"node\"",
+    "location": "vite.config.ts:210"
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps",
+    "type": "DepOptimizationConfig | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3300,
+    "documentation": "Control over which dependencies are optimized during SSR and esbuild options\nDuring build:\n  no external CJS dependencies are optimized by default\nDuring dev:\n  explicit no external CJS dependencies are optimized by default",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.include",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 925,
+    "documentation": "Force optimize listed dependencies (must be resolvable import paths).\nSupports experimental glob patterns for deep imports.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.exclude",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 930,
+    "documentation": "Do not optimize these dependencies (must be resolvable import paths,\ncannot be globs).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.needsInterop",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 936,
+    "documentation": "Forces ESM interop when importing these dependencies. Some legacy\npackages advertise themselves as ESM but use `require` internally",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.esbuildOptions",
+    "type": "DepsOptimizerEsbuildOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 950,
+    "documentation": "Options to pass to esbuild during the dep scanning and optimization\n\nCertain options are omitted since changing them would not be compatible\nwith Vite's dep optimization.\n\n- `external` is also omitted, use Vite's `optimizeDeps.exclude` option\n- `plugins` are merged with Vite's dep plugin\n\nhttps://esbuild.github.io/api",
+    "tags": {
+      "deprecated": "Use `rolldownOptions` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.rollupOptions",
+    "type": "(Omit<RolldownOptions, \"output\" | \"input\" | \"logLevel\"> & { output?: Omit<OutputOptions, \"format\" | \"sourcemap\" | \"banner\" | \"dir\"> | undefined; }) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 954,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use `rolldownOptions` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.rolldownOptions",
+    "type": "(Omit<RolldownOptions, \"output\" | \"input\" | \"logLevel\"> & { output?: Omit<OutputOptions, \"format\" | \"sourcemap\" | \"banner\" | \"dir\"> | undefined; }) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 965,
+    "documentation": "Options to pass to rolldown during the dep scanning and optimization\n\nCertain options are omitted since changing them would not be compatible\nwith Vite's dep optimization.\n\n- `plugins` are merged with Vite's dep plugin",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 977,
+    "documentation": "List of file extensions that can be optimized. A corresponding esbuild\nplugin must exist to handle the specific extension.\n\nBy default, Vite can optimize `.mjs`, `.js`, `.ts`, and `.mts` files. This option\nallows specifying additional extensions.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.disabled",
+    "type": "boolean | \"dev\" | \"build\" | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 987,
+    "documentation": "Deps optimization during build was removed in Vite 5.1. This option is\nnow redundant and will be removed in a future version. Switch to using\n`optimizeDeps.noDiscovery` and an empty or undefined `optimizeDeps.include`.\ntrue or 'dev' disables the optimizer, false or 'build' leaves it enabled.",
+    "tags": {
+      "default": "'build'",
+      "deprecated": "",
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.noDiscovery",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 994,
+    "documentation": "Automatic dependency discovery. When `noDiscovery` is true, only dependencies\nlisted in `include` will be optimized. The scanner isn't run for cold start\nin this case. CJS-only dependencies must be present in `include` during dev.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.holdUntilCrawlEnd",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1005,
+    "documentation": "When enabled, it will hold the first optimized deps results until all static\nimports are crawled on cold start. This avoids the need for full-page reloads\nwhen new dependencies are discovered and they trigger the generation of new\ncommon chunks. If all dependencies are found by the scanner plus the explicitly\ndefined ones in `include`, it is better to disable this option to let the\nbrowser process more requests in parallel.",
+    "tags": {
+      "default": "true",
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.optimizeDeps.ignoreOutdatedRequests",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1013,
+    "documentation": "When enabled, Vite will not throw an error when an outdated optimized\ndependency is requested. Enabling this option may cause a single module\nto have a multiple reference.",
+    "tags": {
+      "default": "false",
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is explicitly configured under environments.ssr.optimizeDeps; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.resolve",
+    "type": "{ conditions?: string[] | undefined; externalConditions?: string[] | undefined; mainFields?: string[] | undefined; } | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3301,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server resolution is explicitly configured under environments.ssr.resolve; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.resolve.conditions",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3309,
+    "documentation": "Conditions that are used in the plugin pipeline. The default value is the root config's `resolve.conditions`.\n\nUse this to override the default ssr conditions for the ssr build.",
+    "tags": {
+      "default": "rootConfig.resolve.conditions"
+    },
+    "state": "excluded",
+    "reason": "Server resolution is explicitly configured under environments.ssr.resolve; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.resolve.externalConditions",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3315,
+    "documentation": "Conditions that are used during ssr import (including `ssrLoadModule`) of externalized dependencies.",
+    "tags": {
+      "default": "['node', 'module-sync']"
+    },
+    "state": "excluded",
+    "reason": "Server resolution is explicitly configured under environments.ssr.resolve; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.ssr.resolve.mainFields",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3316,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server resolution is explicitly configured under environments.ssr.resolve; no duplicate legacy SSR alias selected."
+  },
+  {
+    "path": "Vite.environments",
+    "type": "Record<string, EnvironmentOptions> | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3648,
+    "documentation": "Environment overrides",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    client: { ...clientEnvironment, isBundled: command === \"build\" },\n    ssr: { ...serverEnvironment, isBundled: command === \"build\" },\n  }",
+    "location": "vite.config.ts:257"
+  },
+  {
+    "path": "Vite.appType",
+    "type": "AppType | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3655,
+    "documentation": "Whether your application is a Single Page Application (SPA),\na Multi-Page Application (MPA), or Custom Application (SSR\nand frameworks with custom HTML handling)",
+    "tags": {
+      "default": "'spa'"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit enforced_config owns application middleware behavior."
+  },
+  {
+    "path": "Vite.devtools",
+    "type": "any",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3661,
+    "documentation": "Enable devtools integration. Ensure that `@vitejs/devtools` is installed as a dependency.",
+    "tags": {
+      "experimental": "",
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:151"
+  },
+  {
+    "path": "Vite.dev",
+    "type": "DevEnvironmentOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3459,
+    "documentation": "Dev specific options",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    warmup: [],\n    sourcemap: { js: true, css: false },\n    sourcemapIgnoreList: ignoreDependencySourcemap,\n  }",
+    "location": "vite.config.ts:211"
+  },
+  {
+    "path": "Vite.dev.warmup",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3365,
+    "documentation": "Files to be pre-transformed. Supports glob patterns.",
+    "tags": {},
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:212"
+  },
+  {
+    "path": "Vite.dev.preTransformRequests",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3370,
+    "documentation": "Pre-transform known direct imports\ndefaults to true for the client environment, false for the rest",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server defaults differ."
+  },
+  {
+    "path": "Vite.dev.sourcemap",
+    "type": "boolean | { js?: boolean | undefined; css?: boolean | undefined; } | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3376,
+    "documentation": "Enables sourcemaps during dev",
+    "tags": {
+      "default": "{ js: true }",
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "{ js: true, css: false }",
+    "location": "vite.config.ts:213"
+  },
+  {
+    "path": "Vite.dev.sourcemap.js",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3377,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:213"
+  },
+  {
+    "path": "Vite.dev.sourcemap.css",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3378,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:213"
+  },
+  {
+    "path": "Vite.dev.sourcemapIgnoreList",
+    "type": "false | ((sourcePath: string, sourcemapPath: string) => boolean) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3388,
+    "documentation": "Whether or not to ignore-list source files in the dev server sourcemap, used to populate\nthe [`x_google_ignoreList` source map extension](https://developer.chrome.com/blog/devtools-better-angular-debugging/#the-x_google_ignorelist-source-map-extension).\n\nBy default, it excludes all paths containing `node_modules`. You can pass `false` to\ndisable this behavior, or, for full control, a function that takes the source path and\nsourcemap path and returns whether to ignore the source path.",
+    "tags": {},
+    "state": "explicit",
+    "value": "ignoreDependencySourcemap",
+    "location": "vite.config.ts:214"
+  },
+  {
+    "path": "Vite.dev.createEnvironment",
+    "type": "((name: string, config: ResolvedConfig, context: CreateDevEnvironmentContext) => DevEnvironment | Promise<DevEnvironment>) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3392,
+    "documentation": "create the Dev Environment instance",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit/Vite own their development environment factories; no custom implementation selected."
+  },
+  {
+    "path": "Vite.dev.recoverable",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3399,
+    "documentation": "For environments that support a full-reload, like the client, we can short-circuit when\nrestarting the server throwing early to stop processing current files. We avoided this for\nSSR requests. Maybe this is no longer needed.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server defaults differ."
+  },
+  {
+    "path": "Vite.dev.moduleRunnerTransform",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3405,
+    "documentation": "For environments associated with a module runner.\nBy default, it is false for the client environment and true for non-client environments.\nThis option can also be used instead of the removed config.experimental.skipSsrTransform.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server defaults differ."
+  },
+  {
+    "path": "Vite.build",
+    "type": "BuildEnvironmentOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3463,
+    "documentation": "Build specific options",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    rolldownOptions: { ...bundlerOptions, logLevel: \"info\" },\n    dynamicImportVarsOptions: { include: [], exclude: [nodeModules] },\n    ssrManifest: false,\n    ssrEmitAssets: false,\n    target: \"baseline-widely-available\",\n    modulePreload: { polyfill: true },\n    assetsDir: \"assets\",\n    assetsInlineLimit: 4096,\n    cssTarget: [\"chrome111\", \"edge111\", \"firefox114\", \"safari16.4\"],\n    chunkImportMap: false,\n    write: true,\n    copyPublicDir: true,\n    license: false,\n    reportCompressedSize: true,\n    chunkSizeWarningLimit: 500,\n    watch: null,\n  }",
+    "location": "vite.config.ts:127"
+  },
+  {
+    "path": "Vite.build.target",
+    "type": "false | EsbuildTarget | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2814,
+    "documentation": "Compatibility transform target. The transform is performed with esbuild\nand the lowest supported target is es2015. Note this only handles\nsyntax transformation and does not cover polyfills\n\nDefault: 'baseline-widely-available' - transpile targeting browsers that\nare included in the Baseline Widely Available on 2026-01-01.\n(Chrome 111+, Edge 111+, Firefox 114+, Safari 16.4+).\n\nAnother special value is 'esnext' - which only performs minimal transpiling\n(for minification compat).\n\nFor custom targets, see https://esbuild.github.io/api/#target and\nhttps://esbuild.github.io/content-types/#javascript for more details.",
+    "tags": {
+      "default": "'baseline-widely-available'"
+    },
+    "state": "explicit",
+    "value": "\"baseline-widely-available\"",
+    "location": "vite.config.ts:132"
+  },
+  {
+    "path": "Vite.build.polyfillModulePreload",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2821,
+    "documentation": "whether to inject module preload polyfill.\nNote: does not apply to library mode.",
+    "tags": {
+      "default": "true",
+      "deprecated": "use `modulePreload.polyfill` instead"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. use `modulePreload.polyfill` instead"
+  },
+  {
+    "path": "Vite.build.modulePreload",
+    "type": "boolean | ModulePreloadOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2827,
+    "documentation": "Configure module preload\nNote: does not apply to library mode.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "{ polyfill: true }",
+    "location": "vite.config.ts:133"
+  },
+  {
+    "path": "Vite.build.modulePreload.polyfill",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3053,
+    "documentation": "Whether to inject a module preload polyfill.\nNote: does not apply to library mode.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:133"
+  },
+  {
+    "path": "Vite.build.modulePreload.resolveDependencies",
+    "type": "ResolveModulePreloadDependenciesFn | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 3058,
+    "documentation": "Resolve the list of dependencies to preload for a given dynamic import",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "No custom module preload rewrite hook selected."
+  },
+  {
+    "path": "Vite.build.outDir",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2833,
+    "documentation": "Directory relative from `root` where build output will be placed. If the\ndirectory exists, it will be removed before the build.",
+    "tags": {
+      "default": "'dist'"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit enforced_config selects output directories for each build environment."
+  },
+  {
+    "path": "Vite.build.assetsDir",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2839,
+    "documentation": "Directory relative from `outDir` where the built js/css/image assets will\nbe placed.",
+    "tags": {
+      "default": "'assets'"
+    },
+    "state": "explicit",
+    "value": "\"assets\"",
+    "location": "vite.config.ts:134"
+  },
+  {
+    "path": "Vite.build.assetsInlineLimit",
+    "type": "number | ((filePath: string, content: Buffer<ArrayBufferLike>) => boolean | undefined) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2848,
+    "documentation": "Static asset files smaller than this number (in bytes) will be inlined as\nbase64 strings. If a callback is passed, a boolean can be returned to opt-in\nor opt-out of inlining. If nothing is returned the default logic applies.\n\nDefault limit is `4096` (4 KiB). Set to `0` to disable.",
+    "tags": {
+      "default": "4096"
+    },
+    "state": "explicit",
+    "value": "4096",
+    "location": "vite.config.ts:135"
+  },
+  {
+    "path": "Vite.build.cssCodeSplit",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2855,
+    "documentation": "Whether to code-split CSS. When enabled, CSS in async chunks will be\ninlined as strings in the chunk and inserted via dynamically created\nstyle tags when the chunk is loaded.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "SvelteKit enforced_config owns CSS splitting."
+  },
+  {
+    "path": "Vite.build.cssTarget",
+    "type": "false | EsbuildTarget | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2868,
+    "documentation": "An optional separate target for CSS minification.\nAs esbuild only supports configuring targets to mainstream\nbrowsers, users may need this option when they are targeting\na niche browser that comes with most modern JavaScript features\nbut has poor CSS support, e.g. Android WeChat WebView, which\ndoesn't support the #RGBA syntax.\nWhen `build.cssMinify` is `lightningcss` (the default), this\noption takes precedence over `css.lightningcss.targets` for the\nminification step.",
+    "tags": {
+      "default": "target"
+    },
+    "state": "explicit",
+    "value": "[\"chrome111\", \"edge111\", \"firefox114\", \"safari16.4\"]",
+    "location": "vite.config.ts:136"
+  },
+  {
+    "path": "Vite.build.cssMinify",
+    "type": "boolean | \"lightningcss\" | \"esbuild\" | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2874,
+    "documentation": "Override CSS minification specifically instead of defaulting to `build.minify`,\nso you can configure minification for JS and CSS separately.",
+    "tags": {
+      "default": "'lightningcss', but false if build.minify is disabled for client build"
+    },
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server defaults differ."
+  },
+  {
+    "path": "Vite.build.sourcemap",
+    "type": "boolean | \"inline\" | \"hidden\" | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2882,
+    "documentation": "If `true`, a separate sourcemap file will be created. If 'inline', the\nsourcemap will be appended to the resulting output file as data URI.\n'hidden' works like `true` except that the corresponding sourcemap\ncomments in the bundled files are suppressed.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server defaults differ."
+  },
+  {
+    "path": "Vite.build.minify",
+    "type": "boolean | \"esbuild\" | \"oxc\" | \"terser\" | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2888,
+    "documentation": "Set to `false` to disable minification, or specify the minifier to use.\nAvailable options are 'oxc' or 'terser' or 'esbuild'.",
+    "tags": {
+      "default": "'oxc' for client build, false for SSR build"
+    },
+    "state": "excluded",
+    "reason": "Explicitly configured per environment because browser/server defaults differ."
+  },
+  {
+    "path": "Vite.build.terserOptions",
+    "type": "TerserOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2896,
+    "documentation": "Options for terser\nhttps://terser.org/docs/api-reference#minify-options\n\nIn addition, you can also pass a `maxWorkers: number` option to specify the\nmax number of workers to spawn. Defaults to the number of CPUs minus 1.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Terser is not the selected minifier."
+  },
+  {
+    "path": "Vite.build.terserOptions.maxWorkers",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2793,
+    "documentation": "Vite-specific option to specify the max number of workers to spawn\nwhen minifying files with terser.",
+    "tags": {
+      "default": "number of CPUs minus 1"
+    },
+    "state": "excluded",
+    "reason": "Terser is not the selected minifier."
+  },
+  {
+    "path": "Vite.build.chunkImportMap",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2902,
+    "documentation": "Whether to use import maps feature to optimize chunk caching efficiency.",
+    "tags": {
+      "default": "false",
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:137"
+  },
+  {
+    "path": "Vite.build.rollupOptions",
+    "type": "RolldownOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2907,
+    "documentation": "Alias to `rolldownOptions`",
+    "tags": {
+      "deprecated": "Use `rolldownOptions` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.output",
+    "type": "OutputOptions | OutputOptions[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4124,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.input",
+    "type": "InputOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3605,
+    "documentation": "Defines entries and location(s) of entry modules for the bundle. Relative paths are resolved based on the {@linkcode cwd} option.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.plugins",
+    "type": "RolldownPluginOption<any>",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3628,
+    "documentation": "The list of plugins to use.\n\nFalsy plugins will be ignored, which can be used to easily activate or deactivate plugins. Nested plugins will be flattened. Async plugins will be awaited and resolved.\n\nSee [Plugin API document](https://rolldown.rs/apis/plugin-api) for more details about creating plugins.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown'\n\nexport default defineConfig({\n  plugins: [\n    examplePlugin1(),\n    // Conditional plugins\n    process.env.ENV1 && examplePlugin2(),\n    // Nested plugins arrays are flattened\n    [examplePlugin3(), examplePlugin4()],\n  ]\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.external",
+    "type": "ExternalOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3633,
+    "documentation": "Specifies which modules should be treated as external and not bundled. External modules will be left as import statements in the output.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.resolve",
+    "type": "{ alias?: Record<string, string | false | string[]> | undefined; aliasFields?: string[][] | undefined; conditionNames?: string[] | undefined; extensionAlias?: Record<string, string[]> | undefined; ... 6 more ...; tsconfigFilename?: string | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3637,
+    "documentation": "Options for built-in module resolution feature.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.cwd",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3737,
+    "documentation": "The working directory to use when resolving relative paths in the configuration.",
+    "tags": {
+      "default": "process.cwd()"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.platform",
+    "type": "\"node\" | \"browser\" | \"neutral\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3751,
+    "documentation": "Expected platform where the code run.\n\n When the platform is set to neutral:\n   - When bundling is enabled the default output format is set to esm, which uses the export syntax introduced with ECMAScript 2015 (i.e. ES6). You can change the output format if this default is not appropriate.\n   - The main fields setting is empty by default. If you want to use npm-style packages, you will likely have to configure this to be something else such as main for the standard main field used by node.\n   - The conditions setting does not automatically include any platform-specific values.",
+    "tags": {
+      "default": "- `'node'` if the format is `'cjs'`\n- `'browser'` for other formats"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.shimMissingExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3757,
+    "documentation": "When `true`, creates shim variables for missing exports instead of throwing an error.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.treeshake",
+    "type": "boolean | TreeshakingOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3768,
+    "documentation": "Controls tree-shaking (dead code elimination).\n\nSee the [In-depth Dead Code Elimination Guide](https://rolldown.rs/in-depth/dead-code-elimination) for more details.\n\nWhen `false`, tree-shaking will be disabled.\nWhen `true`, it is equivalent to setting each options to the default value.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.logLevel",
+    "type": "LogLevelOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3776,
+    "documentation": "Controls the verbosity of console logging during the build.",
+    "tags": {
+      "default": "'info'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.onLog",
+    "type": "OnLogFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3798,
+    "documentation": "A function that intercepts log messages. If not supplied, logs are printed to the console.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  onLog(level, log, defaultHandler) {\n    if (log.code === 'CIRCULAR_DEPENDENCY') {\n      return; // Ignore circular dependency warnings\n    }\n    if (level === 'warn') {\n      defaultHandler('error', log); // turn other warnings into errors\n    } else {\n      defaultHandler(level, log); // otherwise, just print the log\n    }\n  }\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.onwarn",
+    "type": "OnwarnFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3809,
+    "documentation": "A function that will intercept warning messages.",
+    "tags": {
+      "deprecated": "This is a legacy API. Consider using {@linkcode onLog} instead for better control over all log types."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This is a legacy API. Consider using {@linkcode onLog} instead for better control over all log types."
+  },
+  {
+    "path": "Vite.build.rollupOptions.moduleTypes",
+    "type": "ModuleTypes | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3828,
+    "documentation": "Maps file patterns to module types, controlling how files are processed.\n\nThis is conceptually similar to [esbuild's `loader`](https://esbuild.github.io/api/#loader) option, allowing you to specify how each file extensions should be handled.\n\nSee [the In-Depth Guide](https://rolldown.rs/in-depth/module-types) for more details.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown'\n\nexport default defineConfig({\n  moduleTypes: {\n    '.frag': 'text',\n  }\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.experimental",
+    "type": "{ viteMode?: boolean | undefined; resolveNewUrlToAsset?: boolean | undefined; devMode?: DevModeOptions | undefined; chunkModulesOrder?: ChunkModulesOrder | undefined; ... 6 more ...; lazyBarrel?: boolean | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3833,
+    "documentation": "Experimental features that may change in future releases and can introduce behavior change without a major version bump.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.transform",
+    "type": "TransformOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4046,
+    "documentation": "Configure how the code is transformed. This process happens after the `transform` hook.",
+    "tags": {
+      "example": "**Enable legacy decorators**\n```js\nexport default defineConfig({\n  transform: {\n    decorator: {\n      legacy: true,\n    },\n  },\n})\n```\nNote that if you have correct `tsconfig.json` file, Rolldown will automatically detect and enable legacy decorators support."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.watch",
+    "type": "false | WatcherOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4056,
+    "documentation": "Watch mode related options.\n\nThese options only take effect when running with the [`--watch`](/apis/cli#w-watch) flag, or using {@linkcode watchwatch()} API.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.checks",
+    "type": "ChecksOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4060,
+    "documentation": "Controls which warnings are emitted during the build process. Each option can be set to `true` (emit warning) or `false` (suppress warning).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.makeAbsoluteExternalsRelative",
+    "type": "MakeAbsoluteExternalsRelative | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4068,
+    "documentation": "Determines if absolute external paths should be converted to relative paths in the output.\n\nThis does not only apply to paths that are absolute in the source but also to paths that are resolved to an absolute path by either a plugin or Rolldown core.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.devtools",
+    "type": "{ sessionId?: string | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4084,
+    "documentation": "Devtools integration options.\n\nWhen enabled, Rolldown writes JSON-lines devtools output under\n`node_modules/.rolldown/{session_id}/`, resolved against {@linkcode cwd}.\nConsumers can parse the output with `@rolldown/debug` after\n`await bundle.close()` resolves.\n\n`sessionId` replaces the generated session id. It must be one path segment: not empty, not\n`.` or `..`, and without `/`, `\\` or NUL. Rolldown does not check that it is unique: give each\nbundler that runs at the same time its own `sessionId`, or their devtools output mixes.\nThe name `unknown-session` is reserved regardless of case.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.preserveEntrySignatures",
+    "type": "false | \"strict\" | \"allow-extension\" | \"exports-only\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4095,
+    "documentation": "Controls how entry chunk exports are preserved.\n\nThis determines whether Rolldown needs to create facade chunks (additional wrapper chunks) to maintain the exact export signatures of entry modules, or whether it can combine entry modules with other chunks for optimization.",
+    "tags": {
+      "default": "`'exports-only'`"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.optimization",
+    "type": "OptimizationOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4099,
+    "documentation": "Configure optimization features for the bundler.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.context",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4115,
+    "documentation": "The value of `this` at the top level of each module. **Normally, you don't need to set this option.**",
+    "tags": {
+      "default": "undefined",
+      "example": "**Set custom context**\n```js\nexport default {\n  context: 'globalThis',\n  output: {\n    format: 'iife',\n  },\n};\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rollupOptions.tsconfig",
+    "type": "string | boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4121,
+    "documentation": "Configures TypeScript configuration file resolution and usage.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.build.rolldownOptions",
+    "type": "RolldownOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2912,
+    "documentation": "Will be merged with internal rolldown options.\nhttps://rolldown.rs/reference/Interface.RolldownOptions",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ ...bundlerOptions, logLevel: \"info\" }",
+    "location": "vite.config.ts:128"
+  },
+  {
+    "path": "Vite.build.commonjsOptions",
+    "type": "RollupCommonJSOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2917,
+    "documentation": "Options to pass on to `@rollup/plugin-commonjs`",
+    "tags": {
+      "deprecated": "This option is no-op and will be removed in future versions."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.include",
+    "type": "string | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 105,
+    "documentation": "A minimatch pattern, or array of patterns, which specifies the files in\nthe build the plugin should operate on. By default, all files with\nextension `\".cjs\"` or those in `extensions` are included, but you can\nnarrow this list by only including specific files. These files will be\nanalyzed and transpiled if either the analysis does not find ES module\nspecific statements or `transformMixedEsModules` is `true`.",
+    "tags": {
+      "default": "undefined"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.exclude",
+    "type": "string | RegExp | readonly (string | RegExp)[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 113,
+    "documentation": "A minimatch pattern, or array of patterns, which specifies the files in\nthe build the plugin should _ignore_. By default, all files with\nextensions other than those in `extensions` or `\".cjs\"` are ignored, but you\ncan exclude additional files. See also the `include` option.",
+    "tags": {
+      "default": "undefined"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  },
+  {
+    "path": "Vite.build.commonjsOptions.extensions",
+    "type": "readonly string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 120,
+    "documentation": "For extensionless imports, search for extensions other than .js in the\norder specified. Note that you need to make sure that non-JavaScript files\nare transpiled by another plugin first.",
+    "tags": {
+      "default": "[ '.js' ]"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This option is no-op and will be removed in future versions."
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "path": "yaml",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "yaml.formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "yaml.formatter.bracketSpacing",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "yaml.formatter.enabled",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "yaml.formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "yaml.formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "yaml.formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "yaml.formatter.quoteStyle",
+    "state": "explicit",
+    "value": "double"
+  },
+  {
+    "path": "yaml.formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "yaml.linter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "yaml.linter.enabled",
+    "state": "explicit",
+    "value": false
+  }
+]

@@ -1,0 +1,1209 @@
+[
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.entryFileNames",
+    "type": "string | ChunkFileNamesFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 635,
+    "documentation": "The pattern to use for chunks created from entry points, or a function that is called per entry chunk with {@linkcode PreRenderedChunk} to return such a pattern.\n\nPatterns support the following placeholders:\n- `[format]`: The rendering format defined in the output options. The value is any of {@linkcode InternalModuleFormat}.\n- `[hash]`: A hash based only on the content of the final generated chunk, including transformations in `renderChunk` and any referenced file hashes. You can also set a specific hash length via e.g. `[hash:10]`. By default, it will create a base-64 hash. If you need a reduced character set, see {@linkcode hashCharactersoutput.hashCharacters}.\n- `[name]`: The file name (without extension) of the entry point, unless the object form of input was used to define a different name.\n\nForward slashes (`/`) can be used to place files in sub-directories. This pattern will also be used for every file when setting the {@linkcode preserveModulesoutput.preserveModules} option.\n\nSee also {@linkcode assetFileNamesoutput.assetFileNames}, {@linkcode chunkFileNamesoutput.chunkFileNames}.",
+    "tags": {
+      "default": "'[name].js'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.chunkFileNames",
+    "type": "string | ChunkFileNamesFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 650,
+    "documentation": "The pattern to use for naming shared chunks created when code-splitting, or a function that is called per chunk with {@linkcode PreRenderedChunk} to return such a pattern.\n\nPatterns support the following placeholders:\n- `[format]`: The rendering format defined in the output options. The value is any of {@linkcode InternalModuleFormat}.\n- `[hash]`: A hash based only on the content of the final generated chunk, including transformations in `renderChunk` and any referenced file hashes. You can also set a specific hash length via e.g. `[hash:10]`. By default, it will create a base-64 hash. If you need a reduced character set, see {@linkcode hashCharactersoutput.hashCharacters}.\n- `[name]`: The name of the chunk. This can be explicitly set via the {@linkcode codeSplittingoutput.codeSplitting} option or when the chunk is created by a plugin via `this.emitFile`. Otherwise, it will be derived from the chunk contents.\n\nForward slashes (`/`) can be used to place files in sub-directories.\n\nSee also {@linkcode assetFileNamesoutput.assetFileNames}, {@linkcode entryFileNamesoutput.entryFileNames}.",
+    "tags": {
+      "default": "'[name]-[hash].js'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.sanitizeFileName",
+    "type": "boolean | SanitizeFileNameFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 658,
+    "documentation": "Whether to enable chunk name sanitization (removal of non-URL-safe characters like `\\0`, `?` and `*`).\n\nSet `false` to disable the sanitization. You can also provide a custom sanitization function.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.globals",
+    "type": "Record<string, string> | GlobalsFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 721,
+    "documentation": "Specifies `id: variableName` pairs necessary for {@link InputOptions.externalexternal} imports in `umd` / `iife` {@link OutputOptions.formatformats}.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  external: ['jquery'],\n  output: {\n    format: 'iife',\n    name: 'MyBundle',\n    globals: {\n      jquery: '$',\n    }\n  }\n});\n```\n```js\n// input\nimport $ from 'jquery';\n```\n```js\n// output\nvar MyBundle = (function ($) {\n  // ...\n})($);\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.generatedCode",
+    "type": "Partial<GeneratedCodeOptions> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 758,
+    "documentation": "Which language features Rolldown can safely use in generated code.\n\nThis will not transpile any user code but only change the code Rolldown uses in wrappers and helpers.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.externalLiveBindings",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 770,
+    "documentation": "Whether to generate code to support live bindings for {@link InputOptions.externalexternal} imports.\n\nWith the default value of `true`, Rolldown will generate code to support live bindings for external imports.\n\nWhen set to `false`, Rolldown will assume that exports from external modules do not change. This will allow Rolldown to generate smaller code. Note that this can cause issues when there are circular dependencies involving an external dependency.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.inlineDynamicImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 780,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Please use `codeSplitting: false` instead.\n\nWhether to inline dynamic imports instead of creating new chunks to create a single bundle.\n\nThis option can be used only when a single input is provided.",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use `codeSplitting: false` instead.\n\nWhether to inline dynamic imports instead of creating new chunks to create a single bundle.\n\nThis option can be used only when a single input is provided."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.dynamicImportInCjs",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 789,
+    "documentation": "Whether to keep external dynamic imports as `import(...)` expressions in CommonJS output.\n\nIf set to `false`, external dynamic imports will be rewritten to use `require(...)` calls.\nThis may be necessary to support environments that do not support dynamic `import()` in CommonJS modules like old Node.js versions.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.manualChunks",
+    "type": "ManualChunksFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 835,
+    "documentation": "Allows you to do manual chunking. Provided for Rollup compatibility.\n\nYou could use this option for migration purpose. Under the hood,\n\n```js\n{\n  manualChunks: (moduleId, meta) => {\n    if (moduleId.includes('node_modules')) {\n      return 'vendor';\n    }\n    return null;\n  }\n}\n```\n\nwill be transformed to\n\n```js\n{\n  codeSplitting: {\n    groups: [\n      {\n        name(moduleId) {\n          if (moduleId.includes('node_modules')) {\n            return 'vendor';\n          }\n          return null;\n        },\n      },\n    ],\n  }\n}\n\n```\n\nNote that unlike Rollup, object form is not supported.",
+    "tags": {
+      "deprecated": "Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\n:::warning\nIf `manualChunks` and `codeSplitting` are both specified, `manualChunks` option will be ignored.\n:::"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\n:::warning\nIf `manualChunks` and `codeSplitting` are both specified, `manualChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.codeSplitting",
+    "type": "boolean | CodeSplittingOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 868,
+    "documentation": "Controls how code splitting is performed.\n\n- `true`: Default behavior, automatic code splitting. **(default)**\n- `false`: Inline all dynamic imports into a single bundle (equivalent to deprecated `inlineDynamicImports: true`).\n- `object`: Advanced manual code splitting configuration.\n\nFor deeper understanding, please refer to the in-depth [documentation](https://rolldown.rs/in-depth/manual-code-splitting).",
+    "tags": {
+      "example": "**Basic vendor chunk**\n```js\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      minSize: 20000,\n      groups: [\n        {\n          name: 'vendor',\n          test: /node_modules/,\n        },\n      ],\n    },\n  },\n});\n```",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.advancedChunks",
+    "type": "{ includeDependenciesRecursively?: boolean | undefined; minSize?: number | undefined; maxSize?: number | undefined; maxModuleSize?: number | undefined; minModuleSize?: number | undefined; minShareCount?: number | undefined; groups?: CodeSplittingGroup[] | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 878,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.legalComments",
+    "type": "\"none\" | \"inline\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 895,
+    "documentation": "Controls how legal comments are preserved in the output.\n\n- `none`: no legal comments\n- `inline`: preserve legal comments that contain `@license`, `@preserve` or starts with `//!` `/*!`",
+    "tags": {
+      "deprecated": "Use `comments.legal` instead. When both `legalComments` and `comments.legal` are set, `comments.legal` takes priority."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `comments.legal` instead. When both `legalComments` and `comments.legal` are set, `comments.legal` takes priority."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.comments",
+    "type": "boolean | CommentsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 910,
+    "documentation": "Control which comments are preserved in the output.\n\n- `true`: Preserve legal, annotation, and JSDoc comments (default)\n- `false`: Strip all comments\n- Object: Granular control over comment categories\n\nNote: Regular line and block comments without these markers\nare always removed regardless of this option.\n\nWhen both `legalComments` and `comments.legal` are set, `comments.legal` takes priority.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.polyfillRequire",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 924,
+    "documentation": "Whether to add a polyfill for `require()` function in non-CommonJS formats.\n\nThis option is useful when you want to inject your own `require` implementation.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.hoistTransitiveImports",
+    "type": "false | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 929,
+    "documentation": "This option is not implemented yet.",
+    "tags": {
+      "hidden": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.preserveModules",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 937,
+    "documentation": "Whether to use preserve modules mode.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.virtualDirname",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 943,
+    "documentation": "Specifies the directory name for \"virtual\" files that might be emitted by plugins when using {@link OutputOptions.preserveModulespreserve modules mode}.",
+    "tags": {
+      "default": "'_virtual'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.preserveModulesRoot",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 949,
+    "documentation": "A directory path to input modules that should be stripped away from {@linkcode diroutput.dir} when using {@link OutputOptions.preserveModulespreserve modules mode}.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.topLevelVar",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 968,
+    "documentation": "Whether to convert top-level `let` and `const` declarations into `var` declarations.\n\nEnabling this option can improve runtime performance of the generated code in\ncertain environments by avoiding Temporal Dead Zone (TDZ) checks. Only declarations\nin the module's top-level scope are rewritten — declarations inside nested scopes\n(functions, blocks, etc.) are left as-is.\n\nNote:\n- Top-level `class X {}` declarations are always emitted as `var X = class {}` so\n  rolldown can hoist them alongside other top-level bindings; this transform is\n  independent of `topLevelVar`.\n- Top-level `function` declarations are never rewritten.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.minifyInternalExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 977,
+    "documentation": "Whether to minify internal exports as single letter variables to allow for better minification.",
+    "tags": {
+      "default": "`true` for format `es` or if `output.minify` is `true` or object, `false` otherwise"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.cleanDir",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 985,
+    "documentation": "Clean output directory ({@linkcode diroutput.dir}) before emitting output.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.keepNames",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 997,
+    "documentation": "Keep `name` property of functions and classes after bundling.\n\nWhen enabled, the bundler will preserve the original `name` property value of functions and\nclasses in the output. This is useful for debugging and some frameworks that rely on it for\nregistration and binding purposes.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.output.strictExecutionOrder",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1011,
+    "documentation": "Preserve source module execution order across generated chunks.\n\nWhen enabled, Rolldown wraps ESM modules so their bodies run in source order regardless of chunk placement. Interop wrappers for CommonJS and require-of-ESM modules are unchanged, and external modules are not affected. `experimental.onDemandWrapping` replaces wrap-all with a conservative plan derived from predicted chunk execution hazards.\n\n> [!WARNING]\n> Enabling this option increases bundle size because wrapped modules need runtime init helpers.\n\n{@linkcode CodeSplittingOptions.experimentalInlineCommonChunksexperimentalInlineCommonChunks}\nwith a `maxSize` above `0` turns this option on when it is omitted.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions",
+    "type": "(Omit<RolldownOptions, \"output\" | \"input\" | \"logLevel\"> & { output?: Omit<OutputOptions, \"format\" | \"sourcemap\" | \"banner\" | \"dir\"> | undefined; }) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 965,
+    "documentation": "Options to pass to rolldown during the dep scanning and optimization\n\nCertain options are omitted since changing them would not be compatible\nwith Vite's dep optimization.\n\n- `plugins` are merged with Vite's dep plugin",
+    "tags": {},
+    "state": "inherited",
+    "value": "{\n      ...bundlerOptions,\n      preserveEntrySignatures: \"exports-only\",\n      output: {\n        ...bundlerOptions.output,\n        assetFileNames: \"assets/[name]-[hash][extname]\",\n        chunkFileNames: \"[name]-[hash].js\",\n      },\n    }",
+    "location": "vite.config.ts:109",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.onwarn",
+    "type": "OnwarnFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3809,
+    "documentation": "A function that will intercept warning messages.",
+    "tags": {
+      "deprecated": "This is a legacy API. Consider using {@linkcode onLog} instead for better control over all log types."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This is a legacy API. Consider using {@linkcode onLog} instead for better control over all log types."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.experimental",
+    "type": "{ viteMode?: boolean | undefined; resolveNewUrlToAsset?: boolean | undefined; devMode?: DevModeOptions | undefined; chunkModulesOrder?: ChunkModulesOrder | undefined; ... 6 more ...; lazyBarrel?: boolean | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3833,
+    "documentation": "Experimental features that may change in future releases and can introduce behavior change without a major version bump.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "inherited",
+    "value": "{\n    resolveNewUrlToAsset: false,\n    chunkModulesOrder: \"exec-order\",\n    attachDebugInfo: \"simple\",\n    chunkImportMap: false,\n    onDemandWrapping: false,\n    incrementalBuild: false,\n    nativeMagicString: false,\n    chunkOptimization: { mergeCommonChunks: true, avoidRedundantChunkLoads: true },\n    lazyBarrel: false,\n  }",
+    "location": "config/bundler.ts:31",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.external",
+    "type": "ExternalOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3633,
+    "documentation": "Specifies which modules should be treated as external and not bundled. External modules will be left as import statements in the output.",
+    "tags": {},
+    "state": "inherited",
+    "value": "[]",
+    "location": "config/bundler.ts:9",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.resolve",
+    "type": "{ alias?: Record<string, string | false | string[]> | undefined; aliasFields?: string[][] | undefined; conditionNames?: string[] | undefined; extensionAlias?: Record<string, string[]> | undefined; ... 6 more ...; tsconfigFilename?: string | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3637,
+    "documentation": "Options for built-in module resolution feature.",
+    "tags": {},
+    "state": "inherited",
+    "value": "{\n    alias: {},\n    extensionAlias: {},\n    exportsFields: [[\"exports\"]],\n    mainFiles: [\"index\"],\n    modules: [\"node_modules\"],\n    symlinks: true,\n  }",
+    "location": "config/bundler.ts:23",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.transform",
+    "type": "TransformOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4046,
+    "documentation": "Configure how the code is transformed. This process happens after the `transform` hook.",
+    "tags": {
+      "example": "**Enable legacy decorators**\n```js\nexport default defineConfig({\n  transform: {\n    decorator: {\n      legacy: true,\n    },\n  },\n})\n```\nNote that if you have correct `tsconfig.json` file, Rolldown will automatically detect and enable legacy decorators support."
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.cwd",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3737,
+    "documentation": "The working directory to use when resolving relative paths in the configuration.",
+    "tags": {
+      "default": "process.cwd()"
+    },
+    "state": "inherited",
+    "value": "process.cwd()",
+    "location": "config/bundler.ts:7",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.tsconfig",
+    "type": "string | boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4121,
+    "documentation": "Configures TypeScript configuration file resolution and usage.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite explicitly supplies the top-level tsconfig path to its native bundler."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.plugins",
+    "type": "RolldownPluginOption<any>",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3628,
+    "documentation": "The list of plugins to use.\n\nFalsy plugins will be ignored, which can be used to easily activate or deactivate plugins. Nested plugins will be flattened. Async plugins will be awaited and resolved.\n\nSee [Plugin API document](https://rolldown.rs/apis/plugin-api) for more details about creating plugins.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown'\n\nexport default defineConfig({\n  plugins: [\n    examplePlugin1(),\n    // Conditional plugins\n    process.env.ENV1 && examplePlugin2(),\n    // Nested plugins arrays are flattened\n    [examplePlugin3(), examplePlugin4()],\n  ]\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Vite builds this native plugin list from its environment-specific plugin pipeline."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.preserveEntrySignatures",
+    "type": "false | \"strict\" | \"allow-extension\" | \"exports-only\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4095,
+    "documentation": "Controls how entry chunk exports are preserved.\n\nThis determines whether Rolldown needs to create facade chunks (additional wrapper chunks) to maintain the exact export signatures of entry modules, or whether it can combine entry modules with other chunks for optimization.",
+    "tags": {
+      "default": "`'exports-only'`"
+    },
+    "state": "inherited",
+    "value": "\"exports-only\"",
+    "location": "vite.config.ts:111",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.platform",
+    "type": "\"node\" | \"browser\" | \"neutral\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3751,
+    "documentation": "Expected platform where the code run.\n\n When the platform is set to neutral:\n   - When bundling is enabled the default output format is set to esm, which uses the export syntax introduced with ECMAScript 2015 (i.e. ES6). You can change the output format if this default is not appropriate.\n   - The main fields setting is empty by default. If you want to use npm-style packages, you will likely have to configure this to be something else such as main for the standard main field used by node.\n   - The conditions setting does not automatically include any platform-specific values.",
+    "tags": {
+      "default": "- `'node'` if the format is `'cjs'`\n- `'browser'` for other formats"
+    },
+    "state": "excluded",
+    "reason": "The framework selects browser/server environments and output format; no fixed cross-environment native platform override is selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.shimMissingExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3757,
+    "documentation": "When `true`, creates shim variables for missing exports instead of throwing an error.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:8",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.treeshake",
+    "type": "boolean | TreeshakingOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3768,
+    "documentation": "Controls tree-shaking (dead code elimination).\n\nSee the [In-depth Dead Code Elimination Guide](https://rolldown.rs/in-depth/dead-code-elimination) for more details.\n\nWhen `false`, tree-shaking will be disabled.\nWhen `true`, it is equivalent to setting each options to the default value.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "{\n    moduleSideEffects: true,\n    annotations: true,\n    manualPureFunctions: [],\n    unknownGlobalSideEffects: true,\n    invalidImportSideEffects: false,\n    commonjs: true,\n    propertyReadSideEffects: \"always\",\n    propertyWriteSideEffects: \"always\",\n  }",
+    "location": "config/bundler.ts:13",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.onLog",
+    "type": "OnLogFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3798,
+    "documentation": "A function that intercepts log messages. If not supplied, logs are printed to the console.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  onLog(level, log, defaultHandler) {\n    if (log.code === 'CIRCULAR_DEPENDENCY') {\n      return; // Ignore circular dependency warnings\n    }\n    if (level === 'warn') {\n      defaultHandler('error', log); // turn other warnings into errors\n    } else {\n      defaultHandler(level, log); // otherwise, just print the log\n    }\n  }\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Vite routes native diagnostics through its logger; the configured logger throws on warnings."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.moduleTypes",
+    "type": "ModuleTypes | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3828,
+    "documentation": "Maps file patterns to module types, controlling how files are processed.\n\nThis is conceptually similar to [esbuild's `loader`](https://esbuild.github.io/api/#loader) option, allowing you to specify how each file extensions should be handled.\n\nSee [the In-Depth Guide](https://rolldown.rs/in-depth/module-types) for more details.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown'\n\nexport default defineConfig({\n  moduleTypes: {\n    '.frag': 'text',\n  }\n})\n```"
+    },
+    "state": "inherited",
+    "value": "{}",
+    "location": "config/bundler.ts:11",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.watch",
+    "type": "false | WatcherOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4056,
+    "documentation": "Watch mode related options.\n\nThese options only take effect when running with the [`--watch`](/apis/cli#w-watch) flag, or using {@linkcode watchwatch()} API.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:12",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.checks",
+    "type": "ChecksOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4060,
+    "documentation": "Controls which warnings are emitted during the build process. Each option can be set to `true` (emit warning) or `false` (suppress warning).",
+    "tags": {},
+    "state": "inherited",
+    "value": "{\n    circularDependency: false,\n    eval: true,\n    missingGlobalName: true,\n    missingNameOptionForIifeExport: true,\n    invalidAnnotation: true,\n    mixedExports: true,\n    unresolvedEntry: true,\n    unresolvedImport: true,\n    filenameConflict: true,\n    moduleLevelDirective: true,\n    commonJsVariableInEsm: true,\n    importIsUndefined: true,\n    emptyImportMeta: true,\n    toleratedTransform: true,\n    cannotCallNamespace: true,\n    configurationFieldConflict: true,\n    preferBuiltinFeature: true,\n    couldNotCleanDirectory: true,\n    bundlerTimings: true,\n    duplicateShebang: true,\n    unsupportedTsconfigOption: true,\n    ineffectiveDynamicImport: true,\n    largeBarrelModules: true,\n    sourcemapBroken: true,\n    namespaceConflict: true,\n    shimmedExport: true,\n  }",
+    "location": "config/bundler.ts:46",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.makeAbsoluteExternalsRelative",
+    "type": "MakeAbsoluteExternalsRelative | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4068,
+    "documentation": "Determines if absolute external paths should be converted to relative paths in the output.\n\nThis does not only apply to paths that are absolute in the source but also to paths that are resolved to an absolute path by either a plugin or Rolldown core.",
+    "tags": {},
+    "state": "inherited",
+    "value": "\"ifRelativeSource\"",
+    "location": "config/bundler.ts:10",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.devtools",
+    "type": "{ sessionId?: string | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4084,
+    "documentation": "Devtools integration options.\n\nWhen enabled, Rolldown writes JSON-lines devtools output under\n`node_modules/.rolldown/{session_id}/`, resolved against {@linkcode cwd}.\nConsumers can parse the output with `@rolldown/debug` after\n`await bundle.close()` resolves.\n\n`sessionId` replaces the generated session id. It must be one path segment: not empty, not\n`.` or `..`, and without `/`, `\\` or NUL. Rolldown does not check that it is unique: give each\nbundler that runs at the same time its own `sessionId`, or their devtools output mixes.\nThe name `unknown-session` is reserved regardless of case.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Developer tools are explicitly disabled at the Vite level; no session is selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.optimization",
+    "type": "OptimizationOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4099,
+    "documentation": "Configure optimization features for the bundler.",
+    "tags": {},
+    "state": "inherited",
+    "value": "{\n    inlineConst: { mode: \"smart\", pass: 1 },\n    pifeForModuleWrappers: true,\n  }",
+    "location": "config/bundler.ts:42",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.context",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4115,
+    "documentation": "The value of `this` at the top level of each module. **Normally, you don't need to set this option.**",
+    "tags": {
+      "default": "undefined",
+      "example": "**Set custom context**\n```js\nexport default {\n  context: 'globalThis',\n  output: {\n    format: 'iife',\n  },\n};\n```"
+    },
+    "state": "excluded",
+    "reason": "Default is undefined. exactOptionalPropertyTypes rejects explicitly assigning undefined to this optional string; no replacement top-level this context is selected."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rolldownOptions.output",
+    "type": "Omit<OutputOptions, \"format\" | \"sourcemap\" | \"banner\" | \"dir\"> | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 966,
+    "documentation": "",
+    "tags": {},
+    "state": "inherited",
+    "value": "{\n        ...bundlerOptions.output,\n        assetFileNames: \"assets/[name]-[hash][extname]\",\n        chunkFileNames: \"[name]-[hash].js\",\n      }",
+    "location": "vite.config.ts:112",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 977,
+    "documentation": "List of file extensions that can be optimized. A corresponding esbuild\nplugin must exist to handle the specific extension.\n\nBy default, Vite can optimize `.mjs`, `.js`, `.ts`, and `.mts` files. This option\nallows specifying additional extensions.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "inherited",
+    "value": "[]",
+    "location": "vite.config.ts:121",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.disabled",
+    "type": "boolean | \"dev\" | \"build\" | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 987,
+    "documentation": "Deps optimization during build was removed in Vite 5.1. This option is\nnow redundant and will be removed in a future version. Switch to using\n`optimizeDeps.noDiscovery` and an empty or undefined `optimizeDeps.include`.\ntrue or 'dev' disables the optimizer, false or 'build' leaves it enabled.",
+    "tags": {
+      "default": "'build'",
+      "deprecated": "",
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "ViteClient.optimizeDeps.noDiscovery",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 994,
+    "documentation": "Automatic dependency discovery. When `noDiscovery` is true, only dependencies\nlisted in `include` will be optimized. The scanner isn't run for cold start\nin this case. CJS-only dependencies must be present in `include` during dev.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "vite.config.ts:125",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.holdUntilCrawlEnd",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1005,
+    "documentation": "When enabled, it will hold the first optimized deps results until all static\nimports are crawled on cold start. This avoids the need for full-page reloads\nwhen new dependencies are discovered and they trigger the generation of new\ncommon chunks. If all dependencies are found by the scanner plus the explicitly\ndefined ones in `include`, it is better to disable this option to let the\nbrowser process more requests in parallel.",
+    "tags": {
+      "default": "true",
+      "experimental": ""
+    },
+    "state": "inherited",
+    "value": "true",
+    "location": "vite.config.ts:122",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.ignoreOutdatedRequests",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1013,
+    "documentation": "When enabled, Vite will not throw an error when an outdated optimized\ndependency is requested. Enabling this option may cause a single module\nto have a multiple reference.",
+    "tags": {
+      "default": "false",
+      "experimental": ""
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "vite.config.ts:124",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.entries",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1026,
+    "documentation": "By default, Vite will crawl your `index.html` to detect dependencies that\nneed to be pre-bundled. If `build.rolldownOptions.input` is specified, Vite\nwill crawl those entry points instead.\n\nIf neither of these fit your needs, you can specify custom entries using\nthis option - the value should be a tinyglobby pattern or array of patterns\n(https://github.com/SuperchupuDev/tinyglobby) that are relative from\nvite project root. This will overwrite default entries inference.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit supplies dependency scan entries from route/generated modules."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.force",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 1031,
+    "documentation": "Force dep pre-optimization regardless of whether deps have changed.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "vite.config.ts:123",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.viteMode",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3839,
+    "documentation": "Enable Vite compatible mode.",
+    "tags": {
+      "default": "false",
+      "hidden": "This option is only meant to be used by Vite. It is not recommended to use this option directly."
+    },
+    "state": "excluded",
+    "reason": "Hidden native integration setting reserved for Vite, per the pinned Rolldown type declaration. Vite owns whether to enable it for each pipeline."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.resolveNewUrlToAsset",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3866,
+    "documentation": "When enabled, `new URL()` calls will be transformed to a stable asset URL which includes the updated name and content hash.\nIt is necessary to pass `import.meta.url` as the second argument to the\n`new URL` constructor, otherwise no transform will be applied.\n:::warning\nJavaScript and TypeScript files referenced via `new URL('./file.js', import.meta.url)` or `new URL('./file.ts', import.meta.url)` will **not** be transformed or bundled. The file will be copied as-is, meaning TypeScript files remain untransformed and dependencies are not resolved.\n\nThe expected behavior for JS/TS files is still being discussed and may\nchange in future releases. See [#7258](https://github.com/rolldown/rolldown/issues/7258) for more context.\n:::",
+    "tags": {
+      "example": "```js\n// main.js\nconst url = new URL('./styles.css', import.meta.url);\nconsole.log(url);\n\n// Example output after bundling WITHOUT the option (default)\nconst url = new URL('./styles.css', import.meta.url);\nconsole.log(url);\n\n// Example output after bundling WITH `experimental.resolveNewUrlToAsset` set to `true`\nconst url = new URL('assets/styles-CjdrdY7X.css', import.meta.url);\nconsole.log(url);\n```",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.devMode",
+    "type": "DevModeOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3871,
+    "documentation": "Dev mode related options.",
+    "tags": {
+      "hidden": "not ready for public usage yet"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.devMode.host",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3519,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.devMode.port",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3520,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.devMode.implement",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3521,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.devMode.skipCommonRuntimeInjection",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3528,
+    "documentation": "Prevent Rolldown from prepending its common dev runtime to {@link implement }.",
+    "tags": {
+      "deprecated": "Common runtime injection will be disabled by default in the future.\nInclude the common runtime in {@link implement } instead.",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Common runtime injection will be disabled by default in the future.\nInclude the common runtime in {@link implement } instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.devMode.lazy",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3529,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.devMode.hotUpdate",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3534,
+    "documentation": "Call the `hotUpdate` plugin hook. The `hotUpdate` option of `dev()` also turns it on.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.chunkModulesOrder",
+    "type": "ChunkModulesOrder | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3884,
+    "documentation": "Control which order should be used when rendering modules in a chunk.\n\nAvailable options:\n- `exec-order`: Almost equivalent to the topological order of the module graph, but specially handling when module graph has cycle.\n- `module-id`: This is more friendly for gzip compression, especially for some javascript static asset lib (e.g. icon library)\n\n> [!NOTE]\n> Try to sort the modules by their module id if possible (Since rolldown scope hoist all modules in the chunk, we only try to sort those modules by module id if we could ensure runtime behavior is correct after sorting).",
+    "tags": {
+      "default": "'exec-order'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.attachDebugInfo",
+    "type": "AttachDebugOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3897,
+    "documentation": "Attach debug information to the output bundle.\n\nAvailable modes:\n- `none`: No debug information is attached.\n- `simple`: Attach a `// <module id>` comment where the code of each module starts, like esbuild and Bun. These comments could be removed by the minifier.\n- `full`: Same as `simple`, and also attach comments that tell why each chunk exists. These chunk comments use legal comment syntax, so they won't be removed by the minifier.",
+    "tags": {
+      "default": "'simple'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.chunkImportMap",
+    "type": "boolean | { baseUrl?: string | undefined; fileName?: string | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3949,
+    "documentation": "Enables automatic generation of a chunk import map asset during build.\n\nThis map includes chunks with hashed filenames. Entry keys use their facade module ID. Common chunks\nuse their name; later chunks with the same name use their smallest original module ID.\nModules copied into a file by `experimentalInlineCommonChunks` remain in `moduleIds` but do not\naffect that file's key.\nKeeping these keys independent of content hashes reduces cascading cache invalidation when\na dependency changes.\n\nThe output defaults to `importmap.json` unless overridden via `fileName`. A base URL prefix\n(default `\"/\"`) can be applied to all paths. The resulting JSON is a valid import map and can be\ndirectly injected into HTML via `<script type=\"importmap\">`.",
+    "tags": {
+      "example": "```js\n{\n  experimental: {\n    chunkImportMap: {\n      baseUrl: '/',\n      fileName: 'importmap.json'\n    }\n  },\n  plugins: [\n    {\n      name: 'inject-import-map',\n      generateBundle(_, bundle) {\n        const chunkImportMap = bundle['importmap.json'];\n        if (chunkImportMap?.type === 'asset') {\n          const htmlPath = path.resolve('index.html');\n          let html = fs.readFileSync(htmlPath, 'utf-8');\n\n          html = html.replace(\n            /<script\\s+type=\"importmap\"[^>]*>[\\s\\S]*?<\\/script>/i,\n            `<script type=\"importmap\">${chunkImportMap.source}<\\/script>`\n          );\n\n          fs.writeFileSync(htmlPath, html);\n          delete bundle['importmap.json'];\n        }\n      }\n    }\n  ]\n}\n```\n\n> [!TIP]\n> If you want to learn more, you can check out the example here: [examples/chunk-import-map](https://github.com/rolldown/rolldown/tree/main/examples/chunk-import-map)",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.chunkImportMap.baseUrl",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3950,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.chunkImportMap.fileName",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3951,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.onDemandWrapping",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3959,
+    "documentation": "Under `output.strictExecutionOrder`, derive a conservative wrapping plan from predicted\nchunk execution hazards instead of wrapping every eligible module.",
+    "tags": {
+      "default": "false",
+      "hidden": "not ready for public usage yet"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.incrementalBuild",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3964,
+    "documentation": "Enable incremental build support. Required to be used with `watch` mode.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.nativeMagicString",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4000,
+    "documentation": "Use native Rust implementation of MagicString for source map generation.\n\n[MagicString](https://github.com/rich-harris/magic-string) is a JavaScript library commonly used by bundlers\nfor string manipulation and source map generation. When enabled, rolldown will use a native Rust\nimplementation of MagicString instead of the JavaScript version, providing significantly better performance\nduring source map generation and code transformation.\n\n**Benefits**\n\n- **Improved Performance**: The native Rust implementation is typically faster than the JavaScript version,\n  especially for large codebases with extensive source maps.\n- **Background Processing**: Source map generation is performed asynchronously in a background thread,\n  allowing the main bundling process to continue without blocking. This parallel processing can significantly\n  reduce overall build times when working with JavaScript transform hooks.\n- **Better Integration**: Seamless integration with rolldown's native Rust architecture.",
+    "tags": {
+      "example": "```js\nexport default {\n  experimental: {\n    nativeMagicString: true\n  },\n  output: {\n    sourcemap: true\n  }\n}\n```\n\n> [!NOTE]\n> This is an experimental feature. While it aims to provide identical behavior to the JavaScript\n> implementation, there may be edge cases. Please report any discrepancies you encounter.\n> For a complete working example, see [examples/native-magic-string](https://github.com/rolldown/rolldown/tree/main/examples/native-magic-string)",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.chunkOptimization",
+    "type": "boolean | ChunkOptimizationOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4013,
+    "documentation": "Control chunk optimizations.\n\n`true` enables both common-chunk merging and redundant dynamic chunk-load avoidance.\n`false` disables all chunk optimizations. Use the object form to control\n`mergeCommonChunks` and `avoidRedundantChunkLoads` separately.\n\nThese optimizations are automatically disabled when any module uses top-level await (TLA) or contains TLA dependencies,\nas they could affect execution order guarantees.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.chunkOptimization.mergeCommonChunks",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3376,
+    "documentation": "Merge common chunks into existing entry chunks when it is safe.\n\nThis can reduce the number of emitted chunks by moving shared/common modules\ninto an entry chunk that already depends on them. Rolldown only applies the\nmerge when it does not create a circular chunk dependency or change strict\nentry export signatures. This pass also covers safe empty-facade cleanup.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.chunkOptimization.avoidRedundantChunkLoads",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3385,
+    "documentation": "Avoid emitting redundant chunk loads for dynamic entries.\n\nThis pass can reduce dynamic-entry dependent chunks when the shared modules\nare guaranteed to be loaded by every importer of that dynamic entry.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.experimental.lazyBarrel",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4026,
+    "documentation": "Control whether to enable lazy barrel optimization.\n\nLazy barrel optimization avoids compiling unused re-export modules in side-effect-free barrel modules,\nsignificantly improving build performance for large codebases with many barrel modules.\n\nThis option is planned to be removed in the future. If you need to opt out, please open an issue\ndescribing your use case so we can address it before the option is gone.",
+    "tags": {
+      "see": "{@link https://rolldown.rs/in-depth/lazy-barrel-optimization Lazy Barrel Documentation}",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.alias",
+    "type": "Record<string, string | false | string[]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3657,
+    "documentation": "Substitute one package for another.\n\nOne use case for this feature is replacing a node-only package with a browser-friendly package in third-party code that you don't control.",
+    "tags": {
+      "example": "```js\nresolve: {\n  alias: {\n    '@': '/src',\n    'utils': './src/utils',\n  }\n}\n```\n> [!WARNING]\n> `resolve.alias` will not call [`resolveId`](/reference/Interface.Plugin#resolveid) hooks of other plugin.\n> If you want to call `resolveId` hooks of other plugin, use `viteAliasPlugin` from `rolldown/experimental` instead.\n> You could find more discussion in [this issue](https://github.com/rolldown/rolldown/issues/3615)"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.aliasFields",
+    "type": "string[][] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3667,
+    "documentation": "Fields in package.json to check for aliased paths.\n\nThis option is expected to be used for `browser` field support.",
+    "tags": {
+      "default": "- `[['browser']]` for `browser` platform\n- `[]` for other platforms"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.conditionNames",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3683,
+    "documentation": "Condition names to use when resolving exports in package.json.",
+    "tags": {
+      "default": "Defaults based on platform and import kind:\n- `browser` platform\n  - `[\"import\", \"browser\", \"default\"]` for import statements\n  - `[\"require\", \"browser\", \"default\"]` for require() calls\n- `node` platform\n  - `[\"import\", \"node\", \"default\"]` for import statements\n  - `[\"require\", \"node\", \"default\"]` for require() calls\n- `neutral` platform\n  - `[\"import\", \"default\"]` for import statements\n  - `[\"require\", \"default\"]` for require() calls"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.extensionAlias",
+    "type": "Record<string, string[]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3690,
+    "documentation": "Map of extensions to alternative extensions.\n\nWith writing `import './foo.js'` in a file, you want to resolve it to `foo.ts` instead of `foo.js`.\nYou can achieve this by setting: `extensionAlias: { '.js': ['.ts', '.js'] }`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.exportsFields",
+    "type": "string[][] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3696,
+    "documentation": "Fields in package.json to check for exports.",
+    "tags": {
+      "default": "`[['exports']]`"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3702,
+    "documentation": "Extensions to try when resolving files. These are tried in order from first to last.",
+    "tags": {
+      "default": "`['.tsx', '.ts', '.jsx', '.js', '.json']`"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.mainFields",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3712,
+    "documentation": "Fields in package.json to check for entry points.",
+    "tags": {
+      "default": "Defaults based on platform:\n- `node` platform: `['main', 'module']`\n- `browser` platform: `['browser', 'module', 'main']`\n- `neutral` platform: `[]`"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.mainFiles",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3717,
+    "documentation": "Filenames to try when resolving directories.",
+    "tags": {
+      "default": "['index']"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.modules",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3722,
+    "documentation": "Directories to search for modules.",
+    "tags": {
+      "default": "['node_modules']"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.symlinks",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3727,
+    "documentation": "Whether to follow symlinks when resolving modules.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.resolve.tsconfigFilename",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3731,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use the top-level {@linkcode tsconfig} option instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use the top-level {@linkcode tsconfig} option instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.define",
+    "type": "Record<string, string> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1847,
+    "documentation": "Replace global variables or [property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) with the provided values.\n\nSee Oxc's [`define` option](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement.html#define) for more details.",
+    "tags": {
+      "example": "**Replace the global variable `IS_PROD` with `true`**\n```js [rolldown.config.js]\nexport default defineConfig({\n  transform: { define: { IS_PROD: 'true' } }\n})\n```\nResult:\n```js\n// Input\nif (IS_PROD) {\n  console.log('Production mode')\n}\n\n// After bundling\nif (true) {\n  console.log('Production mode')\n}\n```\n\n**Replace the property accessor `process.env.NODE_ENV` with `'production'`**\n```js [rolldown.config.js]\nexport default defineConfig({\n  transform: { define: { 'process.env.NODE_ENV': \"'production'\" } }\n})\n```\nResult:\n```js\n// Input\nif (process.env.NODE_ENV === 'production') {\n  console.log('Production mode')\n}\n\n// After bundling\nif ('production' === 'production') {\n  console.log('Production mode')\n}\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.inject",
+    "type": "Record<string, string | [string, string]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1875,
+    "documentation": "Inject import statements on demand.\n\nThe API is aligned with `@rollup/plugin-inject`.\n\nSee Oxc's [`inject` option](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement.html#inject) for more details.\n\n#### Supported patterns\n```js\n{\n  // import { Promise } from 'es6-promise'\n  Promise: ['es6-promise', 'Promise'],\n\n  // import { Promise as P } from 'es6-promise'\n  P: ['es6-promise', 'Promise'],\n\n  // import $ from 'jquery'\n  $: 'jquery',\n\n  // import * as fs from 'node:fs'\n  fs: ['node:fs', '*'],\n\n  // Inject shims for property access pattern\n  'Object.assign': path.resolve( 'src/helpers/object-assign.js' ),\n}\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.dropLabels",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1902,
+    "documentation": "Remove labeled statements with these label names.\n\nLabeled statements are JavaScript statements prefixed with a label identifier.\nThis option allows you to strip specific labeled statements from the output,\nwhich is useful for removing debug-only code in production builds.",
+    "tags": {
+      "example": "```js rolldown.config.js\nexport default defineConfig({\n  transform: { dropLabels: ['DEBUG', 'DEV'] }\n})\n```\nResult:\n```js\n// Input\nDEBUG: console.log('Debug info');\nDEV: {\n  console.log('Development mode');\n}\nconsole.log('Production code');\n\n// After bundling\nconsole.log('Production code');\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.jsx",
+    "type": "false | \"preserve\" | JsxOptions | \"react\" | \"react-jsx\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1911,
+    "documentation": "Controls how JSX syntax is transformed.\n\n- If set to `false`, an error will be thrown if JSX syntax is encountered.\n- If set to `'react'`, JSX syntax will be transformed to classic runtime React code.\n- If set to `'react-jsx'`, JSX syntax will be transformed to automatic runtime React code.\n- If set to `'preserve'`, JSX syntax will be preserved as-is.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.typescript",
+    "type": "TypeScriptOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1156,
+    "documentation": "Configure how TypeScript is transformed.\n\n`typescript.declaration` is evaluated before all transforms.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/typescript}"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.helpers",
+    "type": "Helpers | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1185,
+    "documentation": "Behaviour for runtime helpers.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.helpers.mode",
+    "type": "HelperMode | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 875,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.assumptions",
+    "type": "CompilerAssumptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1148,
+    "documentation": "Set assumptions in order to produce smaller output.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.target",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1183,
+    "documentation": "Sets the target environment for the generated JavaScript.\n\nThe lowest target is `es2015`.\n\nExample:\n\n* `'es2015'`\n* `['es2020', 'chrome58', 'edge16', 'firefox57', 'node12', 'safari11']`",
+    "tags": {
+      "default": "`esnext` (No transformation)",
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/lowering#target}"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.decorator",
+    "type": "DecoratorOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1158,
+    "documentation": "Decorator plugin",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.plugins",
+    "type": "PluginsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1163,
+    "documentation": "Third-party plugins to use.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/plugins}"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.jsx.runtime",
+    "type": "\"classic\" | \"automatic\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 916,
+    "documentation": "Decides which runtime to use.\n\n- 'automatic' - auto-import the correct JSX factories\n- 'classic' - no auto-import",
+    "tags": {
+      "default": "'automatic'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.jsx.development",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 922,
+    "documentation": "Emit development-specific information, such as `__source` and `__self`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.jsx.throwIfNamespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 932,
+    "documentation": "Toggles whether or not to throw an error if an XML namespaced tag name\nis used.\n\nThough the JSX spec allows this, it is disabled by default since React's\nJSX does not currently have support for it.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.jsx.pure",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 938,
+    "documentation": "Mark JSX elements and top-level React method calls as pure for tree shaking.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "ViteClient.optimizeDeps.rollupOptions.transform.jsx.importSource",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 944,
+    "documentation": "Replaces the import source when importing functions.",
+    "tags": {
+      "default": "'react'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  }
+]

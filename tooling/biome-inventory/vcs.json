@@ -1,0 +1,32 @@
+[
+  {
+    "path": "vcs",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "vcs.clientKind",
+    "state": "explicit",
+    "value": "git"
+  },
+  {
+    "path": "vcs.defaultBranch",
+    "state": "excluded",
+    "reason": "No changed-files or since-branch task is used and no comparison base is established; all project files are checked."
+  },
+  {
+    "path": "vcs.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "vcs.root",
+    "state": "explicit",
+    "value": "."
+  },
+  {
+    "path": "vcs.useIgnoreFile",
+    "state": "explicit",
+    "value": true
+  }
+]

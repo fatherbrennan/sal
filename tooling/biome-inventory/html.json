@@ -1,0 +1,107 @@
+[
+  {
+    "path": "html",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "html.assist",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "html.assist.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "html.experimentalFullSupportEnabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "html.formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "html.formatter.attributePosition",
+    "state": "explicit",
+    "value": "auto"
+  },
+  {
+    "path": "html.formatter.bracketSameLine",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "html.formatter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "html.formatter.indentScriptAndStyle",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "html.formatter.indentStyle",
+    "state": "explicit",
+    "value": "space"
+  },
+  {
+    "path": "html.formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "html.formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "html.formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "html.formatter.selfCloseVoidElements",
+    "state": "explicit",
+    "value": "never"
+  },
+  {
+    "path": "html.formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "html.formatter.whitespaceSensitivity",
+    "state": "explicit",
+    "value": "css"
+  },
+  {
+    "path": "html.linter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "html.linter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "html.parser",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "html.parser.interpolation",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "html.parser.vue",
+    "state": "explicit",
+    "value": false
+  }
+]

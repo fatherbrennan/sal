@@ -1,0 +1,17 @@
+[
+  {
+    "path": "plugins[].includes",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  },
+  {
+    "path": "plugins[].path",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  },
+  {
+    "path": "plugins[].resolutionKind",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  }
+]

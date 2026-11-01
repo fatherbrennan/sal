@@ -1,0 +1,97 @@
+[
+  {
+    "path": "json",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "json.assist",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "json.assist.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "json.formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "json.formatter.bracketSpacing",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "json.formatter.delimiterSpacing",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "json.formatter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "json.formatter.expand",
+    "state": "explicit",
+    "value": "auto"
+  },
+  {
+    "path": "json.formatter.indentStyle",
+    "state": "explicit",
+    "value": "space"
+  },
+  {
+    "path": "json.formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "json.formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "json.formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "json.formatter.trailingCommas",
+    "state": "explicit",
+    "value": "none"
+  },
+  {
+    "path": "json.formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "json.linter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "json.linter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "json.parser",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "json.parser.allowComments",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "json.parser.allowTrailingCommas",
+    "state": "explicit",
+    "value": false
+  }
+]

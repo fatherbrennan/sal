@@ -1,0 +1,1158 @@
+[
+  {
+    "path": "Vite.worker.rollupOptions.output.advancedChunks.minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 880,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.advancedChunks.maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 881,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.advancedChunks.maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 882,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.advancedChunks.minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 883,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.advancedChunks.minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 884,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.advancedChunks.groups",
+    "type": "CodeSplittingGroup[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 885,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.legalComments",
+    "type": "\"none\" | \"inline\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 895,
+    "documentation": "Controls how legal comments are preserved in the output.\n\n- `none`: no legal comments\n- `inline`: preserve legal comments that contain `@license`, `@preserve` or starts with `//!` `/*!`",
+    "tags": {
+      "deprecated": "Use `comments.legal` instead. When both `legalComments` and `comments.legal` are set, `comments.legal` takes priority."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `comments.legal` instead. When both `legalComments` and `comments.legal` are set, `comments.legal` takes priority."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.comments",
+    "type": "boolean | CommentsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 910,
+    "documentation": "Control which comments are preserved in the output.\n\n- `true`: Preserve legal, annotation, and JSDoc comments (default)\n- `false`: Strip all comments\n- Object: Granular control over comment categories\n\nNote: Regular line and block comments without these markers\nare always removed regardless of this option.\n\nWhen both `legalComments` and `comments.legal` are set, `comments.legal` takes priority.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.comments.legal",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 356,
+    "documentation": "Comments that contain `@license`, `@preserve` or start with `//!` or `/*!`",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.comments.annotation",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 360,
+    "documentation": "Comments that contain `@__PURE__`, `@__NO_SIDE_EFFECTS__` or `@vite-ignore`",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.comments.jsdoc",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 364,
+    "documentation": "JSDoc comments",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.plugins",
+    "type": "RolldownOutputPluginOption",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 916,
+    "documentation": "The list of plugins to use only for this output.",
+    "tags": {
+      "see": "{@linkcode InputOptions.pluginsplugins}"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.polyfillRequire",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 924,
+    "documentation": "Whether to add a polyfill for `require()` function in non-CommonJS formats.\n\nThis option is useful when you want to inject your own `require` implementation.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.hoistTransitiveImports",
+    "type": "false | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 929,
+    "documentation": "This option is not implemented yet.",
+    "tags": {
+      "hidden": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.preserveModules",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 937,
+    "documentation": "Whether to use preserve modules mode.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.virtualDirname",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 943,
+    "documentation": "Specifies the directory name for \"virtual\" files that might be emitted by plugins when using {@link OutputOptions.preserveModulespreserve modules mode}.",
+    "tags": {
+      "default": "'_virtual'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.preserveModulesRoot",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 949,
+    "documentation": "A directory path to input modules that should be stripped away from {@linkcode diroutput.dir} when using {@link OutputOptions.preserveModulespreserve modules mode}.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.topLevelVar",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 968,
+    "documentation": "Whether to convert top-level `let` and `const` declarations into `var` declarations.\n\nEnabling this option can improve runtime performance of the generated code in\ncertain environments by avoiding Temporal Dead Zone (TDZ) checks. Only declarations\nin the module's top-level scope are rewritten — declarations inside nested scopes\n(functions, blocks, etc.) are left as-is.\n\nNote:\n- Top-level `class X {}` declarations are always emitted as `var X = class {}` so\n  rolldown can hoist them alongside other top-level bindings; this transform is\n  independent of `topLevelVar`.\n- Top-level `function` declarations are never rewritten.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.minifyInternalExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 977,
+    "documentation": "Whether to minify internal exports as single letter variables to allow for better minification.",
+    "tags": {
+      "default": "`true` for format `es` or if `output.minify` is `true` or object, `false` otherwise"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.cleanDir",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 985,
+    "documentation": "Clean output directory ({@linkcode diroutput.dir}) before emitting output.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.keepNames",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 997,
+    "documentation": "Keep `name` property of functions and classes after bundling.\n\nWhen enabled, the bundler will preserve the original `name` property value of functions and\nclasses in the output. This is useful for debugging and some frameworks that rely on it for\nregistration and binding purposes.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.strictExecutionOrder",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1011,
+    "documentation": "Preserve source module execution order across generated chunks.\n\nWhen enabled, Rolldown wraps ESM modules so their bodies run in source order regardless of chunk placement. Interop wrappers for CommonJS and require-of-ESM modules are unchanged, and external modules are not affected. `experimental.onDemandWrapping` replaces wrap-all with a conservative plan derived from predicted chunk execution hazards.\n\n> [!WARNING]\n> Enabling this option increases bundle size because wrapped modules need runtime init helpers.\n\n{@linkcode CodeSplittingOptions.experimentalInlineCommonChunksexperimentalInlineCommonChunks}\nwith a `maxSize` above `0` turns this option on when it is omitted.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.output.strict",
+    "type": "boolean | \"auto\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1023,
+    "documentation": "Whether to always output `\"use strict\"` directive in non-ES module outputs.\n\n- `true` - Always emit `\"use strict\"` at the top of the output (not applicable for ESM format since ESM is always strict).\n- `false` - Never emit `\"use strict\"` in the output.\n- `'auto'` - Respect the `\"use strict\"` directives from the source code.\n\nSee [In-depth directive guide](https://rolldown.rs/in-depth/directives) for more details.",
+    "tags": {
+      "default": "'auto'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.external",
+    "type": "ExternalOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3633,
+    "documentation": "Specifies which modules should be treated as external and not bundled. External modules will be left as import statements in the output.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve",
+    "type": "{ alias?: Record<string, string | false | string[]> | undefined; aliasFields?: string[][] | undefined; conditionNames?: string[] | undefined; extensionAlias?: Record<string, string[]> | undefined; ... 6 more ...; tsconfigFilename?: string | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3637,
+    "documentation": "Options for built-in module resolution feature.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.alias",
+    "type": "Record<string, string | false | string[]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3657,
+    "documentation": "Substitute one package for another.\n\nOne use case for this feature is replacing a node-only package with a browser-friendly package in third-party code that you don't control.",
+    "tags": {
+      "example": "```js\nresolve: {\n  alias: {\n    '@': '/src',\n    'utils': './src/utils',\n  }\n}\n```\n> [!WARNING]\n> `resolve.alias` will not call [`resolveId`](/reference/Interface.Plugin#resolveid) hooks of other plugin.\n> If you want to call `resolveId` hooks of other plugin, use `viteAliasPlugin` from `rolldown/experimental` instead.\n> You could find more discussion in [this issue](https://github.com/rolldown/rolldown/issues/3615)"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.aliasFields",
+    "type": "string[][] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3667,
+    "documentation": "Fields in package.json to check for aliased paths.\n\nThis option is expected to be used for `browser` field support.",
+    "tags": {
+      "default": "- `[['browser']]` for `browser` platform\n- `[]` for other platforms"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.conditionNames",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3683,
+    "documentation": "Condition names to use when resolving exports in package.json.",
+    "tags": {
+      "default": "Defaults based on platform and import kind:\n- `browser` platform\n  - `[\"import\", \"browser\", \"default\"]` for import statements\n  - `[\"require\", \"browser\", \"default\"]` for require() calls\n- `node` platform\n  - `[\"import\", \"node\", \"default\"]` for import statements\n  - `[\"require\", \"node\", \"default\"]` for require() calls\n- `neutral` platform\n  - `[\"import\", \"default\"]` for import statements\n  - `[\"require\", \"default\"]` for require() calls"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.extensionAlias",
+    "type": "Record<string, string[]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3690,
+    "documentation": "Map of extensions to alternative extensions.\n\nWith writing `import './foo.js'` in a file, you want to resolve it to `foo.ts` instead of `foo.js`.\nYou can achieve this by setting: `extensionAlias: { '.js': ['.ts', '.js'] }`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.exportsFields",
+    "type": "string[][] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3696,
+    "documentation": "Fields in package.json to check for exports.",
+    "tags": {
+      "default": "`[['exports']]`"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3702,
+    "documentation": "Extensions to try when resolving files. These are tried in order from first to last.",
+    "tags": {
+      "default": "`['.tsx', '.ts', '.jsx', '.js', '.json']`"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.mainFields",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3712,
+    "documentation": "Fields in package.json to check for entry points.",
+    "tags": {
+      "default": "Defaults based on platform:\n- `node` platform: `['main', 'module']`\n- `browser` platform: `['browser', 'module', 'main']`\n- `neutral` platform: `[]`"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.mainFiles",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3717,
+    "documentation": "Filenames to try when resolving directories.",
+    "tags": {
+      "default": "['index']"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.modules",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3722,
+    "documentation": "Directories to search for modules.",
+    "tags": {
+      "default": "['node_modules']"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.symlinks",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3727,
+    "documentation": "Whether to follow symlinks when resolving modules.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.resolve.tsconfigFilename",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3731,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use the top-level {@linkcode tsconfig} option instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use the top-level {@linkcode tsconfig} option instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform",
+    "type": "TransformOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4046,
+    "documentation": "Configure how the code is transformed. This process happens after the `transform` hook.",
+    "tags": {
+      "example": "**Enable legacy decorators**\n```js\nexport default defineConfig({\n  transform: {\n    decorator: {\n      legacy: true,\n    },\n  },\n})\n```\nNote that if you have correct `tsconfig.json` file, Rolldown will automatically detect and enable legacy decorators support."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.define",
+    "type": "Record<string, string> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1847,
+    "documentation": "Replace global variables or [property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) with the provided values.\n\nSee Oxc's [`define` option](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement.html#define) for more details.",
+    "tags": {
+      "example": "**Replace the global variable `IS_PROD` with `true`**\n```js [rolldown.config.js]\nexport default defineConfig({\n  transform: { define: { IS_PROD: 'true' } }\n})\n```\nResult:\n```js\n// Input\nif (IS_PROD) {\n  console.log('Production mode')\n}\n\n// After bundling\nif (true) {\n  console.log('Production mode')\n}\n```\n\n**Replace the property accessor `process.env.NODE_ENV` with `'production'`**\n```js [rolldown.config.js]\nexport default defineConfig({\n  transform: { define: { 'process.env.NODE_ENV': \"'production'\" } }\n})\n```\nResult:\n```js\n// Input\nif (process.env.NODE_ENV === 'production') {\n  console.log('Production mode')\n}\n\n// After bundling\nif ('production' === 'production') {\n  console.log('Production mode')\n}\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.inject",
+    "type": "Record<string, string | [string, string]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1875,
+    "documentation": "Inject import statements on demand.\n\nThe API is aligned with `@rollup/plugin-inject`.\n\nSee Oxc's [`inject` option](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement.html#inject) for more details.\n\n#### Supported patterns\n```js\n{\n  // import { Promise } from 'es6-promise'\n  Promise: ['es6-promise', 'Promise'],\n\n  // import { Promise as P } from 'es6-promise'\n  P: ['es6-promise', 'Promise'],\n\n  // import $ from 'jquery'\n  $: 'jquery',\n\n  // import * as fs from 'node:fs'\n  fs: ['node:fs', '*'],\n\n  // Inject shims for property access pattern\n  'Object.assign': path.resolve( 'src/helpers/object-assign.js' ),\n}\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.dropLabels",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1902,
+    "documentation": "Remove labeled statements with these label names.\n\nLabeled statements are JavaScript statements prefixed with a label identifier.\nThis option allows you to strip specific labeled statements from the output,\nwhich is useful for removing debug-only code in production builds.",
+    "tags": {
+      "example": "```js rolldown.config.js\nexport default defineConfig({\n  transform: { dropLabels: ['DEBUG', 'DEV'] }\n})\n```\nResult:\n```js\n// Input\nDEBUG: console.log('Debug info');\nDEV: {\n  console.log('Development mode');\n}\nconsole.log('Production code');\n\n// After bundling\nconsole.log('Production code');\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.jsx",
+    "type": "false | \"preserve\" | JsxOptions | \"react\" | \"react-jsx\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1911,
+    "documentation": "Controls how JSX syntax is transformed.\n\n- If set to `false`, an error will be thrown if JSX syntax is encountered.\n- If set to `'react'`, JSX syntax will be transformed to classic runtime React code.\n- If set to `'react-jsx'`, JSX syntax will be transformed to automatic runtime React code.\n- If set to `'preserve'`, JSX syntax will be preserved as-is.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.typescript",
+    "type": "TypeScriptOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1156,
+    "documentation": "Configure how TypeScript is transformed.\n\n`typescript.declaration` is evaluated before all transforms.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/typescript}"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.helpers",
+    "type": "Helpers | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1185,
+    "documentation": "Behaviour for runtime helpers.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.helpers.mode",
+    "type": "HelperMode | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 875,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.assumptions",
+    "type": "CompilerAssumptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1148,
+    "documentation": "Set assumptions in order to produce smaller output.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.target",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1183,
+    "documentation": "Sets the target environment for the generated JavaScript.\n\nThe lowest target is `es2015`.\n\nExample:\n\n* `'es2015'`\n* `['es2020', 'chrome58', 'edge16', 'firefox57', 'node12', 'safari11']`",
+    "tags": {
+      "default": "`esnext` (No transformation)",
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/lowering#target}"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.decorator",
+    "type": "DecoratorOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1158,
+    "documentation": "Decorator plugin",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.transform.plugins",
+    "type": "PluginsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1163,
+    "documentation": "Third-party plugins to use.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/plugins}"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.cwd",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3737,
+    "documentation": "The working directory to use when resolving relative paths in the configuration.",
+    "tags": {
+      "default": "process.cwd()"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.tsconfig",
+    "type": "string | boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4121,
+    "documentation": "Configures TypeScript configuration file resolution and usage.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.platform",
+    "type": "\"node\" | \"browser\" | \"neutral\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3751,
+    "documentation": "Expected platform where the code run.\n\n When the platform is set to neutral:\n   - When bundling is enabled the default output format is set to esm, which uses the export syntax introduced with ECMAScript 2015 (i.e. ES6). You can change the output format if this default is not appropriate.\n   - The main fields setting is empty by default. If you want to use npm-style packages, you will likely have to configure this to be something else such as main for the standard main field used by node.\n   - The conditions setting does not automatically include any platform-specific values.",
+    "tags": {
+      "default": "- `'node'` if the format is `'cjs'`\n- `'browser'` for other formats"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.shimMissingExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3757,
+    "documentation": "When `true`, creates shim variables for missing exports instead of throwing an error.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake",
+    "type": "boolean | TreeshakingOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3768,
+    "documentation": "Controls tree-shaking (dead code elimination).\n\nSee the [In-depth Dead Code Elimination Guide](https://rolldown.rs/in-depth/dead-code-elimination) for more details.\n\nWhen `false`, tree-shaking will be disabled.\nWhen `true`, it is equivalent to setting each options to the default value.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.moduleSideEffects",
+    "type": "ModuleSideEffectsOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2583,
+    "documentation": "**Values:**\n\n- **`true`**: All modules are assumed to have side effects and will be included in the bundle even if none of their exports are used.\n- **`false`**: No modules have side effects. This enables aggressive tree-shaking, removing any modules whose exports are not used.\n- **`string[]`**: Array of module IDs that have side effects. Only modules in this list will be preserved if unused; all others can be tree-shaken when their exports are unused.\n- **`'no-external'`**: Assumes no external modules have side effects while preserving the default behavior for local modules.\n- **`ModuleSideEffectsRule[]`**: Array of rules with `test`, `external`, and `sideEffects` properties for fine-grained control.\n- **`function`**: Function that receives `(id, external)` and returns whether the module has side effects.\n\n**Important:** Setting this to `false` or using an array/string assumes that your modules and their dependencies have no side effects other than their exports. Only use this if you're certain that removing unused modules won't break your application.\n\n> [!NOTE]\n> **Performance: Prefer `ModuleSideEffectsRule[]` over functions**\n>\n> When possible, use rule-based configuration instead of functions. Rules are processed entirely in Rust, while JavaScript functions require runtime calls between Rust and JavaScript, which can hurt CPU utilization during builds.\n>\n> **Functions should be a last resort**: Only use the function signature when your logic cannot be expressed with patterns or simple string matching.\n>\n> **Rule advantages**: `ModuleSideEffectsRule[]` provides better performance by avoiding Rust-JavaScript runtime calls, clearer intent, and easier maintenance.",
+    "tags": {
+      "example": "```js\n// Assume no modules have side effects (aggressive tree-shaking)\ntreeshake: {\n  moduleSideEffects: false\n}\n\n// Only specific modules have side effects (string array)\ntreeshake: {\n  moduleSideEffects: [\n    'lodash',\n    'react-dom',\n  ]\n}\n\n// Use rules for pattern matching and granular control\ntreeshake: {\n  moduleSideEffects: [\n    { test: /^node:/, sideEffects: true },\n    { test: /\\.css$/, sideEffects: true },\n    { test: /some-package/, sideEffects: false, external: false },\n  ]\n}\n\n// Custom function to determine side effects\ntreeshake: {\n  moduleSideEffects: (id, external) => {\n    if (external) return false; // external modules have no side effects\n    return id.includes('/side-effects/') || id.endsWith('.css');\n  }\n}\n\n// Assume no external modules have side effects\ntreeshake: {\n  moduleSideEffects: 'no-external',\n}\n```\n\n**Common Use Cases:**\n- **CSS files**: `{ test: /\\.css$/, sideEffects: true }` - preserve CSS imports\n- **Polyfills**: Add specific polyfill modules to the array\n- **Plugins**: Modules that register themselves globally on import\n- **Library development**: Set to `false` for libraries where unused exports should be removed",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.moduleSideEffects[].test",
+    "type": "RegExp | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2507,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.moduleSideEffects[].external",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2508,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.moduleSideEffects[].sideEffects",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2509,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.annotations",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2591,
+    "documentation": "Whether to respect `/*@__PURE__*\\/` annotations and other tree-shaking hints in the code.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#pure-annotations) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.manualPureFunctions",
+    "type": "readonly string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2605,
+    "documentation": "Array of function names that should be considered pure (no side effects) even if they can't be automatically detected as pure.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#define-pure-functions) for more details.",
+    "tags": {
+      "example": "```js\ntreeshake: {\n  manualPureFunctions: ['console.log', 'debug.trace']\n}\n```",
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.unknownGlobalSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2613,
+    "documentation": "Whether to assume that accessing unknown global properties might have side effects.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-global-variable-access-side-effects) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.invalidImportSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2621,
+    "documentation": "Whether to assume that invalid import statements might have side effects.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-invalid-import-statement-side-effects) for more details.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.commonjs",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2640,
+    "documentation": "Whether to enable tree-shaking for CommonJS modules. When `true`, unused exports from CommonJS modules can be eliminated from the bundle, similar to ES modules. When disabled, CommonJS modules will always be included in their entirety.\n\nThis option allows rolldown to analyze `exports.property` assignments in CommonJS modules and remove unused exports while preserving the module's side effects.",
+    "tags": {
+      "example": "```js\n// source.js (CommonJS)\nexports.used = 'This will be kept';\nexports.unused = 'This will be tree-shaken away';\n\n// main.js\nimport { used } from './source.js';\n// With commonjs: true, only the 'used' export is included in the bundle\n// With commonjs: false, both exports are included\n```",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.propertyReadSideEffects",
+    "type": "false | \"always\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2650,
+    "documentation": "Controls whether reading properties from objects is considered to have side effects.\n\nSet to `false` for more aggressive tree-shaking behavior.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-property-read-side-effects) for more details.",
+    "tags": {
+      "default": "'always'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.treeshake.propertyWriteSideEffects",
+    "type": "false | \"always\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2658,
+    "documentation": "Controls whether writing properties to objects is considered to have side effects.\n\nSet to `false` for more aggressive behavior.",
+    "tags": {
+      "default": "'always'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.logLevel",
+    "type": "LogLevelOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3776,
+    "documentation": "Controls the verbosity of console logging during the build.",
+    "tags": {
+      "default": "'info'"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.onLog",
+    "type": "OnLogFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3798,
+    "documentation": "A function that intercepts log messages. If not supplied, logs are printed to the console.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  onLog(level, log, defaultHandler) {\n    if (log.code === 'CIRCULAR_DEPENDENCY') {\n      return; // Ignore circular dependency warnings\n    }\n    if (level === 'warn') {\n      defaultHandler('error', log); // turn other warnings into errors\n    } else {\n      defaultHandler(level, log); // otherwise, just print the log\n    }\n  }\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.moduleTypes",
+    "type": "ModuleTypes | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3828,
+    "documentation": "Maps file patterns to module types, controlling how files are processed.\n\nThis is conceptually similar to [esbuild's `loader`](https://esbuild.github.io/api/#loader) option, allowing you to specify how each file extensions should be handled.\n\nSee [the In-Depth Guide](https://rolldown.rs/in-depth/module-types) for more details.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown'\n\nexport default defineConfig({\n  moduleTypes: {\n    '.frag': 'text',\n  }\n})\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch",
+    "type": "false | WatcherOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4056,
+    "documentation": "Watch mode related options.\n\nThese options only take effect when running with the [`--watch`](/apis/cli#w-watch) flag, or using {@linkcode watchwatch()} API.",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.skipWrite",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3439,
+    "documentation": "Whether to skip the {@linkcode RolldownBuild.writebundle.write()} step when a rebuild is triggered.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.buildDelay",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3457,
+    "documentation": "Configures how long Rolldown will wait for further changes until it triggers\na rebuild in milliseconds.\n\nEven if this value is set to 0, there's a small debounce timeout configured\nin the file system watcher. Setting this to a value greater than 0 will mean\nthat Rolldown will only trigger a rebuild if there was no change for the\nconfigured number of milliseconds. If several configurations are watched,\nRolldown will use the largest configured build delay.\n\nThis option is useful if you use a tool that regenerates multiple source files\nvery slowly. Rebuilding immediately after the first change could cause Rolldown\nto generate a broken intermediate build before generating a successful final\nbuild, which can be confusing and distracting.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.watcher",
+    "type": "WatcherFileWatcherOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3461,
+    "documentation": "File watcher options for configuring how file changes are detected.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.watcher.usePolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3397,
+    "documentation": "Whether to use polling-based file watching instead of native OS events.\n\nPolling is useful for environments where native FS events are unreliable,\nsuch as network mounts, Docker volumes, or WSL2.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.watcher.pollInterval",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3405,
+    "documentation": "Interval between each poll in milliseconds.\n\nThis option is only used when {@linkcode usePolling} is `true`.",
+    "tags": {
+      "default": "100"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.watcher.compareContentsForPolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3414,
+    "documentation": "Whether to compare file contents for poll-based watchers.\nWhen enabled, poll watchers will check file contents to determine if they actually changed.\n\nThis option is only used when {@linkcode usePolling} is `true`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.watcher.useDebounce",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3420,
+    "documentation": "Whether to use debounced event delivery at the filesystem level.\nThis coalesces rapid filesystem events before they reach the build coordinator.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.watcher.debounceDelay",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3426,
+    "documentation": "Debounce delay in milliseconds for fs-level debounced watchers.\nOnly used when {@linkcode useDebounce} is `true`.",
+    "tags": {
+      "default": "10"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.watcher.debounceTickRate",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3432,
+    "documentation": "Tick rate in milliseconds for the debouncer's internal polling.\nOnly used when {@linkcode useDebounce} is `true`.\nWhen undefined, auto-selects 1/4 of debounceDelay.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.include",
+    "type": "StringOrRegExp | StringOrRegExp[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3479,
+    "documentation": "Filter to limit the file-watching to certain files.\n\nStrings are treated as glob patterns.\nNote that this only filters the module graph but does not allow adding\nadditional watch files.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  watch: {\n    include: 'src/**',\n  },\n})\n```",
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.exclude",
+    "type": "StringOrRegExp | StringOrRegExp[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3495,
+    "documentation": "Filter to prevent files from being watched.\n\nStrings are treated as glob patterns.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  watch: {\n    exclude: 'node_modules/**',\n  },\n})\n```",
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.onInvalidate",
+    "type": "((id: string) => void) | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3509,
+    "documentation": "An optional function that will be called immediately every time\na module changes that is part of the build.\n\nThis is different from the {@linkcode Plugin.watchChangewatchChange} plugin hook, which is\nonly called once the running build has finished. This may for\ninstance be used to prevent additional steps from being performed\nif we know another build will be started anyway once the current\nbuild finished. This callback may be called multiple times per\nbuild as it tracks every change.",
+    "tags": {
+      "param": "id The id of the changed module."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.watch.clearScreen",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3514,
+    "documentation": "Whether to clear the screen when a rebuild is triggered.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks",
+    "type": "ChecksOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4060,
+    "documentation": "Controls which warnings are emitted during the build process. Each option can be set to `true` (emit warning) or `false` (suppress warning).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.circularDependency",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1624,
+    "documentation": "Whether to emit warnings when detecting circular dependency.\n\nCircular dependencies lead to a bigger bundle size and sometimes cause execution order issues and are better to avoid.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.eval",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1631,
+    "documentation": "Whether to emit warnings when detecting uses of direct `eval`s.\n\nSee [Avoiding Direct `eval` in Troubleshooting page](https://rolldown.rs/guide/troubleshooting#avoiding-direct-eval) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.missingGlobalName",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1638,
+    "documentation": "Whether to emit warnings when the `output.globals` option is missing when needed.\n\nSee [`output.globals`](https://rolldown.rs/reference/OutputOptions.globals).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.missingNameOptionForIifeExport",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1645,
+    "documentation": "Whether to emit warnings when the `output.name` option is missing when needed.\n\nSee [`output.name`](https://rolldown.rs/reference/OutputOptions.name).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.invalidAnnotation",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1657,
+    "documentation": "Whether to emit warnings when a `#__PURE__` / `@__PURE__` annotation has no effect due to its position.\n\nAnnotations placed where they cannot annotate a call expression (e.g. before a non-call expression,\nbefore a statement declaration, or between an identifier and `=` in a variable declarator) are\nignored by the parser. Matches Rollup's `INVALID_ANNOTATION` log code.\n\nBy default, warnings are emitted only for local project files inside `cwd` and outside\n`node_modules`. Set this option to `false` to disable the warning entirely.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.mixedExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1664,
+    "documentation": "Whether to emit warnings when the way to export values is ambiguous.\n\nSee [`output.exports`](https://rolldown.rs/reference/OutputOptions.exports).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.unresolvedEntry",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1669,
+    "documentation": "Whether to emit warnings when an entrypoint cannot be resolved.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.unresolvedImport",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1674,
+    "documentation": "Whether to emit warnings when an import cannot be resolved.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.filenameConflict",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1681,
+    "documentation": "Whether to emit warnings when files generated have the same name with different contents.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.moduleLevelDirective",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1686,
+    "documentation": "Whether to emit warnings for module-level directives other than `use strict`.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.commonJsVariableInEsm",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1695,
+    "documentation": "Whether to emit warnings when a CommonJS variable is used in an ES module.\n\nCommonJS variables like `module` and `exports` are treated as global variables in ES modules and may not work as expected.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.importIsUndefined",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1704,
+    "documentation": "Whether to emit warnings when an imported variable is not exported.\n\nIf the code is importing a variable that is not exported by the imported module, the value will always be `undefined`. This might be a mistake in the code.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.emptyImportMeta",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1711,
+    "documentation": "Whether to emit warnings when `import.meta` is not supported with the output format and is replaced with an empty object (`{}`).\n\nSee [`import.meta` in Non-ESM Output Formats page](https://rolldown.rs/in-depth/non-esm-output-formats#import-meta) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.toleratedTransform",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1716,
+    "documentation": "Whether to emit warnings when detecting tolerated transform.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.cannotCallNamespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1725,
+    "documentation": "Whether to emit warnings when a namespace is called as a function.\n\nA module namespace object is an object and not a function. Calling it as a function will cause a runtime error.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.configurationFieldConflict",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1732,
+    "documentation": "Whether to emit warnings when a config value is overridden by another config value with a higher priority.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.preferBuiltinFeature",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1739,
+    "documentation": "Whether to emit warnings when a plugin that is covered by a built-in feature is used.\n\nUsing built-in features is generally more performant than using plugins.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  },
+  {
+    "path": "Vite.worker.rollupOptions.checks.couldNotCleanDirectory",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1746,
+    "documentation": "Whether to emit warnings when Rolldown could not clean the output directory.\n\nSee [`output.cleanDir`](https://rolldown.rs/reference/OutputOptions.cleanDir).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `rolldownOptions` instead."
+  }
+]

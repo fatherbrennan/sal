@@ -1,0 +1,334 @@
+[
+  {
+    "path": "assist",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "assist.actions",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "assist.actions.preset",
+    "state": "explicit",
+    "value": "none"
+  },
+  {
+    "path": "assist.actions.recommended",
+    "state": "excluded",
+    "reason": "Deprecated and incompatible with the explicit preset field; native Biome validator confirms the conflict."
+  },
+  {
+    "path": "assist.actions.source",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "assist.actions.source.noDuplicateClasses",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.noDuplicateClasses.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.noDuplicateClasses.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.noDuplicateClasses.options.attributes",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.noDuplicateClasses.options.functions",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.organizeImports",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "assist.actions.source.organizeImports.level",
+    "state": "explicit",
+    "value": "on"
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.groups",
+    "state": "explicit",
+    "value": []
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.groups[].kind",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.groups[].source",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.groups[].type",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.groups[][].kind",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.groups[][].source",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.groups[][].type",
+    "state": "excluded",
+    "reason": "No entries selected for this array; its item properties do not apply."
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.identifierOrder",
+    "state": "explicit",
+    "value": "natural"
+  },
+  {
+    "path": "assist.actions.source.organizeImports.options.sortBareImports",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "assist.actions.source.preset",
+    "state": "explicit",
+    "value": "none"
+  },
+  {
+    "path": "assist.actions.source.recommended",
+    "state": "excluded",
+    "reason": "Deprecated and incompatible with the explicit preset field; native Biome validator confirms the conflict."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedArguments",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedArguments.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedArguments.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedDefinitions",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedDefinitions.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedDefinitions.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedVariables",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedVariables.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useGraphqlSortedVariables.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedAttributes",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedAttributes.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedAttributes.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedAttributes.options.sortFirst",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedAttributes.options.sortOrder",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedEnumMembers",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedEnumMembers.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedEnumMembers.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedInterfaceMembers",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedInterfaceMembers.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedInterfaceMembers.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedInterfaceMembers.options.partitionByNewLine",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedKeys",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedKeys.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedKeys.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedKeys.options.groupByNesting",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedKeys.options.sortOrder",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedPackageJson",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedPackageJson.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedPackageJson.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedProperties",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedProperties.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedProperties.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedSelectionSet",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedSelectionSet.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedSelectionSet.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedTypeFields",
+    "state": "explicit",
+    "value": "off",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedTypeFields.level",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.actions.source.useSortedTypeFields.options",
+    "state": "excluded",
+    "reason": "Non-recommended assist; explicitly retain the pinned default (off)."
+  },
+  {
+    "path": "assist.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "assist.includes",
+    "state": "explicit",
+    "value": ["**"]
+  }
+]

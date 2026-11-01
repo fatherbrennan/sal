@@ -1,0 +1,97 @@
+[
+  {
+    "path": "css",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "css.assist",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "css.assist.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "css.formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "css.formatter.delimiterSpacing",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "css.formatter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "css.formatter.indentStyle",
+    "state": "explicit",
+    "value": "space"
+  },
+  {
+    "path": "css.formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "css.formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "css.formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "css.formatter.quoteStyle",
+    "state": "explicit",
+    "value": "double"
+  },
+  {
+    "path": "css.formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "css.globals",
+    "state": "explicit",
+    "value": []
+  },
+  {
+    "path": "css.linter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "css.linter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "css.parser",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "css.parser.allowWrongLineComments",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "css.parser.cssModules",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "css.parser.tailwindDirectives",
+    "state": "explicit",
+    "value": false
+  }
+]

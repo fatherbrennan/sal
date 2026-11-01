@@ -1,0 +1,7 @@
+[
+  {
+    "path": "$schema",
+    "state": "explicit",
+    "value": "https://biomejs.dev/schemas/2.6.2/schema.json"
+  }
+]

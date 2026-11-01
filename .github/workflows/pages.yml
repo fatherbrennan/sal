@@ -1,0 +1,55 @@
+name: Deploy GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: package.json
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Validate hosting settings
+        run: bun run pages:validate
+        env:
+          PAGES_URL: ${{ steps.pages.outputs.base_url }}
+      - run: bun run dependencies:install
+      - run: bun run config:check
+      - run: bun run biome:check
+      - run: bun run typecheck
+      - run: bun run test
+      - run: bun run build:pages
+      - run: bun run browsers:install:pages
+      - run: bun run test:browser:pages
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

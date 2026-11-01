@@ -1,0 +1,72 @@
+[
+  {
+    "path": "graphql",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "graphql.assist",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "graphql.assist.enabled",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "graphql.formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "graphql.formatter.bracketSpacing",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "graphql.formatter.enabled",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "graphql.formatter.indentStyle",
+    "state": "explicit",
+    "value": "space"
+  },
+  {
+    "path": "graphql.formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "graphql.formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "graphql.formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "graphql.formatter.quoteStyle",
+    "state": "explicit",
+    "value": "double"
+  },
+  {
+    "path": "graphql.formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "graphql.linter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "graphql.linter.enabled",
+    "state": "explicit",
+    "value": false
+  }
+]

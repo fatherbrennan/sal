@@ -1,0 +1,1157 @@
+[
+  {
+    "path": "Vite.server.watch.followSymlinks",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 414,
+    "documentation": "When `false`, only the symlinks themselves will be watched for changes instead of following\nthe link references and bubbling events through the link's path.",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:183"
+  },
+  {
+    "path": "Vite.server.watch.cwd",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 419,
+    "documentation": "The base directory from which watch `paths` are to be derived. Paths emitted with events will\nbe relative to this.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The watcher receives resolved framework/project paths; no alternate relative watcher root is selected."
+  },
+  {
+    "path": "Vite.server.watch.disableGlobbing",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 426,
+    "documentation": "If set to true then the strings passed to .watch() and .add() are treated as literal path\nnames, even if they look like globs.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:184"
+  },
+  {
+    "path": "Vite.server.watch.usePolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 434,
+    "documentation": "Whether to use fs.watchFile (backed by polling), or fs.watch. If polling leads to high CPU\nutilization, consider setting this to `false`. It is typically necessary to **set this to\n`true` to successfully watch files over a network**, and it may be necessary to successfully\nwatch files in other non-standard situations. Setting to `true` explicitly on OS X overrides\nthe `useFsEvents` default.\nIf `true`, use polling instead of native file system events for watching.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Chokidar derives the backend from platform capabilities and CHOKIDAR_USEPOLLING. A single fixed value is not its cross-platform default."
+  },
+  {
+    "path": "Vite.server.watch.useFsEvents",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 440,
+    "documentation": "Whether to use the `fsevents` watching interface if available. When set to `true` explicitly\nand `fsevents` is available this supersedes the `usePolling` setting. When set to `false` on\nOS X, `usePolling: true` becomes the default.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Chokidar derives native FSEvents availability on macOS; it is unavailable on Windows/Linux."
+  },
+  {
+    "path": "Vite.server.watch.alwaysStat",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 446,
+    "documentation": "If relying upon the [`fs.Stats`](https://nodejs.org/api/fs.html#fs_class_fs_stats) object that\nmay get passed with `add`, `addDir`, and `change` events, set this to `true` to ensure it is\nprovided even in cases where it wasn't already available from the underlying watch events.",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:185"
+  },
+  {
+    "path": "Vite.server.watch.depth",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 450,
+    "documentation": "If set, limits how many levels of subdirectories will be traversed.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The default is unlimited traversal; no finite invented depth is equivalent."
+  },
+  {
+    "path": "Vite.server.watch.interval",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 454,
+    "documentation": "Interval of file system polling.",
+    "tags": {},
+    "state": "explicit",
+    "value": "100",
+    "location": "vite.config.ts:186"
+  },
+  {
+    "path": "Vite.server.watch.binaryInterval",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 459,
+    "documentation": "Interval of file system polling for binary files. ([see list of binary extensions](https://gi\nthub.com/sindresorhus/binary-extensions/blob/master/binary-extensions.json))",
+    "tags": {},
+    "state": "explicit",
+    "value": "300",
+    "location": "vite.config.ts:187"
+  },
+  {
+    "path": "Vite.server.watch.ignorePermissionErrors",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 465,
+    "documentation": "Indicates whether to watch files that don't have read permissions if possible. If watching\nfails due to `EPERM` or `EACCES` with this set to `true`, the errors will be suppressed\nsilently.",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:188"
+  },
+  {
+    "path": "Vite.server.watch.atomic",
+    "type": "number | boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 473,
+    "documentation": "`true` if `useFsEvents` and `usePolling` are `false`. Automatically filters out artifacts\nthat occur when using editors that use \"atomic writes\" instead of writing directly to the\nsource file. If a file is re-added within 100 ms of being deleted, Chokidar emits a `change`\nevent rather than `unlink` then `add`. If the default of 100 ms does not work well for you,\nyou can override it by setting `atomic` to a custom value, in milliseconds.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Chokidar derives atomic handling from the actual polling/FSEvents backend."
+  },
+  {
+    "path": "Vite.server.watch.awaitWriteFinish",
+    "type": "boolean | AwaitWriteFinishOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 477,
+    "documentation": "can be set to an object in order to adjust timing params:",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:189"
+  },
+  {
+    "path": "Vite.server.watch.awaitWriteFinish.stabilityThreshold",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 483,
+    "documentation": "Amount of time in milliseconds for a file size to remain constant before emitting its event.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly disabled; delayed-write object settings do not apply."
+  },
+  {
+    "path": "Vite.server.watch.awaitWriteFinish.pollInterval",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 487,
+    "documentation": "File size polling interval.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly disabled; delayed-write object settings do not apply."
+  },
+  {
+    "path": "Vite.server.watch.include",
+    "type": "StringOrRegExp | StringOrRegExp[] | undefined",
+    "source": "node_modules/rolldown/dist/experimental-index.d.mts",
+    "line": 63,
+    "documentation": "Filter to limit which discovered files are registered with the file watcher.\n\nStrings are treated as glob patterns.",
+    "tags": {
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false."
+  },
+  {
+    "path": "Vite.server.watch.exclude",
+    "type": "StringOrRegExp | StringOrRegExp[] | undefined",
+    "source": "node_modules/rolldown/dist/experimental-index.d.mts",
+    "line": 71,
+    "documentation": "Filter to prevent discovered files from being registered with the file watcher.\n\nStrings are treated as glob patterns.",
+    "tags": {
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false."
+  },
+  {
+    "path": "Vite.server.watch.pollInterval",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/experimental-index.d.mts",
+    "line": 32,
+    "documentation": "Poll interval in milliseconds (only used when usePolling is true).",
+    "tags": {
+      "default": "100"
+    },
+    "state": "excluded",
+    "reason": "Only used by the experimental native bundled-dev watcher; the selected Chokidar interval is explicit."
+  },
+  {
+    "path": "Vite.server.watch.useDebounce",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/experimental-index.d.mts",
+    "line": 37,
+    "documentation": "If `true`, use debounced watcher. If `false`, use non-debounced watcher for immediate responses.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false."
+  },
+  {
+    "path": "Vite.server.watch.debounceDuration",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/experimental-index.d.mts",
+    "line": 42,
+    "documentation": "Debounce duration in milliseconds (only used when useDebounce is true).",
+    "tags": {
+      "default": "10"
+    },
+    "state": "excluded",
+    "reason": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false."
+  },
+  {
+    "path": "Vite.server.watch.compareContentsForPolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/experimental-index.d.mts",
+    "line": 48,
+    "documentation": "Whether to compare file contents for poll-based watchers (only used when usePolling is true).\nWhen enabled, poll watchers will check file contents to determine if they actually changed.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false."
+  },
+  {
+    "path": "Vite.server.watch.debounceTickRate",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/experimental-index.d.mts",
+    "line": 55,
+    "documentation": "Tick rate in milliseconds for debounced watchers (only used when useDebounce is true).\nControls how frequently the debouncer checks for events to process.\nWhen not specified, the debouncer will auto-select an appropriate tick rate (1/4 of the debounce duration).",
+    "tags": {
+      "default": "undefined (auto-select)"
+    },
+    "state": "excluded",
+    "reason": "Only used by the experimental native bundled-dev watcher; bundledDev is explicitly false."
+  },
+  {
+    "path": "Vite.server.middlewareMode",
+    "type": "boolean | { server: HttpServer; } | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2396,
+    "documentation": "Create Vite dev server to be used as a middleware in an existing server",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:161"
+  },
+  {
+    "path": "Vite.server.middlewareMode.server",
+    "type": "HttpServer",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2402,
+    "documentation": "Parent server instance to attach to\n\nThis is needed to proxy WebSocket connections to the parent server.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.setTimeout",
+    "type": "(msec?: number | undefined, callback?: (() => void) | undefined) => Http2SecureServer<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1298,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.maxHeadersCount",
+    "type": "number | null",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 391,
+    "documentation": "Limits maximum incoming headers count. If set to 0, no limit will be applied.",
+    "tags": {
+      "since": "v0.7.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.maxRequestsPerSocket",
+    "type": "number | null",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 403,
+    "documentation": "The maximum number of requests socket can handle\nbefore closing keep alive connection.\n\nA value of `0` will disable the limit.\n\nWhen the limit is reached it will set the `Connection` header value to `close`,\nbut will not actually close the connection, subsequent requests sent\nafter the limit is reached will get `503 Service Unavailable` as a response.",
+    "tags": {
+      "since": "v16.10.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.timeout",
+    "type": "number",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 414,
+    "documentation": "The number of milliseconds of inactivity before a socket is presumed\nto have timed out.\n\nA value of `0` will disable the timeout behavior on incoming connections.\n\nThe socket timeout logic is set up on connection, so changing this\nvalue only affects new connections to the server, not any existing connections.",
+    "tags": {
+      "since": "v0.9.12"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.headersTimeout",
+    "type": "number",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 427,
+    "documentation": "Limit the amount of time the parser will wait to receive the complete HTTP\nheaders.\n\nIf the timeout expires, the server responds with status 408 without\nforwarding the request to the request listener and then closes the connection.\n\nIt must be set to a non-zero value (e.g. 120 seconds) to protect against\npotential Denial-of-Service attacks in case the server is deployed without a\nreverse proxy in front.",
+    "tags": {
+      "since": "v11.3.0, v10.14.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.keepAliveTimeout",
+    "type": "number",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 449,
+    "documentation": "The number of milliseconds of inactivity a server needs to wait for additional\nincoming data, after it has finished writing the last response, before a socket\nwill be destroyed.\n\nThis timeout value is combined with the\n`server.keepAliveTimeoutBuffer` option to determine the actual socket\ntimeout, calculated as:\nsocketTimeout = keepAliveTimeout + keepAliveTimeoutBuffer\nIf the server receives new data before the keep-alive timeout has fired, it\nwill reset the regular inactivity timeout, i.e., `server.timeout`.\n\nA value of `0` will disable the keep-alive timeout behavior on incoming\nconnections.\nA value of `0` makes the HTTP server behave similarly to Node.js versions prior\nto 8.0.0, which did not have a keep-alive timeout.\n\nThe socket timeout logic is set up on connection, so changing this value only\naffects new connections to the server, not any existing connections.",
+    "tags": {
+      "since": "v8.0.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.keepAliveTimeoutBuffer",
+    "type": "number",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 461,
+    "documentation": "An additional buffer time added to the\n`server.keepAliveTimeout` to extend the internal socket timeout.\n\nThis buffer helps reduce connection reset (`ECONNRESET`) errors by increasing\nthe socket timeout slightly beyond the advertised keep-alive timeout.\n\nThis option applies only to new incoming connections.",
+    "tags": {
+      "since": "v24.6.0",
+      "default": "1000"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.requestTimeout",
+    "type": "number",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 474,
+    "documentation": "Sets the timeout value in milliseconds for receiving the entire request from\nthe client.\n\nIf the timeout expires, the server responds with status 408 without\nforwarding the request to the request listener and then closes the connection.\n\nIt must be set to a non-zero value (e.g. 120 seconds) to protect against\npotential Denial-of-Service attacks in case the server is deployed without a\nreverse proxy in front.",
+    "tags": {
+      "since": "v14.11.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.closeAllConnections",
+    "type": "() => void",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 479,
+    "documentation": "Closes all connections connected to this server.",
+    "tags": {
+      "since": "v18.2.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.closeIdleConnections",
+    "type": "() => void",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 485,
+    "documentation": "Closes all connections connected to this server which are not sending a request\nor waiting for a response.",
+    "tags": {
+      "since": "v18.2.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.addListener",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, listener: (...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void): Http2SecureServer<...>; (eventName: string | symbol, listener: (...args: any[]) => void): Http2...",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1415,
+    "documentation": "Alias for `emitter.on(eventName, listener)`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.emit",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, ...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]): boolean; (eventName: string | symbol, ...args: any[]): boolean; }",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1422,
+    "documentation": "Synchronously calls each of the listeners registered for the event named\n`eventName`, in the order they were registered, passing the supplied arguments\nto each.\n\nReturns `true` if the event had listeners, `false` otherwise.\n\n```js\nimport { EventEmitter } from 'node:events';\nconst myEmitter = new EventEmitter();\n\n// First listener\nmyEmitter.on('event', function firstListener() {\n  console.log('Helloooo! first listener');\n});\n// Second listener\nmyEmitter.on('event', function secondListener(arg1, arg2) {\n  console.log(`event with parameters ${arg1}, ${arg2} in second listener`);\n});\n// Third listener\nmyEmitter.on('event', function thirdListener(...args) {\n  const parameters = args.join(', ');\n  console.log(`event with parameters ${parameters} in third listener`);\n});\n\nconsole.log(myEmitter.listeners('event'));\n\nmyEmitter.emit('event', 1, 2, 3, 4, 5);\n\n// Prints:\n// [\n//   [Function: firstListener],\n//   [Function: secondListener],\n//   [Function: thirdListener]\n// ]\n// Helloooo! first listener\n// event with parameters 1, 2 in second listener\n// event with parameters 1, 2, 3, 4, 5 in third listener\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.listenerCount",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, listener?: ((...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void) | undefined): number; (eventName: string | symbol, listener?: ((...args: any[]) => void) | und...",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1427,
+    "documentation": "Returns the number of listeners listening for the event named `eventName`.\nIf `listener` is provided, it will return how many times the listener is found\nin the list of the listeners of the event.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.listeners",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E): ((...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void)[]; (eventName: string | symbol): ((...args: any[]) => void)[]; }",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1434,
+    "documentation": "Returns a copy of the array of listeners for the event named `eventName`.\n\n```js\nserver.on('connection', (stream) => {\n  console.log('someone connected!');\n});\nconsole.log(util.inspect(server.listeners('connection')));\n// Prints: [ [Function] ]\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.off",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, listener: (...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void): Http2SecureServer<...>; (eventName: string | symbol, listener: (...args: any[]) => void): Http2...",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1440,
+    "documentation": "Alias for `emitter.removeListener()`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.on",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, listener: (...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void): Http2SecureServer<...>; (eventName: string | symbol, listener: (...args: any[]) => void): Http2...",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1447,
+    "documentation": "Adds the `listener` function to the end of the listeners array for the\nevent named `eventName`. No checks are made to see if the `listener` has\nalready been added. Multiple calls passing the same combination of `eventName`\nand `listener` will result in the `listener` being added, and called, multiple\ntimes.\n\n```js\nserver.on('connection', (stream) => {\n  console.log('someone connected!');\n});\n```\n\nReturns a reference to the `EventEmitter`, so that calls can be chained.\n\nBy default, event listeners are invoked in the order they are added. The\n`emitter.prependListener()` method can be used as an alternative to add the\nevent listener to the beginning of the listeners array.\n\n```js\nimport { EventEmitter } from 'node:events';\nconst myEE = new EventEmitter();\nmyEE.on('foo', () => console.log('a'));\nmyEE.prependListener('foo', () => console.log('b'));\nmyEE.emit('foo');\n// Prints:\n//   b\n//   a\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.once",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, listener: (...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void): Http2SecureServer<...>; (eventName: string | symbol, listener: (...args: any[]) => void): Http2...",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1454,
+    "documentation": "Adds a **one-time** `listener` function for the event named `eventName`. The\nnext time `eventName` is triggered, this listener is removed and then invoked.\n\n```js\nserver.once('connection', (stream) => {\n  console.log('Ah, we have our first user!');\n});\n```\n\nReturns a reference to the `EventEmitter`, so that calls can be chained.\n\nBy default, event listeners are invoked in the order they are added. The\n`emitter.prependOnceListener()` method can be used as an alternative to add the\nevent listener to the beginning of the listeners array.\n\n```js\nimport { EventEmitter } from 'node:events';\nconst myEE = new EventEmitter();\nmyEE.once('foo', () => console.log('a'));\nmyEE.prependOnceListener('foo', () => console.log('b'));\nmyEE.emit('foo');\n// Prints:\n//   b\n//   a\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.prependListener",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, listener: (...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void): Http2SecureServer<...>; (eventName: string | symbol, listener: (...args: any[]) => void): Http2...",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1461,
+    "documentation": "Adds the `listener` function to the _beginning_ of the listeners array for the\nevent named `eventName`. No checks are made to see if the `listener` has\nalready been added. Multiple calls passing the same combination of `eventName`\nand `listener` will result in the `listener` being added, and called, multiple\ntimes.\n\n```js\nserver.prependListener('connection', (stream) => {\n  console.log('someone connected!');\n});\n```\n\nReturns a reference to the `EventEmitter`, so that calls can be chained.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.prependOnceListener",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, listener: (...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void): Http2SecureServer<...>; (eventName: string | symbol, listener: (...args: any[]) => void): Http2...",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1468,
+    "documentation": "Adds a **one-time** `listener` function for the event named `eventName` to the\n_beginning_ of the listeners array. The next time `eventName` is triggered, this\nlistener is removed, and then invoked.\n\n```js\nserver.prependOnceListener('connection', (stream) => {\n  console.log('Ah, we have our first user!');\n});\n```\n\nReturns a reference to the `EventEmitter`, so that calls can be chained.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.rawListeners",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E): ((...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void)[]; (eventName: string | symbol): ((...args: any[]) => void)[]; }",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1475,
+    "documentation": "Returns a copy of the array of listeners for the event named `eventName`,\nincluding any wrappers (such as those created by `.once()`).\n\n```js\nimport { EventEmitter } from 'node:events';\nconst emitter = new EventEmitter();\nemitter.once('log', () => console.log('log once'));\n\n// Returns a new Array with a function `onceWrapper` which has a property\n// `listener` which contains the original listener bound above\nconst listeners = emitter.rawListeners('log');\nconst logFnWrapper = listeners[0];\n\n// Logs \"log once\" to the console and does not unbind the `once` event\nlogFnWrapper.listener();\n\n// Logs \"log once\" to the console and removes the listener\nlogFnWrapper();\n\nemitter.on('log', () => console.log('log persistently'));\n// Will return a new Array with a single function bound by `.on()` above\nconst newListeners = emitter.rawListeners('log');\n\n// Logs \"log persistently\" twice\nnewListeners[0]();\nemitter.emit('log');\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.removeAllListeners",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName?: E | undefined): Http2SecureServer<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>; (eventName?: string | ... 1 more ... | undefined): Http2SecureServer<...>; }",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1482,
+    "documentation": "Removes all listeners, or those of the specified `eventName`.\n\nIt is bad practice to remove listeners added elsewhere in the code,\nparticularly when the `EventEmitter` instance was created by some other\ncomponent or module (e.g. sockets or file streams).\n\nReturns a reference to the `EventEmitter`, so that calls can be chained.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.removeListener",
+    "type": "{ <E extends keyof Http2SecureServerEventMap>(eventName: E, listener: (...args: Http2SecureServerEventMap<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>[E]) => void): Http2SecureServer<...>; (eventName: string | symbol, listener: (...args: any[]) => void): Http2...",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1484,
+    "documentation": "Removes the specified `listener` from the listener array for the event named\n`eventName`.\n\n```js\nconst callback = (stream) => {\n  console.log('someone connected!');\n};\nserver.on('connection', callback);\n// ...\nserver.removeListener('connection', callback);\n```\n\n`removeListener()` will remove, at most, one instance of a listener from the\nlistener array. If any single listener has been added multiple times to the\nlistener array for the specified `eventName`, then `removeListener()` must be\ncalled multiple times to remove each instance.\n\nOnce an event is emitted, all listeners attached to it at the\ntime of emitting are called in order. This implies that any\n`removeListener()` or `removeAllListeners()` calls _after_ emitting and\n_before_ the last listener finishes execution will not remove them from\n`emit()` in progress. Subsequent events behave as expected.\n\n```js\nimport { EventEmitter } from 'node:events';\nclass MyEmitter extends EventEmitter {}\nconst myEmitter = new MyEmitter();\n\nconst callbackA = () => {\n  console.log('A');\n  myEmitter.removeListener('event', callbackB);\n};\n\nconst callbackB = () => {\n  console.log('B');\n};\n\nmyEmitter.on('event', callbackA);\n\nmyEmitter.on('event', callbackB);\n\n// callbackA removes listener callbackB but it will still be called.\n// Internal listener array at time of emit [callbackA, callbackB]\nmyEmitter.emit('event');\n// Prints:\n//   A\n//   B\n\n// callbackB is now removed.\n// Internal listener array [callbackA]\nmyEmitter.emit('event');\n// Prints:\n//   A\n```\n\nBecause listeners are managed using an internal array, calling this will\nchange the position indexes of any listener registered _after_ the listener\nbeing removed. This will not impact the order in which listeners are called,\nbut it means that any copies of the listener array as returned by\nthe `emitter.listeners()` method will need to be recreated.\n\nWhen a single function has been added as a handler multiple times for a single\nevent (as in the example below), `removeListener()` will remove the most\nrecently added instance. In the example the `once('ping')`\nlistener is removed:\n\n```js\nimport { EventEmitter } from 'node:events';\nconst ee = new EventEmitter();\n\nfunction pong() {\n  console.log('pong');\n}\n\nee.on('ping', pong);\nee.once('ping', pong);\nee.removeListener('ping', pong);\n\nee.emit('ping');\nee.emit('ping');\n```\n\nReturns a reference to the `EventEmitter`, so that calls can be chained.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.listen",
+    "type": "{ (port?: number | undefined, hostname?: string | undefined, backlog?: number | undefined, listeningListener?: (() => void) | undefined): Http2SecureServer<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>; (port?: number | undefined, hostname?: string | undefined,...",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 672,
+    "documentation": "Start a server listening for connections. A `net.Server` can be a TCP or\nan `IPC` server depending on what it listens to.\n\nPossible signatures:\n\n* `server.listen(handle[, backlog][, callback])`\n* `server.listen(options[, callback])`\n* `server.listen(path[, backlog][, callback])` for `IPC` servers\n* `server.listen([port[, host[, backlog]]][, callback])` for TCP servers\n\nThis function is asynchronous. When the server starts listening, the `'listening'` event will be emitted. The last parameter `callback`will be added as a listener for the `'listening'`\nevent.\n\nAll `listen()` methods can take a `backlog` parameter to specify the maximum\nlength of the queue of pending connections. The actual length will be determined\nby the OS through sysctl settings such as `tcp_max_syn_backlog` and `somaxconn` on Linux. The default value of this parameter is 511 (not 512).\n\nAll {@link Socket} are set to `SO_REUSEADDR` (see [`socket(7)`](https://man7.org/linux/man-pages/man7/socket.7.html) for\ndetails).\n\nThe `server.listen()` method can be called again if and only if there was an\nerror during the first `server.listen()` call or `server.close()` has been\ncalled. Otherwise, an `ERR_SERVER_ALREADY_LISTEN` error will be thrown.\n\nOne of the most common errors raised when listening is `EADDRINUSE`.\nThis happens when another server is already listening on the requested`port`/`path`/`handle`. One way to handle this would be to retry\nafter a certain amount of time:\n\n```js\nserver.on('error', (e) => {\n  if (e.code === 'EADDRINUSE') {\n    console.error('Address in use, retrying...');\n    setTimeout(() => {\n      server.close();\n      server.listen(PORT, HOST);\n    }, 1000);\n  }\n});\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.close",
+    "type": "(callback?: ((err?: Error | undefined) => void) | undefined) => Http2SecureServer<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 691,
+    "documentation": "Stops the server from accepting new connections and keeps existing\nconnections. This function is asynchronous, the server is finally closed\nwhen all connections are ended and the server emits a `'close'` event.\nThe optional `callback` will be called once the `'close'` event occurs. Unlike\nthat event, it will be called with an `Error` as its only argument if the server\nwas not open when it was closed.",
+    "tags": {
+      "since": "v0.1.90",
+      "param": "callback Called when the server is closed."
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.address",
+    "type": "() => string | AddressInfo | null",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 718,
+    "documentation": "Returns the bound `address`, the address `family` name, and `port` of the server\nas reported by the operating system if listening on an IP socket\n(useful to find which port was assigned when getting an OS-assigned address):`{ port: 12346, family: 'IPv4', address: '127.0.0.1' }`.\n\nFor a server listening on a pipe or Unix domain socket, the name is returned\nas a string.\n\n```js\nconst server = net.createServer((socket) => {\n  socket.end('goodbye\\n');\n}).on('error', (err) => {\n  // Handle errors here.\n  throw err;\n});\n\n// Grab an arbitrary unused port.\nserver.listen(() => {\n  console.log('opened server on', server.address());\n});\n```\n\n`server.address()` returns `null` before the `'listening'` event has been\nemitted or after calling `server.close()`.",
+    "tags": {
+      "since": "v0.1.90"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.getConnections",
+    "type": "(cb: (error: Error | null, count: number) => void) => Http2SecureServer<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 726,
+    "documentation": "Asynchronously get the number of concurrent connections on the server. Works\nwhen sockets were sent to forks.\n\nCallback should take two arguments `err` and `count`.",
+    "tags": {
+      "since": "v0.9.7"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.ref",
+    "type": "() => Http2SecureServer<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 732,
+    "documentation": "Opposite of `unref()`, calling `ref()` on a previously `unref`ed server will _not_ let the program exit if it's the only server left (the default behavior).\nIf the server is `ref`ed calling `ref()` again will have no effect.",
+    "tags": {
+      "since": "v0.9.1"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.unref",
+    "type": "() => Http2SecureServer<typeof IncomingMessage, typeof ServerResponse, typeof Http2ServerRequest, typeof Http2ServerResponse>",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 738,
+    "documentation": "Calling `unref()` on a server will allow the program to exit if this is the only\nactive server in the event system. If the server is already `unref`ed calling`unref()` again will have no effect.",
+    "tags": {
+      "since": "v0.9.1"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.maxConnections",
+    "type": "number",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 747,
+    "documentation": "Set this property to reject connections when the server's connection count gets\nhigh.\n\nIt is not recommended to use this option once a socket has been sent to a child\nwith `child_process.fork()`.",
+    "tags": {
+      "since": "v0.2.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.connections",
+    "type": "number",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 748,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.listening",
+    "type": "boolean",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 753,
+    "documentation": "Indicates whether or not the server is listening for connections.",
+    "tags": {
+      "since": "v5.7.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.__@asyncDispose@2408",
+    "type": "() => Promise<void>",
+    "source": "node_modules/@types/node/net.d.ts",
+    "line": 758,
+    "documentation": "Calls {@link Server.close()} and returns a promise that fulfills when the server has closed.",
+    "tags": {
+      "since": "v20.5.0"
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.addContext",
+    "type": "(hostname: string, context: SecureContextOptions | SecureContext) => void",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 693,
+    "documentation": "The `server.addContext()` method adds a secure context that will be used if\nthe client request's SNI name matches the supplied `hostname` (or wildcard).\n\nWhen there are multiple matching contexts, the most recently added one is\nused.",
+    "tags": {
+      "since": "v0.5.3",
+      "param": "context An object containing any of the possible properties from the {@link createSecureContext} `options` arguments (e.g. `key`, `cert`, `ca`, etc), or a TLS context object created\nwith {@link createSecureContext} itself."
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.getTicketKeys",
+    "type": "() => NonSharedBuffer",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 701,
+    "documentation": "Returns the session ticket keys.\n\nSee `Session Resumption` for more information.",
+    "tags": {
+      "since": "v3.0.0",
+      "return": "A 48-byte buffer containing the session ticket keys."
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.setSecureContext",
+    "type": "(options: SecureContextOptions) => void",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 708,
+    "documentation": "The `server.setSecureContext()` method replaces the secure context of an\nexisting server. Existing connections to the server are not interrupted.",
+    "tags": {
+      "since": "v11.0.0",
+      "param": "options An object containing any of the possible properties from the {@link createSecureContext} `options` arguments (e.g. `key`, `cert`, `ca`, etc)."
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.setTicketKeys",
+    "type": "(keys: Buffer<ArrayBufferLike>) => void",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 719,
+    "documentation": "Sets the session ticket keys.\n\nChanges to the ticket keys are effective only for future server connections.\nExisting or currently pending server connections will use the previous keys.\n\nSee `Session Resumption` for more information.",
+    "tags": {
+      "since": "v3.0.0",
+      "param": "keys A 48-byte buffer containing the session ticket keys."
+    },
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.middlewareMode.server.updateSettings",
+    "type": "(settings: Settings) => void",
+    "source": "node_modules/@types/node/http2.d.ts",
+    "line": 1303,
+    "documentation": "Throws ERR_HTTP2_INVALID_SETTING_VALUE for invalid settings values.\nThrows ERR_INVALID_ARG_TYPE for invalid settings argument.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Middleware mode is explicitly false; supplying an external server instance is not applicable."
+  },
+  {
+    "path": "Vite.server.fs",
+    "type": "FileSystemServeOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2407,
+    "documentation": "Options for files served via '/\\@fs/'.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n      strict: true,\n      deny: [\n        \".env\",\n        \".env.*\",\n        \"*.{crt,pem,key,p12,pfx,cer,der}\",\n        \".npmrc\",\n        \".yarnrc.yml\",\n        \"**/.git/**\",\n      ],\n    }",
+    "location": "vite.config.ts:166"
+  },
+  {
+    "path": "Vite.server.fs.strict",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2463,
+    "documentation": "Strictly restrict file accessing outside of allowing paths.\n\nSet to `false` to disable the warning",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:167"
+  },
+  {
+    "path": "Vite.server.fs.allow",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2470,
+    "documentation": "Restrict accessing files outside the allowed directories.\n\nAccepts absolute path or a path relative to project root.\nWill try to search up for workspace root by default.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit assembles the allow-list from project, generated and framework paths; overriding it can block required development files."
+  },
+  {
+    "path": "Vite.server.fs.deny",
+    "type": "string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2479,
+    "documentation": "Restrict accessing files that matches the patterns.\n\nThis will have higher priority than `allow`.\npicomatch patterns are supported.",
+    "tags": {
+      "default": "['.env', '.env.*', '*.{crt,pem,key,p12,pfx,cer,der}', '.npmrc', '.yarnrc.yml', '**\\/.git/**']"
+    },
+    "state": "explicit",
+    "value": "[\n        \".env\",\n        \".env.*\",\n        \"*.{crt,pem,key,p12,pfx,cer,der}\",\n        \".npmrc\",\n        \".yarnrc.yml\",\n        \"**/.git/**\",\n      ]",
+    "location": "vite.config.ts:168"
+  },
+  {
+    "path": "Vite.server.origin",
+    "type": "string | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2413,
+    "documentation": "Origin for the generated asset URLs.",
+    "tags": {
+      "example": "`http://127.0.0.1:8080`"
+    },
+    "state": "excluded",
+    "reason": "No separate asset origin is selected; derive URLs from the actual listener."
+  },
+  {
+    "path": "Vite.server.preTransformRequests",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2418,
+    "documentation": "Pre-transform known direct imports",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:162"
+  },
+  {
+    "path": "Vite.server.sourcemapIgnoreList",
+    "type": "false | ((sourcePath: string, sourcemapPath: string) => boolean) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2427,
+    "documentation": "Whether or not to ignore-list source files in the dev server sourcemap, used to populate\nthe [`x_google_ignoreList` source map extension](https://developer.chrome.com/blog/devtools-better-angular-debugging/#the-x_google_ignorelist-source-map-extension).\n\nBy default, it excludes all paths containing `node_modules`. You can pass `false` to\ndisable this behavior, or, for full control, a function that takes the source path and\nsourcemap path and returns whether to ignore the source path.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "SvelteKit supplies its source-map exclusion function."
+  },
+  {
+    "path": "Vite.server.perEnvironmentStartEndDuringDev",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2434,
+    "documentation": "Backward compatibility. The buildStart and buildEnd hooks were called only once for\nthe client environment. This option enables per-environment buildStart and buildEnd hooks.",
+    "tags": {
+      "default": "false",
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:163"
+  },
+  {
+    "path": "Vite.server.perEnvironmentWatchChangeDuringDev",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2441,
+    "documentation": "Backward compatibility. The watchChange hook was called only once for the client environment.\nThis option enables per-environment watchChange hooks.",
+    "tags": {
+      "default": "false",
+      "experimental": ""
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:164"
+  },
+  {
+    "path": "Vite.server.hotUpdateEnvironments",
+    "type": "((server: ViteDevServer, hmr: (environment: DevEnvironment) => Promise<void>) => Promise<void>) | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2446,
+    "documentation": "Run HMR tasks, by default the HMR propagation is done in parallel for all environments",
+    "tags": {
+      "experimental": ""
+    },
+    "state": "excluded",
+    "reason": "No custom hot-update orchestration hook is selected."
+  },
+  {
+    "path": "Vite.server.forwardConsole",
+    "type": "boolean | ForwardConsoleOptions | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 2447,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ unhandledErrors: true, logLevels: [\"error\", \"warn\"] }",
+    "location": "vite.config.ts:165"
+  },
+  {
+    "path": "Vite.server.forwardConsole.unhandledErrors",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 561,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:165"
+  },
+  {
+    "path": "Vite.server.forwardConsole.logLevels",
+    "type": "ForwardConsoleLogLevel[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 562,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "[\"error\", \"warn\"]",
+    "location": "vite.config.ts:165"
+  },
+  {
+    "path": "Vite.server.port",
+    "type": "number | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 808,
+    "documentation": "Specify server port. Note if the port is already being used, Vite will\nautomatically try the next available port so this may not be the actual\nport the server ends up listening on.",
+    "tags": {},
+    "state": "explicit",
+    "value": "applicationPort",
+    "location": "vite.config.ts:153"
+  },
+  {
+    "path": "Vite.server.strictPort",
+    "type": "boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 812,
+    "documentation": "If enabled, vite will exit if specified port is already in use",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:154"
+  },
+  {
+    "path": "Vite.server.host",
+    "type": "string | boolean | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 817,
+    "documentation": "Specify which IP addresses the server should listen on.\nSet to 0.0.0.0 to listen on all addresses, including LAN and public addresses.",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"localhost\"",
+    "location": "vite.config.ts:155"
+  },
+  {
+    "path": "Vite.server.allowedHosts",
+    "type": "true | string[] | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 829,
+    "documentation": "The hostnames that Vite is allowed to respond to.\n`localhost` and subdomains under `.localhost` and all IP addresses are allowed by default.\nWhen using HTTPS, this check is skipped.\n\nIf a string starts with `.`, it will allow that hostname without the `.` and all subdomains under the hostname.\nFor example, `.example.com` will allow `example.com`, `foo.example.com`, and `foo.bar.example.com`.\n\nIf set to `true`, the server is allowed to respond to requests for any hosts.\nThis is not recommended as it will be vulnerable to DNS rebinding attacks.",
+    "tags": {},
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:156"
+  },
+  {
+    "path": "Vite.server.https",
+    "type": "ServerOptions<typeof IncomingMessage, typeof ServerResponse> | undefined",
+    "source": "node_modules/vite/dist/node/index.d.ts",
+    "line": 834,
+    "documentation": "Enable TLS + HTTP/2.\nNote: this downgrades to TLS only when the proxy option is also used.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.IncomingMessage",
+    "type": "typeof IncomingMessage | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 206,
+    "documentation": "Specifies the `IncomingMessage` class to be used. Useful for extending the original `IncomingMessage`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.ServerResponse",
+    "type": "typeof ServerResponse | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 210,
+    "documentation": "Specifies the `ServerResponse` class to be used. Useful for extending the original `ServerResponse`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.requestTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 217,
+    "documentation": "Sets the timeout value in milliseconds for receiving the entire request from the client.",
+    "tags": {
+      "see": "Server.requestTimeout for more information.",
+      "default": "300000",
+      "since": "v18.0.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.joinDuplicateHeaders",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 223,
+    "documentation": "It joins the field line values of multiple headers in a request with `, ` instead of discarding the duplicates.",
+    "tags": {
+      "default": "false",
+      "since": "v18.14.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.keepAliveTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 231,
+    "documentation": "The number of milliseconds of inactivity a server needs to wait for additional incoming data,\nafter it has finished writing the last response, before a socket will be destroyed.",
+    "tags": {
+      "see": "Server.keepAliveTimeout for more information.",
+      "default": "65000",
+      "since": "v18.0.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.keepAliveTimeoutBuffer",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 238,
+    "documentation": "An additional buffer time added to the\n`server.keepAliveTimeout` to extend the internal socket timeout.",
+    "tags": {
+      "since": "24.6.0",
+      "default": "1000"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.connectionsCheckingInterval",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 243,
+    "documentation": "Sets the interval value in milliseconds to check for request and headers timeout in incomplete requests.",
+    "tags": {
+      "default": "30000"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.headersTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 250,
+    "documentation": "Sets the timeout value in milliseconds for receiving the complete HTTP headers from the client.\nSee {@link Server.headersTimeout} for more information.",
+    "tags": {
+      "default": "60000",
+      "since": "18.0.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.highWaterMark",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 257,
+    "documentation": "Optionally overrides all `socket`s' `readableHighWaterMark` and `writableHighWaterMark`.\nThis affects `highWaterMark` property of both `IncomingMessage` and `ServerResponse`.\nDefault:",
+    "tags": {
+      "see": "stream.getDefaultHighWaterMark ().",
+      "since": "v20.1.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.httpValidation",
+    "type": "\"strict\" | \"relaxed\" | \"insecure\" | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 272,
+    "documentation": "Controls HTTP header value validation strictness\nfor incoming requests. Accepted values are:\n* `'strict'`: Strictest validation; rejects any non-ASCII or control\n  characters in header values.\n* `'relaxed'`: Allows a limited set of non-ASCII characters in header\n  values, aligning with the\n  [Fetch specification](https://fetch.spec.whatwg.org/).\n* `'insecure'`: Disables all header value validation (equivalent to\n  `insecureHTTPParser: true`).\n\nCannot be used together with `insecureHTTPParser`. **Default:** `'strict'`.",
+    "tags": {
+      "since": "v26.3.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.insecureHTTPParser",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 279,
+    "documentation": "Use an insecure HTTP parser that accepts invalid HTTP headers when `true`.\nUsing the insecure parser should be avoided.\nSee --insecure-http-parser for more information.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.maxHeaderSize",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 286,
+    "documentation": "Optionally overrides the value of `--max-http-header-size` for requests received by\nthis server, i.e. the maximum length of request headers in bytes.",
+    "tags": {
+      "default": "16384",
+      "since": "v13.3.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.noDelay",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 292,
+    "documentation": "If set to `true`, it disables the use of Nagle's algorithm immediately after a new incoming connection is received.",
+    "tags": {
+      "default": "true",
+      "since": "v16.5.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.requireHostHeader",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 299,
+    "documentation": "If set to `true`, it forces the server to respond with a 400 (Bad Request) status code\nto any HTTP/1.1 request message that lacks a Host header (as mandated by the specification).",
+    "tags": {
+      "default": "true",
+      "since": "20.0.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.keepAlive",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 306,
+    "documentation": "If set to `true`, it enables keep-alive functionality on the socket immediately after a new incoming connection is received,\nsimilarly on what is done in `socket.setKeepAlive()`.",
+    "tags": {
+      "default": "false",
+      "since": "v16.5.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.keepAliveInitialDelay",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 312,
+    "documentation": "If set to a positive number, it sets the initial delay before the first keepalive probe is sent on an idle socket.",
+    "tags": {
+      "default": "0",
+      "since": "v16.5.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.uniqueHeaders",
+    "type": "(string | string[])[] | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 317,
+    "documentation": "A list of response headers that should be sent only once.\nIf the header's value is an array, the items will be joined using `; `.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.shouldUpgradeCallback",
+    "type": "((request: IncomingMessage) => boolean) | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 328,
+    "documentation": "A callback which receives an\nincoming request and returns a boolean, to control which upgrade attempts\nshould be accepted. Accepted upgrades will fire an `'upgrade'` event (or\ntheir sockets will be destroyed, if no listener is registered) while\nrejected upgrades will fire a `'request'` event like any non-upgrade\nrequest.",
+    "tags": {
+      "since": "v24.9.0",
+      "default": "() => server.listenerCount('upgrade') > 0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.rejectNonStandardBodyWrites",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 334,
+    "documentation": "If set to `true`, an error is thrown when writing to an HTTP response which does not have a body.",
+    "tags": {
+      "default": "false",
+      "since": "v18.17.0, v20.2.0"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.optimizeEmptyRequests",
+    "type": "boolean | undefined",
+    "source": "node_modules/@types/node/http.d.ts",
+    "line": 343,
+    "documentation": "If set to `true`, requests without `Content-Length`\nor `Transfer-Encoding` headers (indicating no body) will be initialized with an\nalready-ended body stream, so they will never emit any stream events\n(like `'data'` or `'end'`). You can use `req.readableEnded` to detect this case.",
+    "tags": {
+      "since": "v25.1.0",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.handshakeTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 590,
+    "documentation": "Abort the connection if the SSL/TLS handshake does not finish in the\nspecified number of milliseconds. A 'tlsClientError' is emitted on\nthe tls.Server object whenever a handshake times out. Default:\n120000 (120 seconds).",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  },
+  {
+    "path": "Vite.server.https.sessionTimeout",
+    "type": "number | undefined",
+    "source": "node_modules/@types/node/tls.d.ts",
+    "line": 596,
+    "documentation": "The number of seconds after which a TLS session created by the\nserver will no longer be resumable. See Session Resumption for more\ninformation. Default: 300.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Local development uses HTTP on loopback. No TLS listener or certificate is selected."
+  }
+]

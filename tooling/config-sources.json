@@ -1,0 +1,41 @@
+{
+  "bun": "1.4.4",
+  "dependencies": {
+    "@biomejs/biome": "2.6.2",
+    "@jridgewell/trace-mapping": "0.3.31",
+    "@sveltejs/adapter-static": "4.0.0",
+    "@sveltejs/kit": "3.1.0",
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@types/bun": "1.4.4",
+    "playwright": "1.64.1",
+    "svelte": "5.57.2",
+    "svelte-check": "4.7.7",
+    "typescript": "6.0.3",
+    "v8-to-istanbul": "9.3.0",
+    "vite": "8.3.5"
+  },
+  "sha256": {
+    "node_modules/@sveltejs/adapter-static/index.d.ts": "76b98c2a51f0d30e8e2f58641034ab28287aebe188e45a8054dfc533ef91ffe6",
+    "node_modules/@sveltejs/kit/types/index.d.ts": "17bf0726e16d8f58f6420c0365ada213a0151027f520e1e24f2bc05591445e66",
+    "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts": "e2c41e88bba5137206f58589f9bc50f0b0cedf5b466e8ca7cff418a4b0fcde3a",
+    "node_modules/@types/node/http.d.ts": "ad50512520720d10294c629cb4e2df23891c3fcbeaca00fbfb9e6bbea65f3dd6",
+    "node_modules/@types/node/http2.d.ts": "189769511b45c93b23ba76069f7701d3b631cfbedc1eb94c7753486c78736f78",
+    "node_modules/@types/node/net.d.ts": "961dec547748827cb6b45f6fdc66273f7bacd9c73103c6779f070f2fd07f23f9",
+    "node_modules/@types/node/tls.d.ts": "751048d4aa67e20e5ecd2692340ea0d19bae42a20cc651d6f56d095e411ce3ac",
+    "node_modules/lightningcss/node/index.d.ts": "617112682fcb55805f0a0e16450397edc016881962eee4298f4f4e3ef795aee8",
+    "node_modules/lightningcss/node/targets.d.ts": "a18642ddf216f162052a16cba0944892c4c4c977d3306a87cb673d46abbb0cbf",
+    "node_modules/postcss/lib/postcss.d.ts": "354a7f8e1287d9d6b7561bc97fdd8cbc2f7c1dd79e4cb37b942e8a5cfaff1085",
+    "node_modules/rolldown/dist/experimental-index.d.mts": "16aa3d2a6832bde3530ce99b00a21fb8c1c19afb280889fd030f0301f8780b95",
+    "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts": "63b6f61e6d231c9982e733b4e3adbf1f4a3bfc12357192a844937eb7c93d2006",
+    "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts": "8220d42aa256a4d15ecc3382505eefb169e7c2c5380ab8af51a966167afa3e07",
+    "node_modules/svelte/types/index.d.ts": "1083ec857d6ba96f07c20efb6832cc7b7089f49b8d0eb956b845ebdc3a093d48",
+    "node_modules/typescript/lib/typescript.d.ts": "c967e03c8dbb4770f7e2f0b71b5d13593de679a41cc2b60266c4b69f1342a263",
+    "node_modules/vite/dist/node/index.d.ts": "86125fa458da3a5bb0ef724d3677acdc390cb08b998b32f3360bcba8b2c3168a",
+    "node_modules/vite/types/internal/cssPreprocessorOptions.d.ts": "d8a62a1763683460cfc7c6d66214859909d3f91f34b6e9009aa9443b241f08c0"
+  },
+  "additionalSha256": {
+    "node_modules/bun-types/docs/runtime/bunfig.mdx": "e063fe229c08f928cb13e56c547a2a6b0368662208442c044e5882791a4bc1cc",
+    "node_modules/typescript/lib/typescript.js": "569177652966bd528c319171c7dd22860dbf72bde116cbc4f644f1d02bb12e39",
+    "tooling/evidence/bun/src/bunfig/bunfig.rs": "14703e1799f7f1ae8b22dde8f86c8cb91f971ef005b0663f4658b0b54d77213d"
+  }
+}

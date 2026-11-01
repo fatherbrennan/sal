@@ -1,0 +1,1142 @@
+[
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.name",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 693,
+    "documentation": "Specifies the global variable name that contains the exports of `umd` / `iife` {@link OutputOptions.formatformats}.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  output: {\n    format: 'iife',\n    name: 'MyBundle',\n  }\n});\n```\n```js\n// output\nvar MyBundle = (function () {\n  // ...\n})();\n```"
+    },
+    "state": "excluded",
+    "reason": "No IIFE/UMD global export name is applicable to the ES-module app."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify",
+    "type": "boolean | \"dce-only\" | MinifyOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 671,
+    "documentation": "Control code minification\n\nRolldown uses Oxc Minifier under the hood. See Oxc's [minification documentation](https://oxc.rs/docs/guide/usage/minifier#features) for more details.\n\n- `true`: Enable full minification including code compression and dead code elimination\n- `false`: Disable minification\n- `'dce-only'`: Only perform dead code elimination without code compression (default)\n- `MinifyOptions`: Fine-grained control over minification settings",
+    "tags": {
+      "default": "'dce-only'"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.plugins",
+    "type": "RolldownOutputPluginOption",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 916,
+    "documentation": "The list of plugins to use only for this output.",
+    "tags": {
+      "see": "{@linkcode InputOptions.pluginsplugins}"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.strict",
+    "type": "boolean | \"auto\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1023,
+    "documentation": "Whether to always output `\"use strict\"` directive in non-ES module outputs.\n\n- `true` - Always emit `\"use strict\"` at the top of the output (not applicable for ESM format since ESM is always strict).\n- `false` - Never emit `\"use strict\"` in the output.\n- `'auto'` - Respect the `\"use strict\"` directives from the source code.\n\nSee [In-depth directive guide](https://rolldown.rs/in-depth/directives) for more details.",
+    "tags": {
+      "default": "'auto'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.footer",
+    "type": "string | AddonFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 549,
+    "documentation": "A string to append to the bundle before {@linkcode Plugin.renderChunkrenderChunk} hook.\n\nSee {@linkcode outrooutput.outro}, {@linkcode postFooteroutput.postFooter} as well.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.intro",
+    "type": "string | AddonFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 573,
+    "documentation": "A string to prepend inside any {@link OutputOptions.formatformat}-specific wrapper.\n\nSee {@linkcode banneroutput.banner}, {@linkcode postBanneroutput.postBanner} as well.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.outro",
+    "type": "string | AddonFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 581,
+    "documentation": "A string to append inside any {@link OutputOptions.formatformat}-specific wrapper.\n\nSee {@linkcode footeroutput.footer}, {@linkcode postFooteroutput.postFooter} as well.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.file",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 390,
+    "documentation": "The file path for the single generated chunk.\n\nThe {@linkcode diroutput.dir} option should be used instead if multiple chunks are generated.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite rejects output.file; directory-based output is required."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.charset",
+    "type": "\"ascii\" | \"utf8\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 401,
+    "documentation": "Controls how non-ASCII characters are represented in generated JavaScript.\n\n- `'utf8'`: Preserve non-ASCII characters.\n- `'ascii'`: Escape non-ASCII characters where possible.",
+    "tags": {
+      "default": "'utf8'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.exports",
+    "type": "\"auto\" | \"none\" | \"default\" | \"named\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 409,
+    "documentation": "Which exports mode to use.",
+    "tags": {
+      "default": "'auto'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.hashCharacters",
+    "type": "\"base64\" | \"base36\" | \"hex\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 419,
+    "documentation": "Specify the character set that Rolldown is allowed to use in file hashes.\n\n- `'base64'`: Uses url-safe base64 characters (0-9, a-z, A-Z, -, _). This will produce the shortest hashes.\n- `'base36'`: Uses alphanumeric characters (0-9, a-z)\n- `'hex'`: Uses hexadecimal characters (0-9, a-f)",
+    "tags": {
+      "default": "'base64'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.sourcemapBaseUrl",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 449,
+    "documentation": "The base URL for the links to the sourcemap file in the output file.\n\nBy default, relative URLs are generated. If this option is set, an absolute URL with that base URL will be generated. This is useful when deploying source maps to a different location than your code, such as a CDN or separate debugging server.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No separate sourcemap hosting URL is selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.sourcemapFileNames",
+    "type": "string | ChunkFileNamesFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 465,
+    "documentation": "The pattern to use for sourcemaps created from entry points, or a function that is called per entry chunk with {@linkcode PreRenderedChunk} to return such a pattern.\n\nPatterns support the following placeholders:\n- `[format]`: The rendering format defined in the output options. The value is any of {@linkcode InternalModuleFormat}.\n- `[hash]`: A hash based only on the content of the final generated sourcemap.  You can also set a specific hash length via e.g. `[hash:10]`. By default, it will create a base-64 hash. If you need a reduced character set, see {@linkcode hashCharactersoutput.hashCharacters}.\n- `[chunkhash]`: The same hash as the one used for the corresponding generated chunk (if any).\n- `[name]`: The name of the corresponding chunk.\n\nForward slashes (`/`) can be used to place files in sub-directories. This pattern will also be used for every file when setting the {@linkcode preserveModulesoutput.preserveModules} option.\n\nSee also {@linkcode assetFileNamesoutput.assetFileNames}, {@linkcode chunkFileNamesoutput.chunkFileNames}.",
+    "tags": {
+      "default": "the corresponding chunk filename with `.map` appended"
+    },
+    "state": "excluded",
+    "reason": "The default derives each map name from its output chunk. No fixed shared map filename is valid."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.sourcemapDebugIds",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 473,
+    "documentation": "Whether to include [debug IDs](https://github.com/tc39/ecma426/blob/main/proposals/debug-id.md) in the sourcemap.\n\nWhen `true`, a unique debug ID will be emitted in source and sourcemaps which streamlines identifying sourcemaps across different builds.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.sourcemapIgnoreList",
+    "type": "boolean | StringOrRegExp | SourcemapIgnoreListOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 506,
+    "documentation": "Control which source files are included in the sourcemap ignore list.\n\nFiles in the ignore list are excluded from debugger stepping and error stack traces.\n\n- `false`: Include no source files in the ignore list\n- `true`: Include all source files in the ignore list\n- `string`: Files containing this string in their path will be included in the ignore list\n- `RegExp`: Files matching this regular expression will be included in the ignore list\n- `function`: Custom function to determine if a source should be ignored\n\n:::tip Performance\nUsing static values (`boolean`, `string`, or `RegExp`) is significantly more performant than functions.\nCalling JavaScript functions from Rust has extremely high overhead, so prefer static patterns when possible.\n:::",
+    "tags": {
+      "example": "```js\n// ✅ Preferred: Use RegExp for better performance\nsourcemapIgnoreList: /node_modules/\n\n// ✅ Preferred: Use string pattern for better performance\nsourcemapIgnoreList: \"vendor\"\n\n// ! Use sparingly: Function calls have high overhead\nsourcemapIgnoreList: (source, sourcemapPath) => {\n  return source.includes('node_modules') || source.includes('.min.');\n}\n```",
+      "default": "/node_modules/"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.sourcemapPathTransform",
+    "type": "SourcemapPathTransformOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 523,
+    "documentation": "A transformation to apply to each path in a sourcemap.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  output: {\n    sourcemap: true,\n    sourcemapPathTransform: (source, sourcemapPath) => {\n      // Remove 'src/' prefix from all source paths\n      return source.replace(/^src\\//, '');\n    },\n  },\n});\n```"
+    },
+    "state": "excluded",
+    "reason": "No source-map path rewrite hook is selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.sourcemapExcludeSources",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 533,
+    "documentation": "Whether to exclude the original source code from sourcemaps.\n\nWhen `true`, the `sourcesContent` field is omitted from the generated sourcemap,\nreducing the sourcemap file size. The sourcemap will still contain source file paths\nand mappings, so debugging works if the original files are available.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.postBanner",
+    "type": "string | AddonFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 557,
+    "documentation": "A string to prepend to the bundle after {@linkcode Plugin.renderChunkrenderChunk} hook and minification.\n\nSee {@linkcode banneroutput.banner}, {@linkcode introoutput.intro} as well.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.postFooter",
+    "type": "string | AddonFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 565,
+    "documentation": "A string to append to the bundle after {@linkcode Plugin.renderChunkrenderChunk} hook and minification.\n\nSee {@linkcode footeroutput.footer}, {@linkcode outrooutput.outro} as well.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.extend",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 590,
+    "documentation": "Whether to extend the global variable defined by the {@linkcode OutputOptions.namename} option in `umd` or `iife` {@link OutputOptions.formatformats}.\n\nWhen `true`, the global variable will be defined as `global.name = global.name || {}`.\nWhen `false`, the global defined by name will be overwritten like `global.name = {}`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Only applies to IIFE/UMD exports; SvelteKit emits ES modules."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.esModule",
+    "type": "boolean | \"if-default-prop\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 604,
+    "documentation": "Whether to add a `__esModule: true` property when generating exports for non-ES {@link OutputOptions.formatformats}.\n\nThis property signifies that the exported value is the namespace of an ES module and that the default export of this module corresponds to the `.default` property of the exported object.\n\n- `true`: Always add the property when using {@link OutputOptions.exportsnamed exports mode}, which is similar to what other tools do.\n- `\"if-default-prop\"`: Only add the property when using {@link OutputOptions.exportsnamed exports mode} and there also is a default export. The subtle difference is that if there is no default export, consumers of the CommonJS version of your library will get all named exports as default export instead of an error or `undefined`.\n- `false`: Never add the property even if the default export would become a property `.default`.",
+    "tags": {
+      "default": "'if-default-prop'"
+    },
+    "state": "excluded",
+    "reason": "Only applies to non-ES output interop metadata; SvelteKit emits ES modules."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.assetFileNames",
+    "type": "string | AssetFileNamesFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 620,
+    "documentation": "The pattern to use for naming custom emitted assets to include in the build output, or a function that is called per asset with {@linkcode PreRenderedAsset} to return such a pattern.\n\nPatterns support the following placeholders:\n- `[extname]`: The file extension of the asset including a leading dot, e.g. `.css`.\n- `[ext]`: The file extension without a leading dot, e.g. css.\n- `[hash]`: A hash based on the content of the asset. You can also set a specific hash length via e.g. `[hash:10]`. By default, it will create a base-64 hash. If you need a reduced character set, see {@linkcode hashCharactersoutput.hashCharacters}.\n- `[name]`: The file name of the asset excluding any extension.\n\nForward slashes (`/`) can be used to place files in sub-directories.\n\nSee also {@linkcode chunkFileNamesoutput.chunkFileNames}, {@linkcode entryFileNamesoutput.entryFileNames}.",
+    "tags": {
+      "default": "'assets/[name]-[hash][extname]'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.entryFileNames",
+    "type": "string | ChunkFileNamesFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 635,
+    "documentation": "The pattern to use for chunks created from entry points, or a function that is called per entry chunk with {@linkcode PreRenderedChunk} to return such a pattern.\n\nPatterns support the following placeholders:\n- `[format]`: The rendering format defined in the output options. The value is any of {@linkcode InternalModuleFormat}.\n- `[hash]`: A hash based only on the content of the final generated chunk, including transformations in `renderChunk` and any referenced file hashes. You can also set a specific hash length via e.g. `[hash:10]`. By default, it will create a base-64 hash. If you need a reduced character set, see {@linkcode hashCharactersoutput.hashCharacters}.\n- `[name]`: The file name (without extension) of the entry point, unless the object form of input was used to define a different name.\n\nForward slashes (`/`) can be used to place files in sub-directories. This pattern will also be used for every file when setting the {@linkcode preserveModulesoutput.preserveModules} option.\n\nSee also {@linkcode assetFileNamesoutput.assetFileNames}, {@linkcode chunkFileNamesoutput.chunkFileNames}.",
+    "tags": {
+      "default": "'[name].js'"
+    },
+    "state": "excluded",
+    "reason": "Vite's dependency optimizer explicitly sets [name].js when writing its cache."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.chunkFileNames",
+    "type": "string | ChunkFileNamesFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 650,
+    "documentation": "The pattern to use for naming shared chunks created when code-splitting, or a function that is called per chunk with {@linkcode PreRenderedChunk} to return such a pattern.\n\nPatterns support the following placeholders:\n- `[format]`: The rendering format defined in the output options. The value is any of {@linkcode InternalModuleFormat}.\n- `[hash]`: A hash based only on the content of the final generated chunk, including transformations in `renderChunk` and any referenced file hashes. You can also set a specific hash length via e.g. `[hash:10]`. By default, it will create a base-64 hash. If you need a reduced character set, see {@linkcode hashCharactersoutput.hashCharacters}.\n- `[name]`: The name of the chunk. This can be explicitly set via the {@linkcode codeSplittingoutput.codeSplitting} option or when the chunk is created by a plugin via `this.emitFile`. Otherwise, it will be derived from the chunk contents.\n\nForward slashes (`/`) can be used to place files in sub-directories.\n\nSee also {@linkcode assetFileNamesoutput.assetFileNames}, {@linkcode entryFileNamesoutput.entryFileNames}.",
+    "tags": {
+      "default": "'[name]-[hash].js'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.sanitizeFileName",
+    "type": "boolean | SanitizeFileNameFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 658,
+    "documentation": "Whether to enable chunk name sanitization (removal of non-URL-safe characters like `\\0`, `?` and `*`).\n\nSet `false` to disable the sanitization. You can also provide a custom sanitization function.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.globals",
+    "type": "Record<string, string> | GlobalsFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 721,
+    "documentation": "Specifies `id: variableName` pairs necessary for {@link InputOptions.externalexternal} imports in `umd` / `iife` {@link OutputOptions.formatformats}.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  external: ['jquery'],\n  output: {\n    format: 'iife',\n    name: 'MyBundle',\n    globals: {\n      jquery: '$',\n    }\n  }\n});\n```\n```js\n// input\nimport $ from 'jquery';\n```\n```js\n// output\nvar MyBundle = (function ($) {\n  // ...\n})($);\n```"
+    },
+    "state": "excluded",
+    "reason": "No IIFE/UMD external global mapping is applicable."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.generatedCode",
+    "type": "Partial<GeneratedCodeOptions> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 758,
+    "documentation": "Which language features Rolldown can safely use in generated code.\n\nThis will not transpile any user code but only change the code Rolldown uses in wrappers and helpers.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.externalLiveBindings",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 770,
+    "documentation": "Whether to generate code to support live bindings for {@link InputOptions.externalexternal} imports.\n\nWith the default value of `true`, Rolldown will generate code to support live bindings for external imports.\n\nWhen set to `false`, Rolldown will assume that exports from external modules do not change. This will allow Rolldown to generate smaller code. Note that this can cause issues when there are circular dependencies involving an external dependency.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.inlineDynamicImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 780,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Please use `codeSplitting: false` instead.\n\nWhether to inline dynamic imports instead of creating new chunks to create a single bundle.\n\nThis option can be used only when a single input is provided.",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use `codeSplitting: false` instead.\n\nWhether to inline dynamic imports instead of creating new chunks to create a single bundle.\n\nThis option can be used only when a single input is provided."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.dynamicImportInCjs",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 789,
+    "documentation": "Whether to keep external dynamic imports as `import(...)` expressions in CommonJS output.\n\nIf set to `false`, external dynamic imports will be rewritten to use `require(...)` calls.\nThis may be necessary to support environments that do not support dynamic `import()` in CommonJS modules like old Node.js versions.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "No CommonJS output is selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.manualChunks",
+    "type": "ManualChunksFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 835,
+    "documentation": "Allows you to do manual chunking. Provided for Rollup compatibility.\n\nYou could use this option for migration purpose. Under the hood,\n\n```js\n{\n  manualChunks: (moduleId, meta) => {\n    if (moduleId.includes('node_modules')) {\n      return 'vendor';\n    }\n    return null;\n  }\n}\n```\n\nwill be transformed to\n\n```js\n{\n  codeSplitting: {\n    groups: [\n      {\n        name(moduleId) {\n          if (moduleId.includes('node_modules')) {\n            return 'vendor';\n          }\n          return null;\n        },\n      },\n    ],\n  }\n}\n\n```\n\nNote that unlike Rollup, object form is not supported.",
+    "tags": {
+      "deprecated": "Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\n:::warning\nIf `manualChunks` and `codeSplitting` are both specified, `manualChunks` option will be ignored.\n:::"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\n:::warning\nIf `manualChunks` and `codeSplitting` are both specified, `manualChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting",
+    "type": "boolean | CodeSplittingOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 868,
+    "documentation": "Controls how code splitting is performed.\n\n- `true`: Default behavior, automatic code splitting. **(default)**\n- `false`: Inline all dynamic imports into a single bundle (equivalent to deprecated `inlineDynamicImports: true`).\n- `object`: Advanced manual code splitting configuration.\n\nFor deeper understanding, please refer to the in-depth [documentation](https://rolldown.rs/in-depth/manual-code-splitting).",
+    "tags": {
+      "example": "**Basic vendor chunk**\n```js\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      minSize: 20000,\n      groups: [\n        {\n          name: 'vendor',\n          test: /node_modules/,\n        },\n      ],\n    },\n  },\n});\n```",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.advancedChunks",
+    "type": "{ includeDependenciesRecursively?: boolean | undefined; minSize?: number | undefined; maxSize?: number | undefined; maxModuleSize?: number | undefined; minModuleSize?: number | undefined; minShareCount?: number | undefined; groups?: CodeSplittingGroup[] | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 878,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.legalComments",
+    "type": "\"none\" | \"inline\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 895,
+    "documentation": "Controls how legal comments are preserved in the output.\n\n- `none`: no legal comments\n- `inline`: preserve legal comments that contain `@license`, `@preserve` or starts with `//!` `/*!`",
+    "tags": {
+      "deprecated": "Use `comments.legal` instead. When both `legalComments` and `comments.legal` are set, `comments.legal` takes priority."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `comments.legal` instead. When both `legalComments` and `comments.legal` are set, `comments.legal` takes priority."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.comments",
+    "type": "boolean | CommentsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 910,
+    "documentation": "Control which comments are preserved in the output.\n\n- `true`: Preserve legal, annotation, and JSDoc comments (default)\n- `false`: Strip all comments\n- Object: Granular control over comment categories\n\nNote: Regular line and block comments without these markers\nare always removed regardless of this option.\n\nWhen both `legalComments` and `comments.legal` are set, `comments.legal` takes priority.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite derives annotation/legal/JSDoc retention from the selected minification and output mode."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.polyfillRequire",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 924,
+    "documentation": "Whether to add a polyfill for `require()` function in non-CommonJS formats.\n\nThis option is useful when you want to inject your own `require` implementation.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.hoistTransitiveImports",
+    "type": "false | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 929,
+    "documentation": "This option is not implemented yet.",
+    "tags": {
+      "hidden": ""
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.preserveModules",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 937,
+    "documentation": "Whether to use preserve modules mode.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.virtualDirname",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 943,
+    "documentation": "Specifies the directory name for \"virtual\" files that might be emitted by plugins when using {@link OutputOptions.preserveModulespreserve modules mode}.",
+    "tags": {
+      "default": "'_virtual'"
+    },
+    "state": "excluded",
+    "reason": "preserveModules is explicitly false; virtual preserved-module paths are inapplicable."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.preserveModulesRoot",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 949,
+    "documentation": "A directory path to input modules that should be stripped away from {@linkcode diroutput.dir} when using {@link OutputOptions.preserveModulespreserve modules mode}.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "preserveModules is explicitly false; there is no preserved-module root."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.topLevelVar",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 968,
+    "documentation": "Whether to convert top-level `let` and `const` declarations into `var` declarations.\n\nEnabling this option can improve runtime performance of the generated code in\ncertain environments by avoiding Temporal Dead Zone (TDZ) checks. Only declarations\nin the module's top-level scope are rewritten — declarations inside nested scopes\n(functions, blocks, etc.) are left as-is.\n\nNote:\n- Top-level `class X {}` declarations are always emitted as `var X = class {}` so\n  rolldown can hoist them alongside other top-level bindings; this transform is\n  independent of `topLevelVar`.\n- Top-level `function` declarations are never rewritten.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minifyInternalExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 977,
+    "documentation": "Whether to minify internal exports as single letter variables to allow for better minification.",
+    "tags": {
+      "default": "`true` for format `es` or if `output.minify` is `true` or object, `false` otherwise"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.cleanDir",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 985,
+    "documentation": "Clean output directory ({@linkcode diroutput.dir}) before emitting output.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.keepNames",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 997,
+    "documentation": "Keep `name` property of functions and classes after bundling.\n\nWhen enabled, the bundler will preserve the original `name` property value of functions and\nclasses in the output. This is useful for debugging and some frameworks that rely on it for\nregistration and binding purposes.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.strictExecutionOrder",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1011,
+    "documentation": "Preserve source module execution order across generated chunks.\n\nWhen enabled, Rolldown wraps ESM modules so their bodies run in source order regardless of chunk placement. Interop wrappers for CommonJS and require-of-ESM modules are unchanged, and external modules are not affected. `experimental.onDemandWrapping` replaces wrap-all with a conservative plan derived from predicted chunk execution hazards.\n\n> [!WARNING]\n> Enabling this option increases bundle size because wrapped modules need runtime init helpers.\n\n{@linkcode CodeSplittingOptions.experimentalInlineCommonChunksexperimentalInlineCommonChunks}\nwith a `maxSize` above `0` turns this option on when it is omitted.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress",
+    "type": "boolean | CompressOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 201,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.target",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 59,
+    "documentation": "Set desired EcmaScript standard version for output.\n\nSet `esnext` to enable all target highering.\n\nExample:\n\n* `'es2015'`\n* `['es2020', 'chrome58', 'edge16', 'firefox57', 'node12', 'safari11']`",
+    "tags": {
+      "default": "'esnext'",
+      "see": "[oxc#target](https://oxc.rs/docs/guide/usage/transformer/lowering#target)"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.dropConsole",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 65,
+    "documentation": "Pass true to discard calls to `console.*`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.dropDebugger",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 71,
+    "documentation": "Remove `debugger;` statements.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.unused",
+    "type": "boolean | \"keep_assign\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 78,
+    "documentation": "Pass `true` to drop unreferenced functions and variables.\n\nSimple direct variable assignments do not count as references unless set to `keep_assign`.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.keepNames",
+    "type": "CompressOptionsKeepNames | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 80,
+    "documentation": "Keep function / class names.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.keepNames.function",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 116,
+    "documentation": "Keep function names so that `Function.prototype.name` is preserved.\n\nThis does not guarantee that the `undefined` name is preserved.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.keepNames.class",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 124,
+    "documentation": "Keep class names so that `Class.prototype.name` is preserved.\n\nThis does not guarantee that the `undefined` name is preserved.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.joinVars",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 86,
+    "documentation": "Join consecutive var, let and const statements.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.sequences",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 94,
+    "documentation": "Join consecutive simple statements using the comma operator.\n\n`a; b` -> `a, b`",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.dropLabels",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 102,
+    "documentation": "Set of label names to drop from the code.\n\nLabeled statements matching these names will be removed during minification.",
+    "tags": {
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.maxIterations",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 104,
+    "documentation": "Limit the maximum number of iterations for debugging purpose.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.treeshake",
+    "type": "TreeShakeOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 106,
+    "documentation": "Treeshake options.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.treeshake.annotations",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 236,
+    "documentation": "Whether to respect the pure annotations.\n\nPure annotations are comments that mark an expression as pure.\nFor example:",
+    "tags": {
+      "__PURE__": "or #__NO_SIDE_EFFECTS__.",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.treeshake.manualPureFunctions",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 243,
+    "documentation": "Whether to treat this function call as pure.\n\nThis function is called for normal function calls, new calls, and\ntagged template calls.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.treeshake.propertyReadSideEffects",
+    "type": "boolean | \"always\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 249,
+    "documentation": "Whether property read accesses have side effects.",
+    "tags": {
+      "default": "'always'"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.treeshake.propertyWriteSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 258,
+    "documentation": "Whether property write accesses (assignments to member expressions) have side effects.\n\nWhen false, assignments like `obj.prop = value` are considered side-effect-free\n(assuming the object and value expressions themselves are side-effect-free).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.treeshake.unknownGlobalSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 267,
+    "documentation": "Whether accessing a global variable has side effects.\n\nAccessing a non-existing global variable will throw an error.\nGlobal variable may be a getter that has side effects.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.compress.treeshake.invalidImportSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 276,
+    "documentation": "Whether invalid import statements have side effects.\n\nAccessing a non-existing import name will throw an error.\nAlso import statements that cannot be resolved will throw an error.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangle",
+    "type": "boolean | MangleOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 202,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangle.toplevel",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 132,
+    "documentation": "Pass `true` to mangle names declared in the top level scope.",
+    "tags": {
+      "default": "true for modules and commonjs, otherwise false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangle.keepNames",
+    "type": "boolean | MangleOptionsKeepNames | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 138,
+    "documentation": "Preserve `name` property for functions and classes.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangle.keepNames.function",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 159,
+    "documentation": "Preserve `name` property for functions.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangle.keepNames.class",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 165,
+    "documentation": "Preserve `name` property for classes.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangle.reserved",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 149,
+    "documentation": "Names that bindings must not be renamed to, and that bindings already\ncarrying them keep. Equivalent to terser's `mangle.reserved`.\n\nPass `['exports', 'module']` when minifying prebuilt CommonJS / UMD files\nthat Node consumers `import` directly, so Node's cjs-module-lexer can still\ndetect the mangled module's named exports.",
+    "tags": {
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangle.debug",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 151,
+    "documentation": "Debug mangled names.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.codegen",
+    "type": "boolean | CodegenOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 209,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.codegen.removeWhitespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 10,
+    "documentation": "Remove whitespace.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.codegen.asciiOnly",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 28,
+    "documentation": "Escape non-ASCII characters in string literals, untagged template literals, regular\nexpression literals and identifier names.\n\nUses `\\uXXXX` for characters up to U+FFFF and `\\u{...}` for higher code points.\nRegular expressions use escaped UTF-16 surrogate pairs for higher code points instead;\nescaping changes the observable `RegExp.prototype.source` value.\n\nCode point escapes (`\\u{...}`) require ES2015 or later; this option does not provide\nES5-compatible output.\n\nNon-ASCII characters are left unescaped in tagged template quasis (whose raw text is\nobservable), JSX names and text, JSX attribute strings, hashbangs and preserved comments.\nJavaScript expressions inside tagged templates and JSX are escaped normally.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.codegen.legalComments",
+    "type": "\"none\" | \"inline\" | \"external\" | \"eof\" | { linked: string; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 40,
+    "documentation": "How to handle legal comments (comments containing `@license`, `@preserve`, or starting with `//!`/`/*!`).\n\n* `\"none\"` - Do not preserve any legal comments.\n* `\"inline\"` - Preserve all legal comments inline.\n* `\"eof\"` - Move all legal comments to the end of the file.\n* `\"external\"` - Extract legal comments without linking.\n* `{ linked: \"path/to/legal.txt\" }` - Extract legal comments and add a link comment to the given path.",
+    "tags": {
+      "default": "\"none\" (when minifying)"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.codegen.legalComments.linked",
+    "type": "string",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 41,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangleProps",
+    "type": "ManglePropertiesOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 350,
+    "documentation": "Mangle matching property names. This currently requires a single JavaScript output chunk.\nRolldown throws an error when this option is used with multiple JavaScript chunks.\n\nReserve names accessed indirectly, through module namespace objects, or by code outside\nRolldown's minification.\nNumeric spellings, `__proto__`, `constructor`, and `prototype` are never mangled.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangleProps.cache",
+    "type": "Record<string, string | false> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 339,
+    "documentation": "Stable mappings from original names to output names. `false` reserves an original name.\nString targets must be valid identifiers and cannot be `__proto__`, `constructor`, or\n`prototype`. Generated mappings are returned as `RolldownOutput.mangleCache`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangleProps.include",
+    "type": "RegExp",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 172,
+    "documentation": "JavaScript `RegExp` selecting property names to mangle. The source and flags are compiled\nwith Rust's regex engine. Flags `i`, `m`, `s`, and `u` are supported.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangleProps.exclude",
+    "type": "RegExp | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 174,
+    "documentation": "JavaScript `RegExp` excluding property names selected by `include`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangleProps.debug",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 188,
+    "documentation": "Generate readable `_$name$_`-style output names.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangleProps.reserved",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 176,
+    "documentation": "Exact names that are neither mangled nor emitted as automatic output names.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.minify.mangleProps.quoted",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 182,
+    "documentation": "Mangle quoted property occurrences in addition to unquoted occurrences.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite chooses native minification per build environment from build.minify; a competing low-level override is not selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.generatedCode.symbols",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 268,
+    "documentation": "Whether to use Symbol.toStringTag for namespace objects.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.generatedCode.preset",
+    "type": "GeneratedCodePreset | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 285,
+    "documentation": "Allows choosing one of the presets listed above while overriding some options.\n\n```js\nexport default {\n  output: {\n    generatedCode: {\n      preset: 'es2015',\n      symbols: false\n    }\n  }\n};\n```",
+    "tags": {
+      "default": "'es2015'"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.generatedCode.profilerNames",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 296,
+    "documentation": "Whether to add readable names to internal variables for profiling purposes.\n\nWhen enabled, generated code will use descriptive variable names that correspond\nto the original module names, making it easier to profile and debug the bundled code.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Server dependency optimization is disabled by noDiscovery=true and an empty include list. Its low-level bundler options are inactive."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1323,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.includeDependenciesRecursivelygroup.includeDependenciesRecursively}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1327,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.minSizegroup.minSize}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1331,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.maxSizegroup.maxSize}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1335,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.maxModuleSizegroup.maxModuleSize}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1339,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.minModuleSizegroup.minModuleSize}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1343,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.minShareCountgroup.minShareCount}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.groups",
+    "type": "CodeSplittingGroup[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1347,
+    "documentation": "Groups to be used for code splitting.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].debugName",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1040,
+    "documentation": "`debugName` gives this group a label in the bundler timing report.\n\nSet this option when `name` is a function. This option does not change the chunk name.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].name",
+    "type": "string | CodeSplittingNameFunction",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1099,
+    "documentation": "Name of the group. It will be also used as the name of the chunk and replace the `[name]` placeholder in the {@linkcode OutputOptions.chunkFileNamesoutput.chunkFileNames} option.\n\nFor example,\n\n```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: 'libs',\n          test: /node_modules/,\n        },\n      ],\n    },\n  },\n});\n```\nwill create a chunk named `libs-[hash].js` in the end.\n\nIt's ok to have the same name for different groups. Rolldown will deduplicate the chunk names if necessary.\n\n#### Dynamic `name()`\n\nIf `name` is a function, it will be called with the module id as the argument. The function should return a string or `null`. If it returns `null`, the module will be ignored by this group.\n\nNotice, each returned new name will be treated as a separate group.\n\nFor example,\n\n```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: (moduleId) => moduleId.includes('node_modules') ? 'libs' : 'app',\n          minSize: 100 * 1024,\n        },\n      ],\n    },\n  },\n});\n```\n\n:::warning\nConstraints like `minSize`, `maxSize`, etc. are applied separately for different names returned by the function.\n:::\n\n:::warning\nRolldown calls a function `name` once for each captured module, in a deterministic order. It calls `test` for every candidate module of the group first. Do not read a \"current module\" variable that `test` wrote, because that variable holds the last module `test` saw. Store such state under the module id instead.\n:::",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].test",
+    "type": "StringOrRegExp | CodeSplittingTestFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1118,
+    "documentation": "Controls which modules are captured in this group.\n\n- If `test` is a string, the module whose id contains the string will be captured.\n- If `test` is a regular expression, the module whose id matches the regular expression will be captured.\n- If `test` is a function, modules for which `test(id)` returns `true` will be captured.\n- If `test` is empty, any module will be considered as matched.\n\n:::warning\nWhen using regular expression, it's recommended to use `[\\\\/]` to match the path separator instead of `/` to avoid potential issues on Windows.\n- ✅ Recommended: `/node_modules[\\\\/]react/`\n- ❌ Not recommended: `/node_modules/react/`\n:::\n\n:::warning\nRolldown calls a function `test` once for each candidate module, in a deterministic order. It makes every `test` call of a group before it makes the first `name` call of that group. Rolldown processes the groups in the order that you declare them.\n:::",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].priority",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1150,
+    "documentation": "Priority of the group. Group with higher priority will be chosen first to match modules and create chunks. When converting the group to a chunk, modules of that group will be removed from other groups.\n\nIf two groups have the same priority, the group whose index is smaller will be chosen.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: 'react',\n          test: /node_modules[\\\\/]react/,\n          priority: 2,\n        },\n        {\n          name: 'other-libs',\n          test: /node_modules/,\n          priority: 1,\n        },\n      ],\n    },\n  },\n});\n```",
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1156,
+    "documentation": "Minimum size in bytes of the desired chunk. If the accumulated size of the captured modules by this group is smaller than this value, it will be ignored. Modules in this group will fall back to the `automatic chunking` if they are not captured by any other group.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1162,
+    "documentation": "Controls if a module should be captured based on how many entry chunks reference it.",
+    "tags": {
+      "default": "1"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  },
+  {
+    "path": "ViteServer.optimizeDeps.rolldownOptions.output.codeSplitting.groups[].maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1168,
+    "documentation": "If the accumulated size in bytes of the captured modules by this group is larger than this value, this group will be split into multiple groups that each has size close to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "The automatic code-splitting boolean variant is explicitly selected; no custom group/size constraints are selected."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "path": "grit",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "grit.assist",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "grit.assist.enabled",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "grit.formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "grit.formatter.enabled",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "grit.formatter.indentStyle",
+    "state": "explicit",
+    "value": "space"
+  },
+  {
+    "path": "grit.formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "grit.formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "grit.formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "grit.formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "grit.linter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "grit.linter.enabled",
+    "state": "explicit",
+    "value": false
+  }
+]

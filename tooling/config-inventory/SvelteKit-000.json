@@ -1,0 +1,1179 @@
+[
+  {
+    "path": "SvelteKit.adapter",
+    "type": "Adapter | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1612,
+    "documentation": "Your [adapter](https://svelte.dev/docs/kit/adapters) is run when executing `vite build`. It determines how the output is converted for different platforms.",
+    "tags": {
+      "default": "undefined"
+    },
+    "state": "explicit",
+    "value": "adapter({ pages: \"build\", assets: \"build\", precompress: false, strict: true })",
+    "location": "vite.config.ts:25"
+  },
+  {
+    "path": "SvelteKit.adapter.name",
+    "type": "string",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 20,
+    "documentation": "The name of the adapter, using for logging. Will typically correspond to the package name.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.adapt",
+    "type": "(builder: Builder) => MaybePromise<void>",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 25,
+    "documentation": "This function is called after SvelteKit has built your app.",
+    "tags": {
+      "param": "builder An object provided by SvelteKit that contains methods for adapting the app"
+    },
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.supports",
+    "type": "{ read?: ((details: { config: Record<string, any>; route: { id: string; }; }) => boolean) | undefined; instrumentation?: (() => boolean) | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 29,
+    "documentation": "Checks called during dev and build to determine whether specific features will work in production with this adapter.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.supports.read",
+    "type": "((details: { config: Record<string, any>; route: { id: string; }; }) => boolean) | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 34,
+    "documentation": "Test support for `read` from `$app/server`.",
+    "tags": {
+      "param": "details.config The merged adapter-specific route config exported from the route with `export const config`"
+    },
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.supports.instrumentation",
+    "type": "(() => boolean) | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 40,
+    "documentation": "Test support for `instrumentation.server.js`. To pass, the adapter must support running `instrumentation.server.js` prior to the application code.",
+    "tags": {
+      "since": "2.31.0"
+    },
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.emulate",
+    "type": "(() => MaybePromise<Emulator>) | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 46,
+    "documentation": "Creates an `Emulator`, which allows the adapter to influence the environment\nduring dev, build and prerendering.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.vite",
+    "type": "AdapterViteConfig | ((ctx: { config: ValidatedConfig; }) => AdapterViteConfig) | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 51,
+    "documentation": "Options for configuring and interacting with Vite",
+    "tags": {
+      "since": "3.0.0"
+    },
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.vite.getRequest",
+    "type": "(({ request, response, base, bodySizeLimit }: { request: IncomingMessage; response?: ServerResponse<IncomingMessage> | undefined; base: string; bodySizeLimit?: number | undefined; }) => Request) | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 61,
+    "documentation": "This function overrides the default behavior during Vite's dev and preview modes\nto convert an `http.IncomingMessage` to a `Request` object.\nTo call the original `setRequest` function, import it from `@sveltejs/kit/node`.",
+    "tags": {
+      "since": "3.0.0"
+    },
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.vite.setResponse",
+    "type": "((res: ServerResponse<IncomingMessage>, response: Response) => void) | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 68,
+    "documentation": "This function overrides the default behavior in Vite's dev and preview modes\nto write a `Response` object to a `http.ServerResponse`.\nTo call the original `setResponse` function, import it from `@sveltejs/kit/node`.",
+    "tags": {
+      "since": "3.0.0"
+    },
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.adapter.vite.plugins",
+    "type": "Plugin<any>[] | { pre?: Plugin<any>[] | undefined; post?: Plugin<any>[] | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 74,
+    "documentation": "Vite plugins injected by the adapter. By default,\nthey are placed before SvelteKit's plugins.",
+    "tags": {
+      "since": "3.0.0"
+    },
+    "state": "excluded",
+    "reason": "The adapter factory returns this framework object; its operational methods/capabilities are not user configuration. Inputs are inventoried separately under StaticAdapter."
+  },
+  {
+    "path": "SvelteKit.alias",
+    "type": "Record<string, string> | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1622,
+    "documentation": "An object containing zero or more aliases used to replace values in `import` statements. These aliases are automatically passed to Vite and TypeScript.\n\nThis option is deprecated. Use [subpath imports](https://svelte.dev/docs/kit/$lib) instead.\n\n> [!NOTE] You will need to run `npm run dev` to have SvelteKit automatically generate the required alias configuration in `jsconfig.json` or `tsconfig.json`.",
+    "tags": {
+      "deprecated": "",
+      "default": "{}"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.appDir",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1629,
+    "documentation": "The directory where SvelteKit keeps its stuff, including static assets (such as JS and CSS) and internally-used routes.\n\nIf `paths.assets` is specified, there will be two app directories — `${paths.assets}/${appDir}` and `${paths.base}/${appDir}`.",
+    "tags": {
+      "default": "\"_app\""
+    },
+    "state": "explicit",
+    "value": "\"_app\"",
+    "location": "vite.config.ts:26"
+  },
+  {
+    "path": "SvelteKit.csp",
+    "type": "{ mode?: \"hash\" | \"nonce\" | \"auto\" | undefined; directives?: CspDirectives | undefined; reportOnly?: CspDirectives | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1666,
+    "documentation": "[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) configuration. CSP helps to protect your users against cross-site scripting (XSS) attacks, by limiting the places resources can be loaded from. For example, a configuration like this...\n\n```js\n/// file: vite.config.js\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { defineConfig } from 'vite';\n\nexport default defineConfig({\n\tplugins: [\n\t\tsveltekit({\n\t\t\tcsp: {\n\t\t\t\tdirectives: {\n\t\t\t\t\t'script-src': ['self']\n\t\t\t\t},\n\t\t\t\t// must be specified with either the `report-uri` or `report-to` directives, or both\n\t\t\t\treportOnly: {\n\t\t\t\t\t'script-src': ['self'],\n\t\t\t\t\t'report-uri': ['/']\n\t\t\t\t}\n\t\t\t}\n\t\t})\n\t]\n});\n```\n\n...would prevent scripts loading from external sites. SvelteKit will augment the specified directives with nonces or hashes (depending on `mode`) for any inline styles and scripts it generates.\n\nTo add a nonce for scripts and links manually included in `src/app.html`, you may use the placeholder `%sveltekit.nonce%` (for example `<script nonce=\"%sveltekit.nonce%\">`).\n\nWhen pages are prerendered, the CSP header is added via a `<meta http-equiv>` tag (note that in this case, `frame-ancestors`, `report-uri` and `sandbox` directives will be ignored).\n\n> [!NOTE] When `mode` is `'auto'`, SvelteKit will use nonces for dynamically rendered pages and hashes for prerendered pages. Using nonces with prerendered pages is insecure and therefore forbidden.\n\nIf this level of configuration is insufficient and you have more dynamic requirements, you can use the [`handle` hook](https://svelte.dev/docs/kit/hooks#handle) to roll your own CSP.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ mode: \"auto\", directives: {}, reportOnly: {} }",
+    "location": "vite.config.ts:27"
+  },
+  {
+    "path": "SvelteKit.csp.mode",
+    "type": "\"hash\" | \"nonce\" | \"auto\" | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1670,
+    "documentation": "Whether to use hashes or nonces to restrict `<script>` and `<style>` elements. `'auto'` will use hashes for prerendered pages, and nonces for dynamically rendered pages.",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"auto\"",
+    "location": "vite.config.ts:27"
+  },
+  {
+    "path": "SvelteKit.csp.directives",
+    "type": "CspDirectives | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1674,
+    "documentation": "Directives that will be added to `Content-Security-Policy` headers.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{}",
+    "location": "vite.config.ts:27"
+  },
+  {
+    "path": "SvelteKit.csp.directives.child-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2274,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.default-src",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2275,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.frame-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2276,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.worker-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2277,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.connect-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2278,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.font-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2279,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.img-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2280,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.manifest-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2281,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.media-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2282,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.object-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2283,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.prefetch-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2284,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.script-src",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2285,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.script-src-elem",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2286,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.script-src-attr",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2287,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.style-src",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2288,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.style-src-elem",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2289,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.style-src-attr",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2290,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.base-uri",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2291,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.sandbox",
+    "type": "(\"allow-downloads-without-user-activation\" | \"allow-forms\" | \"allow-modals\" | \"allow-orientation-lock\" | \"allow-pointer-lock\" | \"allow-popups\" | \"allow-popups-to-escape-sandbox\" | ... 5 more ... | \"allow-top-navigation-by-user-activation\")[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2292,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.form-action",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2307,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.frame-ancestors",
+    "type": "((`${string}:` & {}) | `${string}.${string}` | \"localhost\" | `${string}.${string}:${number}` | `${string}.${string}:*` | `localhost:${number}` | \"localhost:*\" | `${string}://${string}.${string}` | `${string}://${string}.${string}:${number}` | `${string}://${string}.${string}:*` | ... 12 more ... | \"none\")[] | undefi...",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2308,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.navigate-to",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2309,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.report-uri",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2310,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.report-to",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2311,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.require-trusted-types-for",
+    "type": "\"script\"[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2313,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.trusted-types",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2314,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.upgrade-insecure-requests",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2315,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom CSP directives selected in the tooling scaffold. Deployment policy is not yet selected; empty directive maps are explicit."
+  },
+  {
+    "path": "SvelteKit.csp.directives.require-sri-for",
+    "type": "(\"script\" | \"style\" | \"script style\")[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2318,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.csp.directives.block-all-mixed-content",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2321,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.csp.directives.plugin-types",
+    "type": "(\"none\" | `${string}/${string}`)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2324,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.csp.directives.referrer",
+    "type": "(\"none\" | \"no-referrer\" | \"no-referrer-when-downgrade\" | \"origin\" | \"origin-when-cross-origin\" | \"same-origin\" | \"strict-origin\" | \"strict-origin-when-cross-origin\" | \"unsafe-url\")[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2327,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly",
+    "type": "CspDirectives | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1678,
+    "documentation": "Directives that will be added to `Content-Security-Policy-Report-Only` headers.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{}",
+    "location": "vite.config.ts:27"
+  },
+  {
+    "path": "SvelteKit.csrf",
+    "type": "{ checkOrigin?: boolean | undefined; trustedOrigins?: string[] | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1683,
+    "documentation": "Protection against [cross-site request forgery (CSRF)](https://owasp.org/www-community/attacks/csrf) attacks.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ trustedOrigins: [] }",
+    "location": "vite.config.ts:28"
+  },
+  {
+    "path": "SvelteKit.csrf.checkOrigin",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1691,
+    "documentation": "Whether to check the incoming `origin` header for `POST`, `PUT`, `PATCH`, or `DELETE` form submissions and verify that it matches the server's origin.\n\nTo allow people to make `POST`, `PUT`, `PATCH`, or `DELETE` requests with a `Content-Type` of `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain` to your app from other origins, you will need to disable this option. Be careful!",
+    "tags": {
+      "default": "true",
+      "deprecated": "removed in 3.0. Use `trustedOrigins: ['*']` instead"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. removed in 3.0. Use `trustedOrigins: ['*']` instead"
+  },
+  {
+    "path": "SvelteKit.csrf.trustedOrigins",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1709,
+    "documentation": "An array of origins that are allowed to make cross-origin form submissions to your app.\n\nEach origin should be a complete origin including protocol (e.g., `https://payment-gateway.com`).\nThis is useful for allowing trusted third-party services like payment gateways or authentication providers to submit forms to your app.\n\nIf the array contains `'*'`, all origins will be trusted. This is generally not recommended!\n\n> [!NOTE] Only add origins you completely trust, as this bypasses CSRF protection for those origins.\n\nCSRF checks only apply in production, not in local development.",
+    "tags": {
+      "default": "[]",
+      "example": "```js\n['https://checkout.stripe.com', 'https://accounts.google.com']\n```"
+    },
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:28"
+  },
+  {
+    "path": "SvelteKit.embedded",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1716,
+    "documentation": "Whether or not the app is embedded inside a larger app. If `true`, SvelteKit will add its event listeners related to navigation etc on the parent of `%sveltekit.body%` instead of `window`, and will pass `params` from the server rather than inferring them from `location.pathname`.\nNote that it is generally not supported to embed multiple SvelteKit apps on the same page and use client-side SvelteKit features within them (things such as pushing to the history state assume a single instance).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:29"
+  },
+  {
+    "path": "SvelteKit.env",
+    "type": "{ dir?: string | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1720,
+    "documentation": "Environment variable configuration",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ dir: \".\" }",
+    "location": "vite.config.ts:30"
+  },
+  {
+    "path": "SvelteKit.env.dir",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1725,
+    "documentation": "The directory to search for `.env` files.",
+    "tags": {
+      "default": "\".\""
+    },
+    "state": "explicit",
+    "value": "\".\"",
+    "location": "vite.config.ts:30"
+  },
+  {
+    "path": "SvelteKit.experimental",
+    "type": "(ExperimentalOptions & { remoteFunctions?: boolean | undefined; forkPreloads?: boolean | undefined; }) | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1728,
+    "documentation": "Experimental features. Here be dragons. These are not subject to semantic versioning, so breaking changes or removal can happen in any release.",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    remoteFunctions: false,\n    forkPreloads: false,\n    sendWarningsToBrowser: false,\n    disableSvelteResolveWarnings: false,\n    compileModule: { infixes: [\".svelte.\"], extensions: [\".ts\", \".js\"] },\n  }",
+    "location": "vite.config.ts:31"
+  },
+  {
+    "path": "SvelteKit.experimental.sendWarningsToBrowser",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 153,
+    "documentation": "send a websocket message with svelte compiler warnings during dev",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:34"
+  },
+  {
+    "path": "SvelteKit.experimental.disableSvelteResolveWarnings",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 159,
+    "documentation": "disable svelte field resolve warnings",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:35"
+  },
+  {
+    "path": "SvelteKit.experimental.compileModule",
+    "type": "CompileModuleOptions | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 161,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ infixes: [\".svelte.\"], extensions: [\".ts\", \".js\"] }",
+    "location": "vite.config.ts:36"
+  },
+  {
+    "path": "SvelteKit.experimental.compileModule.infixes",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 169,
+    "documentation": "infix that must be present in filename",
+    "tags": {
+      "default": "['.svelte.']"
+    },
+    "state": "explicit",
+    "value": "[\".svelte.\"]",
+    "location": "vite.config.ts:36"
+  },
+  {
+    "path": "SvelteKit.experimental.compileModule.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 174,
+    "documentation": "module extensions",
+    "tags": {
+      "default": "['.ts','.js']"
+    },
+    "state": "explicit",
+    "value": "[\".ts\", \".js\"]",
+    "location": "vite.config.ts:36"
+  },
+  {
+    "path": "SvelteKit.experimental.compileModule.include",
+    "type": "Arrayable<string | RegExp> | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 175,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No custom compile-module inclusion filter; explicit infixes/extensions determine discovery."
+  },
+  {
+    "path": "SvelteKit.experimental.compileModule.exclude",
+    "type": "Arrayable<string | RegExp> | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 176,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No additional compile-module exclusions selected."
+  },
+  {
+    "path": "SvelteKit.experimental.remoteFunctions",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1733,
+    "documentation": "Whether to enable the experimental remote functions feature. This feature is not yet stable and may be changed or removed at any time.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:32"
+  },
+  {
+    "path": "SvelteKit.experimental.forkPreloads",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1739,
+    "documentation": "Whether to enable the experimental forked preloading feature using Svelte's fork API.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:33"
+  },
+  {
+    "path": "SvelteKit.files",
+    "type": "{ src?: string | undefined; assets?: string | undefined; hooks?: { client?: string | undefined; server?: string | undefined; universal?: string | undefined; } | undefined; params?: string | undefined; routes?: string | undefined; serviceWorker?: string | undefined; appTemplate?: string | undefined; errorTemplate?: s...",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1745,
+    "documentation": "Where to find various files within your project.",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.src",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1752,
+    "documentation": "The location of your source code.",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src\"",
+      "since": "2.28"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.assets",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1758,
+    "documentation": "A place to put static files that should have stable URLs and undergo no processing, such as `favicon.ico` or `manifest.json`.",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"static\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.hooks",
+    "type": "{ client?: string | undefined; server?: string | undefined; universal?: string | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1759,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.hooks.client",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1765,
+    "documentation": "The location of your client [hooks](https://svelte.dev/docs/kit/hooks).",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src/hooks.client\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.hooks.server",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1771,
+    "documentation": "The location of your server [hooks](https://svelte.dev/docs/kit/hooks).",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src/hooks.server\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.hooks.universal",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1778,
+    "documentation": "The location of your universal [hooks](https://svelte.dev/docs/kit/hooks).",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src/hooks\"",
+      "since": "2.3.0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.params",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1785,
+    "documentation": "A directory containing [parameter matchers](https://svelte.dev/docs/kit/advanced-routing#Matching).",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src/params\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.routes",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1791,
+    "documentation": "The files that define the structure of your app (see [Routing](https://svelte.dev/docs/kit/routing)).",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src/routes\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.serviceWorker",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1797,
+    "documentation": "The location of your service worker's entry point (see [Service workers](https://svelte.dev/docs/kit/service-workers)).",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src/service-worker\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.appTemplate",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1803,
+    "documentation": "The location of the template for HTML responses.",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src/app.html\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.files.errorTemplate",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1809,
+    "documentation": "The location of the template for fallback error responses.",
+    "tags": {
+      "deprecated": "this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead",
+      "default": "\"src/error.html\""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead"
+  },
+  {
+    "path": "SvelteKit.inlineStyleThreshold",
+    "type": "number | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1817,
+    "documentation": "Inline CSS inside a `<style>` block at the head of the HTML. This option is a number that specifies the maximum length of a CSS file in UTF-16 code units, as specified by the [String.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property, to be inlined. All CSS files needed for the page that are smaller than this value are merged and inlined in a `<style>` block.\n\n> [!NOTE] This results in fewer initial requests and can improve your [First Contentful Paint](https://web.dev/first-contentful-paint) score. However, it generates larger HTML output and reduces the effectiveness of browser caches. Use it advisedly.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "explicit",
+    "value": "0",
+    "location": "vite.config.ts:39"
+  },
+  {
+    "path": "SvelteKit.moduleExtensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1822,
+    "documentation": "An array of file extensions that SvelteKit will treat as modules. Files with extensions that match neither `config.extensions` nor `config.moduleExtensions` will be ignored.",
+    "tags": {
+      "default": "[\".js\", \".ts\"]"
+    },
+    "state": "explicit",
+    "value": "[\".js\", \".ts\"]",
+    "location": "vite.config.ts:40"
+  },
+  {
+    "path": "SvelteKit.outDir",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1827,
+    "documentation": "The directory that SvelteKit writes files to during `dev` and `build`. You should exclude this directory from version control.",
+    "tags": {
+      "default": "\".svelte-kit\""
+    },
+    "state": "explicit",
+    "value": "\".svelte-kit\"",
+    "location": "vite.config.ts:41"
+  },
+  {
+    "path": "SvelteKit.output",
+    "type": "{ linkHeaderPreload?: boolean | undefined; preloadStrategy?: \"modulepreload\" | \"preload-js\" | \"preload-mjs\" | undefined; bundleStrategy?: \"split\" | \"single\" | \"inline\" | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1831,
+    "documentation": "Options related to the build output format",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ linkHeaderPreload: false, bundleStrategy: \"split\" }",
+    "location": "vite.config.ts:42"
+  },
+  {
+    "path": "SvelteKit.output.linkHeaderPreload",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1841,
+    "documentation": "Whether to use the [HTTP `Link` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Link) to preload assets instead of the [`<link>` HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link) for non-prerendered pages.\n\nNote that some web servers such as Nginx and Apache have a default header size limit which may be easily exceeded.\nIf you are using one of these web servers, you may want to leave this as `false` or configure a higher limit.",
+    "tags": {
+      "default": "false",
+      "since": "3.0.0"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:42"
+  },
+  {
+    "path": "SvelteKit.output.preloadStrategy",
+    "type": "\"modulepreload\" | \"preload-js\" | \"preload-mjs\" | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1852,
+    "documentation": "SvelteKit will preload the JavaScript modules needed for the initial page to avoid import 'waterfalls', resulting in faster application startup. There\nare three strategies with different trade-offs:\n- `modulepreload` - uses `<link rel=\"modulepreload\">`. This delivers the best results in Chromium-based browsers, in Firefox 115+, and Safari 17+. It is ignored in older browsers.\n- `preload-js` - uses `<link rel=\"preload\">`. Prevents waterfalls in Chromium and Safari, but Chromium will parse each module twice (once as a script, once as a module). Causes modules to be requested twice in Firefox. This is a good setting if you want to maximise performance for users on iOS devices at the cost of a very slight degradation for Chromium users.\n- `preload-mjs` - uses `<link rel=\"preload\">` but with the `.mjs` extension which prevents double-parsing in Chromium. Some static webservers will fail to serve .mjs files with a `Content-Type: application/javascript` header, which will cause your application to break. If that doesn't apply to you, this is the option that will deliver the best performance for the largest number of users, until `modulepreload` is more widely supported.",
+    "tags": {
+      "default": "\"modulepreload\"",
+      "since": "1.8.4",
+      "deprecated": "removed in 3.0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. removed in 3.0"
+  },
+  {
+    "path": "SvelteKit.output.bundleStrategy",
+    "type": "\"split\" | \"single\" | \"inline\" | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1892,
+    "documentation": "The bundle strategy option affects how your app's JavaScript and CSS files are loaded.\n- If `'split'`, splits the app up into multiple .js/.css files so that they are loaded lazily as the user navigates around the app. This is the default, and is recommended for most scenarios.\n- If `'single'`, creates just one .js bundle and one .css file containing code for the entire app.\n- If `'inline'`, inlines all JavaScript and CSS of the entire app into the HTML. The result is usable without a server (i.e. you can just open the file in your browser).\n\nWhen using `'split'`, you can also adjust the bundling behaviour by setting [`output.codeSplitting`](https://rolldown.rs/reference/OutputOptions.codeSplitting) inside your Vite config's [`build.rolldownOptions`](https://vite.dev/config/build-options#build-rolldownoptions).\n\nIf you want to inline your assets, you'll need to set Vite's [`build.assetsInlineLimit`](https://vite.dev/config/build-options.html#build-assetsinlinelimit) option to an appropriate size then import your assets through Vite.\n\n```js\n/// file: vite.config.js\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { defineConfig } from 'vite';\n\nexport default defineConfig({\n  plugins: [sveltekit()],\n  build: {\n    // inline all imported assets\n    assetsInlineLimit: Infinity\n  }\n});\n```\n\n```svelte\n/// file: src/routes/+layout.svelte\n<script>\n  // import the asset through Vite\n  import favicon from './favicon.png';\n</script>\n\n<svelte:head>\n  <!-- this asset will be inlined as a base64 URL -->\n  <link rel=\"icon\" href={favicon} />\n</svelte:head>\n```",
+    "tags": {
+      "default": "'split'",
+      "since": "2.13.0"
+    },
+    "state": "explicit",
+    "value": "\"split\"",
+    "location": "vite.config.ts:42"
+  },
+  {
+    "path": "SvelteKit.paths",
+    "type": "{ assets?: \"\" | `http://${string}` | `https://${string}` | undefined; base?: \"\" | `/${string}` | undefined; origin?: string | undefined; relative?: boolean | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1894,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ base: buildBase(), assets: \"\", relative: true }",
+    "location": "vite.config.ts:43"
+  },
+  {
+    "path": "SvelteKit.paths.assets",
+    "type": "\"\" | `http://${string}` | `https://${string}` | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1899,
+    "documentation": "An absolute path that your app's files are served from. This is useful if your files are served from a storage bucket of some kind.",
+    "tags": {
+      "default": "\"\""
+    },
+    "state": "explicit",
+    "value": "\"\"",
+    "location": "vite.config.ts:43"
+  },
+  {
+    "path": "SvelteKit.paths.base",
+    "type": "\"\" | `/${string}` | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1904,
+    "documentation": "A root-relative path that must start, but not end with `/` (e.g. `/base-path`), unless it is the empty string. This specifies where your app is served from and allows the app to live on a non-root path. Note that you need to prepend all your root-relative links with the base value or they will point to the root of your domain, not your `base` (this is how the browser works). You can use [`resolve(...)` from `$app/paths`](https://svelte.dev/docs/kit/$app-paths#resolve) for that: `<a href=\"{resolve('/your-page')}\">Link</a>`. If you find yourself writing this often, it may make sense to extract this into a reusable component.",
+    "tags": {
+      "default": "\"\""
+    },
+    "state": "explicit",
+    "value": "buildBase()",
+    "location": "vite.config.ts:43"
+  },
+  {
+    "path": "SvelteKit.paths.origin",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1917,
+    "documentation": "The origin of your app, used for CSRF protection and prerendering.\n\nBy default, this is `undefined`, meaning SvelteKit will derive the origin from `request.url` (which is set by the adapter, and ultimately by the platform).\n\nIf your app is served from an origin that isn't known at request time — for example because it's deployed to a preview deployment whose URL isn't known at build time, or because it's behind a reverse proxy that doesn't pass the `host` header — you can set this to a string like `https://my-site.com`.\n\nThis is also used as the value of `url.origin` during prerendering (when unset, it defaults to `http://sveltekit-prerender`), and as the trusted origin for CSRF checks on form submissions and remote function calls.",
+    "tags": {
+      "default": "undefined",
+      "since": "3.0"
+    },
+    "state": "excluded",
+    "reason": "A deployed origin has not been selected; optional unset origin must not invent a host."
+  },
+  {
+    "path": "SvelteKit.paths.relative",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1933,
+    "documentation": "Whether to use relative asset paths.\n\nIf `true`, paths created with `resolve()` and `asset()` imported from `$app/paths` will be replaced with relative asset paths during server-side rendering, resulting in more portable HTML.\nIf `false`, `%sveltekit.assets%` and references to build artifacts will always be root-relative paths, unless `paths.assets` is an external URL\n\n[Single-page app](https://svelte.dev/docs/kit/single-page-apps) fallback pages will always use absolute paths, regardless of this setting.\n\nIf your app uses a `<base>` element, you should set this to `false`, otherwise asset URLs will incorrectly be resolved against the `<base>` URL rather than the current page.\n\nIn 1.0, `undefined` was a valid value, which was set by default. In that case, if `paths.assets` was not external, SvelteKit would replace `%sveltekit.assets%` with a relative path and use relative paths to reference build artifacts, but `base` and `assets` imported from `$app/paths` would be as specified in your config.",
+    "tags": {
+      "default": "true",
+      "since": "1.9.0"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:43"
+  },
+  {
+    "path": "SvelteKit.prerender",
+    "type": "{ concurrency?: number | undefined; crawl?: boolean | undefined; entries?: (\"*\" | `/${string}`)[] | undefined; handleHttpError?: PrerenderHttpErrorHandlerValue | undefined; handleMissingId?: PrerenderMissingIdHandlerValue | undefined; handleEntryGeneratorMismatch?: PrerenderEntryGeneratorMismatchHandlerValue | undef...",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1938,
+    "documentation": "See [Prerendering](https://svelte.dev/docs/kit/page-options#prerender).",
+    "tags": {},
+    "state": "explicit",
+    "value": "{\n    concurrency: 1,\n    crawl: true,\n    entries: [\"*\"],\n    handleHttpError: \"fail\",\n    handleMissingId: \"fail\",\n    handleEntryGeneratorMismatch: \"fail\",\n    handleUnseenRoutes: \"fail\",\n    handleInvalidUrl: \"fail\",\n  }",
+    "location": "vite.config.ts:44"
+  },
+  {
+    "path": "SvelteKit.prerender.concurrency",
+    "type": "number | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1943,
+    "documentation": "How many pages can be prerendered simultaneously. JS is single-threaded, but in cases where prerendering performance is network-bound (for example loading content from a remote CMS) this can speed things up by processing other tasks while waiting on the network response.",
+    "tags": {
+      "default": "1"
+    },
+    "state": "explicit",
+    "value": "1",
+    "location": "vite.config.ts:45"
+  },
+  {
+    "path": "SvelteKit.prerender.crawl",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1948,
+    "documentation": "Whether SvelteKit should find pages to prerender by following links from `entries`.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:46"
+  },
+  {
+    "path": "SvelteKit.prerender.entries",
+    "type": "(\"*\" | `/${string}`)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1953,
+    "documentation": "An array of pages to prerender, or start crawling from (if `crawl: true`). The `*` string includes all routes containing no required `[parameters]`  with optional parameters included as being empty (since SvelteKit doesn't know what value any parameters should have).",
+    "tags": {
+      "default": "[\"*\"]"
+    },
+    "state": "explicit",
+    "value": "[\"*\"]",
+    "location": "vite.config.ts:47"
+  },
+  {
+    "path": "SvelteKit.prerender.handleHttpError",
+    "type": "PrerenderHttpErrorHandlerValue | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 1989,
+    "documentation": "How to respond to HTTP errors encountered while prerendering the app.\n\n- `'fail'` — fail the build\n- `'ignore'` - silently ignore the failure and continue\n- `'warn'` — continue, but print a warning\n- `(details) => void` — a custom error handler that takes a `details` object with `status`, `path`, `referrer`, `referenceType` and `message` properties. If you `throw` from this function, the build will fail\n\n```js\n/// file: vite.config.js\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { defineConfig } from 'vite';\n\nexport default defineConfig({\n\tplugins: [\n\t\tsveltekit({\n \t\tprerender: {\n \t\t\thandleHttpError: ({ path, referrer, message }) => {\n\t\t\t\t\t// ignore deliberate link to shiny 404 page\n\t\t\t\t\tif (path === '/not-found' && referrer === '/blog/how-we-built-our-404-page') {\n\t\t\t\t\t\treturn;\n\t\t\t\t\t}\n\n\t\t\t\t\t// otherwise fail the build\n\t\t\t\t\tthrow new Error(message);\n\t\t\t\t}\n\t\t\t}\n\t\t})\n\t]\n});\n```",
+    "tags": {
+      "default": "\"fail\"",
+      "since": "1.15.7"
+    },
+    "state": "explicit",
+    "value": "\"fail\"",
+    "location": "vite.config.ts:48"
+  },
+  {
+    "path": "SvelteKit.prerender.handleMissingId",
+    "type": "PrerenderMissingIdHandlerValue | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2001,
+    "documentation": "How to respond when hash links from one prerendered page to another don't correspond to an `id` on the destination page.\n\n- `'fail'` — fail the build\n- `'ignore'` - silently ignore the failure and continue\n- `'warn'` — continue, but print a warning\n- `(details) => void` — a custom error handler that takes a `details` object with `path`, `id`, `referrers` and `message` properties. If you `throw` from this function, the build will fail",
+    "tags": {
+      "default": "\"fail\"",
+      "since": "1.15.7"
+    },
+    "state": "explicit",
+    "value": "\"fail\"",
+    "location": "vite.config.ts:49"
+  },
+  {
+    "path": "SvelteKit.prerender.handleEntryGeneratorMismatch",
+    "type": "PrerenderEntryGeneratorMismatchHandlerValue | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2013,
+    "documentation": "How to respond when an entry generated by the `entries` export doesn't match the route it was generated from.\n\n- `'fail'` — fail the build\n- `'ignore'` - silently ignore the failure and continue\n- `'warn'` — continue, but print a warning\n- `(details) => void` — a custom error handler that takes a `details` object with `generatedFromId`, `entry`, `matchedId` and `message` properties. If you `throw` from this function, the build will fail",
+    "tags": {
+      "default": "\"fail\"",
+      "since": "1.16.0"
+    },
+    "state": "explicit",
+    "value": "\"fail\"",
+    "location": "vite.config.ts:50"
+  },
+  {
+    "path": "SvelteKit.prerender.handleUnseenRoutes",
+    "type": "PrerenderUnseenRoutesHandlerValue | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2028,
+    "documentation": "How to respond when a route is marked as prerenderable but has not been prerendered.\n\n- `'fail'` — fail the build\n- `'ignore'` - silently ignore the failure and continue\n- `'warn'` — continue, but print a warning\n- `(details) => void` — a custom error handler that takes a `details` object with a `routes` property which contains all routes that haven't been prerendered. If you `throw` from this function, the build will fail\n\nThe default behavior is to fail the build. This may be undesirable when you know that some of your routes may never be reached under certain\ncircumstances such as a CMS not returning data for a specific area, resulting in certain routes never being reached.",
+    "tags": {
+      "default": "\"fail\"",
+      "since": "2.16.0"
+    },
+    "state": "explicit",
+    "value": "\"fail\"",
+    "location": "vite.config.ts:51"
+  },
+  {
+    "path": "SvelteKit.prerender.handleInvalidUrl",
+    "type": "PrerenderInvalidUrlHandlerValue | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2040,
+    "documentation": "How to respond when SvelteKit encounters a URL it cannot parse while crawling prerendered HTML (for example, an AT Protocol URL such as `at://did:plc:...`).\n\n- `'fail'` — fail the build\n- `'ignore'` - silently ignore the failure and continue\n- `'warn'` — continue, but print a warning\n- `(details) => void` — a custom error handler that takes a `details` object with `href`, `referrer` and `message` properties. If you `throw` from this function, the build will fail",
+    "tags": {
+      "default": "\"fail\"",
+      "since": "2.67.0"
+    },
+    "state": "explicit",
+    "value": "\"fail\"",
+    "location": "vite.config.ts:52"
+  },
+  {
+    "path": "SvelteKit.router",
+    "type": "{ type?: \"hash\" | \"pathname\" | undefined; resolution?: \"client\" | \"server\" | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2042,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ type: \"pathname\", resolution: \"client\" }",
+    "location": "vite.config.ts:54"
+  },
+  {
+    "path": "SvelteKit.router.type",
+    "type": "\"hash\" | \"pathname\" | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2052,
+    "documentation": "What type of client-side router to use.\n- `'pathname'` is the default and means the current URL pathname determines the route\n- `'hash'` means the route is determined by `location.hash`. In this case, SSR and prerendering are disabled. This is only recommended if `pathname` is not an option, for example because you don't control the webserver where your app is deployed.\n  It comes with some caveats: you can't use server-side rendering (or indeed any server logic), and you have to make sure that the links in your app all start with #/, or they won't work. Beyond that, everything works exactly like a normal SvelteKit app.",
+    "tags": {
+      "default": "\"pathname\"",
+      "since": "2.14.0"
+    },
+    "state": "explicit",
+    "value": "\"pathname\"",
+    "location": "vite.config.ts:54"
+  },
+  {
+    "path": "SvelteKit.router.resolution",
+    "type": "\"client\" | \"server\" | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2076,
+    "documentation": "How to determine which route to load when navigating to a new page.\n\nBy default, SvelteKit will serve a route manifest to the browser.\nWhen navigating, this manifest is used (along with the `reroute` hook, if it exists) to determine which components to load and which `load` functions to run.\nBecause everything happens on the client, this decision can be made immediately. The drawback is that the manifest needs to be\nloaded and parsed before the first navigation can happen, which may have an impact if your app contains many routes.\n\nAlternatively, SvelteKit can determine the route on the server. This means that for every navigation to a path that has not yet been visited, the server will be asked to determine the route.\nThis has several advantages:\n- The client does not need to load the routing manifest upfront, which can lead to faster initial page loads\n- The list of routes is hidden from public view\n- The server has an opportunity to intercept each navigation (for example through middleware in front of SvelteKit, such as a reverse proxy or your platform's edge functions), enabling (for example) A/B testing opaque to SvelteKit\n\nRoute resolution requests are answered as soon as the route has been looked up, before the `handle` hook is invoked. To intercept them within SvelteKit itself, use the `reroute` hook, which runs for these requests too.\n\nThe drawback is that for unvisited paths, resolution will take slightly longer (though this is mitigated by [preloading](https://svelte.dev/docs/kit/link-options#data-sveltekit-preload-data)).\n\n> [!NOTE] When using server-side route resolution and prerendering, the resolution is prerendered along with the route itself.",
+    "tags": {
+      "default": "\"client\"",
+      "since": "2.17.0"
+    },
+    "state": "explicit",
+    "value": "\"client\"",
+    "location": "vite.config.ts:54"
+  }
+]

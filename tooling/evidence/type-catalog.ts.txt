@@ -1,0 +1,56 @@
+import assert from "node:assert/strict";
+import { createProgram, isTypeAliasDeclaration, ModuleResolutionKind, ScriptTarget, TypeFlags } from "typescript";
+import type { Type } from "typescript";
+
+const program = createProgram([".cache/contracts.ts"], { target: ScriptTarget.ESNext, moduleResolution: ModuleResolutionKind.Bundler });
+const checker = program.getTypeChecker();
+const source = program.getSourceFile(".cache/contracts.ts");
+assert(source);
+interface Entry { path: string; type: string; source: string; line: number; documentation: string; tags: Record<string, string>; }
+const entries: Entry[] = [];
+const expanded = new Map<Type, string>();
+const references: Record<string, string> = {};
+function walk(type: Type, path: string, ancestors: Set<Type>): void {
+  if (ancestors.has(type)) return;
+  const seen = new Set([...ancestors, type]);
+  if (type.isUnion()) {
+    for (const variant of type.types) walk(variant, path, seen);
+    return;
+  }
+  if (checker.isArrayType(type)) {
+    const item = type.getNumberIndexType();
+    if (item !== undefined) walk(item, `${path}[]`, seen);
+    return;
+  }
+  if (!(type.flags & TypeFlags.Object) && !type.isIntersection()) return;
+  if (type.getCallSignatures().length > 0 || type.getConstructSignatures().length > 0) return;
+  const prior = expanded.get(type);
+  if (prior !== undefined) { references[path] = prior; return; }
+  expanded.set(type, path);
+  for (const property of type.getProperties()) {
+    const declaration = property.declarations?.[0];
+    if (declaration === undefined) continue;
+    const filename = declaration.getSourceFile().fileName.replaceAll("\\", "/");
+    if (!filename.includes("node_modules/")) continue;
+    if (/\/typescript\/lib\/lib\./.test(filename) || /\/@types\/node\/(buffer|stream|events)/.test(filename)) continue;
+    const child = checker.getTypeOfSymbolAtLocation(property, declaration);
+    const childPath = `${path}.${property.name}`;
+    const entry = { path: childPath, type: checker.typeToString(child), source: filename.slice(filename.indexOf("node_modules/")), line: declaration.getSourceFile().getLineAndCharacterOfPosition(declaration.getStart()).line + 1, documentation: property.getDocumentationComment(checker).map((part) => part.text).join(""), tags: Object.fromEntries(property.getJsDocTags(checker).map((tag) => [tag.name, tag.text?.map((part) => part.text).join("") ?? ""])) };
+    entries.push(entry);
+    if (!["plugins", "customLogger", "configFile"].includes(property.name) && !["Vite.server.hmr.server", "Vite.server.ws.server"].includes(childPath)) walk(child, childPath, seen);
+  }
+}
+for (const statement of source.statements) {
+  if (isTypeAliasDeclaration(statement)) walk(checker.getTypeAtLocation(statement), statement.name.text, new Set());
+}
+assert(entries.some((entry) => entry.path === "StaticAdapter.strict"));
+assert(entries.some((entry) => entry.path === "Vite.server.strictPort"));
+assert(entries.some((entry) => entry.path === "Vite.resolve.extensions"));
+await Bun.write(".cache/config-type-catalog.json", `${JSON.stringify(entries, null, 2)}\n`);
+await Bun.write(".cache/config-type-references.json", `${JSON.stringify(references, null, 2)}\n`);
+const prefixes = process.argv.slice(2);
+if (prefixes.length === 0) prefixes.push("Vite");
+for (const prefix of prefixes) {
+  for (const entry of entries.filter((item) => item.path.startsWith(`${prefix}.`) && item.path.split(".").length === prefix.split(".").length + 1)) console.log(JSON.stringify({ path: entry.path, type: entry.type, tags: entry.tags }));
+}
+console.log(`${entries.length} entries saved.`);

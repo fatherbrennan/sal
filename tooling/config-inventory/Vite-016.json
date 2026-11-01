@@ -1,0 +1,1138 @@
+[
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.compress.treeshake.propertyReadSideEffects",
+    "type": "boolean | \"always\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 249,
+    "documentation": "Whether property read accesses have side effects.",
+    "tags": {
+      "default": "'always'"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.compress.treeshake.propertyWriteSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 258,
+    "documentation": "Whether property write accesses (assignments to member expressions) have side effects.\n\nWhen false, assignments like `obj.prop = value` are considered side-effect-free\n(assuming the object and value expressions themselves are side-effect-free).",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.compress.treeshake.unknownGlobalSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 267,
+    "documentation": "Whether accessing a global variable has side effects.\n\nAccessing a non-existing global variable will throw an error.\nGlobal variable may be a getter that has side effects.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.compress.treeshake.invalidImportSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 276,
+    "documentation": "Whether invalid import statements have side effects.\n\nAccessing a non-existing import name will throw an error.\nAlso import statements that cannot be resolved will throw an error.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangle",
+    "type": "boolean | MangleOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 202,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangle.toplevel",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 132,
+    "documentation": "Pass `true` to mangle names declared in the top level scope.",
+    "tags": {
+      "default": "true for modules and commonjs, otherwise false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangle.keepNames",
+    "type": "boolean | MangleOptionsKeepNames | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 138,
+    "documentation": "Preserve `name` property for functions and classes.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangle.keepNames.function",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 159,
+    "documentation": "Preserve `name` property for functions.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangle.keepNames.class",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 165,
+    "documentation": "Preserve `name` property for classes.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangle.reserved",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 149,
+    "documentation": "Names that bindings must not be renamed to, and that bindings already\ncarrying them keep. Equivalent to terser's `mangle.reserved`.\n\nPass `['exports', 'module']` when minifying prebuilt CommonJS / UMD files\nthat Node consumers `import` directly, so Node's cjs-module-lexer can still\ndetect the mangled module's named exports.",
+    "tags": {
+      "default": "[]"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangle.debug",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 151,
+    "documentation": "Debug mangled names.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.codegen",
+    "type": "boolean | CodegenOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 209,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.codegen.removeWhitespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 10,
+    "documentation": "Remove whitespace.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.codegen.asciiOnly",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 28,
+    "documentation": "Escape non-ASCII characters in string literals, untagged template literals, regular\nexpression literals and identifier names.\n\nUses `\\uXXXX` for characters up to U+FFFF and `\\u{...}` for higher code points.\nRegular expressions use escaped UTF-16 surrogate pairs for higher code points instead;\nescaping changes the observable `RegExp.prototype.source` value.\n\nCode point escapes (`\\u{...}`) require ES2015 or later; this option does not provide\nES5-compatible output.\n\nNon-ASCII characters are left unescaped in tagged template quasis (whose raw text is\nobservable), JSX names and text, JSX attribute strings, hashbangs and preserved comments.\nJavaScript expressions inside tagged templates and JSX are escaped normally.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.codegen.legalComments",
+    "type": "\"none\" | \"inline\" | \"external\" | \"eof\" | { linked: string; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 40,
+    "documentation": "How to handle legal comments (comments containing `@license`, `@preserve`, or starting with `//!`/`/*!`).\n\n* `\"none\"` - Do not preserve any legal comments.\n* `\"inline\"` - Preserve all legal comments inline.\n* `\"eof\"` - Move all legal comments to the end of the file.\n* `\"external\"` - Extract legal comments without linking.\n* `{ linked: \"path/to/legal.txt\" }` - Extract legal comments and add a link comment to the given path.",
+    "tags": {
+      "default": "\"none\" (when minifying)"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.codegen.legalComments.linked",
+    "type": "string",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 41,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangleProps",
+    "type": "ManglePropertiesOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 350,
+    "documentation": "Mangle matching property names. This currently requires a single JavaScript output chunk.\nRolldown throws an error when this option is used with multiple JavaScript chunks.\n\nReserve names accessed indirectly, through module namespace objects, or by code outside\nRolldown's minification.\nNumeric spellings, `__proto__`, `constructor`, and `prototype` are never mangled.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangleProps.cache",
+    "type": "Record<string, string | false> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 339,
+    "documentation": "Stable mappings from original names to output names. `false` reserves an original name.\nString targets must be valid identifiers and cannot be `__proto__`, `constructor`, or\n`prototype`. Generated mappings are returned as `RolldownOutput.mangleCache`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangleProps.include",
+    "type": "RegExp",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 172,
+    "documentation": "JavaScript `RegExp` selecting property names to mangle. The source and flags are compiled\nwith Rust's regex engine. Flags `i`, `m`, `s`, and `u` are supported.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangleProps.exclude",
+    "type": "RegExp | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 174,
+    "documentation": "JavaScript `RegExp` excluding property names selected by `include`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangleProps.debug",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 188,
+    "documentation": "Generate readable `_$name$_`-style output names.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangleProps.reserved",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 176,
+    "documentation": "Exact names that are neither mangled nor emitted as automatic output names.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minify.mangleProps.quoted",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 182,
+    "documentation": "Mangle quoted property occurrences in addition to unquoted occurrences.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].name",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 693,
+    "documentation": "Specifies the global variable name that contains the exports of `umd` / `iife` {@link OutputOptions.formatformats}.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  output: {\n    format: 'iife',\n    name: 'MyBundle',\n  }\n});\n```\n```js\n// output\nvar MyBundle = (function () {\n  // ...\n})();\n```"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].globals",
+    "type": "Record<string, string> | GlobalsFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 721,
+    "documentation": "Specifies `id: variableName` pairs necessary for {@link InputOptions.externalexternal} imports in `umd` / `iife` {@link OutputOptions.formatformats}.",
+    "tags": {
+      "example": "```js\nexport default defineConfig({\n  external: ['jquery'],\n  output: {\n    format: 'iife',\n    name: 'MyBundle',\n    globals: {\n      jquery: '$',\n    }\n  }\n});\n```\n```js\n// input\nimport $ from 'jquery';\n```\n```js\n// output\nvar MyBundle = (function ($) {\n  // ...\n})($);\n```"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].paths",
+    "type": "Record<string, string> | PathsFunction$1 | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 752,
+    "documentation": "Maps {@link InputOptions.externalexternal} module IDs to paths.\n\nAllows customizing the path used when importing external dependencies.\nThis is particularly useful for loading dependencies from CDNs or custom locations.\n\n- Object form: Maps module IDs to their replacement paths\n- Function form: Takes a module ID and returns its replacement path",
+    "tags": {
+      "example": "```js\n{\n  paths: (id) => {\n    if (id.startsWith('lodash')) {\n      return `https://cdn.jsdelivr.net/npm/${id}`\n    }\n    return id\n  }\n}\n```"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].generatedCode",
+    "type": "Partial<GeneratedCodeOptions> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 758,
+    "documentation": "Which language features Rolldown can safely use in generated code.\n\nThis will not transpile any user code but only change the code Rolldown uses in wrappers and helpers.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].generatedCode.symbols",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 268,
+    "documentation": "Whether to use Symbol.toStringTag for namespace objects.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].generatedCode.preset",
+    "type": "GeneratedCodePreset | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 285,
+    "documentation": "Allows choosing one of the presets listed above while overriding some options.\n\n```js\nexport default {\n  output: {\n    generatedCode: {\n      preset: 'es2015',\n      symbols: false\n    }\n  }\n};\n```",
+    "tags": {
+      "default": "'es2015'"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].generatedCode.profilerNames",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 296,
+    "documentation": "Whether to add readable names to internal variables for profiling purposes.\n\nWhen enabled, generated code will use descriptive variable names that correspond\nto the original module names, making it easier to profile and debug the bundled code.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].externalLiveBindings",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 770,
+    "documentation": "Whether to generate code to support live bindings for {@link InputOptions.externalexternal} imports.\n\nWith the default value of `true`, Rolldown will generate code to support live bindings for external imports.\n\nWhen set to `false`, Rolldown will assume that exports from external modules do not change. This will allow Rolldown to generate smaller code. Note that this can cause issues when there are circular dependencies involving an external dependency.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].inlineDynamicImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 780,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Please use `codeSplitting: false` instead.\n\nWhether to inline dynamic imports instead of creating new chunks to create a single bundle.\n\nThis option can be used only when a single input is provided.",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use `codeSplitting: false` instead.\n\nWhether to inline dynamic imports instead of creating new chunks to create a single bundle.\n\nThis option can be used only when a single input is provided."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].dynamicImportInCjs",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 789,
+    "documentation": "Whether to keep external dynamic imports as `import(...)` expressions in CommonJS output.\n\nIf set to `false`, external dynamic imports will be rewritten to use `require(...)` calls.\nThis may be necessary to support environments that do not support dynamic `import()` in CommonJS modules like old Node.js versions.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].manualChunks",
+    "type": "ManualChunksFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 835,
+    "documentation": "Allows you to do manual chunking. Provided for Rollup compatibility.\n\nYou could use this option for migration purpose. Under the hood,\n\n```js\n{\n  manualChunks: (moduleId, meta) => {\n    if (moduleId.includes('node_modules')) {\n      return 'vendor';\n    }\n    return null;\n  }\n}\n```\n\nwill be transformed to\n\n```js\n{\n  codeSplitting: {\n    groups: [\n      {\n        name(moduleId) {\n          if (moduleId.includes('node_modules')) {\n            return 'vendor';\n          }\n          return null;\n        },\n      },\n    ],\n  }\n}\n\n```\n\nNote that unlike Rollup, object form is not supported.",
+    "tags": {
+      "deprecated": "Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\n:::warning\nIf `manualChunks` and `codeSplitting` are both specified, `manualChunks` option will be ignored.\n:::"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\n:::warning\nIf `manualChunks` and `codeSplitting` are both specified, `manualChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting",
+    "type": "boolean | CodeSplittingOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 868,
+    "documentation": "Controls how code splitting is performed.\n\n- `true`: Default behavior, automatic code splitting. **(default)**\n- `false`: Inline all dynamic imports into a single bundle (equivalent to deprecated `inlineDynamicImports: true`).\n- `object`: Advanced manual code splitting configuration.\n\nFor deeper understanding, please refer to the in-depth [documentation](https://rolldown.rs/in-depth/manual-code-splitting).",
+    "tags": {
+      "example": "**Basic vendor chunk**\n```js\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      minSize: 20000,\n      groups: [\n        {\n          name: 'vendor',\n          test: /node_modules/,\n        },\n      ],\n    },\n  },\n});\n```",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1323,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.includeDependenciesRecursivelygroup.includeDependenciesRecursively}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1327,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.minSizegroup.minSize}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1331,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.maxSizegroup.maxSize}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1335,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.maxModuleSizegroup.maxModuleSize}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1339,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.minModuleSizegroup.minModuleSize}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1343,
+    "documentation": "Global fallback of {@linkcode CodeSplittingGroup.minShareCountgroup.minShareCount}, if it's not specified in the group.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups",
+    "type": "CodeSplittingGroup[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1347,
+    "documentation": "Groups to be used for code splitting.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].debugName",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1040,
+    "documentation": "`debugName` gives this group a label in the bundler timing report.\n\nSet this option when `name` is a function. This option does not change the chunk name.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].name",
+    "type": "string | CodeSplittingNameFunction",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1099,
+    "documentation": "Name of the group. It will be also used as the name of the chunk and replace the `[name]` placeholder in the {@linkcode OutputOptions.chunkFileNamesoutput.chunkFileNames} option.\n\nFor example,\n\n```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: 'libs',\n          test: /node_modules/,\n        },\n      ],\n    },\n  },\n});\n```\nwill create a chunk named `libs-[hash].js` in the end.\n\nIt's ok to have the same name for different groups. Rolldown will deduplicate the chunk names if necessary.\n\n#### Dynamic `name()`\n\nIf `name` is a function, it will be called with the module id as the argument. The function should return a string or `null`. If it returns `null`, the module will be ignored by this group.\n\nNotice, each returned new name will be treated as a separate group.\n\nFor example,\n\n```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: (moduleId) => moduleId.includes('node_modules') ? 'libs' : 'app',\n          minSize: 100 * 1024,\n        },\n      ],\n    },\n  },\n});\n```\n\n:::warning\nConstraints like `minSize`, `maxSize`, etc. are applied separately for different names returned by the function.\n:::\n\n:::warning\nRolldown calls a function `name` once for each captured module, in a deterministic order. It calls `test` for every candidate module of the group first. Do not read a \"current module\" variable that `test` wrote, because that variable holds the last module `test` saw. Store such state under the module id instead.\n:::",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].test",
+    "type": "StringOrRegExp | CodeSplittingTestFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1118,
+    "documentation": "Controls which modules are captured in this group.\n\n- If `test` is a string, the module whose id contains the string will be captured.\n- If `test` is a regular expression, the module whose id matches the regular expression will be captured.\n- If `test` is a function, modules for which `test(id)` returns `true` will be captured.\n- If `test` is empty, any module will be considered as matched.\n\n:::warning\nWhen using regular expression, it's recommended to use `[\\\\/]` to match the path separator instead of `/` to avoid potential issues on Windows.\n- ✅ Recommended: `/node_modules[\\\\/]react/`\n- ❌ Not recommended: `/node_modules/react/`\n:::\n\n:::warning\nRolldown calls a function `test` once for each candidate module, in a deterministic order. It makes every `test` call of a group before it makes the first `name` call of that group. Rolldown processes the groups in the order that you declare them.\n:::",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].priority",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1150,
+    "documentation": "Priority of the group. Group with higher priority will be chosen first to match modules and create chunks. When converting the group to a chunk, modules of that group will be removed from other groups.\n\nIf two groups have the same priority, the group whose index is smaller will be chosen.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: 'react',\n          test: /node_modules[\\\\/]react/,\n          priority: 2,\n        },\n        {\n          name: 'other-libs',\n          test: /node_modules/,\n          priority: 1,\n        },\n      ],\n    },\n  },\n});\n```",
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1156,
+    "documentation": "Minimum size in bytes of the desired chunk. If the accumulated size of the captured modules by this group is smaller than this value, it will be ignored. Modules in this group will fall back to the `automatic chunking` if they are not captured by any other group.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1162,
+    "documentation": "Controls if a module should be captured based on how many entry chunks reference it.",
+    "tags": {
+      "default": "1"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1168,
+    "documentation": "If the accumulated size in bytes of the captured modules by this group is larger than this value, this group will be split into multiple groups that each has size close to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1174,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is smaller than or equal to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1180,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is larger than or equal to this value.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].entriesAware",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1200,
+    "documentation": "When `false` (default), all matching modules are merged into a single chunk.\nEvery entry that uses any of these modules must load the entire chunk — even\nmodules it doesn't need.\n\nWhen `true`, matching modules are grouped by which entries actually import them.\nModules shared by the same set of entries go into the same chunk, while modules\nshared by a different set go into a separate chunk. This way, each entry only\nloads the code it actually uses.\n\nExample: entries A, B, C all match a `\"vendor\"` group.\n- `moduleX` is used by A, B, C\n- `moduleY` is used by A, B only\n\nWith `entriesAware: false` → one `vendor.js` chunk with both modules; C loads `moduleY` unnecessarily.\nWith `entriesAware: true`  → `vendor.js` (moduleX, loaded by all) + `vendor2.js` (moduleY, loaded by A and B only).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].entriesAwareMergeThreshold",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1210,
+    "documentation": "Size threshold in bytes for merging small `entriesAware` subgroups into the\nclosest neighboring subgroup.\n\nThis option only works when {@linkcode CodeSplittingGroup.entriesAwareentriesAware}\nis `true`. Set to `0` to disable subgroup merging.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1224,
+    "documentation": "Whether to include captured modules' dependencies.\n\nEnabling this option reduces the chance of generating circular chunks.\n\nIf you want to disable this behavior, it's recommended to both set\n- {@linkcode InputOptions.preserveEntrySignaturespreserveEntrySignatures}: `false | 'allow-extension'`\n- {@linkcode OutputOptions.strictExecutionOrderstrictExecutionOrder}: `true`\n\nto avoid generating invalid chunks.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.groups[].tags",
+    "type": "\"$initial\"[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1239,
+    "documentation": "Filter modules by tags. Only modules that have **all** specified tags\nare captured by this group. Combines with `test` and other filters —\na module must match all criteria.\n\nBuilt-in tags: `'$initial'` (module is statically imported by a user-defined entry or part of its dependency chain).",
+    "tags": {
+      "see": "{@link https://rolldown.rs/in-depth/manual-code-splitting Manual Code Splitting}",
+      "example": "```js\n{ name: 'initial-deps', tags: ['$initial'], maxSize: 1048576 }\n```"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.experimentalInlineCommonChunks",
+    "type": "ExperimentalInlineCommonChunksOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1353,
+    "documentation": "Replace small automatic common chunks with factory copies in their consumers.",
+    "tags": {
+      "experimental": "This feature is experimental. Its behavior and option shape may change in any release."
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.experimentalInlineCommonChunks.maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1306,
+    "documentation": "Common chunks whose pre-render size (the sum of the transformed source sizes of their modules,\nin bytes) is strictly smaller than this value are candidates for inlining.\nUse `Infinity` to remove the size limit.\n\nA value greater than `0` requires `output.format: 'es'`, an explicit\n`preserveEntrySignatures: false` and code splitting, and it turns on\n{@linkcode OutputOptions.strictExecutionOrderstrictExecutionOrder} when that option is\nomitted. `output.strictExecutionOrder: false` is an error, `output.preserveModules`,\n`experimental.devMode` and `experimental.onDemandWrapping` must be off.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].codeSplitting.experimentalInlineCommonChunks.exclude",
+    "type": "StringOrRegExp | CodeSplittingTestFunction | (StringOrRegExp | CodeSplittingTestFunction)[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1312,
+    "documentation": "A matcher for module ids, or an array of them: a string (matched as a regular expression), a\nRegExp, or a function, each applied like {@linkcode CodeSplittingGroup.testtest}. A common\nchunk is kept as a file when any of its modules matches any matcher.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks",
+    "type": "{ includeDependenciesRecursively?: boolean | undefined; minSize?: number | undefined; maxSize?: number | undefined; maxModuleSize?: number | undefined; minModuleSize?: number | undefined; minShareCount?: number | undefined; groups?: CodeSplittingGroup[] | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 878,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 879,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 880,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 881,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 882,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 883,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 884,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups",
+    "type": "CodeSplittingGroup[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 885,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].legalComments",
+    "type": "\"none\" | \"inline\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 895,
+    "documentation": "Controls how legal comments are preserved in the output.\n\n- `none`: no legal comments\n- `inline`: preserve legal comments that contain `@license`, `@preserve` or starts with `//!` `/*!`",
+    "tags": {
+      "deprecated": "Use `comments.legal` instead. When both `legalComments` and `comments.legal` are set, `comments.legal` takes priority."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use `comments.legal` instead. When both `legalComments` and `comments.legal` are set, `comments.legal` takes priority."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].comments",
+    "type": "boolean | CommentsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 910,
+    "documentation": "Control which comments are preserved in the output.\n\n- `true`: Preserve legal, annotation, and JSDoc comments (default)\n- `false`: Strip all comments\n- Object: Granular control over comment categories\n\nNote: Regular line and block comments without these markers\nare always removed regardless of this option.\n\nWhen both `legalComments` and `comments.legal` are set, `comments.legal` takes priority.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].comments.legal",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 356,
+    "documentation": "Comments that contain `@license`, `@preserve` or start with `//!` or `/*!`",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].comments.annotation",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 360,
+    "documentation": "Comments that contain `@__PURE__`, `@__NO_SIDE_EFFECTS__` or `@vite-ignore`",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].comments.jsdoc",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 364,
+    "documentation": "JSDoc comments",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].plugins",
+    "type": "RolldownOutputPluginOption",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 916,
+    "documentation": "The list of plugins to use only for this output.",
+    "tags": {
+      "see": "{@linkcode InputOptions.pluginsplugins}"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].polyfillRequire",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 924,
+    "documentation": "Whether to add a polyfill for `require()` function in non-CommonJS formats.\n\nThis option is useful when you want to inject your own `require` implementation.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].hoistTransitiveImports",
+    "type": "false | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 929,
+    "documentation": "This option is not implemented yet.",
+    "tags": {
+      "hidden": ""
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].preserveModules",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 937,
+    "documentation": "Whether to use preserve modules mode.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].virtualDirname",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 943,
+    "documentation": "Specifies the directory name for \"virtual\" files that might be emitted by plugins when using {@link OutputOptions.preserveModulespreserve modules mode}.",
+    "tags": {
+      "default": "'_virtual'"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].preserveModulesRoot",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 949,
+    "documentation": "A directory path to input modules that should be stripped away from {@linkcode diroutput.dir} when using {@link OutputOptions.preserveModulespreserve modules mode}.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].topLevelVar",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 968,
+    "documentation": "Whether to convert top-level `let` and `const` declarations into `var` declarations.\n\nEnabling this option can improve runtime performance of the generated code in\ncertain environments by avoiding Temporal Dead Zone (TDZ) checks. Only declarations\nin the module's top-level scope are rewritten — declarations inside nested scopes\n(functions, blocks, etc.) are left as-is.\n\nNote:\n- Top-level `class X {}` declarations are always emitted as `var X = class {}` so\n  rolldown can hoist them alongside other top-level bindings; this transform is\n  independent of `topLevelVar`.\n- Top-level `function` declarations are never rewritten.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].minifyInternalExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 977,
+    "documentation": "Whether to minify internal exports as single letter variables to allow for better minification.",
+    "tags": {
+      "default": "`true` for format `es` or if `output.minify` is `true` or object, `false` otherwise"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].cleanDir",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 985,
+    "documentation": "Clean output directory ({@linkcode diroutput.dir}) before emitting output.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].keepNames",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 997,
+    "documentation": "Keep `name` property of functions and classes after bundling.\n\nWhen enabled, the bundler will preserve the original `name` property value of functions and\nclasses in the output. This is useful for debugging and some frameworks that rely on it for\nregistration and binding purposes.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].strictExecutionOrder",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1011,
+    "documentation": "Preserve source module execution order across generated chunks.\n\nWhen enabled, Rolldown wraps ESM modules so their bodies run in source order regardless of chunk placement. Interop wrappers for CommonJS and require-of-ESM modules are unchanged, and external modules are not affected. `experimental.onDemandWrapping` replaces wrap-all with a conservative plan derived from predicted chunk execution hazards.\n\n> [!WARNING]\n> Enabling this option increases bundle size because wrapped modules need runtime init helpers.\n\n{@linkcode CodeSplittingOptions.experimentalInlineCommonChunksexperimentalInlineCommonChunks}\nwith a `maxSize` above `0` turns this option on when it is omitted.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].strict",
+    "type": "boolean | \"auto\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1023,
+    "documentation": "Whether to always output `\"use strict\"` directive in non-ES module outputs.\n\n- `true` - Always emit `\"use strict\"` at the top of the output (not applicable for ESM format since ESM is always strict).\n- `false` - Never emit `\"use strict\"` in the output.\n- `'auto'` - Respect the `\"use strict\"` directives from the source code.\n\nSee [In-depth directive guide](https://rolldown.rs/in-depth/directives) for more details.",
+    "tags": {
+      "default": "'auto'"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].debugName",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1040,
+    "documentation": "`debugName` gives this group a label in the bundler timing report.\n\nSet this option when `name` is a function. This option does not change the chunk name.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].name",
+    "type": "string | CodeSplittingNameFunction",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1099,
+    "documentation": "Name of the group. It will be also used as the name of the chunk and replace the `[name]` placeholder in the {@linkcode OutputOptions.chunkFileNamesoutput.chunkFileNames} option.\n\nFor example,\n\n```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: 'libs',\n          test: /node_modules/,\n        },\n      ],\n    },\n  },\n});\n```\nwill create a chunk named `libs-[hash].js` in the end.\n\nIt's ok to have the same name for different groups. Rolldown will deduplicate the chunk names if necessary.\n\n#### Dynamic `name()`\n\nIf `name` is a function, it will be called with the module id as the argument. The function should return a string or `null`. If it returns `null`, the module will be ignored by this group.\n\nNotice, each returned new name will be treated as a separate group.\n\nFor example,\n\n```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: (moduleId) => moduleId.includes('node_modules') ? 'libs' : 'app',\n          minSize: 100 * 1024,\n        },\n      ],\n    },\n  },\n});\n```\n\n:::warning\nConstraints like `minSize`, `maxSize`, etc. are applied separately for different names returned by the function.\n:::\n\n:::warning\nRolldown calls a function `name` once for each captured module, in a deterministic order. It calls `test` for every candidate module of the group first. Do not read a \"current module\" variable that `test` wrote, because that variable holds the last module `test` saw. Store such state under the module id instead.\n:::",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].test",
+    "type": "StringOrRegExp | CodeSplittingTestFunction | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1118,
+    "documentation": "Controls which modules are captured in this group.\n\n- If `test` is a string, the module whose id contains the string will be captured.\n- If `test` is a regular expression, the module whose id matches the regular expression will be captured.\n- If `test` is a function, modules for which `test(id)` returns `true` will be captured.\n- If `test` is empty, any module will be considered as matched.\n\n:::warning\nWhen using regular expression, it's recommended to use `[\\\\/]` to match the path separator instead of `/` to avoid potential issues on Windows.\n- ✅ Recommended: `/node_modules[\\\\/]react/`\n- ❌ Not recommended: `/node_modules/react/`\n:::\n\n:::warning\nRolldown calls a function `test` once for each candidate module, in a deterministic order. It makes every `test` call of a group before it makes the first `name` call of that group. Rolldown processes the groups in the order that you declare them.\n:::",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].priority",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1150,
+    "documentation": "Priority of the group. Group with higher priority will be chosen first to match modules and create chunks. When converting the group to a chunk, modules of that group will be removed from other groups.\n\nIf two groups have the same priority, the group whose index is smaller will be chosen.",
+    "tags": {
+      "example": "```js\nimport { defineConfig } from 'rolldown';\n\nexport default defineConfig({\n  output: {\n    codeSplitting: {\n      groups: [\n        {\n          name: 'react',\n          test: /node_modules[\\\\/]react/,\n          priority: 2,\n        },\n        {\n          name: 'other-libs',\n          test: /node_modules/,\n          priority: 1,\n        },\n      ],\n    },\n  },\n});\n```",
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].minSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1156,
+    "documentation": "Minimum size in bytes of the desired chunk. If the accumulated size of the captured modules by this group is smaller than this value, it will be ignored. Modules in this group will fall back to the `automatic chunking` if they are not captured by any other group.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1162,
+    "documentation": "Controls if a module should be captured based on how many entry chunks reference it.",
+    "tags": {
+      "default": "1"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1168,
+    "documentation": "If the accumulated size in bytes of the captured modules by this group is larger than this value, this group will be split into multiple groups that each has size close to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1174,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is smaller than or equal to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1180,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is larger than or equal to this value.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].entriesAware",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1200,
+    "documentation": "When `false` (default), all matching modules are merged into a single chunk.\nEvery entry that uses any of these modules must load the entire chunk — even\nmodules it doesn't need.\n\nWhen `true`, matching modules are grouped by which entries actually import them.\nModules shared by the same set of entries go into the same chunk, while modules\nshared by a different set go into a separate chunk. This way, each entry only\nloads the code it actually uses.\n\nExample: entries A, B, C all match a `\"vendor\"` group.\n- `moduleX` is used by A, B, C\n- `moduleY` is used by A, B only\n\nWith `entriesAware: false` → one `vendor.js` chunk with both modules; C loads `moduleY` unnecessarily.\nWith `entriesAware: true`  → `vendor.js` (moduleX, loaded by all) + `vendor2.js` (moduleY, loaded by A and B only).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].entriesAwareMergeThreshold",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1210,
+    "documentation": "Size threshold in bytes for merging small `entriesAware` subgroups into the\nclosest neighboring subgroup.\n\nThis option only works when {@linkcode CodeSplittingGroup.entriesAwareentriesAware}\nis `true`. Set to `0` to disable subgroup merging.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1224,
+    "documentation": "Whether to include captured modules' dependencies.\n\nEnabling this option reduces the chance of generating circular chunks.\n\nIf you want to disable this behavior, it's recommended to both set\n- {@linkcode InputOptions.preserveEntrySignaturespreserveEntrySignatures}: `false | 'allow-extension'`\n- {@linkcode OutputOptions.strictExecutionOrderstrictExecutionOrder}: `true`\n\nto avoid generating invalid chunks.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.output[].advancedChunks.groups[].tags",
+    "type": "\"$initial\"[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1239,
+    "documentation": "Filter modules by tags. Only modules that have **all** specified tags\nare captured by this group. Combines with `test` and other filters —\na module must match all criteria.\n\nBuilt-in tags: `'$initial'` (module is statically imported by a user-defined entry or part of its dependency chain).",
+    "tags": {
+      "see": "{@link https://rolldown.rs/in-depth/manual-code-splitting Manual Code Splitting}",
+      "example": "```js\n{ name: 'initial-deps', tags: ['$initial'], maxSize: 1048576 }\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.transform.jsx.runtime",
+    "type": "\"classic\" | \"automatic\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 916,
+    "documentation": "Decides which runtime to use.\n\n- 'automatic' - auto-import the correct JSX factories\n- 'classic' - no auto-import",
+    "tags": {
+      "default": "'automatic'"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.transform.jsx.development",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 922,
+    "documentation": "Emit development-specific information, such as `__source` and `__self`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.transform.jsx.throwIfNamespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 932,
+    "documentation": "Toggles whether or not to throw an error if an XML namespaced tag name\nis used.\n\nThough the JSX spec allows this, it is disabled by default since React's\nJSX does not currently have support for it.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  },
+  {
+    "path": "Vite.worker.rolldownOptions.transform.jsx.pure",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 938,
+    "documentation": "Mark JSX elements and top-level React method calls as pure for tree shaking.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "The application declares no Web Worker bundles. SvelteKit's build worker is framework implementation, not this Vite client-worker configuration."
+  }
+]

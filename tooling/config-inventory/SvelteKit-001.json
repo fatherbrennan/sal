@@ -1,0 +1,1137 @@
+[
+  {
+    "path": "SvelteKit.serviceWorker",
+    "type": "{ register: true; options?: RegistrationOptions | undefined; } | { register?: false | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2078,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ register: true }",
+    "location": "vite.config.ts:55"
+  },
+  {
+    "path": "SvelteKit.serviceWorker.register",
+    "type": "false | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2095,
+    "documentation": "Whether to automatically register the service worker, if it exists.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:55"
+  },
+  {
+    "path": "SvelteKit.serviceWorker.options",
+    "type": "RegistrationOptions | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2088,
+    "documentation": "Options for serviceWorker.register(\"...\", options);",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No service-worker implementation is present during the tooling milestone. Registration details require the offline implementation."
+  },
+  {
+    "path": "SvelteKit.tracing",
+    "type": "{ server?: boolean | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2101,
+    "documentation": "Options for enabling [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations.",
+    "tags": {
+      "default": "{ server: false }"
+    },
+    "state": "explicit",
+    "value": "{ server: false }",
+    "location": "vite.config.ts:56"
+  },
+  {
+    "path": "SvelteKit.tracing.server",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2106,
+    "documentation": "Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for SvelteKit operations including the [`handle` hook](https://svelte.dev/docs/kit/hooks#handle), [`load` functions](https://svelte.dev/docs/kit/load), [form actions](https://svelte.dev/docs/kit/form-actions), [`+server` handlers](https://svelte.dev/docs/kit/routing#server), and [remote functions](https://svelte.dev/docs/kit/remote-functions). Tracing — and more significantly, observability instrumentation — can have a nontrivial overhead, so consider whether you really need it, or if it might be more appropriate to turn it on in development and preview environments only.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:56"
+  },
+  {
+    "path": "SvelteKit.typescript",
+    "type": "{ config?: ((config: Record<string, any>) => void | Record<string, any>) | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2111,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Add configuration to `tsconfig.json` directly"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Add configuration to `tsconfig.json` directly"
+  },
+  {
+    "path": "SvelteKit.typescript.config",
+    "type": "((config: Record<string, any>) => void | Record<string, any>) | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2121,
+    "documentation": "A function that allows you to edit the generated `tsconfig.json`. You can mutate the config (recommended) or return a new one.\nThis is useful for extending a shared `tsconfig.json` in a monorepo root, for example.\n\nNote that any paths configured here should be relative to the generated config file, which is written to `node_modules/$app/tsconfig.json`.",
+    "tags": {
+      "default": "(config) => config",
+      "since": "1.3.0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Add configuration to `tsconfig.json` directly"
+  },
+  {
+    "path": "SvelteKit.version",
+    "type": "{ name?: string | undefined; pollInterval?: number | undefined; } | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2144,
+    "documentation": "Client-side navigation can be buggy if you deploy a new version of your app while people are using it. If the code for the new page is already loaded, it may have stale content; if it isn't, the app's route manifest may point to a JavaScript file that no longer exists.\nSvelteKit helps you solve this problem through version management. The current version is included in data, remote, and form action responses via the `x-sveltekit-version` header, so SvelteKit can detect new deployments without polling — for example when a navigation triggers a server `load` function, or when a remote function is called. SvelteKit also checks for new versions when the tab regains focus or becomes visible.\nIf SvelteKit encounters an error while loading the page and detects that a new version has been deployed (using the `name` specified here, which defaults to a timestamp of the build) it will fall back to traditional full-page navigation.\nNot all navigations will result in an error though, for example if the JavaScript for the next page is already loaded. If you still want to force a full-page navigation in these cases, use `beforeNavigate`:\n```html\n/// file: +layout.svelte\n<script>\n  import { beforeNavigate } from '$app/navigation';\n  import { updated } from '$app/state';\n\n  beforeNavigate(({ willUnload, to }) => {\n    if (updated.current && !willUnload && to?.url) {\n      location.href = to.url.href;\n    }\n  });\n</script>\n```\n\nIn addition to these checks, SvelteKit polls for new versions on an interval and sets [`updated.current`](https://svelte.dev/docs/kit/$app-state#updated) to `true` when it detects one. Set `pollInterval` to `0` to disable polling (the header- and event-based checks will still run).",
+    "tags": {},
+    "state": "explicit",
+    "value": "{ pollInterval: 3_600_000 }",
+    "location": "vite.config.ts:57"
+  },
+  {
+    "path": "SvelteKit.version.name",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2167,
+    "documentation": "The current app version string. If specified, this must be deterministic (e.g. a commit ref rather than `Math.random()` or `Date.now().toString()`), otherwise defaults to a timestamp of the build.\n\nFor example, to use the current commit hash, you could do use `git rev-parse HEAD`:\n\n```js\n/// file: vite.config.js\nimport * as child_process from 'node:child_process';\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { defineConfig } from 'vite';\n\nexport default defineConfig({\n\tplugins: [\n\t\tsveltekit({\n \t\tversion: {\n\t\t\t\tname: child_process.execSync('git rev-parse HEAD').toString().trim()\n\t\t\t}\n\t\t})\n\t]\n});\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Framework-generated build timestamp; a fixed invented value would prevent version-change detection."
+  },
+  {
+    "path": "SvelteKit.version.pollInterval",
+    "type": "number | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2172,
+    "documentation": "The interval in milliseconds to poll for version changes. If this is `0`, no polling occurs. SvelteKit also checks for new versions on server responses (via the `x-sveltekit-version` header) and when the tab regains focus or becomes visible, so polling is only needed for long-lived sessions on a single page.",
+    "tags": {
+      "default": "3600000"
+    },
+    "state": "explicit",
+    "value": "3_600_000",
+    "location": "vite.config.ts:57"
+  },
+  {
+    "path": "SvelteKit.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 105,
+    "documentation": "A list of file extensions to be compiled by Svelte",
+    "tags": {
+      "default": "['.svelte']"
+    },
+    "state": "explicit",
+    "value": "[\".svelte\"]",
+    "location": "vite.config.ts:38"
+  },
+  {
+    "path": "SvelteKit.preprocess",
+    "type": "Arrayable<PreprocessorGroup> | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 111,
+    "documentation": "An array of preprocessors to transform the Svelte source code before compilation",
+    "tags": {
+      "see": "https://svelte.dev/docs/svelte/svelte-compiler#PreprocessorGroup"
+    },
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:64"
+  },
+  {
+    "path": "SvelteKit.preprocess.name",
+    "type": "string | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 972,
+    "documentation": "Name of the preprocessor. Will be a required option in the next major version",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor."
+  },
+  {
+    "path": "SvelteKit.preprocess.markup",
+    "type": "MarkupPreprocessor | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 973,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor."
+  },
+  {
+    "path": "SvelteKit.preprocess.style",
+    "type": "Preprocessor | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 974,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor."
+  },
+  {
+    "path": "SvelteKit.preprocess.script",
+    "type": "Preprocessor | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 975,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor."
+  },
+  {
+    "path": "SvelteKit.compilerOptions",
+    "type": "Omit<CompileOptions, \"filename\" | \"format\" | \"generate\"> | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 119,
+    "documentation": "The options to be passed to the Svelte compiler. A few options are set by default,\nincluding `dev` and `css`. However, some options are non-configurable, like\n`filename`, `format`, `generate`, and `cssHash` (in dev).",
+    "tags": {
+      "see": "https://svelte.dev/docs/svelte/svelte-compiler#CompileOptions"
+    },
+    "state": "explicit",
+    "value": "{\n    experimental: { async: false },\n    customElement: false,\n    namespace: \"html\",\n    css: \"external\",\n    preserveComments: false,\n    preserveWhitespace: false,\n    fragments: \"html\",\n    runes: undefined,\n    discloseVersion: true,\n    modernAst: false,\n    warningFilter: () => true,\n  }",
+    "location": "vite.config.ts:65"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.experimental",
+    "type": "{ async?: boolean | undefined; } | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1195,
+    "documentation": "Experimental options",
+    "tags": {
+      "since": "5.36"
+    },
+    "state": "explicit",
+    "value": "{ async: false }",
+    "location": "vite.config.ts:66"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.experimental.async",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1200,
+    "documentation": "Allow `await` keyword in deriveds, template expressions, and the top level of components",
+    "tags": {
+      "since": "5.36"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:66"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.name",
+    "type": "string | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1032,
+    "documentation": "Sets the name of the resulting JavaScript class (though the compiler will rename it if it would otherwise conflict with other variables in scope).\nIf unspecified, will be inferred from `filename`",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Component names are generated from each filename; no fixed shared name is valid."
+  },
+  {
+    "path": "SvelteKit.compilerOptions.customElement",
+    "type": "boolean | ((options: { filename: string; }) => boolean) | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1040,
+    "documentation": "If `true`, tells the compiler to generate a custom element constructor instead of a regular Svelte component.\n\nYou can also pass a function that receives `{ filename }` and returns a boolean.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:67"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.accessors",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1047,
+    "documentation": "If `true`, getters and setters will be created for the component's props. If `false`, they will only be created for readonly exported values (i.e. those declared with `const`, `class` and `function`). If compiling with `customElement: true` this option defaults to `true`.",
+    "tags": {
+      "default": "false",
+      "deprecated": "This will have no effect in runes mode"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This will have no effect in runes mode"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.namespace",
+    "type": "Namespace | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1053,
+    "documentation": "The namespace of the element; e.g., `\"html\"`, `\"svg\"`, `\"mathml\"`.",
+    "tags": {
+      "default": "'html'"
+    },
+    "state": "explicit",
+    "value": "\"html\"",
+    "location": "vite.config.ts:68"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.immutable",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1061,
+    "documentation": "If `true`, tells the compiler that you promise not to mutate any objects.\nThis allows it to be less conservative about checking whether values have changed.",
+    "tags": {
+      "default": "false",
+      "deprecated": "This will have no effect in runes mode"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. This will have no effect in runes mode"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.css",
+    "type": "\"injected\" | \"external\" | ((options: { filename: string; }) => \"injected\" | \"external\") | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1069,
+    "documentation": "- `'injected'`: styles will be included in the `head` when using `render(...)`, and injected into the document (if not already present) when the component mounts. For components compiled as custom elements, styles are injected to the shadow root.\n- `'external'`: the CSS will only be returned in the `css` field of the compilation result. Most Svelte bundler plugins will set this to `'external'` and use the CSS that is statically generated for better performance, as it will result in smaller JavaScript bundles and the output can be served as cacheable `.css` files.\nThis is always `'injected'` when compiling with `customElement` mode.\n\nYou can also pass a function that receives `{ filename }` and returns either `'injected'` or `'external'`.",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"external\"",
+    "location": "vite.config.ts:69"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.cssHash",
+    "type": "CssHashGetter | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1076,
+    "documentation": "A function that takes a `{ hash, css, name, filename }` argument and returns the string that is used as a classname for scoped CSS.\nIt defaults to returning `svelte-${hash(filename ?? css)}`.",
+    "tags": {
+      "default": "undefined"
+    },
+    "state": "excluded",
+    "reason": "The Svelte Vite plugin owns development/production CSS hashing."
+  },
+  {
+    "path": "SvelteKit.compilerOptions.preserveComments",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1082,
+    "documentation": "If `true`, your HTML comments will be preserved in the output. By default, they are stripped out.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:70"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.preserveWhitespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1088,
+    "documentation": "If `true`, whitespace inside and between elements is kept as you typed it, rather than removed or collapsed to a single space where possible.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:71"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.fragments",
+    "type": "\"html\" | \"tree\" | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1098,
+    "documentation": "Which strategy to use when cloning DOM fragments:\n\n- `html` populates a `<template>` with `innerHTML` and clones it. This is faster, but cannot be used if your app's [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) includes [`require-trusted-types-for 'script'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)\n- `tree` creates the fragment one element at a time and _then_ clones it. This is slower, but works everywhere",
+    "tags": {
+      "default": "'html'",
+      "since": "5.33"
+    },
+    "state": "explicit",
+    "value": "\"html\"",
+    "location": "vite.config.ts:72"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.runes",
+    "type": "boolean | ((options: { filename: string; }) => boolean | undefined) | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1109,
+    "documentation": "Set to `true` to force the compiler into runes mode, even if there are no indications of runes usage.\nSet to `false` to force the compiler into ignoring runes, even if there are indications of runes usage.\nSet to `undefined` (the default) to infer runes mode from the component code.\nIs always `true` for JS/TS modules compiled with Svelte.\nWill be `true` by default in Svelte 6.\nNote that setting this to `true` in your `svelte.config.js` will force runes mode for your entire project, including components in `node_modules`,\nwhich is likely not what you want. If you're using Vite, consider using [dynamicCompileOptions](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#dynamiccompileoptions) instead.",
+    "tags": {
+      "default": "undefined"
+    },
+    "state": "explicit",
+    "value": "undefined",
+    "location": "vite.config.ts:73"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.discloseVersion",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1115,
+    "documentation": "If `true`, exposes the Svelte major version in the browser by adding it to a `Set` stored in the global `window.__svelte.v`.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:74"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.compatibility",
+    "type": "{ componentApi?: 4 | 5 | undefined; } | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1119,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use these only as a temporary solution before migrating your code"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use these only as a temporary solution before migrating your code"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.compatibility.componentApi",
+    "type": "4 | 5 | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1126,
+    "documentation": "Applies a transformation so that the default export of Svelte files can still be instantiated the same way as in Svelte 4 —\nas a class when compiling for the browser (as though using `createClassComponent(MyComponent, {...})` from `svelte/legacy`)\nor as an object with a `.render(...)` method when compiling for the server",
+    "tags": {
+      "default": "5"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use these only as a temporary solution before migrating your code"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.sourcemap",
+    "type": "string | object | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1134,
+    "documentation": "An initial sourcemap that will be merged into the final output sourcemap.\nThis is usually the preprocessor sourcemap.",
+    "tags": {
+      "default": "null"
+    },
+    "state": "excluded",
+    "reason": "Input sourcemaps belong to the framework transform pipeline; no external preprocessing map is selected."
+  },
+  {
+    "path": "SvelteKit.compilerOptions.outputFilename",
+    "type": "string | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1140,
+    "documentation": "Used for your JavaScript sourcemap.",
+    "tags": {
+      "default": "null"
+    },
+    "state": "excluded",
+    "reason": "Framework output paths vary by module and build environment."
+  },
+  {
+    "path": "SvelteKit.compilerOptions.cssOutputFilename",
+    "type": "string | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1146,
+    "documentation": "Used for your CSS sourcemap.",
+    "tags": {
+      "default": "null"
+    },
+    "state": "excluded",
+    "reason": "Framework output paths vary by module and build environment."
+  },
+  {
+    "path": "SvelteKit.compilerOptions.hmr",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1152,
+    "documentation": "If `true`, compiles components with hot reloading support.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Svelte Vite plugin selects HMR for development and disables it for builds."
+  },
+  {
+    "path": "SvelteKit.compilerOptions.modernAst",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1159,
+    "documentation": "If `true`, returns the modern version of the AST.\nWill become `true` by default in Svelte 6, and the option will be removed in Svelte 7.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:75"
+  },
+  {
+    "path": "SvelteKit.compilerOptions.dev",
+    "type": "boolean | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1168,
+    "documentation": "If `true`, causes extra code to be added that will perform runtime checks and provide debugging information during development.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Svelte Vite plugin selects development checks per command/mode."
+  },
+  {
+    "path": "SvelteKit.compilerOptions.rootDir",
+    "type": "string | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1185,
+    "documentation": "Used for ensuring filenames don't leak filesystem information. Your bundler plugin will set it automatically.",
+    "tags": {
+      "default": "process.cwd() on node-like environments, undefined elsewhere"
+    },
+    "state": "excluded",
+    "reason": "Svelte Vite plugin derives the compiler root from the resolved project root."
+  },
+  {
+    "path": "SvelteKit.compilerOptions.warningFilter",
+    "type": "((warning: Warning) => boolean) | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 1190,
+    "documentation": "A function that gets a `Warning` as an argument and returns a boolean.\nUse this to filter out warnings. Return `true` to keep the warning, `false` to discard it.",
+    "tags": {},
+    "state": "explicit",
+    "value": "() => true",
+    "location": "vite.config.ts:76"
+  },
+  {
+    "path": "SvelteKit.onwarn",
+    "type": "((warning: Warning, defaultHandler: (warning: Warning) => void) => void) | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 138,
+    "documentation": "Handles warning emitted from the Svelte compiler\n\nwarnings emitted for files in node_modules are logged at the debug level, to see them run\n`DEBUG=vite-plugin-svelte:node-modules-onwarn pnpm build`",
+    "tags": {
+      "example": "```\n(warning, defaultHandler) => {\n  // ignore some warnings\n  if (!['foo','bar'].includes(warning.code)) {\n    defaultHandler(warning);\n  }\n}\n```"
+    },
+    "state": "explicit",
+    "value": "onwarn(warning) {\n    throw new Error(`${warning.code}: ${warning.message}`);\n  }",
+    "location": "vite.config.ts:78"
+  },
+  {
+    "path": "SvelteKit.configFile",
+    "type": "string | false | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 14,
+    "documentation": "Path to a svelte config file, either absolute or relative to Vite root\n\nset to `false` to ignore the svelte config file",
+    "tags": {
+      "see": "https://vitejs.dev/config/#root"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:58"
+  },
+  {
+    "path": "SvelteKit.include",
+    "type": "Arrayable<string | RegExp> | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 24,
+    "documentation": "A `picomatch` pattern, or array of patterns, which specifies the files the plugin should\noperate on. By default, all svelte files are included.",
+    "tags": {
+      "see": "https://github.com/micromatch/picomatch"
+    },
+    "state": "explicit",
+    "value": "[\"**/*.svelte\"]",
+    "location": "vite.config.ts:59"
+  },
+  {
+    "path": "SvelteKit.exclude",
+    "type": "Arrayable<string | RegExp> | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 31,
+    "documentation": "A `picomatch` pattern, or array of patterns, which specifies the files to be ignored by the\nplugin. By default, no files are ignored.",
+    "tags": {
+      "see": "https://github.com/micromatch/picomatch"
+    },
+    "state": "explicit",
+    "value": "[]",
+    "location": "vite.config.ts:60"
+  },
+  {
+    "path": "SvelteKit.emitCss",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 37,
+    "documentation": "Emit Svelte styles as virtual CSS files for Vite and other plugins to process",
+    "tags": {
+      "default": "true"
+    },
+    "state": "explicit",
+    "value": "true",
+    "location": "vite.config.ts:61"
+  },
+  {
+    "path": "SvelteKit.disableDependencyReinclusion",
+    "type": "boolean | string[] | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 50,
+    "documentation": "vite-plugin-svelte automatically handles excluding svelte libraries and reinclusion of their dependencies\nin vite.optimizeDeps.\n\n`disableDependencyReinclusion: true` disables all reinclusions\n`disableDependencyReinclusion: ['foo','bar']` disables reinclusions for dependencies of foo and bar\n\nThis should be used for hybrid packages that contain both node and browser dependencies, eg Routify",
+    "tags": {
+      "default": "false"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:62"
+  },
+  {
+    "path": "SvelteKit.prebundleSvelteLibraries",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 58,
+    "documentation": "Enable support for Vite's dependency optimization to prebundle Svelte libraries.\n\nTo disable prebundling for a specific library, add it to `optimizeDeps.exclude`.",
+    "tags": {
+      "default": "true for dev, false for build"
+    },
+    "state": "explicit",
+    "value": "command === \"serve\"",
+    "location": "vite.config.ts:254"
+  },
+  {
+    "path": "SvelteKit.inspector",
+    "type": "boolean | InspectorOptions | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 64,
+    "documentation": "toggle/configure Svelte Inspector",
+    "tags": {
+      "default": "unset for dev, always false for build"
+    },
+    "state": "explicit",
+    "value": "false",
+    "location": "vite.config.ts:63"
+  },
+  {
+    "path": "SvelteKit.inspector.toggleKeyCombo",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 205,
+    "documentation": "define a key combo to toggle inspector,",
+    "tags": {
+      "default": "'alt-x'\n\nany number of modifiers `control` `shift` `alt` `meta` followed by zero or one regular key, separated by -\nexamples: control-shift, control-o, control-alt-s  meta-x control-meta\nSome keys have native behavior (e.g. alt-s opens history menu on firefox).\nTo avoid conflicts or accidentally typing into inputs, modifier only combinations are recommended."
+    },
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.navKeys",
+    "type": "{ parent: string; child: string; next: string; prev: string; } | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 224,
+    "documentation": "define keys to select elements with via keyboard",
+    "tags": {
+      "default": "{parent: 'ArrowUp', child: 'ArrowDown', next: 'ArrowRight', prev: 'ArrowLeft' }\n\nimproves accessibility and also helps when you want to select elements that do not have a hoverable surface area\ndue to tight wrapping\n\nA note for users of screen-readers:\nIf you are using arrow keys to navigate the page itself, change the navKeys to avoid conflicts.\ne.g. navKeys: {parent: 'w', prev: 'a', child: 's', next: 'd'}\n\n\nparent: select closest parent\nchild: select first child (or grandchild)\nnext: next sibling (or parent if no next sibling exists)\nprev: previous sibling (or parent if no prev sibling exists)"
+    },
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.navKeys.parent",
+    "type": "string",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 224,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.navKeys.child",
+    "type": "string",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 224,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.navKeys.next",
+    "type": "string",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 224,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.navKeys.prev",
+    "type": "string",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 224,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.openKey",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 231,
+    "documentation": "define key to open the editor for the currently selected dom node",
+    "tags": {
+      "default": "'Enter'"
+    },
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.openMenuKey",
+    "type": "string | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 238,
+    "documentation": "define key to open the context menu for the currently selected dom node",
+    "tags": {
+      "default": "' '"
+    },
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.escapeKeys",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 244,
+    "documentation": "define keys to close the inspector",
+    "tags": {
+      "default": "['Backspace', 'Escape']"
+    },
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.holdMode",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 250,
+    "documentation": "inspector is automatically disabled when releasing toggleKeyCombo after holding it for a longpress",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.showToggleButton",
+    "type": "\"always\" | \"active\" | \"never\" | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 256,
+    "documentation": "when to show the toggle button",
+    "tags": {
+      "default": "'active'"
+    },
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.toggleButtonPos",
+    "type": "\"top-right\" | \"top-left\" | \"bottom-right\" | \"bottom-left\" | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 262,
+    "documentation": "where to display the toggle button",
+    "tags": {
+      "default": "'top-right'"
+    },
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.customStyles",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 267,
+    "documentation": "inject custom styles when inspector is active",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.__internal",
+    "type": "{ base: string; } | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 272,
+    "documentation": "internal options that are automatically set, not to be set or used by users",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.inspector.__internal.base",
+    "type": "string",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 274,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inspector is explicitly disabled; its object-variant options do not apply."
+  },
+  {
+    "path": "SvelteKit.dynamicCompileOptions",
+    "type": "((data: { filename: string; code: string; compileOptions: Partial<CompileOptions>; environment: Environment; }) => void | Partial<CompileOptions> | Promise<...>) | undefined",
+    "source": "node_modules/@sveltejs/vite-plugin-svelte/types/index.d.ts",
+    "line": 86,
+    "documentation": "A function to update `compilerOptions` before compilation\n\n`data.filename` - The file to be compiled\n`data.code` - The preprocessed Svelte code\n`data.compileOptions` - The current compiler options\n`data.environment` - The current Vite environment\n\nTo change part of the compiler options, return an object with the changes you need.",
+    "tags": {
+      "example": "```\n({ filename, compileOptions }) => {\n  // Dynamically set runes mode per Svelte file\n  if (forceRunesMode(filename) && !compileOptions.runes) {\n    return { runes: true };\n  }\n}\n```"
+    },
+    "state": "excluded",
+    "reason": "No per-component compiler override hook is selected."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.child-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2274,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.default-src",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2275,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.frame-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2276,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.worker-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2277,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.connect-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2278,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.font-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2279,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.img-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2280,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.manifest-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2281,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.media-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2282,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.object-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2283,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.prefetch-src",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2284,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.script-src",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2285,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.script-src-elem",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2286,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.script-src-attr",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2287,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.style-src",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2288,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.style-src-elem",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2289,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.style-src-attr",
+    "type": "Sources | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2290,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.base-uri",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2291,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.sandbox",
+    "type": "(\"allow-downloads-without-user-activation\" | \"allow-forms\" | \"allow-modals\" | \"allow-orientation-lock\" | \"allow-pointer-lock\" | \"allow-popups\" | \"allow-popups-to-escape-sandbox\" | ... 5 more ... | \"allow-top-navigation-by-user-activation\")[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2292,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.form-action",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2307,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.frame-ancestors",
+    "type": "((`${string}:` & {}) | `${string}.${string}` | \"localhost\" | `${string}.${string}:${number}` | `${string}.${string}:*` | `localhost:${number}` | \"localhost:*\" | `${string}://${string}.${string}` | `${string}://${string}.${string}:${number}` | `${string}://${string}.${string}:*` | ... 12 more ... | \"none\")[] | undefi...",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2308,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.navigate-to",
+    "type": "(Source | ActionSource)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2309,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.report-uri",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2310,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.report-to",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2311,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.require-trusted-types-for",
+    "type": "\"script\"[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2313,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.trusted-types",
+    "type": "string[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2314,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.upgrade-insecure-requests",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2315,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No report-only CSP or report endpoint is selected. No remote reporting is permitted during application use."
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.require-sri-for",
+    "type": "(\"script\" | \"style\" | \"script style\")[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2318,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.block-all-mixed-content",
+    "type": "boolean | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2321,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.plugin-types",
+    "type": "(\"none\" | `${string}/${string}`)[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2324,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.csp.reportOnly.referrer",
+    "type": "(\"none\" | \"no-referrer\" | \"no-referrer-when-downgrade\" | \"origin\" | \"origin-when-cross-origin\" | \"same-origin\" | \"strict-origin\" | \"strict-origin-when-cross-origin\" | \"unsafe-url\")[] | undefined",
+    "source": "node_modules/@sveltejs/kit/types/index.d.ts",
+    "line": 2327,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "SvelteKit.preprocess[].name",
+    "type": "string | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 972,
+    "documentation": "Name of the preprocessor. Will be a required option in the next major version",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor."
+  },
+  {
+    "path": "SvelteKit.preprocess[].markup",
+    "type": "MarkupPreprocessor | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 973,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor."
+  },
+  {
+    "path": "SvelteKit.preprocess[].style",
+    "type": "Preprocessor | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 974,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor."
+  },
+  {
+    "path": "SvelteKit.preprocess[].script",
+    "type": "Preprocessor | undefined",
+    "source": "node_modules/svelte/types/index.d.ts",
+    "line": 975,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No preprocessors selected. Svelte handles erasable TypeScript without adding a preprocessor."
+  }
+]

@@ -1,0 +1,1209 @@
+[
+  {
+    "path": "ViteServer.build.rolldownOptions.output[].advancedChunks.groups[].minShareCount",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1162,
+    "documentation": "Controls if a module should be captured based on how many entry chunks reference it.",
+    "tags": {
+      "default": "1"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.output[].advancedChunks.groups[].maxSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1168,
+    "documentation": "If the accumulated size in bytes of the captured modules by this group is larger than this value, this group will be split into multiple groups that each has size close to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.output[].advancedChunks.groups[].maxModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1174,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is smaller than or equal to this value.",
+    "tags": {
+      "default": "Infinity"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.output[].advancedChunks.groups[].minModuleSize",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1180,
+    "documentation": "Controls whether a module can only be captured if its size in bytes is larger than or equal to this value.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.output[].advancedChunks.groups[].entriesAware",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1200,
+    "documentation": "When `false` (default), all matching modules are merged into a single chunk.\nEvery entry that uses any of these modules must load the entire chunk — even\nmodules it doesn't need.\n\nWhen `true`, matching modules are grouped by which entries actually import them.\nModules shared by the same set of entries go into the same chunk, while modules\nshared by a different set go into a separate chunk. This way, each entry only\nloads the code it actually uses.\n\nExample: entries A, B, C all match a `\"vendor\"` group.\n- `moduleX` is used by A, B, C\n- `moduleY` is used by A, B only\n\nWith `entriesAware: false` → one `vendor.js` chunk with both modules; C loads `moduleY` unnecessarily.\nWith `entriesAware: true`  → `vendor.js` (moduleX, loaded by all) + `vendor2.js` (moduleY, loaded by A and B only).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.output[].advancedChunks.groups[].entriesAwareMergeThreshold",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1210,
+    "documentation": "Size threshold in bytes for merging small `entriesAware` subgroups into the\nclosest neighboring subgroup.\n\nThis option only works when {@linkcode CodeSplittingGroup.entriesAwareentriesAware}\nis `true`. Set to `0` to disable subgroup merging.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.output[].advancedChunks.groups[].includeDependenciesRecursively",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1224,
+    "documentation": "Whether to include captured modules' dependencies.\n\nEnabling this option reduces the chance of generating circular chunks.\n\nIf you want to disable this behavior, it's recommended to both set\n- {@linkcode InputOptions.preserveEntrySignaturespreserveEntrySignatures}: `false | 'allow-extension'`\n- {@linkcode OutputOptions.strictExecutionOrderstrictExecutionOrder}: `true`\n\nto avoid generating invalid chunks.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.output[].advancedChunks.groups[].tags",
+    "type": "\"$initial\"[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1239,
+    "documentation": "Filter modules by tags. Only modules that have **all** specified tags\nare captured by this group. Combines with `test` and other filters —\na module must match all criteria.\n\nBuilt-in tags: `'$initial'` (module is statically imported by a user-defined entry or part of its dependency chain).",
+    "tags": {
+      "see": "{@link https://rolldown.rs/in-depth/manual-code-splitting Manual Code Splitting}",
+      "example": "```js\n{ name: 'initial-deps', tags: ['$initial'], maxSize: 1048576 }\n```"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Please use {@linkcode codeSplittingoutput.codeSplitting} instead.\n\nAllows you to do manual chunking.\n\n:::warning\nIf `advancedChunks` and `codeSplitting` are both specified, `advancedChunks` option will be ignored.\n:::"
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.alias",
+    "type": "Record<string, string | false | string[]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3657,
+    "documentation": "Substitute one package for another.\n\nOne use case for this feature is replacing a node-only package with a browser-friendly package in third-party code that you don't control.",
+    "tags": {
+      "example": "```js\nresolve: {\n  alias: {\n    '@': '/src',\n    'utils': './src/utils',\n  }\n}\n```\n> [!WARNING]\n> `resolve.alias` will not call [`resolveId`](/reference/Interface.Plugin#resolveid) hooks of other plugin.\n> If you want to call `resolveId` hooks of other plugin, use `viteAliasPlugin` from `rolldown/experimental` instead.\n> You could find more discussion in [this issue](https://github.com/rolldown/rolldown/issues/3615)"
+    },
+    "state": "inherited",
+    "value": "{}",
+    "location": "config/bundler.ts:24",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.aliasFields",
+    "type": "string[][] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3667,
+    "documentation": "Fields in package.json to check for aliased paths.\n\nThis option is expected to be used for `browser` field support.",
+    "tags": {
+      "default": "- `[['browser']]` for `browser` platform\n- `[]` for other platforms"
+    },
+    "state": "excluded",
+    "reason": "Native platform-dependent alias fields are automatic; no cross-environment fixed platform override is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.conditionNames",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3683,
+    "documentation": "Condition names to use when resolving exports in package.json.",
+    "tags": {
+      "default": "Defaults based on platform and import kind:\n- `browser` platform\n  - `[\"import\", \"browser\", \"default\"]` for import statements\n  - `[\"require\", \"browser\", \"default\"]` for require() calls\n- `node` platform\n  - `[\"import\", \"node\", \"default\"]` for import statements\n  - `[\"require\", \"node\", \"default\"]` for require() calls\n- `neutral` platform\n  - `[\"import\", \"default\"]` for import statements\n  - `[\"require\", \"default\"]` for require() calls"
+    },
+    "state": "excluded",
+    "reason": "Native conditions vary by platform and import/require kind. Vite resolves dependencies with its environment conditions."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.extensionAlias",
+    "type": "Record<string, string[]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3690,
+    "documentation": "Map of extensions to alternative extensions.\n\nWith writing `import './foo.js'` in a file, you want to resolve it to `foo.ts` instead of `foo.js`.\nYou can achieve this by setting: `extensionAlias: { '.js': ['.ts', '.js'] }`.",
+    "tags": {},
+    "state": "inherited",
+    "value": "{}",
+    "location": "config/bundler.ts:25",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.exportsFields",
+    "type": "string[][] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3696,
+    "documentation": "Fields in package.json to check for exports.",
+    "tags": {
+      "default": "`[['exports']]`"
+    },
+    "state": "inherited",
+    "value": "[[\"exports\"]]",
+    "location": "config/bundler.ts:26",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.extensions",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3702,
+    "documentation": "Extensions to try when resolving files. These are tried in order from first to last.",
+    "tags": {
+      "default": "`['.tsx', '.ts', '.jsx', '.js', '.json']`"
+    },
+    "state": "excluded",
+    "reason": "Vite's build resolver and dependency optimizer select different extension lists; the application resolver extensions are explicit."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.mainFields",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3712,
+    "documentation": "Fields in package.json to check for entry points.",
+    "tags": {
+      "default": "Defaults based on platform:\n- `node` platform: `['main', 'module']`\n- `browser` platform: `['browser', 'module', 'main']`\n- `neutral` platform: `[]`"
+    },
+    "state": "excluded",
+    "reason": "Native main-field priority varies by platform. Vite supplies environment-specific resolution."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.mainFiles",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3717,
+    "documentation": "Filenames to try when resolving directories.",
+    "tags": {
+      "default": "['index']"
+    },
+    "state": "inherited",
+    "value": "[\"index\"]",
+    "location": "config/bundler.ts:27",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.modules",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3722,
+    "documentation": "Directories to search for modules.",
+    "tags": {
+      "default": "['node_modules']"
+    },
+    "state": "inherited",
+    "value": "[\"node_modules\"]",
+    "location": "config/bundler.ts:28",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.symlinks",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3727,
+    "documentation": "Whether to follow symlinks when resolving modules.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "true",
+    "location": "config/bundler.ts:29",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.resolve.tsconfigFilename",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3731,
+    "documentation": "",
+    "tags": {
+      "deprecated": "Use the top-level {@linkcode tsconfig} option instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Use the top-level {@linkcode tsconfig} option instead."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.moduleSideEffects",
+    "type": "ModuleSideEffectsOption | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2583,
+    "documentation": "**Values:**\n\n- **`true`**: All modules are assumed to have side effects and will be included in the bundle even if none of their exports are used.\n- **`false`**: No modules have side effects. This enables aggressive tree-shaking, removing any modules whose exports are not used.\n- **`string[]`**: Array of module IDs that have side effects. Only modules in this list will be preserved if unused; all others can be tree-shaken when their exports are unused.\n- **`'no-external'`**: Assumes no external modules have side effects while preserving the default behavior for local modules.\n- **`ModuleSideEffectsRule[]`**: Array of rules with `test`, `external`, and `sideEffects` properties for fine-grained control.\n- **`function`**: Function that receives `(id, external)` and returns whether the module has side effects.\n\n**Important:** Setting this to `false` or using an array/string assumes that your modules and their dependencies have no side effects other than their exports. Only use this if you're certain that removing unused modules won't break your application.\n\n> [!NOTE]\n> **Performance: Prefer `ModuleSideEffectsRule[]` over functions**\n>\n> When possible, use rule-based configuration instead of functions. Rules are processed entirely in Rust, while JavaScript functions require runtime calls between Rust and JavaScript, which can hurt CPU utilization during builds.\n>\n> **Functions should be a last resort**: Only use the function signature when your logic cannot be expressed with patterns or simple string matching.\n>\n> **Rule advantages**: `ModuleSideEffectsRule[]` provides better performance by avoiding Rust-JavaScript runtime calls, clearer intent, and easier maintenance.",
+    "tags": {
+      "example": "```js\n// Assume no modules have side effects (aggressive tree-shaking)\ntreeshake: {\n  moduleSideEffects: false\n}\n\n// Only specific modules have side effects (string array)\ntreeshake: {\n  moduleSideEffects: [\n    'lodash',\n    'react-dom',\n  ]\n}\n\n// Use rules for pattern matching and granular control\ntreeshake: {\n  moduleSideEffects: [\n    { test: /^node:/, sideEffects: true },\n    { test: /\\.css$/, sideEffects: true },\n    { test: /some-package/, sideEffects: false, external: false },\n  ]\n}\n\n// Custom function to determine side effects\ntreeshake: {\n  moduleSideEffects: (id, external) => {\n    if (external) return false; // external modules have no side effects\n    return id.includes('/side-effects/') || id.endsWith('.css');\n  }\n}\n\n// Assume no external modules have side effects\ntreeshake: {\n  moduleSideEffects: 'no-external',\n}\n```\n\n**Common Use Cases:**\n- **CSS files**: `{ test: /\\.css$/, sideEffects: true }` - preserve CSS imports\n- **Polyfills**: Add specific polyfill modules to the array\n- **Plugins**: Modules that register themselves globally on import\n- **Library development**: Set to `false` for libraries where unused exports should be removed",
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "true",
+    "location": "config/bundler.ts:14",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.moduleSideEffects[].test",
+    "type": "RegExp | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2507,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The boolean variant explicitly preserves side-effect metadata; no custom per-module rule array is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.moduleSideEffects[].external",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2508,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The boolean variant explicitly preserves side-effect metadata; no custom per-module rule array is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.moduleSideEffects[].sideEffects",
+    "type": "boolean",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2509,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "The boolean variant explicitly preserves side-effect metadata; no custom per-module rule array is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.annotations",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2591,
+    "documentation": "Whether to respect `/*@__PURE__*\\/` annotations and other tree-shaking hints in the code.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#pure-annotations) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "true",
+    "location": "config/bundler.ts:15",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.manualPureFunctions",
+    "type": "readonly string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2605,
+    "documentation": "Array of function names that should be considered pure (no side effects) even if they can't be automatically detected as pure.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#define-pure-functions) for more details.",
+    "tags": {
+      "example": "```js\ntreeshake: {\n  manualPureFunctions: ['console.log', 'debug.trace']\n}\n```",
+      "default": "[]"
+    },
+    "state": "inherited",
+    "value": "[]",
+    "location": "config/bundler.ts:16",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.unknownGlobalSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2613,
+    "documentation": "Whether to assume that accessing unknown global properties might have side effects.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-global-variable-access-side-effects) for more details.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "true",
+    "location": "config/bundler.ts:17",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.invalidImportSideEffects",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2621,
+    "documentation": "Whether to assume that invalid import statements might have side effects.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-invalid-import-statement-side-effects) for more details.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:18",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.commonjs",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2640,
+    "documentation": "Whether to enable tree-shaking for CommonJS modules. When `true`, unused exports from CommonJS modules can be eliminated from the bundle, similar to ES modules. When disabled, CommonJS modules will always be included in their entirety.\n\nThis option allows rolldown to analyze `exports.property` assignments in CommonJS modules and remove unused exports while preserving the module's side effects.",
+    "tags": {
+      "example": "```js\n// source.js (CommonJS)\nexports.used = 'This will be kept';\nexports.unused = 'This will be tree-shaken away';\n\n// main.js\nimport { used } from './source.js';\n// With commonjs: true, only the 'used' export is included in the bundle\n// With commonjs: false, both exports are included\n```",
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "true",
+    "location": "config/bundler.ts:19",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.propertyReadSideEffects",
+    "type": "false | \"always\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2650,
+    "documentation": "Controls whether reading properties from objects is considered to have side effects.\n\nSet to `false` for more aggressive tree-shaking behavior.\n\nSee [related Oxc documentation](https://oxc.rs/docs/guide/usage/minifier/dead-code-elimination#ignoring-property-read-side-effects) for more details.",
+    "tags": {
+      "default": "'always'"
+    },
+    "state": "inherited",
+    "value": "\"always\"",
+    "location": "config/bundler.ts:20",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.treeshake.propertyWriteSideEffects",
+    "type": "false | \"always\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 2658,
+    "documentation": "Controls whether writing properties to objects is considered to have side effects.\n\nSet to `false` for more aggressive behavior.",
+    "tags": {
+      "default": "'always'"
+    },
+    "state": "inherited",
+    "value": "\"always\"",
+    "location": "config/bundler.ts:21",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.viteMode",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3839,
+    "documentation": "Enable Vite compatible mode.",
+    "tags": {
+      "default": "false",
+      "hidden": "This option is only meant to be used by Vite. It is not recommended to use this option directly."
+    },
+    "state": "excluded",
+    "reason": "Hidden native integration setting reserved for Vite, per the pinned Rolldown type declaration. Vite owns whether to enable it for each pipeline."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.resolveNewUrlToAsset",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3866,
+    "documentation": "When enabled, `new URL()` calls will be transformed to a stable asset URL which includes the updated name and content hash.\nIt is necessary to pass `import.meta.url` as the second argument to the\n`new URL` constructor, otherwise no transform will be applied.\n:::warning\nJavaScript and TypeScript files referenced via `new URL('./file.js', import.meta.url)` or `new URL('./file.ts', import.meta.url)` will **not** be transformed or bundled. The file will be copied as-is, meaning TypeScript files remain untransformed and dependencies are not resolved.\n\nThe expected behavior for JS/TS files is still being discussed and may\nchange in future releases. See [#7258](https://github.com/rolldown/rolldown/issues/7258) for more context.\n:::",
+    "tags": {
+      "example": "```js\n// main.js\nconst url = new URL('./styles.css', import.meta.url);\nconsole.log(url);\n\n// Example output after bundling WITHOUT the option (default)\nconst url = new URL('./styles.css', import.meta.url);\nconsole.log(url);\n\n// Example output after bundling WITH `experimental.resolveNewUrlToAsset` set to `true`\nconst url = new URL('assets/styles-CjdrdY7X.css', import.meta.url);\nconsole.log(url);\n```",
+      "default": "false"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:32",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.devMode",
+    "type": "DevModeOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3871,
+    "documentation": "Dev mode related options.",
+    "tags": {
+      "hidden": "not ready for public usage yet"
+    },
+    "state": "excluded",
+    "reason": "Bundled dev is explicitly disabled; no low-level dev server is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.devMode.host",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3519,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Bundled dev is explicitly disabled; no low-level dev server is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.devMode.port",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3520,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Bundled dev is explicitly disabled; no low-level dev server is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.devMode.implement",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3521,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Bundled dev is explicitly disabled; no low-level dev server is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.devMode.skipCommonRuntimeInjection",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3528,
+    "documentation": "Prevent Rolldown from prepending its common dev runtime to {@link implement }.",
+    "tags": {
+      "deprecated": "Common runtime injection will be disabled by default in the future.\nInclude the common runtime in {@link implement } instead.",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Common runtime injection will be disabled by default in the future.\nInclude the common runtime in {@link implement } instead."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.devMode.lazy",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3529,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Bundled dev is explicitly disabled; no low-level dev server is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.devMode.hotUpdate",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3534,
+    "documentation": "Call the `hotUpdate` plugin hook. The `hotUpdate` option of `dev()` also turns it on.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Bundled dev is explicitly disabled; no low-level dev server is selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.chunkModulesOrder",
+    "type": "ChunkModulesOrder | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3884,
+    "documentation": "Control which order should be used when rendering modules in a chunk.\n\nAvailable options:\n- `exec-order`: Almost equivalent to the topological order of the module graph, but specially handling when module graph has cycle.\n- `module-id`: This is more friendly for gzip compression, especially for some javascript static asset lib (e.g. icon library)\n\n> [!NOTE]\n> Try to sort the modules by their module id if possible (Since rolldown scope hoist all modules in the chunk, we only try to sort those modules by module id if we could ensure runtime behavior is correct after sorting).",
+    "tags": {
+      "default": "'exec-order'"
+    },
+    "state": "inherited",
+    "value": "\"exec-order\"",
+    "location": "config/bundler.ts:33",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.attachDebugInfo",
+    "type": "AttachDebugOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3897,
+    "documentation": "Attach debug information to the output bundle.\n\nAvailable modes:\n- `none`: No debug information is attached.\n- `simple`: Attach a `// <module id>` comment where the code of each module starts, like esbuild and Bun. These comments could be removed by the minifier.\n- `full`: Same as `simple`, and also attach comments that tell why each chunk exists. These chunk comments use legal comment syntax, so they won't be removed by the minifier.",
+    "tags": {
+      "default": "'simple'"
+    },
+    "state": "inherited",
+    "value": "\"simple\"",
+    "location": "config/bundler.ts:34",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.chunkImportMap",
+    "type": "boolean | { baseUrl?: string | undefined; fileName?: string | undefined; } | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3949,
+    "documentation": "Enables automatic generation of a chunk import map asset during build.\n\nThis map includes chunks with hashed filenames. Entry keys use their facade module ID. Common chunks\nuse their name; later chunks with the same name use their smallest original module ID.\nModules copied into a file by `experimentalInlineCommonChunks` remain in `moduleIds` but do not\naffect that file's key.\nKeeping these keys independent of content hashes reduces cascading cache invalidation when\na dependency changes.\n\nThe output defaults to `importmap.json` unless overridden via `fileName`. A base URL prefix\n(default `\"/\"`) can be applied to all paths. The resulting JSON is a valid import map and can be\ndirectly injected into HTML via `<script type=\"importmap\">`.",
+    "tags": {
+      "example": "```js\n{\n  experimental: {\n    chunkImportMap: {\n      baseUrl: '/',\n      fileName: 'importmap.json'\n    }\n  },\n  plugins: [\n    {\n      name: 'inject-import-map',\n      generateBundle(_, bundle) {\n        const chunkImportMap = bundle['importmap.json'];\n        if (chunkImportMap?.type === 'asset') {\n          const htmlPath = path.resolve('index.html');\n          let html = fs.readFileSync(htmlPath, 'utf-8');\n\n          html = html.replace(\n            /<script\\s+type=\"importmap\"[^>]*>[\\s\\S]*?<\\/script>/i,\n            `<script type=\"importmap\">${chunkImportMap.source}<\\/script>`\n          );\n\n          fs.writeFileSync(htmlPath, html);\n          delete bundle['importmap.json'];\n        }\n      }\n    }\n  ]\n}\n```\n\n> [!TIP]\n> If you want to learn more, you can check out the example here: [examples/chunk-import-map](https://github.com/rolldown/rolldown/tree/main/examples/chunk-import-map)",
+      "default": "false"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:35",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.chunkImportMap.baseUrl",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3950,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly disabled; its URL/name object variant does not apply."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.chunkImportMap.fileName",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3951,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Explicitly disabled; its URL/name object variant does not apply."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.onDemandWrapping",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3959,
+    "documentation": "Under `output.strictExecutionOrder`, derive a conservative wrapping plan from predicted\nchunk execution hazards instead of wrapping every eligible module.",
+    "tags": {
+      "default": "false",
+      "hidden": "not ready for public usage yet"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:36",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.incrementalBuild",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3964,
+    "documentation": "Enable incremental build support. Required to be used with `watch` mode.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:37",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.nativeMagicString",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4000,
+    "documentation": "Use native Rust implementation of MagicString for source map generation.\n\n[MagicString](https://github.com/rich-harris/magic-string) is a JavaScript library commonly used by bundlers\nfor string manipulation and source map generation. When enabled, rolldown will use a native Rust\nimplementation of MagicString instead of the JavaScript version, providing significantly better performance\nduring source map generation and code transformation.\n\n**Benefits**\n\n- **Improved Performance**: The native Rust implementation is typically faster than the JavaScript version,\n  especially for large codebases with extensive source maps.\n- **Background Processing**: Source map generation is performed asynchronously in a background thread,\n  allowing the main bundling process to continue without blocking. This parallel processing can significantly\n  reduce overall build times when working with JavaScript transform hooks.\n- **Better Integration**: Seamless integration with rolldown's native Rust architecture.",
+    "tags": {
+      "example": "```js\nexport default {\n  experimental: {\n    nativeMagicString: true\n  },\n  output: {\n    sourcemap: true\n  }\n}\n```\n\n> [!NOTE]\n> This is an experimental feature. While it aims to provide identical behavior to the JavaScript\n> implementation, there may be edge cases. Please report any discrepancies you encounter.\n> For a complete working example, see [examples/native-magic-string](https://github.com/rolldown/rolldown/tree/main/examples/native-magic-string)",
+      "default": "false"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:38",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.chunkOptimization",
+    "type": "boolean | ChunkOptimizationOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4013,
+    "documentation": "Control chunk optimizations.\n\n`true` enables both common-chunk merging and redundant dynamic chunk-load avoidance.\n`false` disables all chunk optimizations. Use the object form to control\n`mergeCommonChunks` and `avoidRedundantChunkLoads` separately.\n\nThese optimizations are automatically disabled when any module uses top-level await (TLA) or contains TLA dependencies,\nas they could affect execution order guarantees.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "{ mergeCommonChunks: true, avoidRedundantChunkLoads: true }",
+    "location": "config/bundler.ts:39",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.chunkOptimization.mergeCommonChunks",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3376,
+    "documentation": "Merge common chunks into existing entry chunks when it is safe.\n\nThis can reduce the number of emitted chunks by moving shared/common modules\ninto an entry chunk that already depends on them. Rolldown only applies the\nmerge when it does not create a circular chunk dependency or change strict\nentry export signatures. This pass also covers safe empty-facade cleanup.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "true",
+    "location": "config/bundler.ts:39",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.chunkOptimization.avoidRedundantChunkLoads",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3385,
+    "documentation": "Avoid emitting redundant chunk loads for dynamic entries.\n\nThis pass can reduce dynamic-entry dependent chunks when the shared modules\nare guaranteed to be loaded by every importer of that dynamic entry.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "inherited",
+    "value": "true",
+    "location": "config/bundler.ts:39",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.experimental.lazyBarrel",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 4026,
+    "documentation": "Control whether to enable lazy barrel optimization.\n\nLazy barrel optimization avoids compiling unused re-export modules in side-effect-free barrel modules,\nsignificantly improving build performance for large codebases with many barrel modules.\n\nThis option is planned to be removed in the future. If you need to opt out, please open an issue\ndescribing your use case so we can address it before the option is gone.",
+    "tags": {
+      "see": "{@link https://rolldown.rs/in-depth/lazy-barrel-optimization Lazy Barrel Documentation}",
+      "default": "false"
+    },
+    "state": "inherited",
+    "value": "false",
+    "location": "config/bundler.ts:40",
+    "reason": "Vite merges the explicitly configured root settings into this environment."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.define",
+    "type": "Record<string, string> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1847,
+    "documentation": "Replace global variables or [property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) with the provided values.\n\nSee Oxc's [`define` option](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement.html#define) for more details.",
+    "tags": {
+      "example": "**Replace the global variable `IS_PROD` with `true`**\n```js [rolldown.config.js]\nexport default defineConfig({\n  transform: { define: { IS_PROD: 'true' } }\n})\n```\nResult:\n```js\n// Input\nif (IS_PROD) {\n  console.log('Production mode')\n}\n\n// After bundling\nif (true) {\n  console.log('Production mode')\n}\n```\n\n**Replace the property accessor `process.env.NODE_ENV` with `'production'`**\n```js [rolldown.config.js]\nexport default defineConfig({\n  transform: { define: { 'process.env.NODE_ENV': \"'production'\" } }\n})\n```\nResult:\n```js\n// Input\nif (process.env.NODE_ENV === 'production') {\n  console.log('Production mode')\n}\n\n// After bundling\nif ('production' === 'production') {\n  console.log('Production mode')\n}\n```"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.inject",
+    "type": "Record<string, string | [string, string]> | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1875,
+    "documentation": "Inject import statements on demand.\n\nThe API is aligned with `@rollup/plugin-inject`.\n\nSee Oxc's [`inject` option](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement.html#inject) for more details.\n\n#### Supported patterns\n```js\n{\n  // import { Promise } from 'es6-promise'\n  Promise: ['es6-promise', 'Promise'],\n\n  // import { Promise as P } from 'es6-promise'\n  P: ['es6-promise', 'Promise'],\n\n  // import $ from 'jquery'\n  $: 'jquery',\n\n  // import * as fs from 'node:fs'\n  fs: ['node:fs', '*'],\n\n  // Inject shims for property access pattern\n  'Object.assign': path.resolve( 'src/helpers/object-assign.js' ),\n}\n```",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.dropLabels",
+    "type": "string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1902,
+    "documentation": "Remove labeled statements with these label names.\n\nLabeled statements are JavaScript statements prefixed with a label identifier.\nThis option allows you to strip specific labeled statements from the output,\nwhich is useful for removing debug-only code in production builds.",
+    "tags": {
+      "example": "```js rolldown.config.js\nexport default defineConfig({\n  transform: { dropLabels: ['DEBUG', 'DEV'] }\n})\n```\nResult:\n```js\n// Input\nDEBUG: console.log('Debug info');\nDEV: {\n  console.log('Development mode');\n}\nconsole.log('Production code');\n\n// After bundling\nconsole.log('Production code');\n```"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx",
+    "type": "false | \"preserve\" | JsxOptions | \"react\" | \"react-jsx\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 1911,
+    "documentation": "Controls how JSX syntax is transformed.\n\n- If set to `false`, an error will be thrown if JSX syntax is encountered.\n- If set to `'react'`, JSX syntax will be transformed to classic runtime React code.\n- If set to `'react-jsx'`, JSX syntax will be transformed to automatic runtime React code.\n- If set to `'preserve'`, JSX syntax will be preserved as-is.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript",
+    "type": "TypeScriptOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1156,
+    "documentation": "Configure how TypeScript is transformed.\n\n`typescript.declaration` is evaluated before all transforms.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/typescript}"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.helpers",
+    "type": "Helpers | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1185,
+    "documentation": "Behaviour for runtime helpers.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.helpers.mode",
+    "type": "HelperMode | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 875,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.assumptions",
+    "type": "CompilerAssumptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1148,
+    "documentation": "Set assumptions in order to produce smaller output.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.target",
+    "type": "string | string[] | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1183,
+    "documentation": "Sets the target environment for the generated JavaScript.\n\nThe lowest target is `es2015`.\n\nExample:\n\n* `'es2015'`\n* `['es2020', 'chrome58', 'edge16', 'firefox57', 'node12', 'safari11']`",
+    "tags": {
+      "default": "`esnext` (No transformation)",
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/lowering#target}"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.decorator",
+    "type": "DecoratorOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1158,
+    "documentation": "Decorator plugin",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.plugins",
+    "type": "PluginsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1163,
+    "documentation": "Third-party plugins to use.",
+    "tags": {
+      "see": "{@link https://oxc.rs/docs/guide/usage/transformer/plugins}"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.runtime",
+    "type": "\"classic\" | \"automatic\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 916,
+    "documentation": "Decides which runtime to use.\n\n- 'automatic' - auto-import the correct JSX factories\n- 'classic' - no auto-import",
+    "tags": {
+      "default": "'automatic'"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.development",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 922,
+    "documentation": "Emit development-specific information, such as `__source` and `__self`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.throwIfNamespace",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 932,
+    "documentation": "Toggles whether or not to throw an error if an XML namespaced tag name\nis used.\n\nThough the JSX spec allows this, it is disabled by default since React's\nJSX does not currently have support for it.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.pure",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 938,
+    "documentation": "Mark JSX elements and top-level React method calls as pure for tree shaking.",
+    "tags": {
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.importSource",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 944,
+    "documentation": "Replaces the import source when importing functions.",
+    "tags": {
+      "default": "'react'"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.pragma",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 954,
+    "documentation": "Replace the function used when compiling JSX expressions. It should be a\nqualified name (e.g. `React.createElement`) or an identifier (e.g.\n`createElement`).\n\nOnly used for `classic` {@link runtime}.",
+    "tags": {
+      "default": "'React.createElement'"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.pragmaFrag",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 963,
+    "documentation": "Replace the component used when compiling JSX fragments. It should be a\nvalid JSX tag name.\n\nOnly used for `classic` {@link runtime}.",
+    "tags": {
+      "default": "'React.Fragment'"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.refresh",
+    "type": "boolean | ReactRefreshOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 971,
+    "documentation": "Enable React Fast Refresh .\n\nConforms to the implementation in {@link https://github.com/facebook/react/tree/v18.3.1/packages/react-refresh}",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.refresh.refreshReg",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1035,
+    "documentation": "Specify the identifier of the refresh registration variable.",
+    "tags": {
+      "default": "`$RefreshReg$`."
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.refresh.refreshSig",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1041,
+    "documentation": "Specify the identifier of the refresh signature variable.",
+    "tags": {
+      "default": "`$RefreshSig$`."
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.jsx.refresh.emitFullSignatures",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1042,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.jsxPragma",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1214,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.jsxPragmaFrag",
+    "type": "string | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1215,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.onlyRemoveTypeImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1216,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.allowNamespaces",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1217,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.allowDeclareFields",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1226,
+    "documentation": "When enabled, type-only class fields are only removed if they are prefixed with the declare modifier:",
+    "tags": {
+      "deprecated": "Allowing `declare` fields is built-in support in Oxc without any option. If you want to remove class fields\nwithout initializer, you can use `remove_class_fields_without_initializer: true` instead."
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. Allowing `declare` fields is built-in support in Oxc without any option. If you want to remove class fields\nwithout initializer, you can use `remove_class_fields_without_initializer: true` instead."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.removeClassFieldsWithoutInitializer",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1261,
+    "documentation": "When enabled, class fields without initializers are removed.\n\nFor example:\n```ts\nclass Foo {\n   x: number;\n   y: number = 0;\n}\n```\n// transform into\n```js\nclass Foo {\n   x: number;\n}\n```\n\nThe option is used to align with the behavior of TypeScript's `useDefineForClassFields: false` option.\nWhen you want to enable this, you also need to set [`crate::CompilerAssumptions::set_public_class_fields`]\nto `true`. The `set_public_class_fields: true` + `remove_class_fields_without_initializer: true` is\nequivalent to `useDefineForClassFields: false` in TypeScript.\n\nWhen `set_public_class_fields` is true and class-properties plugin is enabled, the above example transforms into:\n\n```js\nclass Foo {\n  constructor() {\n    this.y = 0;\n  }\n}\n```\n\nDefaults to `false`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.optimizeConstEnums",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1268,
+    "documentation": "When true, optimize const enums by inlining their values at usage sites\nand removing the enum declaration.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.optimizeEnums",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1279,
+    "documentation": "When true, optimize regular (non-const) enums by inlining their member\naccesses at usage sites when the member value is statically known.\n\nNon-exported enum declarations are also removed when all members are\nevaluable and no references to the enum as a runtime value exist\n(e.g., `console.log(Foo)`, `typeof Foo`, or passing the enum as an argument).",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.declaration",
+    "type": "IsolatedDeclarationsOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1289,
+    "documentation": "Also generate a `.d.ts` declaration file for TypeScript files.\n\nThe source file must be compliant with all\n[`isolatedDeclarations`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html#isolated-declarations)\nrequirements.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.declaration.stripInternal",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 892,
+    "documentation": "Do not emit declarations for code that has an",
+    "tags": {
+      "internal": "annotation in its JSDoc comment.\nThis is an internal compiler option; use at your own risk, because the compiler does not check that the result is valid.\n\nDefault: `false`\n\nSee <https://www.typescriptlang.org/tsconfig/#stripInternal>"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.declaration.sourcemap",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 893,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.typescript.rewriteImportExtensions",
+    "type": "boolean | \"rewrite\" | \"remove\" | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 1300,
+    "documentation": "Rewrite or remove TypeScript import/export declaration extensions.\n\n- When set to `rewrite`, it will change `.ts`, `.mts`, `.cts` extensions to `.js`, `.mjs`, `.cjs` respectively.\n- When set to `remove`, it will remove `.ts`/`.mts`/`.cts`/`.tsx` extension entirely.\n- When set to `true`, it's equivalent to `rewrite`.\n- When set to `false` or omitted, no changes will be made to the extensions.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.assumptions.ignoreFunctionLength",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 792,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.assumptions.noDocumentAll",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 793,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.assumptions.objectRestNoSymbols",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 794,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.assumptions.pureGetters",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 795,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.assumptions.setPublicClassFields",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 837,
+    "documentation": "When using public class fields, assume that they don't shadow any getter in the current class,\nin its subclasses or in its superclass. Thus, it's safe to assign them rather than using\n`Object.defineProperty`.\n\nFor example:\n\nInput:\n```js\nclass Test {\n field = 2;\n\n static staticField = 3;\n}\n```\n\nWhen `set_public_class_fields` is `true`, the output will be:\n```js\nclass Test {\n constructor() {\n   this.field = 2;\n }\n}\nTest.staticField = 3;\n```\n\nOtherwise, the output will be:\n```js\nimport _defineProperty from \"@oxc-project/runtime/helpers/defineProperty\";\nclass Test {\n  constructor() {\n    _defineProperty(this, \"field\", 2);\n  }\n}\n_defineProperty(Test, \"staticField\", 3);\n```\n\nNOTE: For TypeScript, if you wanted behavior is equivalent to `useDefineForClassFields: false`, you should\nset both `set_public_class_fields` and [`crate::TypeScriptOptions::remove_class_fields_without_initializer`]\nto `true`.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.decorator.legacy",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 849,
+    "documentation": "Enables experimental support for decorators, which is a version of decorators that predates the TC39 standardization process.\n\nDecorators are a language feature which hasn’t yet been fully ratified into the JavaScript specification.\nThis means that the implementation version in TypeScript may differ from the implementation in JavaScript when it it decided by TC39.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#experimentalDecorators",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.decorator.emitDecoratorMetadata",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 859,
+    "documentation": "Enables emitting decorator metadata.\n\nThis option the same as [emitDecoratorMetadata](https://www.typescriptlang.org/tsconfig/#emitDecoratorMetadata)\nin TypeScript, and it only works when `legacy` is true.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#emitDecoratorMetadata",
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.transform.decorator.strictNullChecks",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/binding-CVMT71K4.d.mts",
+    "line": 871,
+    "documentation": "Aligns nullable-union `design:type` emission with `--strictNullChecks`.\n\nWhen `true` (default), `T | null` and `T | undefined` emit `Object`, matching tsc strict.\nWhen `false`, `null` and `undefined` are elided from the union so the underlying\nprimitive constructor is emitted, matching tsc with `--strictNullChecks=false`\nand `babel-plugin-transform-typescript-metadata`.",
+    "tags": {
+      "see": "https://www.typescriptlang.org/tsconfig/#strictNullChecks",
+      "default": "true"
+    },
+    "state": "excluded",
+    "reason": "Vite's transform plugin uses the explicit oxc/define/build-target configuration. A parallel low-level transform override is not selected."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.watch.skipWrite",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3439,
+    "documentation": "Whether to skip the {@linkcode RolldownBuild.writebundle.write()} step when a rebuild is triggered.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object fields do not apply."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.watch.buildDelay",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3457,
+    "documentation": "Configures how long Rolldown will wait for further changes until it triggers\na rebuild in milliseconds.\n\nEven if this value is set to 0, there's a small debounce timeout configured\nin the file system watcher. Setting this to a value greater than 0 will mean\nthat Rolldown will only trigger a rebuild if there was no change for the\nconfigured number of milliseconds. If several configurations are watched,\nRolldown will use the largest configured build delay.\n\nThis option is useful if you use a tool that regenerates multiple source files\nvery slowly. Rebuilding immediately after the first change could cause Rolldown\nto generate a broken intermediate build before generating a successful final\nbuild, which can be confusing and distracting.",
+    "tags": {
+      "default": "0"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object fields do not apply."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.watch.watcher",
+    "type": "WatcherFileWatcherOptions | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3461,
+    "documentation": "File watcher options for configuring how file changes are detected.",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object fields do not apply."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.watch.watcher.usePolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3397,
+    "documentation": "Whether to use polling-based file watching instead of native OS events.\n\nPolling is useful for environments where native FS events are unreliable,\nsuch as network mounts, Docker volumes, or WSL2.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object fields do not apply."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.watch.watcher.pollInterval",
+    "type": "number | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3405,
+    "documentation": "Interval between each poll in milliseconds.\n\nThis option is only used when {@linkcode usePolling} is `true`.",
+    "tags": {
+      "default": "100"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object fields do not apply."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.watch.watcher.compareContentsForPolling",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3414,
+    "documentation": "Whether to compare file contents for poll-based watchers.\nWhen enabled, poll watchers will check file contents to determine if they actually changed.\n\nThis option is only used when {@linkcode usePolling} is `true`.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object fields do not apply."
+  },
+  {
+    "path": "ViteServer.build.rolldownOptions.watch.watcher.useDebounce",
+    "type": "boolean | undefined",
+    "source": "node_modules/rolldown/dist/shared/define-config-BoIay7tU.d.mts",
+    "line": 3420,
+    "documentation": "Whether to use debounced event delivery at the filesystem level.\nThis coalesces rapid filesystem events before they reach the build coordinator.",
+    "tags": {
+      "default": "false"
+    },
+    "state": "excluded",
+    "reason": "Watch builds are explicitly disabled; watcher object fields do not apply."
+  }
+]

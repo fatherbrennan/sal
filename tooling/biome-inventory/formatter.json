@@ -1,0 +1,77 @@
+[
+  {
+    "path": "formatter",
+    "state": "explicit",
+    "value": "Object"
+  },
+  {
+    "path": "formatter.attributePosition",
+    "state": "explicit",
+    "value": "auto"
+  },
+  {
+    "path": "formatter.bracketSameLine",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "formatter.bracketSpacing",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "formatter.delimiterSpacing",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "formatter.enabled",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "formatter.expand",
+    "state": "explicit",
+    "value": "auto"
+  },
+  {
+    "path": "formatter.formatWithErrors",
+    "state": "explicit",
+    "value": false
+  },
+  {
+    "path": "formatter.includes",
+    "state": "explicit",
+    "value": ["**"]
+  },
+  {
+    "path": "formatter.indentStyle",
+    "state": "explicit",
+    "value": "space"
+  },
+  {
+    "path": "formatter.indentWidth",
+    "state": "explicit",
+    "value": 2
+  },
+  {
+    "path": "formatter.lineEnding",
+    "state": "explicit",
+    "value": "lf"
+  },
+  {
+    "path": "formatter.lineWidth",
+    "state": "explicit",
+    "value": 100
+  },
+  {
+    "path": "formatter.trailingNewline",
+    "state": "explicit",
+    "value": true
+  },
+  {
+    "path": "formatter.useEditorconfig",
+    "state": "explicit",
+    "value": false
+  }
+]

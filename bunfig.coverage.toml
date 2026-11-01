@@ -1,0 +1,72 @@
+preload = []
+smol = false
+logLevel = "warn"
+telemetry = false
+env = false
+define = {}
+loader = {}
+macros = {}
+external = []
+
+[console]
+depth = 2
+
+[test]
+root = "."
+preload = []
+pathIgnorePatterns = [".cache/**", "node_modules/**", ".svelte-kit/**", "build/**"]
+smol = false
+coverage = true
+coverageThreshold = { lines = 0.9, functions = 0.9 }
+coverageSkipTestFiles = true
+coverageIgnoreSourcemaps = false
+coveragePathIgnorePatterns = ["**/*.d.ts", ".cache/**", "node_modules/**", ".svelte-kit/**", "build/**"]
+coverageReporter = ["text", "lcov"]
+coverageDir = "coverage"
+randomize = false
+rerunEach = 0
+retry = 0
+onlyFailures = false
+
+[test.reporter]
+dots = false
+
+[install]
+optional = true
+dev = true
+peer = true
+production = false
+exact = true
+ignoreScripts = false
+saveTextLockfile = true
+auto = "disable"
+prefer = "online"
+offline = false
+frozenLockfile = false
+dryRun = false
+registry = "https://registry.npmjs.org/"
+linkWorkspacePackages = true
+scopes = {}
+linker = "hoisted"
+logLevel = "warn"
+minimumReleaseAgeExcludes = []
+# concurrentScripts is calculated by scripts/install.ts and passed explicitly to Bun.
+
+[install.cache]
+# Bun treats a configured tilde literally; keep generated cache in the excluded workspace directory.
+dir = ".cache/bun/install"
+disable = false
+disableManifest = false
+
+[install.lockfile]
+save = true
+print = "bun"
+path = "bun.lock"
+savePath = "bun.lock"
+
+[run]
+shell = "bun"
+bun = true
+silent = false
+elide-lines = 0
+noOrphans = false

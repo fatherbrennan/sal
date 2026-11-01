@@ -1,0 +1,1081 @@
+[
+  {
+    "path": "TypeScript.allowImportingTsExtensions",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7015,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.allowImportingTsExtensions"
+  },
+  {
+    "path": "TypeScript.allowJs",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7016,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.allowJs"
+  },
+  {
+    "path": "TypeScript.allowArbitraryExtensions",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7017,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.allowArbitraryExtensions"
+  },
+  {
+    "path": "TypeScript.allowSyntheticDefaultImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7018,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.allowSyntheticDefaultImports"
+  },
+  {
+    "path": "TypeScript.allowUmdGlobalAccess",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7019,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.allowUmdGlobalAccess"
+  },
+  {
+    "path": "TypeScript.allowUnreachableCode",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7020,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.allowUnreachableCode"
+  },
+  {
+    "path": "TypeScript.allowUnusedLabels",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7021,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.allowUnusedLabels"
+  },
+  {
+    "path": "TypeScript.alwaysStrict",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7022,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.alwaysStrict"
+  },
+  {
+    "path": "TypeScript.baseUrl",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7024,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.charset",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7026,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.checkJs",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7027,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.checkJs"
+  },
+  {
+    "path": "TypeScript.customConditions",
+    "type": "string[] | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7028,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "[]",
+    "location": "tsconfig.json#compilerOptions.customConditions"
+  },
+  {
+    "path": "TypeScript.declaration",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7029,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.declarationMap",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7030,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.emitDeclarationOnly",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7031,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.declarationDir",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7032,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.disableSizeLimit",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7033,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.disableSizeLimit"
+  },
+  {
+    "path": "TypeScript.disableSourceOfProjectReferenceRedirect",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7034,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.disableSourceOfProjectReferenceRedirect"
+  },
+  {
+    "path": "TypeScript.disableSolutionSearching",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7035,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.disableSolutionSearching"
+  },
+  {
+    "path": "TypeScript.disableReferencedProjectLoad",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7036,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.disableReferencedProjectLoad"
+  },
+  {
+    "path": "TypeScript.downlevelIteration",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7038,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.emitBOM",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7039,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.emitDecoratorMetadata",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7040,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.emitDecoratorMetadata"
+  },
+  {
+    "path": "TypeScript.exactOptionalPropertyTypes",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7041,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.exactOptionalPropertyTypes"
+  },
+  {
+    "path": "TypeScript.experimentalDecorators",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7042,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.experimentalDecorators"
+  },
+  {
+    "path": "TypeScript.forceConsistentCasingInFileNames",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7043,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.forceConsistentCasingInFileNames"
+  },
+  {
+    "path": "TypeScript.ignoreDeprecations",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7044,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Deprecation suppression is prohibited."
+  },
+  {
+    "path": "TypeScript.importHelpers",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7045,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.importsNotUsedAsValues",
+    "type": "ImportsNotUsedAsValues | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7047,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.inlineSourceMap",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7048,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.inlineSources",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7049,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.isolatedModules",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7050,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.isolatedModules"
+  },
+  {
+    "path": "TypeScript.isolatedDeclarations",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7051,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.isolatedDeclarations"
+  },
+  {
+    "path": "TypeScript.jsx",
+    "type": "JsxEmit | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7052,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX/React source is authored; sal uses Svelte templates."
+  },
+  {
+    "path": "TypeScript.keyofStringsOnly",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7054,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.lib",
+    "type": "string[] | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7055,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "[\"ESNext\",\"DOM\",\"DOM.Iterable\"]",
+    "location": "tsconfig.json#compilerOptions.lib"
+  },
+  {
+    "path": "TypeScript.libReplacement",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7056,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.libReplacement"
+  },
+  {
+    "path": "TypeScript.locale",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7057,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "CLI-only display locale, not a valid compilerOptions property."
+  },
+  {
+    "path": "TypeScript.mapRoot",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7058,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.maxNodeModuleJsDepth",
+    "type": "number | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7059,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "0",
+    "location": "tsconfig.json#compilerOptions.maxNodeModuleJsDepth"
+  },
+  {
+    "path": "TypeScript.module",
+    "type": "ModuleKind | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7060,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"ESNext\"",
+    "location": "tsconfig.json#compilerOptions.module"
+  },
+  {
+    "path": "TypeScript.moduleResolution",
+    "type": "ModuleResolutionKind | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7061,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"bundler\"",
+    "location": "tsconfig.json#compilerOptions.moduleResolution"
+  },
+  {
+    "path": "TypeScript.moduleSuffixes",
+    "type": "string[] | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7062,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "[\"\"]",
+    "location": "tsconfig.json#compilerOptions.moduleSuffixes"
+  },
+  {
+    "path": "TypeScript.moduleDetection",
+    "type": "ModuleDetectionKind | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7063,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"force\"",
+    "location": "tsconfig.json#compilerOptions.moduleDetection"
+  },
+  {
+    "path": "TypeScript.newLine",
+    "type": "NewLineKind | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7064,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.noEmit",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7065,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noEmit"
+  },
+  {
+    "path": "TypeScript.noCheck",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7066,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.noCheck"
+  },
+  {
+    "path": "TypeScript.noEmitHelpers",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7067,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.noEmitOnError",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7068,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.noErrorTruncation",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7069,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.noErrorTruncation"
+  },
+  {
+    "path": "TypeScript.noFallthroughCasesInSwitch",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7070,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noFallthroughCasesInSwitch"
+  },
+  {
+    "path": "TypeScript.noImplicitAny",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7071,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noImplicitAny"
+  },
+  {
+    "path": "TypeScript.noImplicitReturns",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7072,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noImplicitReturns"
+  },
+  {
+    "path": "TypeScript.noImplicitThis",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7073,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noImplicitThis"
+  },
+  {
+    "path": "TypeScript.noStrictGenericChecks",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7075,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.noUnusedLocals",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7076,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noUnusedLocals"
+  },
+  {
+    "path": "TypeScript.noUnusedParameters",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7077,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noUnusedParameters"
+  },
+  {
+    "path": "TypeScript.noImplicitUseStrict",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7079,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.noPropertyAccessFromIndexSignature",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7080,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noPropertyAccessFromIndexSignature"
+  },
+  {
+    "path": "TypeScript.assumeChangesOnlyAffectDirectDependencies",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7081,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Incremental/watch builds are disabled; full type checks run."
+  },
+  {
+    "path": "TypeScript.noLib",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7082,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.noLib"
+  },
+  {
+    "path": "TypeScript.noResolve",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7083,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.noResolve"
+  },
+  {
+    "path": "TypeScript.noUncheckedIndexedAccess",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7084,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noUncheckedIndexedAccess"
+  },
+  {
+    "path": "TypeScript.out",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7086,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.outDir",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7087,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.outFile",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7088,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.paths",
+    "type": "MapLike<string[]> | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7089,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inherited from the explicitly generated $app/tsconfig; required framework route/virtual-module paths are environment-specific."
+  },
+  {
+    "path": "TypeScript.preserveConstEnums",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7090,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.noImplicitOverride",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7091,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.noImplicitOverride"
+  },
+  {
+    "path": "TypeScript.preserveSymlinks",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7092,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.preserveSymlinks"
+  },
+  {
+    "path": "TypeScript.preserveValueImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7094,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.project",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7095,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "CLI-only project selector; named tasks explicitly select each configuration."
+  },
+  {
+    "path": "TypeScript.reactNamespace",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7096,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX/React source is authored; sal uses Svelte templates."
+  },
+  {
+    "path": "TypeScript.jsxFactory",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7097,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX/React source is authored; sal uses Svelte templates."
+  },
+  {
+    "path": "TypeScript.jsxFragmentFactory",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7098,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX/React source is authored; sal uses Svelte templates."
+  },
+  {
+    "path": "TypeScript.jsxImportSource",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7099,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "No JSX/React source is authored; sal uses Svelte templates."
+  },
+  {
+    "path": "TypeScript.composite",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7100,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.composite"
+  },
+  {
+    "path": "TypeScript.incremental",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7101,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.incremental"
+  },
+  {
+    "path": "TypeScript.tsBuildInfoFile",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7102,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Incremental/composite builds are disabled."
+  },
+  {
+    "path": "TypeScript.removeComments",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7103,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.resolvePackageJsonExports",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7104,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.resolvePackageJsonExports"
+  },
+  {
+    "path": "TypeScript.resolvePackageJsonImports",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7105,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.resolvePackageJsonImports"
+  },
+  {
+    "path": "TypeScript.rewriteRelativeImportExtensions",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7106,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.rootDir",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7107,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "\".\"",
+    "location": "tsconfig.json#compilerOptions.rootDir"
+  },
+  {
+    "path": "TypeScript.rootDirs",
+    "type": "string[] | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7108,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "Inherited from $app/tsconfig to join authored and generated route types. Tooling explicitly overrides its own rootDirs."
+  },
+  {
+    "path": "TypeScript.skipLibCheck",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7109,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.skipLibCheck"
+  },
+  {
+    "path": "TypeScript.skipDefaultLibCheck",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7110,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.skipDefaultLibCheck"
+  },
+  {
+    "path": "TypeScript.sourceMap",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7111,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.sourceRoot",
+    "type": "string | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7112,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.strict",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7113,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.strict"
+  },
+  {
+    "path": "TypeScript.strictFunctionTypes",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7114,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.strictFunctionTypes"
+  },
+  {
+    "path": "TypeScript.strictBindCallApply",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7115,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.strictBindCallApply"
+  },
+  {
+    "path": "TypeScript.strictNullChecks",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7116,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.strictNullChecks"
+  },
+  {
+    "path": "TypeScript.strictPropertyInitialization",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7117,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.strictPropertyInitialization"
+  },
+  {
+    "path": "TypeScript.strictBuiltinIteratorReturn",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7118,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "true",
+    "location": "tsconfig.json#compilerOptions.strictBuiltinIteratorReturn"
+  },
+  {
+    "path": "TypeScript.stripInternal",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7119,
+    "documentation": "",
+    "tags": {},
+    "state": "excluded",
+    "reason": "TypeScript is a noEmit type checker; transpilation and output belong to the Bun/Vite/Svelte build pipeline."
+  },
+  {
+    "path": "TypeScript.suppressExcessPropertyErrors",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7121,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.suppressImplicitAnyIndexErrors",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7123,
+    "documentation": "",
+    "tags": {
+      "deprecated": ""
+    },
+    "state": "excluded",
+    "reason": "Deprecated in the pinned tool type definitions. "
+  },
+  {
+    "path": "TypeScript.target",
+    "type": "ScriptTarget | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7124,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "\"ESNext\"",
+    "location": "tsconfig.json#compilerOptions.target"
+  },
+  {
+    "path": "TypeScript.traceResolution",
+    "type": "boolean | undefined",
+    "source": "node_modules/typescript/lib/typescript.d.ts",
+    "line": 7125,
+    "documentation": "",
+    "tags": {},
+    "state": "explicit",
+    "value": "false",
+    "location": "tsconfig.json#compilerOptions.traceResolution"
+  }
+]
